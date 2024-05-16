@@ -20,7 +20,7 @@ add_compile_options(-Wall
         -Wno-maybe-uninitialized
         )
 
-# include_directories(${PROJECT_SOURCE_DIR}/utilities/dbg_probe
+include_directories(${PROJECT_SOURCE_DIR}/utilities/dbg_probe
 #                     ${PROJECT_SOURCE_DIR}/utilities/cntrl_value
 #                     ${PROJECT_SOURCE_DIR}/utilities/ui_mvc
 #                     ${PROJECT_SOURCE_DIR}/sw/framebuffer
@@ -29,9 +29,10 @@ add_compile_options(-Wall
 #                     ${PROJECT_SOURCE_DIR}/device/device_switch
 #                     ${PROJECT_SOURCE_DIR}/device/device_KY_040
 #                     ${PROJECT_SOURCE_DIR}/hw/hw_I2C
-#                     ${PROJECT_SOURCE_DIR}/hw/hw_PWM)
+#                     ${PROJECT_SOURCE_DIR}/hw/hw_PWM
+)
 
-# add_subdirectory(utilities)
+add_subdirectory(utilities)
 # add_subdirectory(hw)
 # add_subdirectory(device)
 # add_subdirectory(sw)
