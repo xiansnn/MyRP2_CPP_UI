@@ -28,12 +28,12 @@ enum class ControlledObjectStatus
     IS_ACTIVE
 };
 
-class AbstractDisplayDevice : public Framebuffer
+class UIDisplayDevice : public Framebuffer
 {
 private:
 public:
-    AbstractDisplayDevice(size_t width, size_t height, Framebuffer_format format = Framebuffer_format::MONO_VLSB, config_framebuffer_text_t txt_cnf = {.font = font_8x8});
-    virtual ~AbstractDisplayDevice();
+    UIDisplayDevice(size_t width, size_t height, Framebuffer_format format = Framebuffer_format::MONO_VLSB, config_framebuffer_text_t txt_cnf = {.font = font_8x8});
+    virtual ~UIDisplayDevice();
     virtual void show() = 0;
     virtual void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y) = 0;
 };
