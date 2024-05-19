@@ -1,1 +1,2 @@
 add_subdirectory(device_SSD1306)
+add_subdirectory(device_MSGEQ7)

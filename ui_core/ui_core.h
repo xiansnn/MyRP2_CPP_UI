@@ -6,6 +6,28 @@
 #include <vector>
 #include <list>
 
+
+
+enum class ControlEvent
+{
+    NOOP,
+    PUSH,
+    DOUBLE_PUSH, // TODO find a way to do "DOUBLE_PUSH"
+    LONG_PUSH,
+    RELEASED_AFTER_LONG_TIME,
+    RELEASED_AFTER_SHORT_TIME,
+    INCREMENT,
+    DECREMENT,
+    TIME_OUT // TODO find a way to do "TIME_OUT"
+};
+
+enum class ControlledObjectStatus
+{
+    WAITING,
+    HAS_FOCUS,
+    IS_ACTIVE
+};
+
 class AbstractDisplayDevice : public Framebuffer
 {
 private:
