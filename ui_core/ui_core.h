@@ -6,8 +6,6 @@
 #include <vector>
 #include <list>
 
-
-
 enum class ControlEvent
 {
     NOOP,
@@ -28,6 +26,8 @@ enum class ControlledObjectStatus
     IS_ACTIVE
 };
 
+class UIController;
+
 class UIDisplayDevice : public Framebuffer
 {
 private:
@@ -38,6 +38,66 @@ public:
     virtual void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y) = 0;
 };
 
+class UIModelObject
+{
+private:
+    bool change_flag{true};
+    ControlledObjectStatus status{ControlledObjectStatus::WAITING};
+    UIController *current_controller{nullptr};
 
+public:
+    UIModelObject(/* args */);
+    ~UIModelObject();
+    bool has_changed();
+    void set_change_flag();
+    void clear_change_flag();
+    void update_current_controller(UIController *_new_controller);
+    void update_status(ControlledObjectStatus _new_status);
+    virtual void process_control_event(ControlEvent _event) = 0;
+};
+
+class UIControlledIncrementalValue : public UIModelObject
+{
+private:
+
+protected:
+    int value;
+    int min_value;
+    int max_value;
+    int increment;
+    bool is_wrappable;
+
+public:
+    UIControlledIncrementalValue(int _min_value = 0, int _max_value = 10, bool wrap = false, int increment = 1);
+    ~UIControlledIncrementalValue();
+    virtual void increment_value();
+    virtual void decrement_value();
+    void set_clipped_value(int _new_value);
+};
+
+class UIObjectManager : public UIControlledIncrementalValue
+{
+private:
+    std::vector<UIModelObject*> managed_objects;
+public:
+    UIObjectManager(/* args */);
+    ~UIObjectManager();
+    void add_managed_object(UIModelObject* _new_object);
+    void increment_focus();
+    void decrement_focus();
+    void make_managed_object_active();
+
+};
+
+class UIController
+{
+private:
+    UIModelObject *current_controlled_object{nullptr};
+
+public:
+    UIController(/* args */);
+    ~UIController();
+    void update_current_controlled_object(UIModelObject *_new_controlled_object);
+};
 
 #endif // UI_CORE_H
