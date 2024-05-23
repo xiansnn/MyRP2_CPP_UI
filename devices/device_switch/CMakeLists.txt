@@ -1,0 +1,11 @@
+add_library(switch_button switch_button.cpp)
+target_link_libraries(switch_button pico_stdlib ui_core)
+
+
+add_executable(test_switch_button test_switch_button.cpp)
+target_link_libraries(test_switch_button  pico_stdlib  switch_button debug_probe)
+pico_add_extra_outputs(test_switch_button)
+
+add_executable(test_switch_button_irq test_switch_button_irq.cpp)
+target_link_libraries(test_switch_button_irq  pico_stdlib  switch_button debug_probe)
+pico_add_extra_outputs(test_switch_button_irq)
