@@ -104,7 +104,7 @@ public:
 
 class UIController
 {
-private:
+protected:
     UIModelObject *current_controlled_object{nullptr};
 
 public:
