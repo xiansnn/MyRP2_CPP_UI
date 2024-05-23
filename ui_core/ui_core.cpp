@@ -1,6 +1,6 @@
 #include "ui_core.h"
 
-UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, Framebuffer_format format, config_framebuffer_text_t txt_cnf)
+UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, StructFramebufferText txt_cnf)
     : Framebuffer(width, height, format, txt_cnf)
 {
 }
@@ -147,5 +147,67 @@ void UIController::update_current_controlled_object(UIModelObject *_new_controll
     {
         this->current_controlled_object = _new_controlled_object;
         this->current_controlled_object->update_current_controller(this);
+    }
+}
+
+void UIWidget::draw_border()
+{
+    rect(0, 0, frame_width, frame_height);
+}
+
+FramebufferColor UIWidget::blinking_us(uint32_t _blink_period)
+{
+    return ((time_us_32() / _blink_period) % 2) ? FramebufferColor::WHITE : FramebufferColor::BLACK;
+}
+
+UIWidget::UIWidget(UIDisplayDevice *_display_screen, size_t _frame_width, size_t _frame_height, uint8_t _widget_anchor_x, uint8_t _widget_anchor_y, bool _widget_with_border,
+                   uint8_t _widget_border_width, FramebufferFormat _framebuffer_format, StructFramebufferText _framebuffer_txt_cnf)
+    : Framebuffer(_frame_width, _frame_height, _framebuffer_format, _framebuffer_txt_cnf)
+{
+    this->display_screen = _display_screen;
+    this->widget_anchor_x = _widget_anchor_x;
+    this->widget_anchor_y = _widget_anchor_y;
+    this->widget_with_border = _widget_with_border;
+    this->widget_border_width = (widget_with_border) ? _widget_border_width : 0;
+
+    widget_start_x = widget_border_width;
+    widget_start_y = widget_border_width;
+    widget_width = frame_width - 2 * widget_border_width;
+    widget_height = frame_height - 2 * widget_border_width;
+}
+
+UIWidget::~UIWidget()
+{
+}
+
+void UIWidget::set_displayed_object(UIModelObject *_new_displayed_object)
+{
+    this->displayed_object = _new_displayed_object;
+}
+
+void UIWidget::set_display_screen(UIDisplayDevice *_new_display_device)
+{
+    this->display_screen = _new_display_device;
+}
+
+void UIWidget::add_widget(UIWidget *_sub_widget)
+{
+    this->widgets.push_back(_sub_widget);
+}
+
+void UIWidget::refresh()
+{
+    if (widgets.size() != 0)
+    {
+        for (auto &&w : widgets)
+            w->refresh();
+    }
+    if (this->displayed_object->has_changed())
+    {
+        draw();
+        if (widget_with_border)
+            draw_border();
+        this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        this->displayed_object->clear_change_flag();
     }
 }

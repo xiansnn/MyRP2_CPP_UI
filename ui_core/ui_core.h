@@ -26,13 +26,27 @@ enum class ControlledObjectStatus
     IS_ACTIVE
 };
 
+/// @brief can be useful for keep memory of widget configuration
+struct StructWidgetConfig
+{
+    size_t width{128};
+    size_t height{8};
+    bool with_border{true};
+    bool with_label{true};
+    uint8_t anchor_x{0};
+    uint8_t anchor_y{0};
+    uint8_t start_x;
+    uint8_t start_y;
+    const unsigned char *font{nullptr};
+};
+
 class UIController;
 
 class UIDisplayDevice : public Framebuffer
 {
 private:
 public:
-    UIDisplayDevice(size_t width, size_t height, Framebuffer_format format = Framebuffer_format::MONO_VLSB, config_framebuffer_text_t txt_cnf = {.font = font_8x8});
+    UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, StructFramebufferText txt_cnf = {.font = font_8x8});
     virtual ~UIDisplayDevice();
     virtual void show() = 0;
     virtual void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y) = 0;
@@ -59,7 +73,6 @@ public:
 class UIControlledIncrementalValue : public UIModelObject
 {
 private:
-
 protected:
     int value;
     int min_value;
@@ -78,15 +91,15 @@ public:
 class UIObjectManager : public UIControlledIncrementalValue
 {
 private:
-    std::vector<UIModelObject*> managed_objects;
+    std::vector<UIModelObject *> managed_objects;
+
 public:
     UIObjectManager(/* args */);
     ~UIObjectManager();
-    void add_managed_object(UIModelObject* _new_object);
+    void add_managed_object(UIModelObject *_new_object);
     void increment_focus();
     void decrement_focus();
     void make_managed_object_active();
-
 };
 
 class UIController
@@ -98,6 +111,39 @@ public:
     UIController(/* args */);
     ~UIController();
     void update_current_controlled_object(UIModelObject *_new_controlled_object);
+};
+
+class UIWidget : public Framebuffer
+{
+private:
+    UIDisplayDevice *display_screen{nullptr};
+    bool widget_with_border{true};
+    uint8_t widget_anchor_x;
+    uint8_t widget_anchor_y;
+    std::vector<UIWidget *> widgets;
+
+protected:
+    size_t widget_width{128};
+    size_t widget_height{8};
+    uint8_t widget_start_x;
+    uint8_t widget_start_y;
+    uint8_t widget_border_width;
+    UIModelObject *displayed_object{nullptr};
+    void draw_border();
+
+public:
+    static FramebufferColor blinking_us(uint32_t _blink_period);
+    UIWidget(UIDisplayDevice *_display_screen, size_t _frame_width, size_t _frame_height,
+             uint8_t _widget_anchor_x, uint8_t _widget_anchor_y, bool _widget_with_border, uint8_t _widget_border_width = 1,
+             FramebufferFormat _framebuffer_format = FramebufferFormat::MONO_VLSB, StructFramebufferText _framebuffer_txt_cnf = {.font = font_8x8});
+    ~UIWidget();
+    void set_displayed_object(UIModelObject *_new_displayed_object);
+    void set_display_screen(UIDisplayDevice *_new_display_device);
+    void add_widget(UIWidget *_sub_widget);
+    void refresh();
+    virtual void draw() = 0;
+    // virtual void draw_active() = 0; // TODO  a verifier si utile pour les instances de widget
+    // virtual void draw_focus() = 0; // TODO  a verifier si utile pour les instances de widget
 };
 
 #endif // UI_CORE_H
