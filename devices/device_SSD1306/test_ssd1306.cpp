@@ -135,10 +135,10 @@ void test_outofframe_line(SSD1306 *display)
 
     for (int x = -10; x < 138; x++)
     {
-        Framebuffer_color c = Framebuffer_color::WHITE;
+        FramebufferColor c = FramebufferColor::WHITE;
         display->line(x, y0, x1, y1, c);
         display->show();
-        c = Framebuffer_color::BLACK;
+        c = FramebufferColor::BLACK;
         display->line(x, y0, x1, y1, c);
         display->show();
     }
@@ -146,14 +146,14 @@ void test_outofframe_line(SSD1306 *display)
 void test_fb_line(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
-    Framebuffer_color c = Framebuffer_color::BLACK;
+    FramebufferColor c = FramebufferColor::BLACK;
     render_area_t full_screen_area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
     for (int i = 0; i < 2; i++)
     {
-        if (c == Framebuffer_color::BLACK)
-            c = Framebuffer_color::WHITE;
+        if (c == FramebufferColor::BLACK)
+            c = FramebufferColor::WHITE;
         else
-            c = Framebuffer_color::BLACK;
+            c = FramebufferColor::BLACK;
 
         for (int x = 0; x < SSD1306_WIDTH; x++)
         {
@@ -173,20 +173,20 @@ void test_fb_line(SSD1306 *display)
     {
         for (int x = 0; x < SSD1306_WIDTH; x++)
         {
-            c = Framebuffer_color::WHITE;
+            c = FramebufferColor::WHITE;
             display->line(x, 0, SSD1306_WIDTH - 1 - x, SSD1306_HEIGHT - 1, c);
             display->show();
-            c = Framebuffer_color::BLACK;
+            c = FramebufferColor::BLACK;
             display->line(x, 0, SSD1306_WIDTH - 1 - x, SSD1306_HEIGHT - 1, c);
             display->show();
         }
 
         for (int y = SSD1306_HEIGHT - 1; y >= 0; y--)
         {
-            c = Framebuffer_color::WHITE;
+            c = FramebufferColor::WHITE;
             display->line(0, y, SSD1306_WIDTH - 1, SSD1306_HEIGHT - 1 - y, c);
             display->show_render_area(display->pixel_buffer, full_screen_area);
-            c = Framebuffer_color::BLACK;
+            c = FramebufferColor::BLACK;
             display->line(0, y, SSD1306_WIDTH - 1, SSD1306_HEIGHT - 1 - y, c);
             display->show_render_area(display->pixel_buffer, full_screen_area);
         }
@@ -244,15 +244,15 @@ void test_fb_in_fb(SSD1306 *display)
     display->clear_pixel_buffer_and_show_full_screen();
     display->rect(0, 0, SSD1306_WIDTH, SSD1306_HEIGHT); //, false, Framebuffer_color::white);
     display->rect(10, 10, 108, 44, true);               //, true, Framebuffer_color::black);
-    display->line(5, 60, 120, 5, Framebuffer_color::BLACK);
+    display->line(5, 60, 120, 5, FramebufferColor::BLACK);
     display->show();
     sleep_ms(1000);
     uint8_t small_frame_x_anchor = 20;
     uint8_t small_frame_y_anchor = 20;
     uint8_t small_frame_width = 88;
     uint8_t small_frame_height = 25;
-    Framebuffer small_frame = Framebuffer(small_frame_width, small_frame_height, Framebuffer_format::MONO_VLSB);
-    small_frame.fill(Framebuffer_color::BLACK);
+    Framebuffer small_frame = Framebuffer(small_frame_width, small_frame_height, FramebufferFormat::MONO_VLSB);
+    small_frame.fill(FramebufferColor::BLACK);
     small_frame.line(5, 5, 80, 20); // point coordinates are relative to the local frame
     small_frame.circle(8, 44, 12);
     display->show(&small_frame, small_frame_x_anchor, small_frame_y_anchor);

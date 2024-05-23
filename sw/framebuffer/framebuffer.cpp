@@ -5,9 +5,9 @@
 
 #define BYTE_SIZE 8
 
-Framebuffer::Framebuffer(size_t _frame_width, size_t _frame_height, Framebuffer_format _framebuffer_format, config_framebuffer_text_t _framebuffer_txt_cnf)
+Framebuffer::Framebuffer(size_t _frame_width, size_t _frame_height, FramebufferFormat _framebuffer_format, StructFramebufferText _framebuffer_txt_cnf)
 {
-    assert(_framebuffer_format == Framebuffer_format::MONO_VLSB); // works only for MONO_VLSB devices
+    assert(_framebuffer_format == FramebufferFormat::MONO_VLSB); // works only for MONO_VLSB devices
     this->frame_format = _framebuffer_format;
     this->frame_height = _frame_height;
     this->frame_width = _frame_width; // MONO_VLDB => 1 Byte = 1 column of 8 pixel
@@ -27,10 +27,10 @@ Framebuffer::~Framebuffer()
     delete[] this->text_buffer;
 }
 
-void Framebuffer::fill(Framebuffer_color c)
+void Framebuffer::fill(FramebufferColor c)
 {
-    assert(this->frame_format == Framebuffer_format::MONO_VLSB);
-    if (c == Framebuffer_color::BLACK)
+    assert(this->frame_format == FramebufferFormat::MONO_VLSB);
+    if (c == FramebufferColor::BLACK)
         memset(this->pixel_buffer, 0x00, this->pixel_buffer_size);
     else
         memset(this->pixel_buffer, 0xFF, this->pixel_buffer_size);
@@ -38,7 +38,7 @@ void Framebuffer::fill(Framebuffer_color c)
 
 void Framebuffer::clear_pixel_buffer()
 {
-    fill(Framebuffer_color::BLACK);
+    fill(FramebufferColor::BLACK);
     current_char_column = 0;
     current_char_line = 0;
 }
@@ -49,7 +49,7 @@ void Framebuffer::clear_text_buffer()
     current_char_line = 0;
 }
 
-void Framebuffer::set_text_config(config_framebuffer_text_t _framebuffer_txt_cnf)
+void Framebuffer::set_text_config(StructFramebufferText _framebuffer_txt_cnf)
 {
     this->frame_text_config = _framebuffer_txt_cnf;
     set_font(_framebuffer_txt_cnf.font);
@@ -158,9 +158,9 @@ void Framebuffer::print_char(char c)
     }
 }
 
-void Framebuffer::pixel(int x, int y, Framebuffer_color c)
+void Framebuffer::pixel(int x, int y, FramebufferColor c)
 {
-    assert(frame_format == Framebuffer_format::MONO_VLSB); // works only if MONO_VLSB
+    assert(frame_format == FramebufferFormat::MONO_VLSB); // works only if MONO_VLSB
 
     if (x >= 0 && x < this->frame_width && y >= 0 && y < this->frame_height) // avoid drawing outside the framebuffer
     {
@@ -168,7 +168,7 @@ void Framebuffer::pixel(int x, int y, Framebuffer_color c)
         int byte_idx = (y / 8) * BytesPerRow + x;
         uint8_t byte = this->pixel_buffer[byte_idx];
 
-        if (c == Framebuffer_color::WHITE)
+        if (c == FramebufferColor::WHITE)
             byte |= 1 << (y % 8);
         else
             byte &= ~(1 << (y % 8));
@@ -177,19 +177,19 @@ void Framebuffer::pixel(int x, int y, Framebuffer_color c)
     }
 }
 
-void Framebuffer::hline(uint8_t x, uint8_t y, size_t w, Framebuffer_color c)
+void Framebuffer::hline(uint8_t x, uint8_t y, size_t w, FramebufferColor c)
 {
     for (size_t i = 0; i < w; i++)
         this->pixel(x + i, y, c);
 }
 
-void Framebuffer::vline(uint8_t x, uint8_t y, size_t h, Framebuffer_color c)
+void Framebuffer::vline(uint8_t x, uint8_t y, size_t h, FramebufferColor c)
 {
     for (size_t i = 0; i < h; i++)
         this->pixel(x, y + i, c);
 }
 
-void Framebuffer::line(int x0, int y0, int x1, int y1, Framebuffer_color c)
+void Framebuffer::line(int x0, int y0, int x1, int y1, FramebufferColor c)
 {
     int dx = abs(x1 - x0);
     int sx = x0 < x1 ? 1 : -1;
@@ -217,7 +217,7 @@ void Framebuffer::line(int x0, int y0, int x1, int y1, Framebuffer_color c)
     }
 }
 
-void Framebuffer::rect(uint8_t x, uint8_t y, size_t w, size_t h, bool fill, Framebuffer_color c)
+void Framebuffer::rect(uint8_t x, uint8_t y, size_t w, size_t h, bool fill, FramebufferColor c)
 {
     if (!fill)
     {
@@ -233,7 +233,7 @@ void Framebuffer::rect(uint8_t x, uint8_t y, size_t w, size_t h, bool fill, Fram
     }
 }
 
-void Framebuffer::ellipse(uint8_t x_center, uint8_t y_center, uint8_t x_radius, uint8_t y_radius, bool fill, uint8_t quadrant, Framebuffer_color c)
+void Framebuffer::ellipse(uint8_t x_center, uint8_t y_center, uint8_t x_radius, uint8_t y_radius, bool fill, uint8_t quadrant, FramebufferColor c)
 {
     int x, y, m;
     x = 0;
@@ -335,7 +335,7 @@ void Framebuffer::drawChar(char c, uint8_t char_column, uint8_t char_line)
 }
 
 
-void Framebuffer::circle(int radius, int x_center, int y_center, bool fill, Framebuffer_color c)
+void Framebuffer::circle(int radius, int x_center, int y_center, bool fill, FramebufferColor c)
 /*
 https://fr.wikipedia.org/wiki/Algorithme_de_trac%C3%A9_d%27arc_de_cercle_de_Bresenham
 https://en.wikipedia.org/wiki/Midpoint_circle_algorithm

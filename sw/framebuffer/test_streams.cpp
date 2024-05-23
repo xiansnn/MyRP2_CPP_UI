@@ -38,7 +38,7 @@ void test_ostringstream_format(SSD1306 *display)
 
     const unsigned char *current_font{font_5x8};
 
-    config_framebuffer_text_t txt_conf = {
+    StructFramebufferText txt_conf = {
         .font = current_font,
         .wrap = false};
     display->set_text_config(txt_conf);
@@ -87,7 +87,7 @@ void test_sprintf_format(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
 
-    config_framebuffer_text_t cfg_fb_txt = {
+    StructFramebufferText cfg_fb_txt = {
         .font = font_8x8,
         .wrap = false};
     display->set_text_config(cfg_fb_txt);
@@ -230,7 +230,7 @@ void test_text_and_graph(SSD1306 *display)
 {
 #define DEGREE "\xF8"
     display->clear_pixel_buffer_and_show_full_screen();
-    config_framebuffer_text_t title_config = {
+    StructFramebufferText title_config = {
         .font = font_8x8};
     uint8_t w = title_config.font[FONT_WIDTH];
     uint8_t h = title_config.font[FONT_HEIGHT];
@@ -240,7 +240,7 @@ void test_text_and_graph(SSD1306 *display)
     int title_area_anchor_x = 0;
     int title_area_anchor_y = h * 6;
 
-    Framebuffer title = Framebuffer(title_area_width, title_area_height, Framebuffer_format::MONO_VLSB);
+    Framebuffer title = Framebuffer(title_area_width, title_area_height, FramebufferFormat::MONO_VLSB);
     title.set_text_config(title_config);
     title.print_text("ROLL:\nPITCH:");
     display->show(&title, title_area_anchor_x, title_area_anchor_y);
@@ -250,7 +250,7 @@ void test_text_and_graph(SSD1306 *display)
     int values_area_anchor_y = h * 6;
     int values_area_width = w * 8;
     int values_area_height = h * 2;
-    Framebuffer values = Framebuffer(values_area_width, values_area_height, Framebuffer_format::MONO_VLSB);
+    Framebuffer values = Framebuffer(values_area_width, values_area_height, FramebufferFormat::MONO_VLSB);
     values.set_font(font_8x8);
 
     // draw graph
@@ -259,8 +259,8 @@ void test_text_and_graph(SSD1306 *display)
     int graph_area_width = w * 12;
     int graph_area_height = h * 5;
 
-    Framebuffer graph = Framebuffer(graph_area_width, graph_area_height, Framebuffer_format::MONO_VLSB);
-    graph.fill(Framebuffer_color::BLACK);
+    Framebuffer graph = Framebuffer(graph_area_width, graph_area_height, FramebufferFormat::MONO_VLSB);
+    graph.fill(FramebufferColor::BLACK);
     display->show(&graph, graph_area_anchor_x, graph_area_anchor_y);
 
     int roll, pitch;
@@ -291,8 +291,8 @@ void test_text_and_graph(SSD1306 *display)
         graph.line(x0, y0, x1, y1);
         display->show(&graph, graph_area_anchor_x, graph_area_anchor_y);
         display->show(&values, values_area_anchor_x, values_area_anchor_y);
-        graph.line(x0, y0, x1, y1, Framebuffer_color::BLACK);
-        graph.circle(radius, xc, yl, false, Framebuffer_color::BLACK);
+        graph.line(x0, y0, x1, y1, FramebufferColor::BLACK);
+        graph.circle(radius, xc, yl, false, FramebufferColor::BLACK);
         sleep_ms(50);
     }
     delete[] c_str;
@@ -334,7 +334,7 @@ void test_font_size(SSD1306 *display)
 
 void test_full_screen_text(SSD1306 *display)
 {
-    config_framebuffer_text_t txt_conf = {
+    StructFramebufferText txt_conf = {
         .font = font_8x8,
         .wrap = true,
     };
@@ -359,7 +359,7 @@ void test_full_screen_text(SSD1306 *display)
 
 void test_auto_next_char(SSD1306 *display)
 {
-    config_framebuffer_text_t txt_conf = {
+    StructFramebufferText txt_conf = {
         .font = font_8x8,
         .wrap = true,
         .auto_next_char = false};
