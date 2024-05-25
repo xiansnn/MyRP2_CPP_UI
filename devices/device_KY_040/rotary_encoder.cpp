@@ -3,9 +3,9 @@
 #include "pico/stdlib.h"
 #include <string>
 
-RotaryEncoder::RotaryEncoder( uint encoder_clk_gpio, uint encoder_dt_gpio, gpio_irq_callback_t call_back,
-                           StructSwitchButtonConfig clk_conf)
-    : SwitchButtonWithIRQ( encoder_clk_gpio, call_back, clk_conf), UIController()
+RotaryEncoder::RotaryEncoder(uint encoder_clk_gpio, uint encoder_dt_gpio, gpio_irq_callback_t call_back,
+                             StructSwitchButtonConfig clk_conf)
+    : SwitchButtonWithIRQ(encoder_clk_gpio, call_back, clk_conf), UIController()
 {
     this->dt_gpio = encoder_dt_gpio;
     this->active_lo = true;
