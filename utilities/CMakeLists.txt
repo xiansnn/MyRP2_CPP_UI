@@ -1,1 +1,1 @@
-add_subdirectory(dbg_probe)
+add_subdirectory(debug)

@@ -34,9 +34,9 @@ std::map<ControlEvent, std::string> sw_button_events{
 
 void sw_call_back(uint gpio, uint32_t event_mask);
 
-SwitchButtonWithIRQ encoder_central_sw = SwitchButtonWithIRQ( CENTRAL_SWITCH_GPIO, &sw_call_back, cfg_central_switch);
+SwitchButtonWithIRQ encoder_central_sw = SwitchButtonWithIRQ(CENTRAL_SWITCH_GPIO, &sw_call_back, cfg_central_switch);
 
-SwitchButtonWithIRQ encoder_clk = SwitchButtonWithIRQ( ENCODER_CLK_GPIO, &sw_call_back, cfg_encoder_clk);
+SwitchButtonWithIRQ encoder_clk = SwitchButtonWithIRQ(ENCODER_CLK_GPIO, &sw_call_back, cfg_encoder_clk);
 
 void sw_call_back(uint gpio, uint32_t event_mask)
 {

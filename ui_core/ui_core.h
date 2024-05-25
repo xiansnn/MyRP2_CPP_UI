@@ -81,7 +81,7 @@ protected:
     bool is_wrappable;
 
 public:
-    UIControlledIncrementalValue(int _min_value = 0, int _max_value = 10, bool wrap = false, int increment = 1);
+    UIControlledIncrementalValue(int _min_value = 0, int _max_value = 10, bool _is_wrapable = false, int increment = 1);
     ~UIControlledIncrementalValue();
     virtual void increment_value();
     virtual void decrement_value();
