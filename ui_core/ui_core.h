@@ -35,8 +35,8 @@ struct StructWidgetConfig
     bool with_label{true};
     uint8_t anchor_x{0};
     uint8_t anchor_y{0};
-    uint8_t start_x;
-    uint8_t start_y;
+    // uint8_t start_x;
+    // uint8_t start_y;
     const unsigned char *font{nullptr};
 };
 
