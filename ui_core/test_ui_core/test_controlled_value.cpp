@@ -33,7 +33,6 @@ RotaryEncoder encoder = RotaryEncoder(ENCODER_CLK_GPIO, ENCODER_DT_GPIO,
                                       shared_irq_call_back, cfg_encoder_clk);
 
 SwitchButton central_switch = SwitchButton(CENTRAL_SWITCH_GPIO, cfg_central_switch);
-WTextSerialMonitor monitor = WTextSerialMonitor();
 
 void shared_irq_call_back(uint gpio, uint32_t event_mask)
 {
@@ -52,9 +51,10 @@ void shared_irq_call_back(uint gpio, uint32_t event_mask)
 int main()
 {
     stdio_init_all();
+    WTextSerialMonitor monitor = WTextSerialMonitor();
     ControlledValue value_1 = ControlledValue("val1", 0, 5, true, 1);
     ControlledValue value_2 = ControlledValue("val2", 0, 10, false, 1);
-    ControlledValue current_controlled_value = value_2;
+    ControlledValue current_controlled_value = value_1;
     current_controlled_value.update_current_controller(&encoder);
     monitor.set_displayed_object(&current_controlled_value);
     std::string monitor_text;
@@ -62,7 +62,7 @@ int main()
     {
         ControlEvent event = central_switch.process_sample_event();
         current_controlled_value.process_control_event(event);
-        monitor_text = "monitor: " + current_controlled_value.get_name() + ":" + std::to_string (current_controlled_value.get_value()) + "\n";
+        monitor_text = "monitor: " + current_controlled_value.get_name() + ":" + std::to_string(current_controlled_value.get_value()) + "\n";
 
         monitor.set_text_to_display(monitor_text);
         monitor.refresh();
