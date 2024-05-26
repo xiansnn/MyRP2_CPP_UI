@@ -18,7 +18,6 @@ void ControlledValue::process_control_event(ControlEvent _event)
         /* code */
         break;
     case ControlEvent::PUSH:
-        this->set_change_flag();
         printf("PUSH\n");
         break;
     case ControlEvent::DOUBLE_PUSH:
@@ -34,11 +33,11 @@ void ControlledValue::process_control_event(ControlEvent _event)
         printf("RELEASED_AFTER_SHORT_TIME\n");
         break;
     case ControlEvent::INCREMENT:
-        printf("INCREMENT\n");
+        // printf("INCREMENT\n");
         increment_value();
         break;
     case ControlEvent::DECREMENT:
-        printf("DECREMENT\n");
+        // printf("DECREMENT\n");
         decrement_value();
         break;
     case ControlEvent::TIME_OUT:
