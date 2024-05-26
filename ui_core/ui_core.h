@@ -57,6 +57,7 @@ class UIModelObject
 private:
     bool change_flag{true};
     ControlledObjectStatus status{ControlledObjectStatus::WAITING};
+protected:
     UIController *current_controller{nullptr};
 
 public:
@@ -86,6 +87,7 @@ public:
     virtual void increment_value();
     virtual void decrement_value();
     void set_clipped_value(int _new_value);
+    int get_value();
 };
 
 class UIObjectManager : public UIControlledIncrementalValue
@@ -130,6 +132,7 @@ protected:
     uint8_t widget_border_width;
     UIModelObject *displayed_object{nullptr};
     void draw_border();
+    virtual void draw() = 0;
 
 public:
     static FramebufferColor blinking_us(uint32_t _blink_period);
@@ -140,8 +143,7 @@ public:
     void set_displayed_object(UIModelObject *_new_displayed_object);
     void set_display_screen(UIDisplayDevice *_new_display_device);
     void add_widget(UIWidget *_sub_widget);
-    void refresh();
-    virtual void draw() = 0;
+    virtual void refresh();
     // virtual void draw_active() = 0; // TODO  a verifier si utile pour les instances de widget
     // virtual void draw_focus() = 0; // TODO  a verifier si utile pour les instances de widget
 };

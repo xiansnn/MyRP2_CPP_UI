@@ -8,3 +8,23 @@ WTextSerialMonitor::WTextSerialMonitor()
 WTextSerialMonitor::~WTextSerialMonitor()
 {
 }
+
+void WTextSerialMonitor::set_text_to_display(std::string _text)
+{
+    this->text = _text;
+}
+
+void WTextSerialMonitor::refresh()
+{
+    if (this->displayed_object->has_changed())
+    {
+        draw();
+        this->displayed_object->clear_change_flag();
+    }
+
+}
+
+void WTextSerialMonitor::draw()
+{
+    printf(text.c_str());
+}

@@ -91,6 +91,11 @@ void UIControlledIncrementalValue::set_clipped_value(int _new_value)
         set_change_flag();
 }
 
+int UIControlledIncrementalValue::get_value()
+{
+    return this->value;
+}
+
 UIObjectManager::UIObjectManager()
     : UIControlledIncrementalValue(0, 0, true, 1)
 {
