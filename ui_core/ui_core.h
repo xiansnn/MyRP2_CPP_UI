@@ -57,6 +57,7 @@ class UIModelObject
 private:
     bool change_flag{true};
     ControlledObjectStatus status{ControlledObjectStatus::WAITING};
+
 protected:
     UIController *current_controller{nullptr};
 
@@ -68,6 +69,7 @@ public:
     void clear_change_flag();
     void update_current_controller(UIController *_new_controller);
     void update_status(ControlledObjectStatus _new_status);
+    ControlledObjectStatus get_status();
     virtual void process_control_event(ControlEvent _event) = 0;
 };
 

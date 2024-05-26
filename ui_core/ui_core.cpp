@@ -45,6 +45,11 @@ void UIModelObject::update_status(ControlledObjectStatus _new_status)
     }
 }
 
+ControlledObjectStatus UIModelObject::get_status()
+{
+    return this->status;
+}
+
 void UIModelObject::set_change_flag()
 {
     this->change_flag = true;
