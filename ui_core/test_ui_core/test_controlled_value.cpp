@@ -43,16 +43,20 @@ int main()
 {
     stdio_init_all();
     WTextSerialMonitor serial_monitor_console = WTextSerialMonitor();
+    WCursorOnSerialMonitor cursor_on_console = WCursorOnSerialMonitor();
     ControlledValue value_1 = ControlledValue("val1", 0, 5, true, 1);
     ControlledValue value_2 = ControlledValue("val2", 0, 10, false, 1);
-    ControlledValue current_controlled_value = value_1;
+    ControlledValue current_controlled_value = value_2;
+    current_controlled_value.update_status(ControlledObjectStatus::IS_ACTIVE);
     current_controlled_value.update_current_controller(&encoder);
     serial_monitor_console.set_displayed_object(&current_controlled_value);
+    cursor_on_console.set_displayed_object(&current_controlled_value);
     while (true)
     {
         ControlEvent event = central_switch.process_sample_event();
         current_controlled_value.process_control_event(event);
-        serial_monitor_console.refresh();
+        serial_monitor_console.refresh(); // FIXME pb qd 2 widget affiche la meme donnée : la premiere clear change flag
+        cursor_on_console.refresh();
         sleep_ms(20);
     }
 

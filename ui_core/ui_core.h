@@ -89,6 +89,8 @@ public:
     virtual void decrement_value();
     void set_clipped_value(int _new_value);
     int get_value();
+    int get_min_value();
+    int get_max_value();
 };
 
 class UIObjectManager : public UIControlledIncrementalValue
@@ -123,10 +125,10 @@ private:
     bool widget_with_border{true};
     uint8_t widget_anchor_x;
     uint8_t widget_anchor_y;
-    std::vector<UIWidget *> widgets;
     UIModelObject *displayed_model{nullptr};
 
 protected:
+    std::vector<UIWidget *> widgets;
     size_t widget_width{128};
     size_t widget_height{8};
     uint8_t widget_start_x;

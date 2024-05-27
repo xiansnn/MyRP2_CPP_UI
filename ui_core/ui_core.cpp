@@ -101,6 +101,16 @@ int UIControlledIncrementalValue::get_value()
     return this->value;
 }
 
+int UIControlledIncrementalValue::get_min_value()
+{
+    return min_value;
+}
+
+int UIControlledIncrementalValue::get_max_value()
+{
+    return max_value;
+}
+
 UIObjectManager::UIObjectManager()
     : UIControlledIncrementalValue(0, 0, true, 1)
 {
