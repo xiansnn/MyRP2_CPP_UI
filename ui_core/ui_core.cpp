@@ -190,9 +190,9 @@ UIWidget::~UIWidget()
 {
 }
 
-void UIWidget::set_displayed_object(UIModelObject *_new_displayed_object)
+void UIWidget::set_displayed_model(UIModelObject *_new_displayed_model)
 {
-    this->displayed_object = _new_displayed_object;
+    this->displayed_model = _new_displayed_model;
 }
 
 void UIWidget::set_display_screen(UIDisplayDevice *_new_display_device)
@@ -212,12 +212,12 @@ void UIWidget::refresh()
         for (auto &&w : widgets)
             w->refresh();
     }
-    if (this->displayed_object->has_changed())
+    if (this->displayed_model->has_changed())
     {
         draw();
         if (widget_with_border)
             draw_border();
         this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-        this->displayed_object->clear_change_flag();
+        this->displayed_model->clear_change_flag();
     }
 }

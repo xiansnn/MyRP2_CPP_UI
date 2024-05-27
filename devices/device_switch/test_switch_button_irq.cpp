@@ -24,13 +24,16 @@ StructSwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 1000,
 };
 
-std::map<ControlEvent, std::string> sw_button_events{
+std::map<ControlEvent, std::string> event_to_string{
     {ControlEvent::NOOP, "NOOP"},
     {ControlEvent::PUSH, "PUSH"},
+    {ControlEvent::DOUBLE_PUSH, "DOUBLE_PUSH"},
     {ControlEvent::LONG_PUSH, "LONG_PUSH"},
-    {ControlEvent::RELEASED_AFTER_SHORT_TIME, "RELEASED_AFTER_SHORT_TIME"},
     {ControlEvent::RELEASED_AFTER_LONG_TIME, "RELEASED_AFTER_LONG_TIME"},
-};
+    {ControlEvent::RELEASED_AFTER_SHORT_TIME, "RELEASED_AFTER_SHORT_TIME"},
+    {ControlEvent::INCREMENT, "INCREMENT"},
+    {ControlEvent::DECREMENT, "DECREMENT"},
+    {ControlEvent::TIME_OUT, "TIME_OUT"}};
 
 void sw_call_back(uint gpio, uint32_t event_mask);
 
@@ -46,7 +49,7 @@ void sw_call_back(uint gpio, uint32_t event_mask)
         ControlEvent sw_event = encoder_central_sw.process_IRQ_event(event_mask);
         if (sw_event != ControlEvent::NOOP)
         {
-            printf("Encoder central SW event(%s) mask(%d)\n", sw_button_events[sw_event].c_str(), event_mask);
+            printf("Encoder central SW event(%s) mask(%d)\n", event_to_string[sw_event].c_str(), event_mask);
         }
         else
         {
@@ -60,7 +63,7 @@ void sw_call_back(uint gpio, uint32_t event_mask)
         if (clk_event != ControlEvent::NOOP)
         {
             pr_D4.pulse_us(1); // actual IRQ received
-            printf("Encoder clk event(%s) mask(%d)\n", sw_button_events[clk_event].c_str(), event_mask);
+            printf("Encoder clk event(%s) mask(%d)\n", event_to_string[clk_event].c_str(), event_mask);
         }
         else
         {

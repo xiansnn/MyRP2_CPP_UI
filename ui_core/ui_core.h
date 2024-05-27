@@ -4,7 +4,8 @@
 #include "pico/stdlib.h"
 #include "framebuffer.h"
 #include <vector>
-#include <list>
+#include <map>
+#include <string>
 
 enum class ControlEvent
 {
@@ -35,8 +36,6 @@ struct StructWidgetConfig
     bool with_label{true};
     uint8_t anchor_x{0};
     uint8_t anchor_y{0};
-    // uint8_t start_x;
-    // uint8_t start_y;
     const unsigned char *font{nullptr};
 };
 
@@ -125,6 +124,7 @@ private:
     uint8_t widget_anchor_x;
     uint8_t widget_anchor_y;
     std::vector<UIWidget *> widgets;
+    UIModelObject *displayed_model{nullptr};
 
 protected:
     size_t widget_width{128};
@@ -132,7 +132,8 @@ protected:
     uint8_t widget_start_x;
     uint8_t widget_start_y;
     uint8_t widget_border_width;
-    UIModelObject *displayed_object{nullptr};
+    virtual void set_displayed_model(UIModelObject *_new_displayed_model);
+    void set_display_screen(UIDisplayDevice *_new_display_device);
     void draw_border();
     virtual void draw() = 0;
 
@@ -142,8 +143,6 @@ public:
              uint8_t _widget_anchor_x, uint8_t _widget_anchor_y, bool _widget_with_border, uint8_t _widget_border_width = 1,
              FramebufferFormat _framebuffer_format = FramebufferFormat::MONO_VLSB, StructFramebufferText _framebuffer_txt_cnf = {.font = font_8x8});
     ~UIWidget();
-    void set_displayed_object(UIModelObject *_new_displayed_object);
-    void set_display_screen(UIDisplayDevice *_new_display_device);
     void add_widget(UIWidget *_sub_widget);
     virtual void refresh();
     // virtual void draw_active() = 0; // TODO  a verifier si utile pour les instances de widget

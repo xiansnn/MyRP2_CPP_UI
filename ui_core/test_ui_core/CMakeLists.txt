@@ -1,3 +1,4 @@
+
 add_executable(test_controlled_value 
                 test_controlled_value.cpp
                 controlled_value.cpp
@@ -5,7 +6,7 @@ add_executable(test_controlled_value
 target_link_libraries(test_controlled_value 
                 pico_stdlib
                 rotary_encoder
-                widget_print_console
+                widget_print_serial_monitor
                 debug_probe
                 )
 pico_add_extra_outputs(test_controlled_value)

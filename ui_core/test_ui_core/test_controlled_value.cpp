@@ -1,6 +1,6 @@
 #include "controlled_value.h"
 #include "rotary_encoder.h"
-#include "widget_print_console.h"
+#include "widget_print_serial_monitor.h"
 #include <map>
 #include <string>
 
@@ -17,16 +17,7 @@ StructSwitchButtonConfig cfg_central_switch{
 StructSwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 5000};
 
-std::map<ControlEvent, std::string> translate_to_string{
-    {ControlEvent::NOOP, "NOOP"},
-    {ControlEvent::PUSH, "PUSH"},
-    {ControlEvent::DOUBLE_PUSH, "DOUBLE_PUSH"},
-    {ControlEvent::LONG_PUSH, "LONG_PUSH"},
-    {ControlEvent::RELEASED_AFTER_LONG_TIME, "RELEASED_AFTER_LONG_TIME"},
-    {ControlEvent::RELEASED_AFTER_SHORT_TIME, "RELEASED_AFTER_SHORT_TIME"},
-    {ControlEvent::INCREMENT, "INCREMENT"},
-    {ControlEvent::DECREMENT, "DECREMENT"},
-    {ControlEvent::TIME_OUT, "TIME_OUT"}};
+
 
 void shared_irq_call_back(uint gpio, uint32_t event_mask);
 RotaryEncoder encoder = RotaryEncoder(ENCODER_CLK_GPIO, ENCODER_DT_GPIO,
@@ -51,21 +42,17 @@ void shared_irq_call_back(uint gpio, uint32_t event_mask)
 int main()
 {
     stdio_init_all();
-    WTextSerialMonitor monitor = WTextSerialMonitor();
+    WTextSerialMonitor serial_monitor_console = WTextSerialMonitor();
     ControlledValue value_1 = ControlledValue("val1", 0, 5, true, 1);
     ControlledValue value_2 = ControlledValue("val2", 0, 10, false, 1);
     ControlledValue current_controlled_value = value_1;
     current_controlled_value.update_current_controller(&encoder);
-    monitor.set_displayed_object(&current_controlled_value);
-    std::string monitor_text;
+    serial_monitor_console.set_displayed_object(&current_controlled_value);
     while (true)
     {
         ControlEvent event = central_switch.process_sample_event();
         current_controlled_value.process_control_event(event);
-        monitor_text = "monitor: " + current_controlled_value.get_name() + ":" + std::to_string(current_controlled_value.get_value()) + "\n";
-
-        monitor.set_text_to_display(monitor_text);
-        monitor.refresh();
+        serial_monitor_console.refresh();
         sleep_ms(20);
     }
 

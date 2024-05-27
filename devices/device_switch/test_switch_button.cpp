@@ -14,13 +14,17 @@ StructSwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 1000,
 };
 
-std::map<ControlEvent, std::string> sw_button_events{
+std::map<ControlEvent, std::string> event_to_string{
     {ControlEvent::NOOP, "NOOP"},
     {ControlEvent::PUSH, "PUSH"},
+    {ControlEvent::DOUBLE_PUSH, "DOUBLE_PUSH"},
     {ControlEvent::LONG_PUSH, "LONG_PUSH"},
-    {ControlEvent::RELEASED_AFTER_SHORT_TIME, "RELEASED_AFTER_SHORT_TIME"},
     {ControlEvent::RELEASED_AFTER_LONG_TIME, "RELEASED_AFTER_LONG_TIME"},
-};
+    {ControlEvent::RELEASED_AFTER_SHORT_TIME, "RELEASED_AFTER_SHORT_TIME"},
+    {ControlEvent::INCREMENT, "INCREMENT"},
+    {ControlEvent::DECREMENT, "DECREMENT"},
+    {ControlEvent::TIME_OUT, "TIME_OUT"}};
+
 
 int main()
 {
@@ -32,10 +36,10 @@ int main()
     {
         ControlEvent sw_event = central_switch.process_sample_event();
         if (sw_event != ControlEvent::NOOP)
-            printf("SW event(%s)\n", sw_button_events[sw_event].c_str());
+            printf("SW event(%s)\n", event_to_string[sw_event].c_str());
         ControlEvent clk_event = encoder_clk.process_sample_event();
         if (clk_event != ControlEvent::NOOP)
-            printf("CLK event(%s)\n", sw_button_events[clk_event].c_str());
+            printf("CLK event(%s)\n", event_to_string[clk_event].c_str());
     }
 
     return 0;
