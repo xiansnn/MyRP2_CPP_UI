@@ -18,7 +18,7 @@ void WTextSerialMonitor::refresh()
     }
 }
 
-void WTextSerialMonitor::set_displayed_object(ControlledValue *_new_displayed_object)
+void WTextSerialMonitor::set_displayed_object(Test_ControlledValue *_new_displayed_object)
 {
     this->set_displayed_model(_new_displayed_object);
     this->actual_displayed_object = _new_displayed_object;
@@ -68,7 +68,7 @@ void WCursorOnSerialMonitor::refresh()
     }
 }
 
-void WCursorOnSerialMonitor::set_displayed_object(ControlledValue *_actual_displayed_object)
+void WCursorOnSerialMonitor::set_displayed_object(Test_ControlledValue *_actual_displayed_object)
 {
     this->set_displayed_model(_actual_displayed_object);
     this->actual_displayed_object = _actual_displayed_object;
