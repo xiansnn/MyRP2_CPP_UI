@@ -10,18 +10,18 @@
 class TestCursorWidgetWithIncrementalValue : public UIWidget
 {
 private:
-    float slope;
-    float offset;
+    float char_position_slope;
+    float char_position_offset;
     uint8_t max_line_width = 21;
+    int value_to_char_position();
 
     TestIncrementalValue *actual_displayed_object;
     void draw();
 
 public:
-    TestCursorWidgetWithIncrementalValue();
+    TestCursorWidgetWithIncrementalValue(TestIncrementalValue *_actual_displayed_object);
     ~TestCursorWidgetWithIncrementalValue();
     void refresh();
-    void set_displayed_object(TestIncrementalValue *_actual_displayed_object);
 };
 
 class TestObjectManagerWidget : public UIWidget
@@ -30,9 +30,8 @@ private:
     Test_Manager * actual_displayed_object;
     void draw();
 public:
-    TestObjectManagerWidget(/* args */);
+    TestObjectManagerWidget(Test_Manager* _manager);
     ~TestObjectManagerWidget();
-    void set_displayed_object(Test_Manager* _manager);
     void refresh();
 };
 

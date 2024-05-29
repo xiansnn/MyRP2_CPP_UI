@@ -1,9 +1,10 @@
 #include "test_manager.h"
 
-Test_Manager::Test_Manager()
+Test_Manager::Test_Manager(UIController * _controller)
     : UIObjectManager()
 {
     make_manager_active();
+    update_current_controller(_controller);
 }
 
 Test_Manager::~Test_Manager()

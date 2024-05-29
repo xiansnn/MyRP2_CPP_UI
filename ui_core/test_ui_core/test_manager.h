@@ -7,7 +7,7 @@ class Test_Manager : public UIObjectManager
 {
 private:
 public:
-    Test_Manager(/* args */);
+    Test_Manager(UIController * _controller);
     ~Test_Manager();
     void process_control_event(ControlEvent _event);
 };

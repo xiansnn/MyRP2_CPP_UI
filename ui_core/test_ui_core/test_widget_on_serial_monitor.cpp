@@ -2,13 +2,18 @@
 #include <sstream>
 
 std::map<ControlledObjectStatus, std::string> status_to_string{
-    {ControlledObjectStatus::WAITING, "WAITING"},
+    {ControlledObjectStatus::IS_WAITING, "IS_WAITING"},
     {ControlledObjectStatus::HAS_FOCUS, "HAS_FOCUS"},
     {ControlledObjectStatus::IS_ACTIVE, "IS_ACTIVE"}};
 
-TestCursorWidgetWithIncrementalValue::TestCursorWidgetWithIncrementalValue()
+TestCursorWidgetWithIncrementalValue::TestCursorWidgetWithIncrementalValue(TestIncrementalValue *_actual_displayed_object)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
+    this->set_displayed_model(_actual_displayed_object);
+    this->actual_displayed_object = _actual_displayed_object;
+
+    char_position_slope = (max_line_width - 1.) / (actual_displayed_object->get_max_value() - actual_displayed_object->get_min_value());
+    char_position_offset = 1 - char_position_slope * actual_displayed_object->get_min_value();
 }
 
 TestCursorWidgetWithIncrementalValue::~TestCursorWidgetWithIncrementalValue()
@@ -24,28 +29,26 @@ void TestCursorWidgetWithIncrementalValue::refresh()
     }
 }
 
-void TestCursorWidgetWithIncrementalValue::set_displayed_object(TestIncrementalValue *_actual_displayed_object)
+int TestCursorWidgetWithIncrementalValue::value_to_char_position()
 {
-    this->set_displayed_model(_actual_displayed_object);
-    this->actual_displayed_object = _actual_displayed_object;
-
-    slope = (max_line_width - 1.) / (actual_displayed_object->get_max_value() - actual_displayed_object->get_min_value());
-    offset = 1 - slope * actual_displayed_object->get_min_value();
+    return (char_position_slope * actual_displayed_object->get_value() + char_position_offset);
 }
 
 void TestCursorWidgetWithIncrementalValue::draw()
 {
-    int display_value = slope * actual_displayed_object->get_value() + offset;
     switch (actual_displayed_object->get_status())
     {
-    case ControlledObjectStatus::WAITING:
-        printf("[%s] is waiting with value[%d]\n", actual_displayed_object->get_name().c_str(), actual_displayed_object->get_value());
+    case ControlledObjectStatus::IS_WAITING:
+        printf("[%s] %s with value=%d\n",
+               actual_displayed_object->get_name().c_str(), status_to_string[actual_displayed_object->get_status()].c_str(), actual_displayed_object->get_value());
         break;
     case ControlledObjectStatus::HAS_FOCUS:
-        printf("Focus on [%s] with value[%d]\n", actual_displayed_object->get_name().c_str(), actual_displayed_object->get_value());
+        printf("[%s] %s with value=%d\n",
+               actual_displayed_object->get_name().c_str(), status_to_string[actual_displayed_object->get_status()].c_str(), actual_displayed_object->get_value());
         break;
     case ControlledObjectStatus::IS_ACTIVE:
-        printf("[%s] is active: %s %*c\n", actual_displayed_object->get_name().c_str(), std::to_string(actual_displayed_object->get_value()).c_str(), display_value, '|');
+        printf("[%s] %s with value= %d %*c\n",
+               actual_displayed_object->get_name().c_str(), status_to_string[actual_displayed_object->get_status()].c_str(), actual_displayed_object->get_value(), value_to_char_position(), '|');
         break;
     default:
         break;
@@ -54,23 +57,19 @@ void TestCursorWidgetWithIncrementalValue::draw()
 
 void TestObjectManagerWidget::draw()
 {
-    std::string text = "manager[" + status_to_string[actual_displayed_object->get_status()] + "] with value(" + std::to_string(actual_displayed_object->get_value()) + ")" + "\n";
+    std::string text = "manager " + status_to_string[actual_displayed_object->get_status()] + " with value=" + std::to_string(actual_displayed_object->get_value()) + "\n";
     printf(text.c_str());
 }
 
-TestObjectManagerWidget::TestObjectManagerWidget()
+TestObjectManagerWidget::TestObjectManagerWidget(Test_Manager *_manager)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
+    this->set_displayed_model(_manager);
+    this->actual_displayed_object = _manager;
 }
 
 TestObjectManagerWidget::~TestObjectManagerWidget()
 {
-}
-
-void TestObjectManagerWidget::set_displayed_object(Test_Manager *_manager)
-{
-    this->set_displayed_model(_manager);
-    this->actual_displayed_object = _manager;
 }
 
 void TestObjectManagerWidget::refresh()

@@ -4,10 +4,15 @@
 #include "test_widget_on_serial_monitor.h"
 #include <map>
 #include <string>
+#include "probe.h"
 
 #define CENTRAL_SWITCH_GPIO 6
 #define ENCODER_CLK_GPIO 26
 #define ENCODER_DT_GPIO 21
+
+Probe pr_D1 = Probe(1);
+Probe pr_D4 = Probe(4);
+Probe pr_D5 = Probe(5);
 
 StructSwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 5000,
@@ -26,6 +31,7 @@ SwitchButton central_switch = SwitchButton(CENTRAL_SWITCH_GPIO, cfg_central_swit
 
 void shared_irq_call_back(uint gpio, uint32_t event_mask)
 {
+    pr_D1.pulse_us(10);
     switch (gpio)
     {
     case ENCODER_CLK_GPIO:
@@ -40,34 +46,43 @@ void shared_irq_call_back(uint gpio, uint32_t event_mask)
 
 int main()
 {
+    pr_D1.hi();
     stdio_init_all();
-    Test_Manager manager = Test_Manager();
-    manager.update_current_controller(&encoder);
-
-    TestObjectManagerWidget manager_widget = TestObjectManagerWidget();
-    manager_widget.set_displayed_object(&manager);
-
 
     TestIncrementalValue value_0 = TestIncrementalValue("val0", 0, 5, true, 1);
+    TestIncrementalValue value_1 = TestIncrementalValue("val1", 0, 10, false, 1);
+    TestIncrementalValue value_2 = TestIncrementalValue("val2", -20, 3, false, 1);
+
+    TestCursorWidgetWithIncrementalValue value_0_widget = TestCursorWidgetWithIncrementalValue(&value_0);
+    TestCursorWidgetWithIncrementalValue value_1_widget = TestCursorWidgetWithIncrementalValue(&value_1);
+    TestCursorWidgetWithIncrementalValue value_2_widget = TestCursorWidgetWithIncrementalValue(&value_2);
+
+
+    Test_Manager manager = Test_Manager(&encoder);
+
+    TestObjectManagerWidget manager_widget = TestObjectManagerWidget(&manager);
+
+
+
     value_0.update_status(ControlledObjectStatus::HAS_FOCUS);
     manager.add_managed_model(&value_0);
-
-    TestCursorWidgetWithIncrementalValue value_0_widget = TestCursorWidgetWithIncrementalValue();
-    value_0_widget.set_displayed_object(&value_0);
-
-    TestIncrementalValue value_1 = TestIncrementalValue("val1", 0, 10, false, 1);
     manager.add_managed_model(&value_1);
+    manager.add_managed_model(&value_2);
 
-    TestCursorWidgetWithIncrementalValue value_1_widget = TestCursorWidgetWithIncrementalValue();
-    value_1_widget.set_displayed_object(&value_1);
+    pr_D1.lo();
+
 
     while (true)
     {
+        pr_D4.pulse_us(10);
         ControlEvent event = central_switch.process_sample_event();
         manager.process_control_event(event);
+        pr_D5.hi();
         manager_widget.refresh();
         value_0_widget.refresh();
         value_1_widget.refresh();
+        value_2_widget.refresh();
+        pr_D5.lo();
         sleep_ms(20);
     }
 

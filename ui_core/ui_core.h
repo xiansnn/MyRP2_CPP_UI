@@ -22,7 +22,7 @@ enum class ControlEvent
 
 enum class ControlledObjectStatus
 {
-    WAITING,
+    IS_WAITING,
     HAS_FOCUS,
     IS_ACTIVE
 };
@@ -55,8 +55,10 @@ class UIModelObject
 {
 private:
     bool change_flag{true};
-    ControlledObjectStatus status{ControlledObjectStatus::WAITING};
+    ControlledObjectStatus status{ControlledObjectStatus::IS_WAITING};
     UIController *current_controller{nullptr};
+
+protected:
 
 public:
     UIModelObject(/* args */);
@@ -64,8 +66,8 @@ public:
     bool has_changed();
     void set_change_flag();
     void clear_change_flag();
-    void update_current_controller(UIController *_new_controller);
     void update_status(ControlledObjectStatus _new_status);
+    void update_current_controller(UIController *_new_controller);
     ControlledObjectStatus get_status();
     virtual void process_control_event(ControlEvent _event) = 0;
 };
@@ -95,7 +97,7 @@ class UIObjectManager : public UIControlledIncrementalValue
 {
 protected:
     std::vector<UIModelObject *> managed_models;
-    UIModelObject* current_active_model;
+    UIModelObject *current_active_model;
     void make_managed_object_active();
     void make_manager_active();
     virtual void increment_focus();
@@ -147,8 +149,6 @@ public:
     ~UIWidget();
     void add_widget(UIWidget *_sub_widget);
     virtual void refresh();
-    // virtual void draw_active() = 0; // TODO  a verifier si utile pour les instances de widget
-    // virtual void draw_focus() = 0; // TODO  a verifier si utile pour les instances de widget
 };
 
 #endif // UI_CORE_H

@@ -135,7 +135,7 @@ void UIObjectManager::increment_focus()
     this->increment_value();
     if (value != previous_value)
     {
-        this->managed_models[previous_value]->update_status(ControlledObjectStatus::WAITING);
+        this->managed_models[previous_value]->update_status(ControlledObjectStatus::IS_WAITING);
         this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
     }
 }
@@ -146,7 +146,7 @@ void UIObjectManager::decrement_focus()
     this->decrement_value();
     if (value != previous_value)
     {
-        this->managed_models[previous_value]->update_status(ControlledObjectStatus::WAITING);
+        this->managed_models[previous_value]->update_status(ControlledObjectStatus::IS_WAITING);
         this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
     }
 }
@@ -155,7 +155,7 @@ void UIObjectManager::make_managed_object_active()
 {
     this->current_active_model = this->managed_models[this->value];
     this->current_active_model->update_status(ControlledObjectStatus::IS_ACTIVE);
-    update_status(ControlledObjectStatus::WAITING);
+    update_status(ControlledObjectStatus::IS_WAITING);
 }
 
 void UIObjectManager::make_manager_active()
