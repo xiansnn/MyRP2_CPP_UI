@@ -24,23 +24,6 @@ public:
     void set_displayed_object(TestIncrementalValue *_actual_displayed_object);
 };
 
-// class WCursorOnSerialMonitor : public UIWidget
-// {
-// private:
-//     float slope;
-//     float offset;
-//     uint8_t max_line_width = 21;
-
-//     TestIncrementalValue *actual_displayed_object;
-//     void draw();
-
-// public:
-//     WCursorOnSerialMonitor(/* args */);
-//     ~WCursorOnSerialMonitor();
-//     void refresh();
-//     void set_displayed_object(TestIncrementalValue *_actual_displayed_object);
-// };
-
 class TestObjectManagerWidget : public UIWidget
 {
 private:

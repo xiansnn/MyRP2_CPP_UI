@@ -6,7 +6,6 @@
 class Test_Manager : public UIObjectManager
 {
 private:
-    /* data */
 public:
     Test_Manager(/* args */);
     ~Test_Manager();

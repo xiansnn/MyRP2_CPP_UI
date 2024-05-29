@@ -1,4 +1,3 @@
-
 add_executable(test_ui_core 
                 test_ui_core.cpp
                 test_manager.cpp
