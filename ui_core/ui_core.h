@@ -56,8 +56,6 @@ class UIModelObject
 private:
     bool change_flag{true};
     ControlledObjectStatus status{ControlledObjectStatus::WAITING};
-
-protected:
     UIController *current_controller{nullptr};
 
 public:
@@ -95,16 +93,18 @@ public:
 
 class UIObjectManager : public UIControlledIncrementalValue
 {
-private:
-    std::vector<UIModelObject *> managed_objects;
+protected:
+    std::vector<UIModelObject *> managed_models;
+    UIModelObject* current_active_model;
+    void make_managed_object_active();
+    void make_manager_active();
+    virtual void increment_focus();
+    virtual void decrement_focus();
 
 public:
     UIObjectManager(/* args */);
     ~UIObjectManager();
-    void add_managed_object(UIModelObject *_new_object);
-    void increment_focus();
-    void decrement_focus();
-    void make_managed_object_active();
+    void add_managed_model(UIModelObject *_new_model);
 };
 
 class UIController

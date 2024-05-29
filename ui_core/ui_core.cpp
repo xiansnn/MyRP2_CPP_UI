@@ -56,6 +56,7 @@ void UIModelObject::set_change_flag()
 }
 
 UIControlledIncrementalValue::UIControlledIncrementalValue(int _min_value, int _max_value, bool _is_wrapable, int _increment)
+    : UIModelObject()
 {
     this->value = 0;
     this->min_value = _min_value;
@@ -114,16 +115,18 @@ int UIControlledIncrementalValue::get_max_value()
 UIObjectManager::UIObjectManager()
     : UIControlledIncrementalValue(0, 0, true, 1)
 {
+    update_status(ControlledObjectStatus::IS_ACTIVE);
+    current_active_model = this;
 }
 
 UIObjectManager::~UIObjectManager()
 {
 }
 
-void UIObjectManager::add_managed_object(UIModelObject *_new_object)
+void UIObjectManager::add_managed_model(UIModelObject *_new_model)
 {
-    this->managed_objects.push_back(_new_object);
-    this->max_value = managed_objects.size() - 1;
+    this->managed_models.push_back(_new_model);
+    this->max_value = managed_models.size() - 1;
 }
 
 void UIObjectManager::increment_focus()
@@ -132,8 +135,8 @@ void UIObjectManager::increment_focus()
     this->increment_value();
     if (value != previous_value)
     {
-        this->managed_objects[previous_value]->update_status(ControlledObjectStatus::WAITING);
-        this->managed_objects[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
+        this->managed_models[previous_value]->update_status(ControlledObjectStatus::WAITING);
+        this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
     }
 }
 
@@ -143,14 +146,28 @@ void UIObjectManager::decrement_focus()
     this->decrement_value();
     if (value != previous_value)
     {
-        this->managed_objects[previous_value]->update_status(ControlledObjectStatus::WAITING);
-        this->managed_objects[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
+        this->managed_models[previous_value]->update_status(ControlledObjectStatus::WAITING);
+        this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
     }
 }
 
 void UIObjectManager::make_managed_object_active()
 {
-    this->managed_objects[this->value]->update_status(ControlledObjectStatus::IS_ACTIVE);
+    this->current_active_model = this->managed_models[this->value];
+    this->current_active_model->update_status(ControlledObjectStatus::IS_ACTIVE);
+    update_status(ControlledObjectStatus::WAITING);
+}
+
+void UIObjectManager::make_manager_active()
+{
+    if (managed_models.size() != 0)
+    {
+        current_active_model->update_status(ControlledObjectStatus::HAS_FOCUS);
+        for (auto &&model : managed_models)
+            model->set_change_flag();
+    }
+    current_active_model = this;
+    update_status(ControlledObjectStatus::IS_ACTIVE);
 }
 
 UIController::UIController()
@@ -215,6 +232,7 @@ void UIWidget::add_widget(UIWidget *_sub_widget)
     this->widgets.push_back(_sub_widget);
 }
 
+/// @brief WARNING : this function can be redefined. When several widget displmay one Model, only le last one must clear_change_flag()
 void UIWidget::refresh()
 {
     if (widgets.size() != 0)
