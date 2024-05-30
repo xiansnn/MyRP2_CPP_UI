@@ -1,3 +1,13 @@
+/**
+ * @file test_ui_core.cpp
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "test_controlled_value.h"
 #include "test_manager.h"
 #include "rotary_encoder.h"

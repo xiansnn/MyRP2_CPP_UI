@@ -1,13 +1,12 @@
 /**
  * @file probe.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief A utility that can be used to show code behavior through pulse on gpio.
- * Very useful with a logic analyser.
+ * @brief 
  * @version 0.1
- * @date 2023-05-02
- *
- * @copyright Copyright (c) 2023
- *
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 #include "probe.h"
 #include "hardware/gpio.h"

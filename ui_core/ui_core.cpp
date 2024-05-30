@@ -1,3 +1,13 @@
+/**
+ * @file ui_core.cpp
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "ui_core.h"
 
 UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, StructFramebufferText txt_cnf)

@@ -1,3 +1,13 @@
+/**
+ * @file test_widget_on_serial_monitor.h
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #if !defined(WIDGET_PRINT_SERIAL_MONITOR_H)
 #define WIDGET_PRINT_SERIAL_MONITOR_H
 

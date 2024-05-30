@@ -1,3 +1,13 @@
+/**
+ * @file test_widget_on_serial_monitor.cpp
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "test_widget_on_serial_monitor.h"
 #include <sstream>
 

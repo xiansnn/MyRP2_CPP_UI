@@ -1,7 +1,23 @@
+/**
+ * @file switch_button.cpp
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief 
+ * @version 0.1
+ * @date 2024-05-30
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "switch_button.h"
 #include "hardware/gpio.h"
 #include "hardware/timer.h"
 
+/**
+ * @brief Construct a new Switch Button:: Switch Button object
+ * 
+ * @param gpio 
+ * @param conf 
+ */
 SwitchButton::SwitchButton(uint gpio, StructSwitchButtonConfig conf)
 {
     this->gpio = gpio;
