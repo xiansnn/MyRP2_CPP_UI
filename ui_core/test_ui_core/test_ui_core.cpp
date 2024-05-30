@@ -66,7 +66,7 @@ int main()
     TestCursorWidgetWithIncrementalValue value_0_widget = TestCursorWidgetWithIncrementalValue(&value_0);
     TestCursorWidgetWithIncrementalValue value_1_widget = TestCursorWidgetWithIncrementalValue(&value_1);
     TestCursorWidgetWithIncrementalValue value_2_widget = TestCursorWidgetWithIncrementalValue(&value_2);
-
+//TODO set of widget
 
     Test_Manager manager = Test_Manager(&encoder);
 
