@@ -1,4 +1,0 @@
-var dir_15ac1794788e87348dc5120387dc4163 =
-[
-    [ "pico", "dir_20399f4cc941b9e42bd228133e9ff304.html", "dir_20399f4cc941b9e42bd228133e9ff304" ]
-];
