@@ -1,12 +1,12 @@
 /**
  * @file test_ui_core.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-30
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #include "test_controlled_value.h"
 #include "test_manager.h"
@@ -66,13 +66,17 @@ int main()
     TestCursorWidgetWithIncrementalValue value_0_widget = TestCursorWidgetWithIncrementalValue(&value_0);
     TestCursorWidgetWithIncrementalValue value_1_widget = TestCursorWidgetWithIncrementalValue(&value_1);
     TestCursorWidgetWithIncrementalValue value_2_widget = TestCursorWidgetWithIncrementalValue(&value_2);
-//TODO set of widget
 
     Test_Manager manager = Test_Manager(&encoder);
 
     TestObjectManagerWidget manager_widget = TestObjectManagerWidget(&manager);
 
-
+    TestSetOfWidget set_of_widget = TestSetOfWidget();
+    set_of_widget.add_widget(&manager_widget);
+    set_of_widget.add_widget(&value_0_widget);
+    set_of_widget.add_widget(&value_1_widget);
+    set_of_widget.add_widget(&value_2_widget);
+     
 
     value_0.update_status(ControlledObjectStatus::HAS_FOCUS);
     manager.add_managed_model(&value_0);
@@ -81,21 +85,16 @@ int main()
 
     pr_D1.lo();
 
-
     while (true)
     {
         pr_D4.pulse_us(10);
         ControlEvent event = central_switch.process_sample_event();
         manager.process_control_event(event);
         pr_D5.hi();
-        manager_widget.refresh();
-        value_0_widget.refresh();
-        value_1_widget.refresh();
-        value_2_widget.refresh();
+        set_of_widget.refresh();
         pr_D5.lo();
         sleep_ms(20);
     }
 
     return 0;
 }
-

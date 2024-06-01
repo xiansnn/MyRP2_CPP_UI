@@ -1,12 +1,12 @@
 /**
  * @file ui_core.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-30
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #include "ui_core.h"
 
@@ -242,7 +242,7 @@ void UIWidget::add_widget(UIWidget *_sub_widget)
     this->widgets.push_back(_sub_widget);
 }
 
-/// @brief WARNING : this function can be redefined. When several widget displmay one Model, only le last one must clear_change_flag()
+/// @brief WARNING : this function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
 void UIWidget::refresh()
 {
     if (widgets.size() != 0)
@@ -250,7 +250,7 @@ void UIWidget::refresh()
         for (auto &&w : widgets)
             w->refresh();
     }
-    if (this->displayed_model->has_changed())
+    if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
     {
         draw();
         if (widget_with_border)

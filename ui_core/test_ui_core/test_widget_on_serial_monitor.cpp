@@ -90,3 +90,16 @@ void TestObjectManagerWidget::refresh()
         this->actual_displayed_object->clear_change_flag();
     }
 }
+
+void TestSetOfWidget::draw()
+{
+}
+
+TestSetOfWidget::TestSetOfWidget()
+    : UIWidget(nullptr, 128, 8, 0, 0, false)
+{
+}
+
+TestSetOfWidget::~TestSetOfWidget()
+{
+}

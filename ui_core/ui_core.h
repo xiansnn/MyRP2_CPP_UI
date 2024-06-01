@@ -220,6 +220,11 @@ protected:
      */
     int max_value;
     /**
+     * @brief 
+     * 
+     */
+    int min_value;
+    /**
      * @brief
      *
      */
@@ -382,6 +387,11 @@ private:
      * 
      */
     UIDisplayDevice *display_screen{nullptr};
+    /**
+     * @brief 
+     * 
+     */
+    UIModelObject * displayed_model{nullptr};
     /**
      * @brief 
      * 

@@ -45,4 +45,16 @@ public:
     void refresh();
 };
 
+class TestSetOfWidget : public UIWidget
+{
+private:
+    /* data */
+    void draw();
+public:
+    TestSetOfWidget(/* args */);
+    ~TestSetOfWidget();
+};
+
+
+
 #endif // WIDGET_PRINT_SERIAL_MONITOR_H
