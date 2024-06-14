@@ -3,7 +3,7 @@ This repository proposes a User Interface alternative version for RPi Pico.
 All the classes defined here rely on the RPi Pico SDK version 1.5.1
 
 ## Complete documentation
-[the complete doc under construction can be found here](docs\html\index.html)
+[this is the doc under construction](docs\html\index.html)
 
 ## Motivation
 
