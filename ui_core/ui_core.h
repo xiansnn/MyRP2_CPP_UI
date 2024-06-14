@@ -18,7 +18,8 @@
 #include <string>
 
 /**
- * @brief
+ * @brief The list of predefined event that a Controller can send to the controlled object, leaving it the responsibility
+ * to act as required by its specification.
  *
  */
 enum class ControlEvent
@@ -35,59 +36,38 @@ enum class ControlEvent
 };
 
 /**
- * @brief
+ * @brief The list of status that a model can have.
  *
  */
 enum class ControlledObjectStatus
 {
-    IS_WAITING,
-    HAS_FOCUS,
-    IS_ACTIVE
+    IS_WAITING, // nothing to do
+    HAS_FOCUS, // the widget or object manager is pointing to this model
+    IS_ACTIVE // the user has selected (clicked) on this model. CtrolEvent are then passed to this model in order to be processed.
 };
 
 /**
- * @brief can be useful for keep memory of widget configuration
+ * @brief Can be useful for keep memory of widget configuration and share it.
+ *  The structure reflects the memebers of UIWidget class
  *
  */
 struct StructWidgetConfig
 {
-    /**
-     * @brief 
-     * 
-     */
     size_t width{128};
     size_t height{8};
-    /**
-     * @brief 
-     * 
-     */
     bool with_border{true};
-    /**
-     * @brief 
-     * 
-     */
     bool with_label{true};
-    /**
-     * @brief 
-     * 
-     */
     uint8_t anchor_x{0};
-    /**
-     * @brief 
-     * 
-     */
     uint8_t anchor_y{0};
-    /**
-     * @brief 
-     * 
-     */
     const unsigned char *font{nullptr};
 };
 
 class UIController;
 
 /**
- * @brief
+ * @brief This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen SSD1306).
+ * It derived from Framebuffer. This allows to draw text and graphics directly into the display framebuffer 
+ * thanks to Framebuffet class text and graphic primitives indepently from any kind of widget
  *
  */
 class UIDisplayDevice : public Framebuffer
@@ -97,10 +77,10 @@ public:
     /**
      * @brief Construct a new UIDisplayDevice object
      *
-     * @param width
-     * @param height
-     * @param format
-     * @param txt_cnf
+     * @param width The width of physical screen, in pixel.
+     * @param height The height of physical screen, in pixel.
+     * @param format The framebuffer format ... see Framebuffer class FramebufferFormat enumeration
+     * @param txt_cnf A structure of datga that reflect the framebuffer member related to text primitives
      */
     UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, StructFramebufferText txt_cnf = {.font = font_8x8});
     /**
@@ -109,39 +89,44 @@ public:
      */
     virtual ~UIDisplayDevice();
     /**
-     * @brief
+     * @brief This is an pure virtual member function that all final derived class must implement.
+     * It transfers the framebuffer buffer to the entire display screen buffer.
      *
      */
     virtual void show() = 0;
     /**
-     * @brief
+     * @brief This is an pure virtual member function that all final derived class must implement.
+     * It transfers the framebuffer buffer to the a part of display screen buffer starting at the (anchor_x, anchor_y) coordinates of the screen , expressed in pixel.
      *
-     * @param frame
-     * @param anchor_x
-     * @param anchor_y
+     * @param frame a pointer to the frame to be displayed
+     * @param anchor_x the x (horizontal)starting position of the frame within the display screen, (in pixel)
+     * @param anchor_y the y (vertical) starting position of the frame within the display screen, (in pixel)
      */
     virtual void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y) = 0;
 };
 
 /**
- * @brief
+ * @brief This is the Model abstract class of Model_View_Control design pattern.
+ * It handles change_flag, a semaphore used to indicate that a screen refresh is required.
+ * the controller or any other entities that modify the model must set the change_flag 
+ * and the widget in charge of its screen representation must clear the chang_flag
  *
  */
 class UIModelObject
 {
 private:
     /**
-     * @brief
+     * @brief The semaphore used to trigger the actual drawing of the widget on the screen.
      *
      */
     bool change_flag{true};
     /**
-     * @brief
+     * @brief The status of the model, indicating if it is waiting, active or just ahs focus (pointed by the object manager)
      *
      */
     ControlledObjectStatus status{ControlledObjectStatus::IS_WAITING};
     /**
-     * @brief
+     * @brief A point er to the controller of this model.
      *
      */
     UIController *current_controller{nullptr};
@@ -149,7 +134,7 @@ private:
 protected:
 public:
     /**
-     * @brief
+     * @brief Construct the UIModelObject object
      *
      */
     UIModelObject(/* args */);
@@ -161,28 +146,29 @@ public:
     /**
      * @brief
      *
-     * @return true
-     * @return false
+     * @return true means the redraw is required
+     * @return false means the model is unchanged
      */
     bool has_changed();
     /**
-     * @brief Set the change flag object
+     * @brief Set the change flag object to true
      *
      */
     void set_change_flag();
     /**
-     * @brief
+     * @brief Set the change flag object to false
      *
      */
     void clear_change_flag();
     /**
-     * @brief
+     * @brief Propose a _new_status for the model. If this _new_status is different from the present one, 
+     * then the change is effective and the change_flag is set to true.
      *
      * @param _new_status
      */
     void update_status(ControlledObjectStatus _new_status);
     /**
-     * @brief
+     * @brief 
      *
      * @param _new_controller
      */
@@ -502,7 +488,7 @@ public:
      */
     void add_widget(UIWidget *_sub_widget);
     /**
-     * @brief 
+     * @brief WARNING : this function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
      * 
      */
     virtual void refresh();

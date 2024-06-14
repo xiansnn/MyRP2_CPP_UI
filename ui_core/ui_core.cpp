@@ -1,13 +1,3 @@
-/**
- * @file ui_core.cpp
- * @author xiansnn (xiansnn@hotmail.com)
- * @brief
- * @version 0.1
- * @date 2024-05-30
- *
- * @copyright Copyright (c) 2024
- *
- */
 #include "ui_core.h"
 
 UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, StructFramebufferText txt_cnf)
@@ -39,7 +29,7 @@ void UIModelObject::clear_change_flag()
 
 void UIModelObject::update_current_controller(UIController *_new_controller)
 {
-    if (this->current_controller != _new_controller)
+    if (this->current_controller != _new_controller) // to avoid deadlock with recursive callback
     {
         this->current_controller = _new_controller;
         this->current_controller->update_current_controlled_object(this);
@@ -143,7 +133,7 @@ void UIObjectManager::increment_focus()
 {
     int previous_value = value;
     this->increment_value();
-    if (value != previous_value)
+    if (value != previous_value) // action takes place only when the value changes
     {
         this->managed_models[previous_value]->update_status(ControlledObjectStatus::IS_WAITING);
         this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
@@ -154,7 +144,7 @@ void UIObjectManager::decrement_focus()
 {
     int previous_value = value;
     this->decrement_value();
-    if (value != previous_value)
+    if (value != previous_value) // action takes place only when the value changes
     {
         this->managed_models[previous_value]->update_status(ControlledObjectStatus::IS_WAITING);
         this->managed_models[this->value]->update_status(ControlledObjectStatus::HAS_FOCUS);
@@ -242,20 +232,28 @@ void UIWidget::add_widget(UIWidget *_sub_widget)
     this->widgets.push_back(_sub_widget);
 }
 
-/// @brief WARNING : this function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
 void UIWidget::refresh()
 {
+    /**
+     * @brief First: Scan all contained sub-widgets if any and call refresh() member function of each of them.
+     * 
+     */
     if (widgets.size() != 0)
     {
         for (auto &&w : widgets)
             w->refresh();
     }
+    /**
+     * @brief Then: apply refresh() on the containing widget if any changes require a screen redraw
+     * and finally : clear model change flag
+     * 
+     */
     if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
     {
         draw();
         if (widget_with_border)
             draw_border();
         this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-        this->displayed_model->clear_change_flag();
+        this->displayed_model->clear_change_flag(); 
     }
 }

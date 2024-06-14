@@ -12,8 +12,16 @@
 #include "pico/time.h"
 
 
+/**
+ * @brief this test program generates a signal pulse on each probe channel indefinitely.
+ * 
+ * @return int 
+ */
 int main()
 {
+    /**
+     * @brief Initialisation of a set of Probe, one for each channel.
+     */
 
     Probe p0 = Probe(0);
     Probe p1 = Probe(1);
@@ -26,8 +34,16 @@ int main()
 
     Probe *probes[] = {&p0, &p1, &p2, &p3, &p4, &p5, &p6, &p7};
 
+    /**
+     * @brief run an infinite loop.
+     * 
+     */
     while (true)
     {
+        /**
+         * @brief Scan each channel and generate a pulse on the corresponding GPIO.
+         * 
+         */
         for (size_t i = 0; i < 8; i++)
         {
             sleep_us(100);

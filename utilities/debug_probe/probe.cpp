@@ -1,54 +1,33 @@
-/**
- * @file probe.cpp
- * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
- * @version 0.1
- * @date 2024-05-30
- * 
- * @copyright Copyright (c) 2024
- * 
- */
 #include "probe.h"
 #include "hardware/gpio.h"
 
-/**
- * @brief Construct a new Probe:: Probe object
- *
- * @param channel_ this is the channel number of the logic analyser
- */
-Probe::Probe(uint channel_)
+Probe::Probe(uint _channel)
 {
-    this->_gpio = Probe::_channel_map[channel_];
+    /* initialisation of the probe instance
+    */
+    this->_gpio = Probe::_channel_map[_channel];
     gpio_init(this->_gpio);
     gpio_set_dir(this->_gpio, GPIO_OUT);
 }
 
-/**
- * @brief send a HI level on the corresponding gpio
- *
- */
 void Probe::hi()
 {
     gpio_put(this->_gpio, 1);
 }
 
-/**
- * @brief send a LO level on the corresponding gpio
- *
- */
 void Probe::lo()
 {
     gpio_put(this->_gpio, 0);
 }
 
-void Probe::pulse_us(uint duration)
+void Probe::pulse_us(uint _duration)
 {
     hi();
-    busy_wait_us(duration);
+    busy_wait_us(_duration);
     lo();
 }
 
-void Probe::copy(bool value)
+void Probe::copy(bool _value)
 {
-    gpio_put(this->_gpio, value);
+    gpio_put(this->_gpio, _value);
 }
