@@ -5,7 +5,7 @@ All the classes defined here rely on the RPi Pico SDK version 1.5.1
 ## Complete documentation (still in construction)
 Access to the the project web page with external browser [here](https://xiansnn.github.io/MyRP2_CPP_UI/).
 
-Once open with browser, you will find doxygen documentation [here](docs\html\index.html)
+Once open with browser, you will find doxygen documentation [here](docs/html/index.html)
 
 
 ## Motivation
