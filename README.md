@@ -2,8 +2,10 @@
 This repository proposes a User Interface alternative version for RPi Pico.
 All the classes defined here rely on the RPi Pico SDK version 1.5.1
 
-## Complete documentation
-[this is the doc under construction](docs\html\index.html)
+## Complete documentation (still in construction)
+Access to the the project web page with external browser [here](https://xiansnn.github.io/MyRP2_CPP_UI/)
+Once open with browser, you will find doxygen documentation [here](docs\html\index.html)
+
 
 ## Motivation
 
