@@ -35,7 +35,8 @@ private:
 
 public:
     /**
-     * @brief Construct a new Probe object
+     * @brief Construct a new Probe object.
+     * 
      * The Probe provides a convenient class that can be used to observe behavior of programs.
      * It may be used with a logical analyser. The one used here has eight channel, numbered from 0 to 7.
      *

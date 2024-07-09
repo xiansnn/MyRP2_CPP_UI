@@ -1,7 +1,13 @@
 /**
  * @file test_ui_core.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief
+ * @brief This is the main test program of the UI_core.
+ * 
+ * It consists in simulating 3 controlled incremental values, a display widget on the serial monitor and and a rotary encoder as control device, 
+ * and a View/Control Manager.
+ * 
+ * If the manager IS_ACTIVE, rotating the encoder changes the focus, a short click on the encoder central switch, makes IS_ACIVE the current controlled value with focus.
+ * Rotating the encoder changes now the value of the controlledIncrementalValue. A short click, now, validates the value and pass the control to the manager.
  * @version 0.1
  * @date 2024-05-30
  *
