@@ -131,17 +131,74 @@ public:
      */
     ~Framebuffer();
 
-    /**  graphic primitives*/
+    /**
+     * @brief Fill the pixel_buffer with "0" (BLACK). Reset also character position to (0,0).
+     */
     void clear_pixel_buffer();
+    /**
+     * @brief Write all framebuffer memory with "0" (or "1") if color c is BLACK (resp. WHITE).
+     * 
+     * Only format MONO_VLSB is implemented.
+     * 
+     * @param c FramebufferColor
+     */
     void fill(FramebufferColor c);
+    /**
+     * @brief  Draw a c color horizontal line, starting at frame position (x,y), on w number of pixel.
+     * 
+     * @param x   horizontal start of line 
+     * @param y   vertical start of line
+     * @param w   length of the line in number of pixel
+     * @param c   color of the line, default to WHITE
+     */
     void hline(uint8_t x, uint8_t y, size_t w, FramebufferColor c = FramebufferColor::WHITE);
+    /**
+     * @brief  Draw a c color vertical line, starting at frame position (x,y), on w number of pixel.
+     * 
+     * @param x   horizontal start of line 
+     * @param y   vertical start of line
+     * @param h   length of the line in number of pixel
+     * @param c   color of the line, default to WHITE
+     */
     void vline(uint8_t x, uint8_t y, size_t h, FramebufferColor c = FramebufferColor::WHITE);
+    /**
+     * @brief   Draw a c color line, starting at frame position (x1,y1), ending at frame position (x2,y2)
+     * 
+     * @param x1   horizontal start of line
+     * @param y1   vertical start of line
+     * @param x2   horizontal end of line
+     * @param y2   vertical end of line
+     * @param c   color of the line, default to WHITE
+     */
     void line(int x1, int y1, int x2, int y2, FramebufferColor c = FramebufferColor::WHITE);
+    /**
+     * @brief   Draw a rectangle, starting at frame position (x,y), w wide and h high
+     * 
+     * @param x   horizontal start of the rectangle
+     * @param y   vertical start of the rectangle
+     * @param w   number of pixel of the rectangle width 
+     * @param h   number of pixel of the rectangle height
+     * @param fill if true, the rectangle is filled with color c
+     * @param c color of the border of the rectangle, default to WHITE
+     */
     void rect(uint8_t x, uint8_t y, size_t w, size_t h, bool fill = false, FramebufferColor c = FramebufferColor::WHITE);
+    /**
+     * @brief draw a cercle of size radius, centered at (x_center, y_center)
+     * 
+     * @param radius   radius, in pixel, of the circle
+     * @param x_center   horizontal position of the center of the cercle
+     * @param y_center   vertical position of the center on the cercle
+     * @param fill   if true, the circle is filled with color c
+     * @param c   color of the border of the circle, default to WHITE
+     */
     void circle(int radius, int x_center, int y_center, bool fill = false, FramebufferColor c = FramebufferColor::WHITE);
 
-    /** textual primitives*/
-    void init_text_buffer(StructFramebufferText device_config);
+    /**
+     * @brief 
+     * 
+     * @param frame_text_config 
+     */
+    void init_text_buffer(StructFramebufferText frame_text_config);
     void clear_text_buffer();
     void set_font(const unsigned char *font);
     void print_text();
