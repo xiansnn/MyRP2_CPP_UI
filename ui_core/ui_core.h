@@ -46,21 +46,6 @@ enum class ControlledObjectStatus
     IS_ACTIVE // the user has selected (clicked) on this model. CtrolEvent are then passed to this model in order to be processed.
 };
 
-/**
- * @brief Can be useful for keep memory of widget configuration and share it.
- *  The structure reflects the memebers of UIWidget class
- *
- */
-struct StructWidgetConfig
-{
-    size_t width{128};
-    size_t height{8};
-    bool with_border{true};
-    bool with_label{true};
-    uint8_t anchor_x{0};
-    uint8_t anchor_y{0};
-    const unsigned char *font{nullptr};
-};
 
 class UIController;
 
@@ -473,9 +458,16 @@ public:
      * @param _framebuffer_format 
      * @param _framebuffer_txt_cnf 
      */
-    UIWidget(UIDisplayDevice *_display_screen, size_t _frame_width, size_t _frame_height,
-             uint8_t _widget_anchor_x, uint8_t _widget_anchor_y, bool _widget_with_border, uint8_t _widget_border_width = 1,
-             FramebufferFormat _framebuffer_format = FramebufferFormat::MONO_VLSB, StructFramebufferText _framebuffer_txt_cnf = {.font = font_8x8});
+    UIWidget(UIDisplayDevice *_display_screen, 
+                size_t _frame_width,
+                size_t _frame_height,
+                uint8_t _widget_anchor_x, 
+                uint8_t _widget_anchor_y, 
+                bool _widget_with_border, 
+                uint8_t _widget_border_width = 1,
+                FramebufferFormat _framebuffer_format = FramebufferFormat::MONO_VLSB, 
+                StructFramebufferText _framebuffer_txt_cnf = {.font = font_8x8}
+                );
     /**
      * @brief Destroy the UIWidget object
      * 

@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['files_20organisation_0',['Files organisation',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md4',1,'']]],
-  ['framebuffer_1',['Framebuffer',['../class_framebuffer.html',1,'']]],
-  ['framebuffer_2ecpp_2',['framebuffer.cpp',['../framebuffer_8cpp.html',1,'']]],
-  ['framebuffer_2eh_3',['framebuffer.h',['../framebuffer_8h.html',1,'']]]
+  ['fg_5fcolor_0',['fg_color',['../struct_struct_framebuffer_text.html#addd57ada13f684e04a1ac84c60d089a6',1,'StructFramebufferText']]],
+  ['files_20organisation_1',['Files organisation',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md4',1,'']]],
+  ['font_2',['font',['../struct_struct_framebuffer_text.html#aa322a812c7ad59f9fda0384e641cf059',1,'StructFramebufferText']]],
+  ['framebuffer_3',['Framebuffer',['../class_framebuffer.html',1,'Framebuffer'],['../class_framebuffer.html#a25c9cadebb3531112c5085e981962407',1,'Framebuffer::Framebuffer()']]],
+  ['framebuffer_2ecpp_4',['framebuffer.cpp',['../framebuffer_8cpp.html',1,'']]],
+  ['framebuffer_2eh_5',['framebuffer.h',['../framebuffer_8h.html',1,'']]]
 ];

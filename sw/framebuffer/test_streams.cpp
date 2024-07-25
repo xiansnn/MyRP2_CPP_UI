@@ -51,7 +51,7 @@ void test_ostringstream_format(SSD1306 *display)
     StructFramebufferText txt_conf = {
         .font = current_font,
         .wrap = false};
-    display->set_text_config(txt_conf);
+    display->init_text_buffer(txt_conf);
 
     int n = 42;
     float f = std::numbers::pi;
@@ -100,7 +100,7 @@ void test_sprintf_format(SSD1306 *display)
     StructFramebufferText cfg_fb_txt = {
         .font = font_8x8,
         .wrap = false};
-    display->set_text_config(cfg_fb_txt);
+    display->init_text_buffer(cfg_fb_txt);
 
     const char *s = "Hello";
 
@@ -250,8 +250,8 @@ void test_text_and_graph(SSD1306 *display)
     int title_area_anchor_x = 0;
     int title_area_anchor_y = h * 6;
 
-    Framebuffer title = Framebuffer(title_area_width, title_area_height, FramebufferFormat::MONO_VLSB);
-    title.set_text_config(title_config);
+    Framebuffer title = Framebuffer(title_area_width, title_area_height);
+    title.init_text_buffer(title_config);
     title.print_text("ROLL:\nPITCH:");
     display->show(&title, title_area_anchor_x, title_area_anchor_y);
 
@@ -260,7 +260,7 @@ void test_text_and_graph(SSD1306 *display)
     int values_area_anchor_y = h * 6;
     int values_area_width = w * 8;
     int values_area_height = h * 2;
-    Framebuffer values = Framebuffer(values_area_width, values_area_height, FramebufferFormat::MONO_VLSB);
+    Framebuffer values = Framebuffer(values_area_width, values_area_height);
     values.set_font(font_8x8);
 
     // draw graph
@@ -269,7 +269,7 @@ void test_text_and_graph(SSD1306 *display)
     int graph_area_width = w * 12;
     int graph_area_height = h * 5;
 
-    Framebuffer graph = Framebuffer(graph_area_width, graph_area_height, FramebufferFormat::MONO_VLSB);
+    Framebuffer graph = Framebuffer(graph_area_width, graph_area_height);
     graph.fill(FramebufferColor::BLACK);
     display->show(&graph, graph_area_anchor_x, graph_area_anchor_y);
 
@@ -348,7 +348,7 @@ void test_full_screen_text(SSD1306 *display)
         .font = font_8x8,
         .wrap = true,
     };
-    display->set_text_config(txt_conf);
+    display->init_text_buffer(txt_conf);
 
     display->print_char(FORM_FEED);
     uint16_t nb = display->max_column * display->max_line;
@@ -373,7 +373,7 @@ void test_auto_next_char(SSD1306 *display)
         .font = font_8x8,
         .wrap = true,
         .auto_next_char = false};
-    display->set_text_config(txt_conf);
+    display->init_text_buffer(txt_conf);
     display->print_char(FORM_FEED);
 
     uint16_t n{0};

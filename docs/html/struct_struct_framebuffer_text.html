@@ -102,29 +102,42 @@ $(function(){initNavTree('struct_struct_framebuffer_text.html',''); initResizabl
   <div class="headertitle"><div class="title">StructFramebufferText Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Data structure that holds all configuration parameters used by textual primitives.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="framebuffer_8h_source.html">framebuffer.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aa322a812c7ad59f9fda0384e641cf059" id="r_aa322a812c7ad59f9fda0384e641cf059"><td class="memItemLeft" align="right" valign="top"><a id="aa322a812c7ad59f9fda0384e641cf059" name="aa322a812c7ad59f9fda0384e641cf059"></a>
 const unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>font</b> {nullptr}</td></tr>
+<tr class="memdesc:aa322a812c7ad59f9fda0384e641cf059"><td class="mdescLeft">&#160;</td><td class="mdescRight">The font used. Current font are defined according to IBM CP437. The font files are derived from <a href="https://github.com/Harbys/pico-ssd1306">https://github.com/Harbys/pico-ssd1306</a> works. They come is size 5x8, 8x8, 12x16 and 16x32. <br /></td></tr>
 <tr class="separator:aa322a812c7ad59f9fda0384e641cf059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38eee6376d7aec3f021084781cf08c86" id="r_a38eee6376d7aec3f021084781cf08c86"><td class="memItemLeft" align="right" valign="top"><a id="a38eee6376d7aec3f021084781cf08c86" name="a38eee6376d7aec3f021084781cf08c86"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>tab_size</b> {2}</td></tr>
+<tr class="memdesc:a38eee6376d7aec3f021084781cf08c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of space that ASCII character HT (aka TAB , "\t", 0x9) generates, default to 2. <br /></td></tr>
 <tr class="separator:a38eee6376d7aec3f021084781cf08c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:addd57ada13f684e04a1ac84c60d089a6" id="r_addd57ada13f684e04a1ac84c60d089a6"><td class="memItemLeft" align="right" valign="top"><a id="addd57ada13f684e04a1ac84c60d089a6" name="addd57ada13f684e04a1ac84c60d089a6"></a>
 FramebufferColor&#160;</td><td class="memItemRight" valign="bottom"><b>fg_color</b> {FramebufferColor::WHITE}</td></tr>
+<tr class="memdesc:addd57ada13f684e04a1ac84c60d089a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">The foreground color, default to WHITE. <br /></td></tr>
 <tr class="separator:addd57ada13f684e04a1ac84c60d089a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60db00dfe24e812b194c087393536a30" id="r_a60db00dfe24e812b194c087393536a30"><td class="memItemLeft" align="right" valign="top"><a id="a60db00dfe24e812b194c087393536a30" name="a60db00dfe24e812b194c087393536a30"></a>
 FramebufferColor&#160;</td><td class="memItemRight" valign="bottom"><b>bg_color</b> {FramebufferColor::BLACK}</td></tr>
+<tr class="memdesc:a60db00dfe24e812b194c087393536a30"><td class="mdescLeft">&#160;</td><td class="mdescRight">The background color, defaul to BLACK. <br /></td></tr>
 <tr class="separator:a60db00dfe24e812b194c087393536a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff77c5461443c7f9cd53126bbd056b0" id="r_a3ff77c5461443c7f9cd53126bbd056b0"><td class="memItemLeft" align="right" valign="top"><a id="a3ff77c5461443c7f9cd53126bbd056b0" name="a3ff77c5461443c7f9cd53126bbd056b0"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>wrap</b> {true}</td></tr>
+<tr class="memdesc:a3ff77c5461443c7f9cd53126bbd056b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrap flag : if true, text wrap to the next line when end of line is reached. <br /></td></tr>
 <tr class="separator:a3ff77c5461443c7f9cd53126bbd056b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a664704237eafaed5ff1fb58e85b01acd" id="r_a664704237eafaed5ff1fb58e85b01acd"><td class="memItemLeft" align="right" valign="top"><a id="a664704237eafaed5ff1fb58e85b01acd" name="a664704237eafaed5ff1fb58e85b01acd"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>auto_next_char</b> {true}</td></tr>
+<tr class="memdesc:a664704237eafaed5ff1fb58e85b01acd"><td class="mdescLeft">&#160;</td><td class="mdescRight">auto_next_char flag : if true each char steps one position after being written. <br /></td></tr>
 <tr class="separator:a664704237eafaed5ff1fb58e85b01acd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Data structure that holds all configuration parameters used by textual primitives. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/framebuffer/<a class="el" href="framebuffer_8h_source.html">framebuffer.h</a></li>
 </ul>
 </div><!-- contents -->

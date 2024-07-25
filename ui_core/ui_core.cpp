@@ -1,7 +1,7 @@
 #include "ui_core.h"
 
 UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, StructFramebufferText txt_cnf)
-    : Framebuffer(width, height, format, txt_cnf)
+    : Framebuffer(width, height, format)
 {
 }
 
@@ -197,9 +197,16 @@ FramebufferColor UIWidget::blinking_us(uint32_t _blink_period)
     return ((time_us_32() / _blink_period) % 2) ? FramebufferColor::WHITE : FramebufferColor::BLACK;
 }
 
-UIWidget::UIWidget(UIDisplayDevice *_display_screen, size_t _frame_width, size_t _frame_height, uint8_t _widget_anchor_x, uint8_t _widget_anchor_y, bool _widget_with_border,
-                   uint8_t _widget_border_width, FramebufferFormat _framebuffer_format, StructFramebufferText _framebuffer_txt_cnf)
-    : Framebuffer(_frame_width, _frame_height, _framebuffer_format, _framebuffer_txt_cnf)
+UIWidget::UIWidget( UIDisplayDevice *_display_screen, 
+                    size_t _frame_width, 
+                    size_t _frame_height, 
+                    uint8_t _widget_anchor_x, 
+                    uint8_t _widget_anchor_y, 
+                    bool _widget_with_border,
+                    uint8_t _widget_border_width, 
+                    FramebufferFormat _framebuffer_format, 
+                    StructFramebufferText _framebuffer_txt_cnf)
+    : Framebuffer(_frame_width, _frame_height, _framebuffer_format)
 {
     this->display_screen = _display_screen;
     this->widget_anchor_x = _widget_anchor_x;
@@ -236,7 +243,7 @@ void UIWidget::refresh()
 {
     /**
      * @brief First: Scan all contained sub-widgets if any and call refresh() member function of each of them.
-     * 
+     *
      */
     if (widgets.size() != 0)
     {
@@ -246,7 +253,7 @@ void UIWidget::refresh()
     /**
      * @brief Then: apply refresh() on the containing widget if any changes require a screen redraw
      * and finally : clear model change flag
-     * 
+     *
      */
     if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
     {
@@ -254,6 +261,6 @@ void UIWidget::refresh()
         if (widget_with_border)
             draw_border();
         this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-        this->displayed_model->clear_change_flag(); 
+        this->displayed_model->clear_change_flag();
     }
 }

@@ -125,9 +125,13 @@ Inheritance diagram for Framebuffer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acab9bd199febedcbb0a4c0b97876cb7f" id="r_acab9bd199febedcbb0a4c0b97876cb7f"><td class="memItemLeft" align="right" valign="top"><a id="acab9bd199febedcbb0a4c0b97876cb7f" name="acab9bd199febedcbb0a4c0b97876cb7f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Framebuffer</b> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB)</td></tr>
-<tr class="separator:acab9bd199febedcbb0a4c0b97876cb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25c9cadebb3531112c5085e981962407" id="r_a25c9cadebb3531112c5085e981962407"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25c9cadebb3531112c5085e981962407">Framebuffer</a> (size_t frame_width, size_t frame_height, FramebufferFormat frame_format=FramebufferFormat::MONO_VLSB)</td></tr>
+<tr class="memdesc:a25c9cadebb3531112c5085e981962407"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> object.  <br /></td></tr>
+<tr class="separator:a25c9cadebb3531112c5085e981962407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a037bf3e17455354d5d907ceea00313dd" id="r_a037bf3e17455354d5d907ceea00313dd"><td class="memItemLeft" align="right" valign="top"><a id="a037bf3e17455354d5d907ceea00313dd" name="a037bf3e17455354d5d907ceea00313dd"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Framebuffer</b> ()</td></tr>
+<tr class="memdesc:a037bf3e17455354d5d907ceea00313dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> object. <br /></td></tr>
+<tr class="separator:a037bf3e17455354d5d907ceea00313dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b470c2ef236fcfbfd371ee800992154" id="r_a7b470c2ef236fcfbfd371ee800992154"><td class="memItemLeft" align="right" valign="top"><a id="a7b470c2ef236fcfbfd371ee800992154" name="a7b470c2ef236fcfbfd371ee800992154"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b> ()</td></tr>
 <tr class="separator:a7b470c2ef236fcfbfd371ee800992154"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,10 +205,47 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> is the basic framework to handle texts and graphics on a digital display. </p>
 <p>This framebuffer implementation is derived from the mycropython API and more explanations can be found there <a href="https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf">https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf</a>.</p>
-<p>The current implementation supports only MONO_VLSB format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html">SSD1306</a>.</p>
+<p>The current implementation supports only MONO_VLSB frame_format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html">SSD1306</a>.</p>
 <p>The core of framebuffer is the pixel_buffer, a memory space that contains pixel values. This pixel_buffer is computed and initialized by the framebuffer constructor.</p>
-<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters is used. It is created ans initialized by init_text_buffer(StructFramebufferText device_config) member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a>. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters is used. It is created ans initialized by init_text_buffer member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html" title="Data structure that holds all configuration parameters used by textual primitives.">StructFramebufferText</a>. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a25c9cadebb3531112c5085e981962407" name="a25c9cadebb3531112c5085e981962407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25c9cadebb3531112c5085e981962407">&#9670;&#160;</a></span>Framebuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Framebuffer::Framebuffer </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>frame_width</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>frame_height</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferFormat</td>          <td class="paramname"><span class="paramname"><em>frame_format</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferFormat::MONO_VLSB</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_width</td><td>The width of the frame in displayed pixel. Usually defined by "x" starting at "0" on top upleft corner, running to the left and ending at frame_width-1 position. </td></tr>
+    <tr><td class="paramname">frame_height</td><td>The height of the frame in displayed pixel. Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position. </td></tr>
+    <tr><td class="paramname">frame_format</td><td>the way the memory byte are translated by the dispaly driver device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/framebuffer/<a class="el" href="framebuffer_8h_source.html">framebuffer.h</a></li>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/framebuffer/<a class="el" href="framebuffer_8cpp.html">framebuffer.cpp</a></li>
 </ul>

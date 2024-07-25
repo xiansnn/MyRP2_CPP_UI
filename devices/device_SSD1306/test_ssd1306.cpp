@@ -251,7 +251,7 @@ void test_fb_in_fb(SSD1306 *display)
     uint8_t small_frame_y_anchor = 20;
     uint8_t small_frame_width = 88;
     uint8_t small_frame_height = 25;
-    Framebuffer small_frame = Framebuffer(small_frame_width, small_frame_height, FramebufferFormat::MONO_VLSB);
+    Framebuffer small_frame = Framebuffer(small_frame_width, small_frame_height);//, FramebufferFormat::MONO_VLSB);
     small_frame.fill(FramebufferColor::BLACK);
     small_frame.line(5, 5, 80, 20); // point coordinates are relative to the local frame
     small_frame.circle(8, 44, 12);

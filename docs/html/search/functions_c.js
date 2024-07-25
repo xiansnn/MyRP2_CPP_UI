@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['_7eswitchbutton_0',['~SwitchButton',['../class_switch_button.html#a3aaf08da555f8418572d502e8221fcec',1,'SwitchButton']]],
-  ['_7eswitchbuttonwithirq_1',['~SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html#a2d4eb41f9e064fd22e68a20c486c7f06',1,'SwitchButtonWithIRQ']]],
-  ['_7euicontrolledincrementalvalue_2',['~UIControlledIncrementalValue',['../class_u_i_controlled_incremental_value.html#a012cebe64e294c16f901a55530a8b045',1,'UIControlledIncrementalValue']]],
-  ['_7euicontroller_3',['~UIController',['../class_u_i_controller.html#aaf299e95c332a4d7383693380c945dda',1,'UIController']]],
-  ['_7euidisplaydevice_4',['~UIDisplayDevice',['../class_u_i_display_device.html#ac4184e12c219116cbf80f02f3034e0ef',1,'UIDisplayDevice']]],
-  ['_7euimodelobject_5',['~UIModelObject',['../class_u_i_model_object.html#a27926030b4ebb2bcd5bf6eb07d85a9c4',1,'UIModelObject']]],
-  ['_7euiobjectmanager_6',['~UIObjectManager',['../class_u_i_object_manager.html#a81b63c49e0fd5b2c8ac33e60ccf84d66',1,'UIObjectManager']]],
-  ['_7euiwidget_7',['~UIWidget',['../class_u_i_widget.html#a9d4a57bc7a557151612c87058be8b9c7',1,'UIWidget']]]
+  ['uicontrolledincrementalvalue_0',['UIControlledIncrementalValue',['../class_u_i_controlled_incremental_value.html#a32ac72be5974abc924c289c447018df1',1,'UIControlledIncrementalValue']]],
+  ['uidisplaydevice_1',['UIDisplayDevice',['../class_u_i_display_device.html#a7a31ddf37113196411f2dc2d65750f31',1,'UIDisplayDevice']]],
+  ['uimodelobject_2',['UIModelObject',['../class_u_i_model_object.html#af89f5a77bc6a17f09ceb7fe603bbe715',1,'UIModelObject']]],
+  ['uiwidget_3',['UIWidget',['../class_u_i_widget.html#aee2be39224977636cf721c29de6a4bb4',1,'UIWidget']]],
+  ['update_5fcurrent_5fcontrolled_5fobject_4',['update_current_controlled_object',['../class_u_i_controller.html#a2cc0f0b9952528a65b002f1ed86bb0f2',1,'UIController']]],
+  ['update_5fcurrent_5fcontroller_5',['update_current_controller',['../class_u_i_model_object.html#a656066649f529b7472d098637ddcf04f',1,'UIModelObject']]],
+  ['update_5fstatus_6',['update_status',['../class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688',1,'UIModelObject']]]
 ];
