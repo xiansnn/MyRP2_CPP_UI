@@ -134,27 +134,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a037bf3e17455354d5d907ceea00313dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b470c2ef236fcfbfd371ee800992154" id="r_a7b470c2ef236fcfbfd371ee800992154"><td class="memItemLeft" align="right" valign="top"><a id="a7b470c2ef236fcfbfd371ee800992154" name="a7b470c2ef236fcfbfd371ee800992154"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b> ()</td></tr>
+<tr class="memdesc:a7b470c2ef236fcfbfd371ee800992154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the pixel_buffer with "0" (BLACK). Reset also character position to (0,0). <br /></td></tr>
 <tr class="separator:a7b470c2ef236fcfbfd371ee800992154"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac71de6e7a85fc62b53f795ce994c9ec1" id="r_ac71de6e7a85fc62b53f795ce994c9ec1"><td class="memItemLeft" align="right" valign="top"><a id="ac71de6e7a85fc62b53f795ce994c9ec1" name="ac71de6e7a85fc62b53f795ce994c9ec1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill</b> (FramebufferColor c)</td></tr>
+<tr class="memitem:ac71de6e7a85fc62b53f795ce994c9ec1" id="r_ac71de6e7a85fc62b53f795ce994c9ec1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a> (FramebufferColor c)</td></tr>
+<tr class="memdesc:ac71de6e7a85fc62b53f795ce994c9ec1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write all framebuffer memory with "0" (or "1") if color c is BLACK (resp. WHITE).  <br /></td></tr>
 <tr class="separator:ac71de6e7a85fc62b53f795ce994c9ec1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae464d1772ef80976c1faf8b2abb42903" id="r_ae464d1772ef80976c1faf8b2abb42903"><td class="memItemLeft" align="right" valign="top"><a id="ae464d1772ef80976c1faf8b2abb42903" name="ae464d1772ef80976c1faf8b2abb42903"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>hline</b> (uint8_t x, uint8_t y, size_t w, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memitem:ae464d1772ef80976c1faf8b2abb42903" id="r_ae464d1772ef80976c1faf8b2abb42903"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae464d1772ef80976c1faf8b2abb42903">hline</a> (uint8_t x, uint8_t y, size_t w, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:ae464d1772ef80976c1faf8b2abb42903"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a c color horizontal line, starting at frame position (x,y), on w number of pixel.  <br /></td></tr>
 <tr class="separator:ae464d1772ef80976c1faf8b2abb42903"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8fb16c32869ebc991bc6fbe1465979d" id="r_ae8fb16c32869ebc991bc6fbe1465979d"><td class="memItemLeft" align="right" valign="top"><a id="ae8fb16c32869ebc991bc6fbe1465979d" name="ae8fb16c32869ebc991bc6fbe1465979d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vline</b> (uint8_t x, uint8_t y, size_t h, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memitem:ae8fb16c32869ebc991bc6fbe1465979d" id="r_ae8fb16c32869ebc991bc6fbe1465979d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8fb16c32869ebc991bc6fbe1465979d">vline</a> (uint8_t x, uint8_t y, size_t h, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:ae8fb16c32869ebc991bc6fbe1465979d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a c color vertical line, starting at frame position (x,y), on w number of pixel.  <br /></td></tr>
 <tr class="separator:ae8fb16c32869ebc991bc6fbe1465979d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b7d45e8d169a9899d124a7f6de9ce16" id="r_a8b7d45e8d169a9899d124a7f6de9ce16"><td class="memItemLeft" align="right" valign="top"><a id="a8b7d45e8d169a9899d124a7f6de9ce16" name="a8b7d45e8d169a9899d124a7f6de9ce16"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>line</b> (int x1, int y1, int x2, int y2, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memitem:a8b7d45e8d169a9899d124a7f6de9ce16" id="r_a8b7d45e8d169a9899d124a7f6de9ce16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8b7d45e8d169a9899d124a7f6de9ce16">line</a> (int x1, int y1, int x2, int y2, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:a8b7d45e8d169a9899d124a7f6de9ce16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a c color line, starting at frame position (x1,y1), ending at frame position (x2,y2)  <br /></td></tr>
 <tr class="separator:a8b7d45e8d169a9899d124a7f6de9ce16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0e1916dfc5fcdaa7999c8d3ebdaef6b" id="r_ae0e1916dfc5fcdaa7999c8d3ebdaef6b"><td class="memItemLeft" align="right" valign="top"><a id="ae0e1916dfc5fcdaa7999c8d3ebdaef6b" name="ae0e1916dfc5fcdaa7999c8d3ebdaef6b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>rect</b> (uint8_t x, uint8_t y, size_t w, size_t h, bool fill=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memitem:ae0e1916dfc5fcdaa7999c8d3ebdaef6b" id="r_ae0e1916dfc5fcdaa7999c8d3ebdaef6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae0e1916dfc5fcdaa7999c8d3ebdaef6b">rect</a> (uint8_t x, uint8_t y, size_t w, size_t h, bool <a class="el" href="#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:ae0e1916dfc5fcdaa7999c8d3ebdaef6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw a rectangle, starting at frame position (x,y), w wide and h high.  <br /></td></tr>
 <tr class="separator:ae0e1916dfc5fcdaa7999c8d3ebdaef6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4eb865f19596a64e30862697ab737318" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top"><a id="a4eb865f19596a64e30862697ab737318" name="a4eb865f19596a64e30862697ab737318"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>circle</b> (int radius, int x_center, int y_center, bool fill=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memitem:a4eb865f19596a64e30862697ab737318" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb865f19596a64e30862697ab737318">circle</a> (int radius, int x_center, int y_center, bool <a class="el" href="#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:a4eb865f19596a64e30862697ab737318"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a cercle of size radius, centered at (x_center, y_center)  <br /></td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc4e7a692dfd5d2902149ef46f54e11" id="r_afbc4e7a692dfd5d2902149ef46f54e11"><td class="memItemLeft" align="right" valign="top"><a id="afbc4e7a692dfd5d2902149ef46f54e11" name="afbc4e7a692dfd5d2902149ef46f54e11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_text_buffer</b> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
+<tr class="memitem:afbc4e7a692dfd5d2902149ef46f54e11" id="r_afbc4e7a692dfd5d2902149ef46f54e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbc4e7a692dfd5d2902149ef46f54e11">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
 <tr class="separator:afbc4e7a692dfd5d2902149ef46f54e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top"><a id="a471d9d9a24d51b9df2a89362abd2e607" name="a471d9d9a24d51b9df2a89362abd2e607"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
@@ -186,9 +186,6 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><b>pixel_buffer</b>
 <tr class="memitem:ac3c00a276f3da2d196676edaa11ecc7c" id="r_ac3c00a276f3da2d196676edaa11ecc7c"><td class="memItemLeft" align="right" valign="top"><a id="ac3c00a276f3da2d196676edaa11ecc7c" name="ac3c00a276f3da2d196676edaa11ecc7c"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>text_buffer</b></td></tr>
 <tr class="separator:ac3c00a276f3da2d196676edaa11ecc7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e6725a15c60a721c3158a776d37acde" id="r_a8e6725a15c60a721c3158a776d37acde"><td class="memItemLeft" align="right" valign="top"><a id="a8e6725a15c60a721c3158a776d37acde" name="a8e6725a15c60a721c3158a776d37acde"></a>
-<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a>&#160;</td><td class="memItemRight" valign="bottom"><b>frame_text_config</b> {}</td></tr>
-<tr class="separator:a8e6725a15c60a721c3158a776d37acde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35a041f8b088ee5274aa334d13e4c60e" id="r_a35a041f8b088ee5274aa334d13e4c60e"><td class="memItemLeft" align="right" valign="top"><a id="a35a041f8b088ee5274aa334d13e4c60e" name="a35a041f8b088ee5274aa334d13e4c60e"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>frame_width</b></td></tr>
 <tr class="separator:a35a041f8b088ee5274aa334d13e4c60e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -236,9 +233,288 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <p>Construct a new <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">frame_width</td><td>The width of the frame in displayed pixel. Usually defined by "x" starting at "0" on top upleft corner, running to the left and ending at frame_width-1 position. </td></tr>
-    <tr><td class="paramname">frame_height</td><td>The height of the frame in displayed pixel. Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position. </td></tr>
-    <tr><td class="paramname">frame_format</td><td>the way the memory byte are translated by the dispaly driver device. </td></tr>
+    <tr><td class="paramname">frame_width</td><td>The number of pixel along the width of the frame. Usually defined by "x" starting at "0" on top upleft corner, running to the left and ending at frame_width-1 position. </td></tr>
+    <tr><td class="paramname">frame_height</td><td>The number of pixel along the height of the frame. Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position. </td></tr>
+    <tr><td class="paramname">frame_format</td><td>The way the memory byte are translated by the dispaly driver device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4eb865f19596a64e30862697ab737318" name="a4eb865f19596a64e30862697ab737318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb865f19596a64e30862697ab737318">&#9670;&#160;</a></span>circle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::circle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>radius</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x_center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y_center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fill</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw a cercle of size radius, centered at (x_center, y_center) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">radius</td><td>radius, in pixel, of the circle </td></tr>
+    <tr><td class="paramname">x_center</td><td>horizontal position of the center of the cercle </td></tr>
+    <tr><td class="paramname">y_center</td><td>vertical position of the center on the cercle </td></tr>
+    <tr><td class="paramname">fill</td><td>if true, the circle is filled with color c </td></tr>
+    <tr><td class="paramname">c</td><td>color of the border of the circle, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac71de6e7a85fc62b53f795ce994c9ec1" name="ac71de6e7a85fc62b53f795ce994c9ec1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac71de6e7a85fc62b53f795ce994c9ec1">&#9670;&#160;</a></span>fill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::fill </td>
+          <td>(</td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write all framebuffer memory with "0" (or "1") if color c is BLACK (resp. WHITE). </p>
+<p>Only format MONO_VLSB is implemented.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td>FramebufferColor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae464d1772ef80976c1faf8b2abb42903" name="ae464d1772ef80976c1faf8b2abb42903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae464d1772ef80976c1faf8b2abb42903">&#9670;&#160;</a></span>hline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::hline </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a c color horizontal line, starting at frame position (x,y), on w number of pixel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>horizontal start of line </td></tr>
+    <tr><td class="paramname">y</td><td>vertical start of line </td></tr>
+    <tr><td class="paramname">w</td><td>length of the line in number of pixel </td></tr>
+    <tr><td class="paramname">c</td><td>color of the line, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afbc4e7a692dfd5d2902149ef46f54e11" name="afbc4e7a692dfd5d2902149ef46f54e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc4e7a692dfd5d2902149ef46f54e11">&#9670;&#160;</a></span>init_text_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::init_text_buffer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a></td>          <td class="paramname"><span class="paramname"><em>device_config</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>textual primitives </p>
+
+</div>
+</div>
+<a id="a8b7d45e8d169a9899d124a7f6de9ce16" name="a8b7d45e8d169a9899d124a7f6de9ce16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7d45e8d169a9899d124a7f6de9ce16">&#9670;&#160;</a></span>line()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::line </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a c color line, starting at frame position (x1,y1), ending at frame position (x2,y2) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x1</td><td>horizontal start of line </td></tr>
+    <tr><td class="paramname">y1</td><td>vertical start of line </td></tr>
+    <tr><td class="paramname">x2</td><td>horizontal end of line </td></tr>
+    <tr><td class="paramname">y2</td><td>vertical end of line </td></tr>
+    <tr><td class="paramname">c</td><td>color of the line, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae0e1916dfc5fcdaa7999c8d3ebdaef6b" name="ae0e1916dfc5fcdaa7999c8d3ebdaef6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e1916dfc5fcdaa7999c8d3ebdaef6b">&#9670;&#160;</a></span>rect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::rect </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>w</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>fill</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a rectangle, starting at frame position (x,y), w wide and h high. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>horizontal start of the rectangle </td></tr>
+    <tr><td class="paramname">y</td><td>vertical start of the rectangle </td></tr>
+    <tr><td class="paramname">w</td><td>number of pixel of the rectangle width </td></tr>
+    <tr><td class="paramname">h</td><td>number of pixel of the rectangle height </td></tr>
+    <tr><td class="paramname">fill</td><td>if true, the rectangle is filled with color c </td></tr>
+    <tr><td class="paramname">c</td><td>color of the border of the rectangle, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae8fb16c32869ebc991bc6fbe1465979d" name="ae8fb16c32869ebc991bc6fbe1465979d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8fb16c32869ebc991bc6fbe1465979d">&#9670;&#160;</a></span>vline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::vline </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>h</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>c</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw a c color vertical line, starting at frame position (x,y), on w number of pixel. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>horizontal start of line </td></tr>
+    <tr><td class="paramname">y</td><td>vertical start of line </td></tr>
+    <tr><td class="paramname">h</td><td>length of the line in number of pixel </td></tr>
+    <tr><td class="paramname">c</td><td>color of the line, default to WHITE </td></tr>
   </table>
   </dd>
 </dl>
