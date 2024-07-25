@@ -1,12 +1,12 @@
 /**
  * @file framebuffer.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-30
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #include "framebuffer.h"
 #include "pico/stdlib.h"
@@ -15,7 +15,9 @@
 
 #define BYTE_SIZE 8
 
-Framebuffer::Framebuffer(size_t _frame_width, size_t _frame_height, FramebufferFormat _framebuffer_format, StructFramebufferText _framebuffer_txt_cnf)
+Framebuffer::Framebuffer(size_t _frame_width,
+                         size_t _frame_height,
+                         FramebufferFormat _framebuffer_format)
 {
     assert(_framebuffer_format == FramebufferFormat::MONO_VLSB); // works only for MONO_VLSB devices
     this->frame_format = _framebuffer_format;
@@ -28,7 +30,6 @@ Framebuffer::Framebuffer(size_t _frame_width, size_t _frame_height, FramebufferF
     this->pixel_buffer = new uint8_t[this->pixel_buffer_size];
     clear_pixel_buffer();
     this->text_buffer = nullptr;
-    this->set_text_config(_framebuffer_txt_cnf);
 }
 
 Framebuffer::~Framebuffer()
@@ -59,7 +60,7 @@ void Framebuffer::clear_text_buffer()
     current_char_line = 0;
 }
 
-void Framebuffer::set_text_config(StructFramebufferText _framebuffer_txt_cnf)
+void Framebuffer::init_text_buffer(StructFramebufferText _framebuffer_txt_cnf)
 {
     this->frame_text_config = _framebuffer_txt_cnf;
     set_font(_framebuffer_txt_cnf.font);
@@ -344,7 +345,6 @@ void Framebuffer::drawChar(char c, uint8_t char_column, uint8_t char_line)
     drawChar(this->frame_text_config.font, c, anchor_x, anchor_y);
 }
 
-
 void Framebuffer::circle(int radius, int x_center, int y_center, bool fill, FramebufferColor c)
 /*
 https://fr.wikipedia.org/wiki/Algorithme_de_trac%C3%A9_d%27arc_de_cercle_de_Bresenham
@@ -406,4 +406,3 @@ fin de procédure ;
         m += 8 * x + 4;
     }
 }
-

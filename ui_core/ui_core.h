@@ -65,7 +65,7 @@ public:
      * @param width The width of physical screen, in pixel.
      * @param height The height of physical screen, in pixel.
      * @param format The framebuffer format ... see Framebuffer class FramebufferFormat enumeration
-     * @param txt_cnf A structure of datga that reflect the framebuffer member related to text primitives
+     * @param txt_cnf A structure of data that reflect the framebuffer member related to text primitives
      */
     UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, StructFramebufferText txt_cnf = {.font = font_8x8});
     /**
