@@ -125,9 +125,9 @@ Inheritance diagram for Framebuffer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a0a3b69a314ebe36c148c6918cebe3288" id="r_a0a3b69a314ebe36c148c6918cebe3288"><td class="memItemLeft" align="right" valign="top"><a id="a0a3b69a314ebe36c148c6918cebe3288" name="a0a3b69a314ebe36c148c6918cebe3288"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Framebuffer</b> (size_t width, size_t height, <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> txt_cnf={.font=font_8x8}, FramebufferFormat format=FramebufferFormat::MONO_VLSB)</td></tr>
-<tr class="separator:a0a3b69a314ebe36c148c6918cebe3288"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acab9bd199febedcbb0a4c0b97876cb7f" id="r_acab9bd199febedcbb0a4c0b97876cb7f"><td class="memItemLeft" align="right" valign="top"><a id="acab9bd199febedcbb0a4c0b97876cb7f" name="acab9bd199febedcbb0a4c0b97876cb7f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Framebuffer</b> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB)</td></tr>
+<tr class="separator:acab9bd199febedcbb0a4c0b97876cb7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b470c2ef236fcfbfd371ee800992154" id="r_a7b470c2ef236fcfbfd371ee800992154"><td class="memItemLeft" align="right" valign="top"><a id="a7b470c2ef236fcfbfd371ee800992154" name="a7b470c2ef236fcfbfd371ee800992154"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b> ()</td></tr>
 <tr class="separator:a7b470c2ef236fcfbfd371ee800992154"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,12 +149,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>rect</b> (uint8_t x, 
 <tr class="memitem:a4eb865f19596a64e30862697ab737318" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top"><a id="a4eb865f19596a64e30862697ab737318" name="a4eb865f19596a64e30862697ab737318"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>circle</b> (int radius, int x_center, int y_center, bool fill=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc4e7a692dfd5d2902149ef46f54e11" id="r_afbc4e7a692dfd5d2902149ef46f54e11"><td class="memItemLeft" align="right" valign="top"><a id="afbc4e7a692dfd5d2902149ef46f54e11" name="afbc4e7a692dfd5d2902149ef46f54e11"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>init_text_buffer</b> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
+<tr class="separator:afbc4e7a692dfd5d2902149ef46f54e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top"><a id="a471d9d9a24d51b9df2a89362abd2e607" name="a471d9d9a24d51b9df2a89362abd2e607"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
 <tr class="separator:a471d9d9a24d51b9df2a89362abd2e607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a487d113c2a80252bbe360d17597cb62a" id="r_a487d113c2a80252bbe360d17597cb62a"><td class="memItemLeft" align="right" valign="top"><a id="a487d113c2a80252bbe360d17597cb62a" name="a487d113c2a80252bbe360d17597cb62a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_text_config</b> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
-<tr class="separator:a487d113c2a80252bbe360d17597cb62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad27d96389ab6be3c82fc03a4cb8eaf64" id="r_ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memItemLeft" align="right" valign="top"><a id="ad27d96389ab6be3c82fc03a4cb8eaf64" name="ad27d96389ab6be3c82fc03a4cb8eaf64"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_font</b> (const unsigned char *font)</td></tr>
 <tr class="separator:ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,7 +201,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> is the basic framework to handle texts and graphics on a digital display. </p>
 <p>This framebuffer implementation is derived from the mycropython API and more explanations can be found there <a href="https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf">https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf</a>.</p>
-<p>The current implementation supports only MONO_VLSB format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html">SSD1306</a>. </p>
+<p>The current implementation supports only MONO_VLSB format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html">SSD1306</a>.</p>
+<p>The core of framebuffer is the pixel_buffer, a memory space that contains pixel values. This pixel_buffer is computed and initialized by the framebuffer constructor.</p>
+<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters is used. It is created ans initialized by init_text_buffer(StructFramebufferText device_config) member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a>. </p>
 </div><hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/framebuffer/<a class="el" href="framebuffer_8h_source.html">framebuffer.h</a></li>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/framebuffer/<a class="el" href="framebuffer_8cpp.html">framebuffer.cpp</a></li>
