@@ -5,7 +5,6 @@ var searchData=
   ['struct_5frender_5farea_2',['struct_render_area',['../structstruct__render__area.html',1,'']]],
   ['structframebuffertext_3',['StructFramebufferText',['../struct_struct_framebuffer_text.html',1,'']]],
   ['structswitchbuttonconfig_4',['StructSwitchButtonConfig',['../struct_struct_switch_button_config.html',1,'']]],
-  ['structwidgetconfig_5',['StructWidgetConfig',['../struct_struct_widget_config.html',1,'']]],
-  ['switchbutton_6',['SwitchButton',['../class_switch_button.html',1,'']]],
-  ['switchbuttonwithirq_7',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html',1,'']]]
+  ['switchbutton_5',['SwitchButton',['../class_switch_button.html',1,'']]],
+  ['switchbuttonwithirq_6',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html',1,'']]]
 ];

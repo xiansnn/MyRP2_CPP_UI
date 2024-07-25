@@ -14,10 +14,9 @@ var searchData=
   ['struct_5frender_5farea_11',['struct_render_area',['../structstruct__render__area.html',1,'']]],
   ['structframebuffertext_12',['StructFramebufferText',['../struct_struct_framebuffer_text.html',1,'']]],
   ['structswitchbuttonconfig_13',['StructSwitchButtonConfig',['../struct_struct_switch_button_config.html',1,'']]],
-  ['structwidgetconfig_14',['StructWidgetConfig',['../struct_struct_widget_config.html',1,'']]],
-  ['sw_20directory_15',['&quot;sw&quot; directory',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md6',1,'']]],
-  ['switch_5fbutton_2ecpp_16',['switch_button.cpp',['../switch__button_8cpp.html',1,'']]],
-  ['switch_5fbutton_2eh_17',['switch_button.h',['../switch__button_8h.html',1,'']]],
-  ['switchbutton_18',['SwitchButton',['../class_switch_button.html',1,'SwitchButton'],['../class_switch_button.html#a1a24a88e0e3b151081552537f9cde431',1,'SwitchButton::SwitchButton()']]],
-  ['switchbuttonwithirq_19',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html',1,'SwitchButtonWithIRQ'],['../class_switch_button_with_i_r_q.html#a268acfd3b3414ddc8df3ff19b8386600',1,'SwitchButtonWithIRQ::SwitchButtonWithIRQ()']]]
+  ['sw_20directory_14',['&quot;sw&quot; directory',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md6',1,'']]],
+  ['switch_5fbutton_2ecpp_15',['switch_button.cpp',['../switch__button_8cpp.html',1,'']]],
+  ['switch_5fbutton_2eh_16',['switch_button.h',['../switch__button_8h.html',1,'']]],
+  ['switchbutton_17',['SwitchButton',['../class_switch_button.html',1,'SwitchButton'],['../class_switch_button.html#a1a24a88e0e3b151081552537f9cde431',1,'SwitchButton::SwitchButton()']]],
+  ['switchbuttonwithirq_18',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html',1,'SwitchButtonWithIRQ'],['../class_switch_button_with_i_r_q.html#a268acfd3b3414ddc8df3ff19b8386600',1,'SwitchButtonWithIRQ::SwitchButtonWithIRQ()']]]
 ];

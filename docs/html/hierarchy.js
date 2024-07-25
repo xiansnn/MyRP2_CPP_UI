@@ -23,7 +23,6 @@ var hierarchy =
     [ "struct_render_area", "structstruct__render__area.html", null ],
     [ "StructFramebufferText", "struct_struct_framebuffer_text.html", null ],
     [ "StructSwitchButtonConfig", "struct_struct_switch_button_config.html", null ],
-    [ "StructWidgetConfig", "struct_struct_widget_config.html", null ],
     [ "SwitchButton", "class_switch_button.html", [
       [ "SwitchButtonWithIRQ", "class_switch_button_with_i_r_q.html", [
         [ "RotaryEncoder", "class_rotary_encoder.html", null ]

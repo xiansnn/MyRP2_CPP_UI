@@ -103,7 +103,7 @@ $(function(){initNavTree('class_u_i_display_device.html',''); initResizable(true
 </div><!--header-->
 <div class="contents">
 
-<p>This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen <a class="el" href="class_s_s_d1306.html">SSD1306</a>). It derived from <a class="el" href="class_framebuffer.html">Framebuffer</a>. This allows to draw text and graphics directly into the display framebuffer thanks to Framebuffet class text and graphic primitives indepently from any kind of widget.  
+<p>This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen <a class="el" href="class_s_s_d1306.html">SSD1306</a>). It derived from <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a>. This allows to draw text and graphics directly into the display framebuffer thanks to Framebuffet class text and graphic primitives indepently from any kind of widget.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ui__core_8h_source.html">ui_core.h</a>&gt;</code></p>
@@ -113,7 +113,7 @@ Inheritance diagram for UIDisplayDevice:</div>
  <div class="center">
   <img src="class_u_i_display_device.png" usemap="#UIDisplayDevice_map" alt=""/>
   <map id="UIDisplayDevice_map" name="UIDisplayDevice_map">
-<area href="class_framebuffer.html" alt="Framebuffer" shape="rect" coords="0,0,105,24"/>
+<area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="0,0,105,24"/>
 <area href="class_s_s_d1306.html" alt="SSD1306" shape="rect" coords="0,112,105,136"/>
   </map>
 </div></div>
@@ -134,9 +134,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~UIDisplayDevice</
 <tr class="memdesc:aa87594dc5c9085523809519fe0d85f5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an pure virtual member function that all final derived class must implement. It transfers the framebuffer buffer to the a part of display screen buffer starting at the (anchor_x, anchor_y) coordinates of the screen , expressed in pixel.  <br /></td></tr>
 <tr class="separator:aa87594dc5c9085523809519fe0d85f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_framebuffer"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_framebuffer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_framebuffer.html">Framebuffer</a></td></tr>
-<tr class="memitem:abb31d9b62ae2fa01934830ebfddc5fea inherit pub_methods_class_framebuffer" id="r_abb31d9b62ae2fa01934830ebfddc5fea"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>Framebuffer</b> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB, <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> txt_cnf={.font=font_8x8})</td></tr>
-<tr class="separator:abb31d9b62ae2fa01934830ebfddc5fea inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3b69a314ebe36c148c6918cebe3288 inherit pub_methods_class_framebuffer" id="r_a0a3b69a314ebe36c148c6918cebe3288"><td class="memItemLeft" align="right" valign="top">
+&#160;</td><td class="memItemRight" valign="bottom"><b>Framebuffer</b> (size_t width, size_t height, <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> txt_cnf={.font=font_8x8}, FramebufferFormat format=FramebufferFormat::MONO_VLSB)</td></tr>
+<tr class="separator:a0a3b69a314ebe36c148c6918cebe3288 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b470c2ef236fcfbfd371ee800992154 inherit pub_methods_class_framebuffer" id="r_a7b470c2ef236fcfbfd371ee800992154"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b> ()</td></tr>
 <tr class="separator:a7b470c2ef236fcfbfd371ee800992154 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,7 +209,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <tr class="separator:abaaff6cacf8f6095b6ae4ba2323ec5e5 inherit pub_attribs_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen <a class="el" href="class_s_s_d1306.html">SSD1306</a>). It derived from <a class="el" href="class_framebuffer.html">Framebuffer</a>. This allows to draw text and graphics directly into the display framebuffer thanks to Framebuffet class text and graphic primitives indepently from any kind of widget. </p>
+<div class="textblock"><p>This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen <a class="el" href="class_s_s_d1306.html">SSD1306</a>). It derived from <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a>. This allows to draw text and graphics directly into the display framebuffer thanks to Framebuffet class text and graphic primitives indepently from any kind of widget. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7a31ddf37113196411f2dc2d65750f31" name="a7a31ddf37113196411f2dc2d65750f31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a31ddf37113196411f2dc2d65750f31">&#9670;&#160;</a></span>UIDisplayDevice()</h2>
@@ -245,7 +245,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   <table class="params">
     <tr><td class="paramname">width</td><td>The width of physical screen, in pixel. </td></tr>
     <tr><td class="paramname">height</td><td>The height of physical screen, in pixel. </td></tr>
-    <tr><td class="paramname">format</td><td>The framebuffer format ... see <a class="el" href="class_framebuffer.html">Framebuffer</a> class FramebufferFormat enumeration </td></tr>
+    <tr><td class="paramname">format</td><td>The framebuffer format ... see <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> class FramebufferFormat enumeration </td></tr>
     <tr><td class="paramname">txt_cnf</td><td>A structure of datga that reflect the framebuffer member related to text primitives </td></tr>
   </table>
   </dd>
