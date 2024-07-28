@@ -448,29 +448,28 @@ public:
     /**
      * @brief Construct a new UIWidget object
      * 
-     * @param _display_screen 
-     * @param _frame_width 
-     * @param _frame_height 
-     * @param _widget_anchor_x 
-     * @param _widget_anchor_y 
-     * @param _widget_with_border 
-     * @param _widget_border_width 
-     * @param _framebuffer_format 
-     * @param _framebuffer_txt_cnf 
+     * @param display_screen 
+     * @param frame_width 
+     * @param frame_height 
+     * @param widget_anchor_x 
+     * @param widget_anchor_y 
+     * @param widget_with_border 
+     * @param widget_border_width 
+     * @param framebuffer_format 
+     * @param framebuffer_txt_cnf 
      */
-    UIWidget(UIDisplayDevice *_display_screen, 
-                size_t _frame_width,
-                size_t _frame_height,
-                uint8_t _widget_anchor_x, 
-                uint8_t _widget_anchor_y, 
-                bool _widget_with_border, 
-                uint8_t _widget_border_width = 1,
-                FramebufferFormat _framebuffer_format = FramebufferFormat::MONO_VLSB, 
-                StructFramebufferText _framebuffer_txt_cnf = {.font = font_8x8}
+    UIWidget(UIDisplayDevice *display_screen, 
+                size_t frame_width,
+                size_t frame_height,
+                uint8_t widget_anchor_x, 
+                uint8_t widget_anchor_y, 
+                bool widget_with_border, 
+                uint8_t widget_border_width = 1,
+                FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB, 
+                StructFramebufferText framebuffer_txt_cnf = {.font = font_8x8}
                 );
     /**
      * @brief Destroy the UIWidget object
-     * 
      */
     ~UIWidget();
     /**
@@ -480,8 +479,7 @@ public:
      */
     void add_widget(UIWidget *_sub_widget);
     /**
-     * @brief WARNING : this function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
-     * 
+     * @brief WARNING : This function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
      */
     virtual void refresh();
 };
