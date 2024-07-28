@@ -122,6 +122,7 @@ public:
      * @param frame_height   The number of pixel along the height of the frame. 
      * Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position.
      * @param frame_format   The way the memory byte are translated by the dispaly driver device.
+     * \image html framebuffer.png 
      */
     Framebuffer(size_t frame_width,
                 size_t frame_height,
@@ -194,17 +195,58 @@ public:
     void circle(int radius, int x_center, int y_center, bool fill = false, FramebufferColor c = FramebufferColor::WHITE);
 
     /**
-     * @brief 
+     * @brief   Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config
      * 
-     * @param frame_text_config 
+     * @param   frame_text_config 
      */
     void init_text_buffer(StructFramebufferText frame_text_config);
+    /**
+     * @brief   Set text buffer memory to "0" and set character line and column to 0
+     */
     void clear_text_buffer();
+    /**
+     * @brief Update the reference to the font, recompute max number of line, column, the new text buffer size, delete the previous one if any and create a new buffer.
+     * 
+     * @param font 
+     */
     void set_font(const unsigned char *font);
+    /**
+     * @brief copy the internal framebuffer text buffer to the device buffer.
+     */
     void print_text();
+    /**
+     * @brief copy the string c_str to the device buffer.
+     * 
+     * @param c_str A C_style character string.
+     */
     void print_text(const char *c_str);
+    /**
+     * @brief copy the c character to the current line and column character position.
+     * 
+     * Text wrapping is done if wrap flag is true.
+     * Character position steps forward according to auto_next_char flag.
+     * 
+     * Some special characters are processed:
+     * 
+     *  - "LINE_FEED"       (\\n 0x0A) : line position steps forward, column position is set to 0.
+     * 
+     *  - "BACKSPACE"       (\\b  0x08) : column position steps backward, a space (" ") character is overwritten.
+     * 
+     *  - "FORM_FEED"       (\\f  0x0C) : the text buffer is cleared.
+     * 
+     *  - "CARRIAGE_RETURN" (\\r  0x0D) : column position is set to 0.
+     * 
+     *  - "HORIZONTAL_TAB"  (\\t  0x09) : " " characters are added according to tab_size configuration value.
+     * @param c 
+     */
     void print_char(char c);
+    /**
+     * @brief character line position steps forward
+     */
     void next_line();
+    /**
+     * @brief character column position steps forward
+     */
     void next_char();
 };
 
