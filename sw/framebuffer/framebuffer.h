@@ -125,6 +125,7 @@ public:
      * Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position.
      * @param frame_format   The way the memory byte are translated by the dispaly driver device.
      * \image html framebuffer.png 
+     * \image html framebuffer.png 
      */
     Framebuffer(size_t frame_width,
                 size_t frame_height,
@@ -238,8 +239,7 @@ public:
      * 
      *  - "CARRIAGE_RETURN" (\\r  0x0D) : column position is set to 0.
      * 
-     *  - "HORIZONTAL_TAB"  (\\t  0x09) : " " characters are added according to tab_size value in StructFramebufferText  .
-     * 
+     *  - "HORIZONTAL_TAB"  (\\t  0x09) : " " characters are added according to tab_size configuration value.
      * @param c 
      */
     void print_char(char c);
