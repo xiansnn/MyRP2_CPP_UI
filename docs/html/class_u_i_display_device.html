@@ -163,28 +163,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b
 <tr class="memitem:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#a4eb865f19596a64e30862697ab737318">circle</a> (int radius, int x_center, int y_center, bool <a class="el" href="class_framebuffer.html#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
 <tr class="memdesc:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a cercle of size radius, centered at (x_center, y_center)  <br /></td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc4e7a692dfd5d2902149ef46f54e11 inherit pub_methods_class_framebuffer" id="r_afbc4e7a692dfd5d2902149ef46f54e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#afbc4e7a692dfd5d2902149ef46f54e11">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
-<tr class="separator:afbc4e7a692dfd5d2902149ef46f54e11 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer" id="r_ad55894974ba23bd04e280fe40afed813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#ad55894974ba23bd04e280fe40afed813">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> frame_text_config)</td></tr>
+<tr class="memdesc:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
+<tr class="separator:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607 inherit pub_methods_class_framebuffer" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
+<tr class="memdesc:a471d9d9a24d51b9df2a89362abd2e607 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text buffer memory to "0" and set character line and column to 0. <br /></td></tr>
 <tr class="separator:a471d9d9a24d51b9df2a89362abd2e607 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27d96389ab6be3c82fc03a4cb8eaf64 inherit pub_methods_class_framebuffer" id="r_ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_font</b> (const unsigned char *font)</td></tr>
+<tr class="memitem:ad27d96389ab6be3c82fc03a4cb8eaf64 inherit pub_methods_class_framebuffer" id="r_ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#ad27d96389ab6be3c82fc03a4cb8eaf64">set_font</a> (const unsigned char *font)</td></tr>
+<tr class="memdesc:ad27d96389ab6be3c82fc03a4cb8eaf64 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the reference to the font, recompute max number of line, column, the new text buffer size, delete the previous one if any and create a new buffer.  <br /></td></tr>
 <tr class="separator:ad27d96389ab6be3c82fc03a4cb8eaf64 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19daac8a65e25c850a057cd99cff202a inherit pub_methods_class_framebuffer" id="r_a19daac8a65e25c850a057cd99cff202a"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print_text</b> ()</td></tr>
+<tr class="memdesc:a19daac8a65e25c850a057cd99cff202a inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the internal framebuffer text buffer to the device buffer. <br /></td></tr>
 <tr class="separator:a19daac8a65e25c850a057cd99cff202a inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1dbcd1fe29cfed2f54da9f71fd0d63 inherit pub_methods_class_framebuffer" id="r_a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_text</b> (const char *c_str)</td></tr>
+<tr class="memitem:a2d1dbcd1fe29cfed2f54da9f71fd0d63 inherit pub_methods_class_framebuffer" id="r_a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#a2d1dbcd1fe29cfed2f54da9f71fd0d63">print_text</a> (const char *c_str)</td></tr>
+<tr class="memdesc:a2d1dbcd1fe29cfed2f54da9f71fd0d63 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the string c_str to the device buffer.  <br /></td></tr>
 <tr class="separator:a2d1dbcd1fe29cfed2f54da9f71fd0d63 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b0d1c589fd81e853ae14979d5585be inherit pub_methods_class_framebuffer" id="r_ad7b0d1c589fd81e853ae14979d5585be"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_char</b> (char c)</td></tr>
+<tr class="memitem:ad7b0d1c589fd81e853ae14979d5585be inherit pub_methods_class_framebuffer" id="r_ad7b0d1c589fd81e853ae14979d5585be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#ad7b0d1c589fd81e853ae14979d5585be">print_char</a> (char c)</td></tr>
+<tr class="memdesc:ad7b0d1c589fd81e853ae14979d5585be inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the c character to the current line and column character position.  <br /></td></tr>
 <tr class="separator:ad7b0d1c589fd81e853ae14979d5585be inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982a7f4b22ea3aa5f8b9a31dc71ca679 inherit pub_methods_class_framebuffer" id="r_a982a7f4b22ea3aa5f8b9a31dc71ca679"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>next_line</b> ()</td></tr>
+<tr class="memdesc:a982a7f4b22ea3aa5f8b9a31dc71ca679 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">character line position steps forward <br /></td></tr>
 <tr class="separator:a982a7f4b22ea3aa5f8b9a31dc71ca679 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e480702cd3607f488ed7c19142c8b36 inherit pub_methods_class_framebuffer" id="r_a7e480702cd3607f488ed7c19142c8b36"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>next_char</b> ()</td></tr>
+<tr class="memdesc:a7e480702cd3607f488ed7c19142c8b36 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">character column position steps forward <br /></td></tr>
 <tr class="separator:a7e480702cd3607f488ed7c19142c8b36 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>

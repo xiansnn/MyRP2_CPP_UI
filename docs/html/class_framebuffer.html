@@ -154,28 +154,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b
 <tr class="memitem:a4eb865f19596a64e30862697ab737318" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb865f19596a64e30862697ab737318">circle</a> (int radius, int x_center, int y_center, bool <a class="el" href="#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
 <tr class="memdesc:a4eb865f19596a64e30862697ab737318"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a cercle of size radius, centered at (x_center, y_center)  <br /></td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbc4e7a692dfd5d2902149ef46f54e11" id="r_afbc4e7a692dfd5d2902149ef46f54e11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbc4e7a692dfd5d2902149ef46f54e11">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> device_config)</td></tr>
-<tr class="separator:afbc4e7a692dfd5d2902149ef46f54e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad55894974ba23bd04e280fe40afed813" id="r_ad55894974ba23bd04e280fe40afed813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55894974ba23bd04e280fe40afed813">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> frame_text_config)</td></tr>
+<tr class="memdesc:ad55894974ba23bd04e280fe40afed813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
+<tr class="separator:ad55894974ba23bd04e280fe40afed813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top"><a id="a471d9d9a24d51b9df2a89362abd2e607" name="a471d9d9a24d51b9df2a89362abd2e607"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
+<tr class="memdesc:a471d9d9a24d51b9df2a89362abd2e607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text buffer memory to "0" and set character line and column to 0. <br /></td></tr>
 <tr class="separator:a471d9d9a24d51b9df2a89362abd2e607"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad27d96389ab6be3c82fc03a4cb8eaf64" id="r_ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memItemLeft" align="right" valign="top"><a id="ad27d96389ab6be3c82fc03a4cb8eaf64" name="ad27d96389ab6be3c82fc03a4cb8eaf64"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_font</b> (const unsigned char *font)</td></tr>
+<tr class="memitem:ad27d96389ab6be3c82fc03a4cb8eaf64" id="r_ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad27d96389ab6be3c82fc03a4cb8eaf64">set_font</a> (const unsigned char *font)</td></tr>
+<tr class="memdesc:ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the reference to the font, recompute max number of line, column, the new text buffer size, delete the previous one if any and create a new buffer.  <br /></td></tr>
 <tr class="separator:ad27d96389ab6be3c82fc03a4cb8eaf64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a19daac8a65e25c850a057cd99cff202a" id="r_a19daac8a65e25c850a057cd99cff202a"><td class="memItemLeft" align="right" valign="top"><a id="a19daac8a65e25c850a057cd99cff202a" name="a19daac8a65e25c850a057cd99cff202a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>print_text</b> ()</td></tr>
+<tr class="memdesc:a19daac8a65e25c850a057cd99cff202a"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the internal framebuffer text buffer to the device buffer. <br /></td></tr>
 <tr class="separator:a19daac8a65e25c850a057cd99cff202a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d1dbcd1fe29cfed2f54da9f71fd0d63" id="r_a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="memItemLeft" align="right" valign="top"><a id="a2d1dbcd1fe29cfed2f54da9f71fd0d63" name="a2d1dbcd1fe29cfed2f54da9f71fd0d63"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_text</b> (const char *c_str)</td></tr>
+<tr class="memitem:a2d1dbcd1fe29cfed2f54da9f71fd0d63" id="r_a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d1dbcd1fe29cfed2f54da9f71fd0d63">print_text</a> (const char *c_str)</td></tr>
+<tr class="memdesc:a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the string c_str to the device buffer.  <br /></td></tr>
 <tr class="separator:a2d1dbcd1fe29cfed2f54da9f71fd0d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b0d1c589fd81e853ae14979d5585be" id="r_ad7b0d1c589fd81e853ae14979d5585be"><td class="memItemLeft" align="right" valign="top"><a id="ad7b0d1c589fd81e853ae14979d5585be" name="ad7b0d1c589fd81e853ae14979d5585be"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>print_char</b> (char c)</td></tr>
+<tr class="memitem:ad7b0d1c589fd81e853ae14979d5585be" id="r_ad7b0d1c589fd81e853ae14979d5585be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7b0d1c589fd81e853ae14979d5585be">print_char</a> (char c)</td></tr>
+<tr class="memdesc:ad7b0d1c589fd81e853ae14979d5585be"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy the c character to the current line and column character position.  <br /></td></tr>
 <tr class="separator:ad7b0d1c589fd81e853ae14979d5585be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a982a7f4b22ea3aa5f8b9a31dc71ca679" id="r_a982a7f4b22ea3aa5f8b9a31dc71ca679"><td class="memItemLeft" align="right" valign="top"><a id="a982a7f4b22ea3aa5f8b9a31dc71ca679" name="a982a7f4b22ea3aa5f8b9a31dc71ca679"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>next_line</b> ()</td></tr>
+<tr class="memdesc:a982a7f4b22ea3aa5f8b9a31dc71ca679"><td class="mdescLeft">&#160;</td><td class="mdescRight">character line position steps forward <br /></td></tr>
 <tr class="separator:a982a7f4b22ea3aa5f8b9a31dc71ca679"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e480702cd3607f488ed7c19142c8b36" id="r_a7e480702cd3607f488ed7c19142c8b36"><td class="memItemLeft" align="right" valign="top"><a id="a7e480702cd3607f488ed7c19142c8b36" name="a7e480702cd3607f488ed7c19142c8b36"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>next_char</b> ()</td></tr>
+<tr class="memdesc:a7e480702cd3607f488ed7c19142c8b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">character column position steps forward <br /></td></tr>
 <tr class="separator:a7e480702cd3607f488ed7c19142c8b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -235,7 +240,10 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   <table class="params">
     <tr><td class="paramname">frame_width</td><td>The number of pixel along the width of the frame. Usually defined by "x" starting at "0" on top upleft corner, running to the left and ending at frame_width-1 position. </td></tr>
     <tr><td class="paramname">frame_height</td><td>The number of pixel along the height of the frame. Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position. </td></tr>
-    <tr><td class="paramname">frame_format</td><td>The way the memory byte are translated by the dispaly driver device. </td></tr>
+    <tr><td class="paramname">frame_format</td><td>The way the memory byte are translated by the dispaly driver device. <div class="image">
+<img src="framebuffer.png" alt=""/>
+</div>
+ </td></tr>
   </table>
   </dd>
 </dl>
@@ -359,8 +367,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
-<a id="afbc4e7a692dfd5d2902149ef46f54e11" name="afbc4e7a692dfd5d2902149ef46f54e11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbc4e7a692dfd5d2902149ef46f54e11">&#9670;&#160;</a></span>init_text_buffer()</h2>
+<a id="ad55894974ba23bd04e280fe40afed813" name="ad55894974ba23bd04e280fe40afed813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad55894974ba23bd04e280fe40afed813">&#9670;&#160;</a></span>init_text_buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -368,12 +376,19 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="memname">void Framebuffer::init_text_buffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a></td>          <td class="paramname"><span class="paramname"><em>device_config</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a></td>          <td class="paramname"><span class="paramname"><em>frame_text_config</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>textual primitives </p>
+
+<p>Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">frame_text_config</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -419,6 +434,65 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
     <tr><td class="paramname">x2</td><td>horizontal end of line </td></tr>
     <tr><td class="paramname">y2</td><td>vertical end of line </td></tr>
     <tr><td class="paramname">c</td><td>color of the line, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad7b0d1c589fd81e853ae14979d5585be" name="ad7b0d1c589fd81e853ae14979d5585be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b0d1c589fd81e853ae14979d5585be">&#9670;&#160;</a></span>print_char()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::print_char </td>
+          <td>(</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>c</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copy the c character to the current line and column character position. </p>
+<p>Text wrapping is done if wrap flag is true. Character position steps forward according to auto_next_char flag.</p>
+<p>Some special characters are processed:</p>
+<ul>
+<li>"LINE_FEED" (\n 0x0A) : line position steps forward, column position is set to 0.</li>
+<li>"BACKSPACE" (\b 0x08) : column position steps backward, a space (" ") character is overwritten.</li>
+<li>"FORM_FEED" (\f 0x0C) : the text buffer is cleared.</li>
+<li>"CARRIAGE_RETURN" (\r 0x0D) : column position is set to 0.</li>
+<li>"HORIZONTAL_TAB" (\t 0x09) : " " characters are added according to tab_size configuration value. <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a2d1dbcd1fe29cfed2f54da9f71fd0d63" name="a2d1dbcd1fe29cfed2f54da9f71fd0d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d1dbcd1fe29cfed2f54da9f71fd0d63">&#9670;&#160;</a></span>print_text()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::print_text </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>c_str</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>copy the string c_str to the device buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">c_str</td><td>A C_style character string. </td></tr>
   </table>
   </dd>
 </dl>
@@ -473,6 +547,31 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
     <tr><td class="paramname">h</td><td>number of pixel of the rectangle height </td></tr>
     <tr><td class="paramname">fill</td><td>if true, the rectangle is filled with color c </td></tr>
     <tr><td class="paramname">c</td><td>color of the border of the rectangle, default to WHITE </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad27d96389ab6be3c82fc03a4cb8eaf64" name="ad27d96389ab6be3c82fc03a4cb8eaf64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad27d96389ab6be3c82fc03a4cb8eaf64">&#9670;&#160;</a></span>set_font()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Framebuffer::set_font </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>font</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the reference to the font, recompute max number of line, column, the new text buffer size, delete the previous one if any and create a new buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">font</td><td></td></tr>
   </table>
   </dd>
 </dl>
