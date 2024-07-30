@@ -55,13 +55,13 @@ void UIModelObject::set_change_flag()
     this->change_flag = true;
 }
 
-UIControlledIncrementalValue::UIControlledIncrementalValue(int _min_value, int _max_value, bool _is_wrapable, int _increment)
+UIControlledIncrementalValue::UIControlledIncrementalValue(int _min_value, int _max_value, bool _is_wrappable, int _increment)
     : UIModelObject()
 {
     this->value = 0;
     this->min_value = _min_value;
     this->max_value = _max_value;
-    this->is_wrappable = _is_wrapable;
+    this->is_wrappable = _is_wrappable;
     this->increment = _increment;
 }
 

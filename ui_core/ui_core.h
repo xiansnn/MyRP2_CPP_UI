@@ -1,12 +1,12 @@
 /**
  * @file ui_core.h
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-30
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #if !defined(UI_CORE_H)
 #define UI_CORE_H
@@ -18,40 +18,86 @@
 #include <string>
 
 /**
- * @brief The list of predefined event that a Controller can send to the controlled object, leaving it the responsibility
+ * @brief The list of predefined events that a UIController can send to the controlled UIModelObject, leaving it the responsibility
  * to act as required by its specification.
  *
  */
 enum class ControlEvent
 {
+    /**
+     * @brief null event, no operation expected.
+     */
     NOOP,
+    /**
+     * @brief event triggered when a button is pushed
+     */
     PUSH,
-    DOUBLE_PUSH, // TODO find a way to do "DOUBLE_PUSH"
+    /**
+     * @brief event triggered when a button is double-pushed
+     * 
+     * Not implemented. // TODO  To find a way to do "DOUBLE_PUSH"
+     */
+    DOUBLE_PUSH, 
+    /**
+     * @brief event triggered when a button is held more than a configurable duration.
+     * 
+     * The duration configuration is under implemented UIController object.
+     */
     LONG_PUSH,
+    /**
+     * @brief event triggered when a button is released after a configurable duration.
+     * 
+     * The duration configuration is under implemented UIController object.
+     */
     RELEASED_AFTER_LONG_TIME,
+    /**
+     * @brief event triggered when a button is released before a configurable duration.
+     * 
+     * The duration configuration is under implemented UIController object.
+     */
     RELEASED_AFTER_SHORT_TIME,
+    /**
+     * @brief event that signals the user trig an increment order.
+     */
     INCREMENT,
+    /**
+     * @brief event that signals the user trig an decerement order.
+     */
     DECREMENT,
-    TIME_OUT // TODO find a way to do "TIME_OUT"
+    /**
+     * @brief event that signals nothing happens after a configurable period of time.
+     * The period of time configuration is under implemented UIController object.
+     * 
+     * Not implemented. //TODO find a way to do "TIME_OUT"
+     */
+    TIME_OUT 
 };
 
 /**
- * @brief The list of status that a model can have.
+ * @brief The list of status that a UIModelObject can have.
  *
  */
 enum class ControlledObjectStatus
 {
-    IS_WAITING, // nothing to do
-    HAS_FOCUS, // the widget or object manager is pointing to this model
-    IS_ACTIVE // the user has selected (clicked) on this model. CtrolEvent are then passed to this model in order to be processed.
+    /**
+     * @brief The object is inactive, nothing to do.
+     */
+    IS_WAITING,
+    /**
+     * @brief The widget or object manager is pointing to this model
+     */
+    HAS_FOCUS,
+    /**
+     * @brief The user has selected (clicked) on this model. ControlEvent are then passed to this model in order to be processed.
+     */
+    IS_ACTIVE
 };
-
 
 class UIController;
 
 /**
  * @brief This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen SSD1306).
- * It derived from Framebuffer. This allows to draw text and graphics directly into the display framebuffer 
+ * It derived from Framebuffer. This allows to draw text and graphics directly into the display framebuffer
  * thanks to Framebuffet class text and graphic primitives indepently from any kind of widget
  *
  */
@@ -70,7 +116,7 @@ public:
     UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, StructFramebufferText txt_cnf = {.font = font_8x8});
     /**
      * @brief Destroy the UIDisplayDevice object
-     * 
+     *
      */
     virtual ~UIDisplayDevice();
     /**
@@ -92,9 +138,11 @@ public:
 
 /**
  * @brief This is the Model abstract class of Model_View_Control design pattern.
+ *
  * It handles change_flag, a semaphore used to indicate that a screen refresh is required.
- * the controller or any other entities that modify the model must set the change_flag 
- * and the widget in charge of its screen representation must clear the chang_flag
+ *
+ *The controller or any other entities that modify the model must set the change_flag
+ * and the widget in charge of its screen representation must clear the change_flag
  *
  */
 class UIModelObject
@@ -125,7 +173,7 @@ public:
     UIModelObject(/* args */);
     /**
      * @brief Destroy the UIModelObject object
-     * 
+     *
      */
     ~UIModelObject();
     /**
@@ -146,14 +194,15 @@ public:
      */
     void clear_change_flag();
     /**
-     * @brief Propose a _new_status for the model. If this _new_status is different from the present one, 
+     * @brief Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one,
      * then the change is effective and the change_flag is set to true.
      *
      * @param _new_status
      */
     void update_status(ControlledObjectStatus _new_status);
     /**
-     * @brief 
+     * @brief if _new_controller is different from the current controller, change the current controller associated to the ModelObject.
+     * the new controller has is member current_controlled_object also changed.
      *
      * @param _new_controller
      */
@@ -165,7 +214,7 @@ public:
      */
     ControlledObjectStatus get_status();
     /**
-     * @brief
+     * @brief The purpose of this function is to implement the behavior of the implemented model object when a ControlEvent is received.
      *
      * @param _event
      */
@@ -173,309 +222,292 @@ public:
 };
 
 /**
- * @brief
+ * @brief The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value that can be incremented or decremented.
+ * This value runs between a min_value and a max_value.
+ *
+ * The increment value is configurable. A is_wrappable flag indicates how the value behaves once min or max values are reached.
  *
  */
 class UIControlledIncrementalValue : public UIModelObject
 {
 private:
 protected:
-    /**
-     * @brief
-     *
-     */
     int value;
-    /**
-     * @brief
-     *
-     */
     int max_value;
-    /**
-     * @brief 
-     * 
-     */
     int min_value;
-    /**
-     * @brief
-     *
-     */
     int increment;
-    /**
-     * @brief
-     *
-     */
     bool is_wrappable;
 
 public:
     /**
      * @brief Construct a new UIControlledIncrementalValue object
      *
-     * @param _min_value
-     * @param _max_value
-     * @param _is_wrapable
-     * @param increment
+     * @param min_value   The minimum value that can be reached. Can be either negative or positive.
+     * @param max_value   The maximum value that can be reached. Can be either negative or positive.
+     * @param is_wrappable   If true, once the max (resp. min) value is reached, the next one wraps to min (resp*; max) value.
+     * If false values are clipped on min and max values.
+     * @param increment   The number that is added or substracted to the current value. Default to 1.
      */
-    UIControlledIncrementalValue(int _min_value = 0, int _max_value = 10, bool _is_wrapable = false, int increment = 1);
+    UIControlledIncrementalValue(int min_value = 0, int max_value = 10, bool is_wrappable = false, int increment = 1);
     /**
      * @brief Destroy the UIControlledIncrementalValue object
-     * 
+     *
      */
     ~UIControlledIncrementalValue();
     /**
-     * @brief 
-     * 
+     * @brief Add "increment" to the current value.
+     *
      */
     virtual void increment_value();
     /**
-     * @brief 
-     * 
+     * @brief  Substract "increment" to the current value.
+     *
      */
     virtual void decrement_value();
     /**
-     * @brief Set the clipped value object
-     * 
-     * @param _new_value 
+     * @brief Set value to _new_value, and clip the result to min or max value if needed.
+     *
+     * @param _new_value
      */
     void set_clipped_value(int _new_value);
     /**
      * @brief Get the value object
-     * 
-     * @return int 
+     *
+     * @return int
      */
     int get_value();
     /**
      * @brief Get the min value object
-     * 
-     * @return int 
+     *
+     * @return int
      */
     int get_min_value();
     /**
      * @brief Get the max value object
-     * 
-     * @return int 
+     *
+     * @return int
      */
     int get_max_value();
 };
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 class UIObjectManager : public UIControlledIncrementalValue
 {
 protected:
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     std::vector<UIModelObject *> managed_models;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     UIModelObject *current_active_model;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     void make_managed_object_active();
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     void make_manager_active();
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     virtual void increment_focus();
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     virtual void decrement_focus();
 
 public:
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     UIObjectManager(/* args */);
     /**
      * @brief Destroy the UIObjectManager object
-     * 
+     *
      */
     ~UIObjectManager();
     /**
-     * @brief 
-     * 
-     * @param _new_model 
+     * @brief
+     *
+     * @param _new_model
      */
     void add_managed_model(UIModelObject *_new_model);
 };
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 class UIController
 {
 protected:
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     UIModelObject *current_controlled_object{nullptr};
 
 public:
-/**
- * @brief 
- * 
- */
+    /**
+     * @brief
+     *
+     */
     UIController(/* args */);
     /**
      * @brief Destroy the UIController object
-     * 
+     *
      */
     ~UIController();
     /**
-     * @brief 
-     * 
-     * @param _new_controlled_object 
+     * @brief
+     *
+     * @param _new_controlled_object
      */
     void update_current_controlled_object(UIModelObject *_new_controlled_object);
 };
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 class UIWidget : public Framebuffer
 {
 private:
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     UIDisplayDevice *display_screen{nullptr};
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
-    UIModelObject * displayed_model{nullptr};
+    UIModelObject *displayed_model{nullptr};
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     bool widget_with_border{true};
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     uint8_t widget_anchor_x;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     uint8_t widget_anchor_y;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
 
 protected:
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     std::vector<UIWidget *> widgets;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     size_t widget_width{128};
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     size_t widget_height{8};
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     uint8_t widget_start_x;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     uint8_t widget_start_y;
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     uint8_t widget_border_width;
     /**
      * @brief Set the displayed model object
-     * 
-     * @param _new_displayed_model 
+     *
+     * @param _new_displayed_model
      */
     virtual void set_displayed_model(UIModelObject *_new_displayed_model);
     /**
      * @brief Set the display screen object
-     * 
-     * @param _new_display_device 
+     *
+     * @param _new_display_device
      */
     void set_display_screen(UIDisplayDevice *_new_display_device);
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     void draw_border();
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      */
     virtual void draw() = 0;
 
 public:
     /**
-     * @brief 
-     * 
-     * @param _blink_period 
-     * @return FramebufferColor 
+     * @brief
+     *
+     * @param _blink_period
+     * @return FramebufferColor
      */
     static FramebufferColor blinking_us(uint32_t _blink_period);
     /**
      * @brief Construct a new UIWidget object
-     * 
-     * @param display_screen 
-     * @param frame_width 
-     * @param frame_height 
-     * @param widget_anchor_x 
-     * @param widget_anchor_y 
-     * @param widget_with_border 
-     * @param widget_border_width 
-     * @param framebuffer_format 
-     * @param framebuffer_txt_cnf 
+     *
+     * @param display_screen
+     * @param frame_width
+     * @param frame_height
+     * @param widget_anchor_x
+     * @param widget_anchor_y
+     * @param widget_with_border
+     * @param widget_border_width
+     * @param framebuffer_format
+     * @param framebuffer_txt_cnf
      */
-    UIWidget(UIDisplayDevice *display_screen, 
-                size_t frame_width,
-                size_t frame_height,
-                uint8_t widget_anchor_x, 
-                uint8_t widget_anchor_y, 
-                bool widget_with_border, 
-                uint8_t widget_border_width = 1,
-                FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB, 
-                StructFramebufferText framebuffer_txt_cnf = {.font = font_8x8}
-                );
+    UIWidget(UIDisplayDevice *display_screen,
+             size_t frame_width,
+             size_t frame_height,
+             uint8_t widget_anchor_x,
+             uint8_t widget_anchor_y,
+             bool widget_with_border,
+             uint8_t widget_border_width = 1,
+             FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB,
+             StructFramebufferText framebuffer_txt_cnf = {.font = font_8x8});
     /**
      * @brief Destroy the UIWidget object
      */
     ~UIWidget();
     /**
-     * @brief 
-     * 
-     * @param _sub_widget 
+     * @brief
+     *
+     * @param _sub_widget
      */
     void add_widget(UIWidget *_sub_widget);
     /**
