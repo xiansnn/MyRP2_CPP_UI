@@ -103,13 +103,18 @@ $(function(){initNavTree('class_u_i_controlled_incremental_value.html',''); init
   <div class="headertitle"><div class="title">UIControlledIncrementalValue Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> is a kind of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> that have special feature such as a value that can be incremented or decremented. This value runs between a min_value and a max_value.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ui__core_8h_source.html">ui_core.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for UIControlledIncrementalValue:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="class_u_i_controlled_incremental_value.png" usemap="#UIControlledIncrementalValue_map" alt=""/>
   <map id="UIControlledIncrementalValue_map" name="UIControlledIncrementalValue_map">
-<area href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern. It handles change_flag,..." alt="UIModelObject" shape="rect" coords="94,0,273,24"/>
+<area href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern." alt="UIModelObject" shape="rect" coords="94,0,273,24"/>
 <area href="class_test_incremental_value.html" alt="TestIncrementalValue" shape="rect" coords="0,112,179,136"/>
 <area href="class_u_i_object_manager.html" alt="UIObjectManager" shape="rect" coords="189,112,368,136"/>
 <area href="class_test___manager.html" alt="Test_Manager" shape="rect" coords="189,168,368,192"/>
@@ -118,21 +123,23 @@ Inheritance diagram for UIControlledIncrementalValue:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a32ac72be5974abc924c289c447018df1" id="r_a32ac72be5974abc924c289c447018df1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32ac72be5974abc924c289c447018df1">UIControlledIncrementalValue</a> (int _min_value=0, int _max_value=10, bool _is_wrapable=false, int increment=1)</td></tr>
-<tr class="memdesc:a32ac72be5974abc924c289c447018df1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a> object.  <br /></td></tr>
-<tr class="separator:a32ac72be5974abc924c289c447018df1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2186659f8715ff9822861415cd38cf7" id="r_ac2186659f8715ff9822861415cd38cf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2186659f8715ff9822861415cd38cf7">UIControlledIncrementalValue</a> (int min_value=0, int max_value=10, bool is_wrappable=false, int increment=1)</td></tr>
+<tr class="memdesc:ac2186659f8715ff9822861415cd38cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> object.  <br /></td></tr>
+<tr class="separator:ac2186659f8715ff9822861415cd38cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a012cebe64e294c16f901a55530a8b045" id="r_a012cebe64e294c16f901a55530a8b045"><td class="memItemLeft" align="right" valign="top"><a id="a012cebe64e294c16f901a55530a8b045" name="a012cebe64e294c16f901a55530a8b045"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~UIControlledIncrementalValue</b> ()</td></tr>
-<tr class="memdesc:a012cebe64e294c16f901a55530a8b045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a> object. <br /></td></tr>
+<tr class="memdesc:a012cebe64e294c16f901a55530a8b045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> object. <br /></td></tr>
 <tr class="separator:a012cebe64e294c16f901a55530a8b045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f2e0d88e66e06576c00531c32cf8175" id="r_a1f2e0d88e66e06576c00531c32cf8175"><td class="memItemLeft" align="right" valign="top"><a id="a1f2e0d88e66e06576c00531c32cf8175" name="a1f2e0d88e66e06576c00531c32cf8175"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>increment_value</b> ()</td></tr>
+<tr class="memdesc:a1f2e0d88e66e06576c00531c32cf8175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add "increment" to the current value. <br /></td></tr>
 <tr class="separator:a1f2e0d88e66e06576c00531c32cf8175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd999667d7ae68a76cdea8dc062d3652" id="r_afd999667d7ae68a76cdea8dc062d3652"><td class="memItemLeft" align="right" valign="top"><a id="afd999667d7ae68a76cdea8dc062d3652" name="afd999667d7ae68a76cdea8dc062d3652"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>decrement_value</b> ()</td></tr>
+<tr class="memdesc:afd999667d7ae68a76cdea8dc062d3652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substract "increment" to the current value. <br /></td></tr>
 <tr class="separator:afd999667d7ae68a76cdea8dc062d3652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a428e1f2a8063a48f04ec45c4050af36d" id="r_a428e1f2a8063a48f04ec45c4050af36d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a428e1f2a8063a48f04ec45c4050af36d">set_clipped_value</a> (int _new_value)</td></tr>
-<tr class="memdesc:a428e1f2a8063a48f04ec45c4050af36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the clipped value object.  <br /></td></tr>
+<tr class="memdesc:a428e1f2a8063a48f04ec45c4050af36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set value to _new_value, and clip the result to min or max value if needed.  <br /></td></tr>
 <tr class="separator:a428e1f2a8063a48f04ec45c4050af36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7989979c51969bb665d8539636eb9876" id="r_a7989979c51969bb665d8539636eb9876"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7989979c51969bb665d8539636eb9876">get_value</a> ()</td></tr>
 <tr class="memdesc:a7989979c51969bb665d8539636eb9876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value object.  <br /></td></tr>
@@ -146,11 +153,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>decrement_val
 <tr class="inherit_header pub_methods_class_u_i_model_object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_u_i_model_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_u_i_model_object.html">UIModelObject</a></td></tr>
 <tr class="memitem:af89f5a77bc6a17f09ceb7fe603bbe715 inherit pub_methods_class_u_i_model_object" id="r_af89f5a77bc6a17f09ceb7fe603bbe715"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>UIModelObject</b> ()</td></tr>
-<tr class="memdesc:af89f5a77bc6a17f09ceb7fe603bbe715 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern. It handles change_flag,...">UIModelObject</a> object. <br /></td></tr>
+<tr class="memdesc:af89f5a77bc6a17f09ceb7fe603bbe715 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> object. <br /></td></tr>
 <tr class="separator:af89f5a77bc6a17f09ceb7fe603bbe715 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27926030b4ebb2bcd5bf6eb07d85a9c4 inherit pub_methods_class_u_i_model_object" id="r_a27926030b4ebb2bcd5bf6eb07d85a9c4"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>~UIModelObject</b> ()</td></tr>
-<tr class="memdesc:a27926030b4ebb2bcd5bf6eb07d85a9c4 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern. It handles change_flag,...">UIModelObject</a> object. <br /></td></tr>
+<tr class="memdesc:a27926030b4ebb2bcd5bf6eb07d85a9c4 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> object. <br /></td></tr>
 <tr class="separator:a27926030b4ebb2bcd5bf6eb07d85a9c4 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79a9f2c84215e09309dcefde3711138 inherit pub_methods_class_u_i_model_object" id="r_ae79a9f2c84215e09309dcefde3711138"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#ae79a9f2c84215e09309dcefde3711138">has_changed</a> ()</td></tr>
 <tr class="separator:ae79a9f2c84215e09309dcefde3711138 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,14 +170,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_change_flag</b>
 <tr class="memdesc:aff2fe32c66d4c1637627a253274fd383 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the change flag object to false. <br /></td></tr>
 <tr class="separator:aff2fe32c66d4c1637627a253274fd383 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object" id="r_a23cc738b1244cbc6a52ad7ed6102e688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688">update_status</a> (<a class="el" href="ui__core_8h.html#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> _new_status)</td></tr>
-<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose a _new_status for the model. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true.  <br /></td></tr>
+<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true.  <br /></td></tr>
 <tr class="separator:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a656066649f529b7472d098637ddcf04f inherit pub_methods_class_u_i_model_object" id="r_a656066649f529b7472d098637ddcf04f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a656066649f529b7472d098637ddcf04f">update_current_controller</a> (<a class="el" href="class_u_i_controller.html">UIController</a> *_new_controller)</td></tr>
+<tr class="memdesc:a656066649f529b7472d098637ddcf04f inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">if _new_controller is different from the current controller, change the current controller associated to the ModelObject. the new controller has is member current_controlled_object also changed.  <br /></td></tr>
 <tr class="separator:a656066649f529b7472d098637ddcf04f inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d6483ff3c6141398213e6eae1be63d inherit pub_methods_class_u_i_model_object" id="r_a63d6483ff3c6141398213e6eae1be63d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ui__core_8h.html#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a63d6483ff3c6141398213e6eae1be63d">get_status</a> ()</td></tr>
 <tr class="memdesc:a63d6483ff3c6141398213e6eae1be63d inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status object.  <br /></td></tr>
 <tr class="separator:a63d6483ff3c6141398213e6eae1be63d inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b035d133dc91fd33028d3c264992add inherit pub_methods_class_u_i_model_object" id="r_a4b035d133dc91fd33028d3c264992add"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a4b035d133dc91fd33028d3c264992add">process_control_event</a> (<a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> _event)=0</td></tr>
+<tr class="memdesc:a4b035d133dc91fd33028d3c264992add inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">The purpose of this function is to implement the behavior of the implemented model object when a ControlEvent is received.  <br /></td></tr>
 <tr class="separator:a4b035d133dc91fd33028d3c264992add inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -191,9 +200,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>increment</b></td></tr
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td></tr>
 <tr class="separator:a73b3a10b2774cf4ce94902925ffc9ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a32ac72be5974abc924c289c447018df1" name="a32ac72be5974abc924c289c447018df1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32ac72be5974abc924c289c447018df1">&#9670;&#160;</a></span>UIControlledIncrementalValue()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> is a kind of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> that have special feature such as a value that can be incremented or decremented. This value runs between a min_value and a max_value. </p>
+<p>The increment value is configurable. A is_wrappable flag indicates how the value behaves once min or max values are reached. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac2186659f8715ff9822861415cd38cf7" name="ac2186659f8715ff9822861415cd38cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2186659f8715ff9822861415cd38cf7">&#9670;&#160;</a></span>UIControlledIncrementalValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,17 +213,17 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td>
         <tr>
           <td class="memname">UIControlledIncrementalValue::UIControlledIncrementalValue </td>
           <td>(</td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_min_value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>min_value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">0</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>_max_value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_value</em></span><span class="paramdefsep"> = </span><span class="paramdefval">10</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>_is_wrapable</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>is_wrappable</em></span><span class="paramdefsep"> = </span><span class="paramdefval">false</span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -221,13 +233,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a> object. </p>
+<p>Construct a new <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_min_value</td><td></td></tr>
-    <tr><td class="paramname">_max_value</td><td></td></tr>
-    <tr><td class="paramname">_is_wrapable</td><td></td></tr>
-    <tr><td class="paramname">increment</td><td></td></tr>
+    <tr><td class="paramname">min_value</td><td>The minimum value that can be reached. Can be either negative or positive. </td></tr>
+    <tr><td class="paramname">max_value</td><td>The maximum value that can be reached. Can be either negative or positive. </td></tr>
+    <tr><td class="paramname">is_wrappable</td><td>If true, once the max (resp. min) value is reached, the next one wraps to min (resp*; max) value. If false values are clipped on min and max values. </td></tr>
+    <tr><td class="paramname">increment</td><td>The number that is added or substracted to the current value. Default to 1. </td></tr>
   </table>
   </dd>
 </dl>
@@ -310,7 +322,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td>
       </table>
 </div><div class="memdoc">
 
-<p>Set the clipped value object. </p>
+<p>Set value to _new_value, and clip the result to min or max value if needed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_new_value</td><td></td></tr>

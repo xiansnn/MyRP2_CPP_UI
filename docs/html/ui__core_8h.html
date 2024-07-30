@@ -116,9 +116,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the abstract class to handle all generic behavior of physical display devices (e.g. OLED screen <a class="el" href="class_s_s_d1306.html">SSD1306</a>). It derived from <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a>. This allows to draw text and graphics directly into the display framebuffer thanks to Framebuffet class text and graphic primitives indepently from any kind of widget.  <a href="class_u_i_display_device.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html">UIModelObject</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Model abstract class of Model_View_Control design pattern. It handles change_flag, a semaphore used to indicate that a screen refresh is required. the controller or any other entities that modify the model must set the change_flag and the widget in charge of its screen representation must clear the chang_flag.  <a href="class_u_i_model_object.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Model abstract class of Model_View_Control design pattern.  <a href="class_u_i_model_object.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> is a kind of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> that have special feature such as a value that can be incremented or decremented. This value runs between a min_value and a max_value.  <a href="class_u_i_controlled_incremental_value.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_object_manager.html">UIObjectManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,27 +130,27 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:afe97f6c9e5f8fc59c735ff67fa2255b4" id="r_afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="memItemLeft" align="right" valign="top"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4" name="afe97f6c9e5f8fc59c735ff67fa2255b4"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> { <br />
-&#160;&#160;<b>NOOP</b>
-, <b>PUSH</b>
-, <b>DOUBLE_PUSH</b>
-, <b>LONG_PUSH</b>
+<tr class="memitem:afe97f6c9e5f8fc59c735ff67fa2255b4" id="r_afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> { <br />
+&#160;&#160;<a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4a722d122e81cbbe543bd5520bb8678c0e">NOOP</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4a73dabe4437725eedc05a1824a2c31550">PUSH</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4a7f9117be5ae4af6fadbf2c87f360c120">DOUBLE_PUSH</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646">LONG_PUSH</a>
 , <br />
-&#160;&#160;<b>RELEASED_AFTER_LONG_TIME</b>
-, <b>RELEASED_AFTER_SHORT_TIME</b>
-, <b>INCREMENT</b>
-, <b>DECREMENT</b>
+&#160;&#160;<a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84">RELEASED_AFTER_LONG_TIME</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90">RELEASED_AFTER_SHORT_TIME</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534">INCREMENT</a>
+, <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106">DECREMENT</a>
 , <br />
-&#160;&#160;<b>TIME_OUT</b>
+&#160;&#160;<a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98">TIME_OUT</a>
 <br />
  }</td></tr>
-<tr class="memdesc:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of predefined event that a Controller can send to the controlled object, leaving it the responsibility to act as required by its specification. <br /></td></tr>
+<tr class="memdesc:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of predefined events that a <a class="el" href="class_u_i_controller.html">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification.  <a href="#afe97f6c9e5f8fc59c735ff67fa2255b4">More...</a><br /></td></tr>
 <tr class="separator:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57c20ec1ef250b4ad060705786762112" id="r_a57c20ec1ef250b4ad060705786762112"><td class="memItemLeft" align="right" valign="top"><a id="a57c20ec1ef250b4ad060705786762112" name="a57c20ec1ef250b4ad060705786762112"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> { <b>IS_WAITING</b>
-, <b>HAS_FOCUS</b>
-, <b>IS_ACTIVE</b>
+<tr class="memitem:a57c20ec1ef250b4ad060705786762112" id="r_a57c20ec1ef250b4ad060705786762112"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> { <a class="el" href="#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab">IS_WAITING</a>
+, <a class="el" href="#a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac">HAS_FOCUS</a>
+, <a class="el" href="#a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089">IS_ACTIVE</a>
  }</td></tr>
-<tr class="memdesc:a57c20ec1ef250b4ad060705786762112"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of status that a model can have. <br /></td></tr>
+<tr class="memdesc:a57c20ec1ef250b4ad060705786762112"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of status that a <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> can have.  <a href="#a57c20ec1ef250b4ad060705786762112">More...</a><br /></td></tr>
 <tr class="separator:a57c20ec1ef250b4ad060705786762112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -157,7 +158,89 @@ Enumerations</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-05-30</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="afe97f6c9e5f8fc59c735ff67fa2255b4" name="afe97f6c9e5f8fc59c735ff67fa2255b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe97f6c9e5f8fc59c735ff67fa2255b4">&#9670;&#160;</a></span>ControlEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of predefined events that a <a class="el" href="class_u_i_controller.html">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a722d122e81cbbe543bd5520bb8678c0e" name="afe97f6c9e5f8fc59c735ff67fa2255b4a722d122e81cbbe543bd5520bb8678c0e"></a>NOOP&#160;</td><td class="fielddoc"><p>null event, no operation expected. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a73dabe4437725eedc05a1824a2c31550" name="afe97f6c9e5f8fc59c735ff67fa2255b4a73dabe4437725eedc05a1824a2c31550"></a>PUSH&#160;</td><td class="fielddoc"><p>event triggered when a button is pushed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a7f9117be5ae4af6fadbf2c87f360c120" name="afe97f6c9e5f8fc59c735ff67fa2255b4a7f9117be5ae4af6fadbf2c87f360c120"></a>DOUBLE_PUSH&#160;</td><td class="fielddoc"><p>event triggered when a button is double-pushed </p>
+<p>Not implemented. // TODO To find a way to do "DOUBLE_PUSH" </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646" name="afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646"></a>LONG_PUSH&#160;</td><td class="fielddoc"><p>event triggered when a button is held more than a configurable duration. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84" name="afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84"></a>RELEASED_AFTER_LONG_TIME&#160;</td><td class="fielddoc"><p>event triggered when a button is released after a configurable duration. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90" name="afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90"></a>RELEASED_AFTER_SHORT_TIME&#160;</td><td class="fielddoc"><p>event triggered when a button is released before a configurable duration. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534" name="afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534"></a>INCREMENT&#160;</td><td class="fielddoc"><p>event that signals the user trig an increment order. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106" name="afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106"></a>DECREMENT&#160;</td><td class="fielddoc"><p>event that signals the user trig an decerement order. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98" name="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98"></a>TIME_OUT&#160;</td><td class="fielddoc"><p>event that signals nothing happens after a configurable period of time. The period of time configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+<p>Not implemented. //TODO find a way to do "TIME_OUT" </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a57c20ec1ef250b4ad060705786762112" name="a57c20ec1ef250b4ad060705786762112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57c20ec1ef250b4ad060705786762112">&#9670;&#160;</a></span>ControlledObjectStatus</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The list of status that a <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> can have. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab" name="a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab"></a>IS_WAITING&#160;</td><td class="fielddoc"><p>The object is inactive, nothing to do. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac" name="a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac"></a>HAS_FOCUS&#160;</td><td class="fielddoc"><p>The widget or object manager is pointing to this model. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089" name="a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089"></a>IS_ACTIVE&#160;</td><td class="fielddoc"><p>The user has selected (clicked) on this model. ControlEvent are then passed to this model in order to be processed. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

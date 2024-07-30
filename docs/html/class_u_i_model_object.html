@@ -103,7 +103,7 @@ $(function(){initNavTree('class_u_i_model_object.html',''); initResizable(true);
 </div><!--header-->
 <div class="contents">
 
-<p>This is the Model abstract class of Model_View_Control design pattern. It handles change_flag, a semaphore used to indicate that a screen refresh is required. the controller or any other entities that modify the model must set the change_flag and the widget in charge of its screen representation must clear the chang_flag.  
+<p>This is the Model abstract class of Model_View_Control design pattern.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ui__core_8h_source.html">ui_core.h</a>&gt;</code></p>
@@ -113,7 +113,7 @@ Inheritance diagram for UIModelObject:</div>
  <div class="center">
   <img src="class_u_i_model_object.png" usemap="#UIModelObject_map" alt=""/>
   <map id="UIModelObject_map" name="UIModelObject_map">
-<area href="class_u_i_controlled_incremental_value.html" alt="UIControlledIncrementalValue" shape="rect" coords="94,56,273,80"/>
+<area href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value..." alt="UIControlledIncrementalValue" shape="rect" coords="94,56,273,80"/>
 <area href="class_test_incremental_value.html" alt="TestIncrementalValue" shape="rect" coords="0,112,179,136"/>
 <area href="class_u_i_object_manager.html" alt="UIObjectManager" shape="rect" coords="189,112,368,136"/>
 <area href="class_test___manager.html" alt="Test_Manager" shape="rect" coords="189,168,368,192"/>
@@ -124,11 +124,11 @@ Inheritance diagram for UIModelObject:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af89f5a77bc6a17f09ceb7fe603bbe715" id="r_af89f5a77bc6a17f09ceb7fe603bbe715"><td class="memItemLeft" align="right" valign="top"><a id="af89f5a77bc6a17f09ceb7fe603bbe715" name="af89f5a77bc6a17f09ceb7fe603bbe715"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>UIModelObject</b> ()</td></tr>
-<tr class="memdesc:af89f5a77bc6a17f09ceb7fe603bbe715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern. It handles change_flag,...">UIModelObject</a> object. <br /></td></tr>
+<tr class="memdesc:af89f5a77bc6a17f09ceb7fe603bbe715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> object. <br /></td></tr>
 <tr class="separator:af89f5a77bc6a17f09ceb7fe603bbe715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27926030b4ebb2bcd5bf6eb07d85a9c4" id="r_a27926030b4ebb2bcd5bf6eb07d85a9c4"><td class="memItemLeft" align="right" valign="top"><a id="a27926030b4ebb2bcd5bf6eb07d85a9c4" name="a27926030b4ebb2bcd5bf6eb07d85a9c4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~UIModelObject</b> ()</td></tr>
-<tr class="memdesc:a27926030b4ebb2bcd5bf6eb07d85a9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern. It handles change_flag,...">UIModelObject</a> object. <br /></td></tr>
+<tr class="memdesc:a27926030b4ebb2bcd5bf6eb07d85a9c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> object. <br /></td></tr>
 <tr class="separator:a27926030b4ebb2bcd5bf6eb07d85a9c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79a9f2c84215e09309dcefde3711138" id="r_ae79a9f2c84215e09309dcefde3711138"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae79a9f2c84215e09309dcefde3711138">has_changed</a> ()</td></tr>
 <tr class="separator:ae79a9f2c84215e09309dcefde3711138"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -141,18 +141,22 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_change_flag</b>
 <tr class="memdesc:aff2fe32c66d4c1637627a253274fd383"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the change flag object to false. <br /></td></tr>
 <tr class="separator:aff2fe32c66d4c1637627a253274fd383"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23cc738b1244cbc6a52ad7ed6102e688" id="r_a23cc738b1244cbc6a52ad7ed6102e688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23cc738b1244cbc6a52ad7ed6102e688">update_status</a> (<a class="el" href="ui__core_8h.html#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> _new_status)</td></tr>
-<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose a _new_status for the model. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true.  <br /></td></tr>
+<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true.  <br /></td></tr>
 <tr class="separator:a23cc738b1244cbc6a52ad7ed6102e688"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a656066649f529b7472d098637ddcf04f" id="r_a656066649f529b7472d098637ddcf04f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a656066649f529b7472d098637ddcf04f">update_current_controller</a> (<a class="el" href="class_u_i_controller.html">UIController</a> *_new_controller)</td></tr>
+<tr class="memdesc:a656066649f529b7472d098637ddcf04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">if _new_controller is different from the current controller, change the current controller associated to the ModelObject. the new controller has is member current_controlled_object also changed.  <br /></td></tr>
 <tr class="separator:a656066649f529b7472d098637ddcf04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63d6483ff3c6141398213e6eae1be63d" id="r_a63d6483ff3c6141398213e6eae1be63d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ui__core_8h.html#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63d6483ff3c6141398213e6eae1be63d">get_status</a> ()</td></tr>
 <tr class="memdesc:a63d6483ff3c6141398213e6eae1be63d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status object.  <br /></td></tr>
 <tr class="separator:a63d6483ff3c6141398213e6eae1be63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b035d133dc91fd33028d3c264992add" id="r_a4b035d133dc91fd33028d3c264992add"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b035d133dc91fd33028d3c264992add">process_control_event</a> (<a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> _event)=0</td></tr>
+<tr class="memdesc:a4b035d133dc91fd33028d3c264992add"><td class="mdescLeft">&#160;</td><td class="mdescRight">The purpose of this function is to implement the behavior of the implemented model object when a ControlEvent is received.  <br /></td></tr>
 <tr class="separator:a4b035d133dc91fd33028d3c264992add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the Model abstract class of Model_View_Control design pattern. It handles change_flag, a semaphore used to indicate that a screen refresh is required. the controller or any other entities that modify the model must set the change_flag and the widget in charge of its screen representation must clear the chang_flag. </p>
+<div class="textblock"><p>This is the Model abstract class of Model_View_Control design pattern. </p>
+<p>It handles change_flag, a semaphore used to indicate that a screen refresh is required.</p>
+<p>The controller or any other entities that modify the model must set the change_flag and the widget in charge of its screen representation must clear the change_flag </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a63d6483ff3c6141398213e6eae1be63d" name="a63d6483ff3c6141398213e6eae1be63d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63d6483ff3c6141398213e6eae1be63d">&#9670;&#160;</a></span>get_status()</h2>
@@ -216,6 +220,8 @@ false means the model is unchanged </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>The purpose of this function is to implement the behavior of the implemented model object when a ControlEvent is received. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_event</td><td></td></tr>
@@ -241,6 +247,8 @@ false means the model is unchanged </dd></dl>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>if _new_controller is different from the current controller, change the current controller associated to the ModelObject. the new controller has is member current_controlled_object also changed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_new_controller</td><td></td></tr>
@@ -265,7 +273,7 @@ false means the model is unchanged </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Propose a _new_status for the model. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true. </p>
+<p>Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_new_status</td><td></td></tr>

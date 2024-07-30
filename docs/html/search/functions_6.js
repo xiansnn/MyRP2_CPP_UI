@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['init_5ftext_5fbuffer_0',['init_text_buffer',['../class_framebuffer.html#ad55894974ba23bd04e280fe40afed813',1,'Framebuffer']]],
-  ['irq_5fenabled_1',['irq_enabled',['../class_switch_button_with_i_r_q.html#a261dc80eca218e3733c6a0cf637c25e8',1,'SwitchButtonWithIRQ']]],
-  ['is_5fbutton_5factive_2',['is_button_active',['../class_switch_button.html#aa9fdb807158ad5f9c2af77541a6da8a5',1,'SwitchButton']]],
-  ['is_5fswitch_5factive_3',['is_switch_active',['../class_switch_button.html#a7e862eb1123eb54a4589f88537b68374',1,'SwitchButton']]],
-  ['is_5fswitch_5fpushed_4',['is_switch_pushed',['../class_switch_button_with_i_r_q.html#a36babd7863c8831b6ceee97c884024fc',1,'SwitchButtonWithIRQ']]]
+  ['has_5fchanged_0',['has_changed',['../class_u_i_model_object.html#ae79a9f2c84215e09309dcefde3711138',1,'UIModelObject']]],
+  ['hi_1',['hi',['../class_probe.html#a493e1f46f0123ae6a18d7bd6e79d74f1',1,'Probe']]],
+  ['hline_2',['hline',['../class_framebuffer.html#ae464d1772ef80976c1faf8b2abb42903',1,'Framebuffer']]],
+  ['hw_5fi2c_5fmaster_3',['hw_I2C_master',['../classhw___i2_c__master.html#adbe831a40bc2a353f13e28b71267738d',1,'hw_I2C_master']]],
+  ['hw_5fi2c_5fslave_4',['hw_I2C_slave',['../classhw___i2_c__slave.html#a80642512c9f6f8641c36fdaf7cc8f8a8',1,'hw_I2C_slave']]]
 ];

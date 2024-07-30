@@ -209,7 +209,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <p>This framebuffer implementation is derived from the mycropython API and more explanations can be found there <a href="https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf">https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf</a>.</p>
 <p>The current implementation supports only MONO_VLSB frame_format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html">SSD1306</a>.</p>
 <p>The core of framebuffer is the pixel_buffer, a memory space that contains pixel values. This pixel_buffer is computed and initialized by the framebuffer constructor.</p>
-<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters is used. It is created ans initialized by init_text_buffer member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html" title="Data structure that holds all configuration parameters used by textual primitives.">StructFramebufferText</a>. </p>
+<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters chain is used. It is created and initialized by init_text_buffer function member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html" title="Data structure that holds all configuration parameters used by textual primitives.">StructFramebufferText</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25c9cadebb3531112c5085e981962407" name="a25c9cadebb3531112c5085e981962407"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25c9cadebb3531112c5085e981962407">&#9670;&#160;</a></span>Framebuffer()</h2>
@@ -241,6 +241,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
     <tr><td class="paramname">frame_width</td><td>The number of pixel along the width of the frame. Usually defined by "x" starting at "0" on top upleft corner, running to the left and ending at frame_width-1 position. </td></tr>
     <tr><td class="paramname">frame_height</td><td>The number of pixel along the height of the frame. Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position. </td></tr>
     <tr><td class="paramname">frame_format</td><td>The way the memory byte are translated by the dispaly driver device. <div class="image">
+<img src="framebuffer.png" alt=""/>
+</div>
+ <div class="image">
 <img src="framebuffer.png" alt=""/>
 </div>
  </td></tr>

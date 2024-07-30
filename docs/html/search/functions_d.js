@@ -1,10 +1,14 @@
 var searchData=
 [
-  ['uicontrolledincrementalvalue_0',['UIControlledIncrementalValue',['../class_u_i_controlled_incremental_value.html#a32ac72be5974abc924c289c447018df1',1,'UIControlledIncrementalValue']]],
-  ['uidisplaydevice_1',['UIDisplayDevice',['../class_u_i_display_device.html#a7a31ddf37113196411f2dc2d65750f31',1,'UIDisplayDevice']]],
-  ['uimodelobject_2',['UIModelObject',['../class_u_i_model_object.html#af89f5a77bc6a17f09ceb7fe603bbe715',1,'UIModelObject']]],
-  ['uiwidget_3',['UIWidget',['../class_u_i_widget.html#a91eb578573cca545c1dd378323734007',1,'UIWidget']]],
-  ['update_5fcurrent_5fcontrolled_5fobject_4',['update_current_controlled_object',['../class_u_i_controller.html#a2cc0f0b9952528a65b002f1ed86bb0f2',1,'UIController']]],
-  ['update_5fcurrent_5fcontroller_5',['update_current_controller',['../class_u_i_model_object.html#a656066649f529b7472d098637ddcf04f',1,'UIModelObject']]],
-  ['update_5fstatus_6',['update_status',['../class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688',1,'UIModelObject']]]
+  ['set_5fchange_5fflag_0',['set_change_flag',['../class_u_i_model_object.html#a2d8608d80b226fde8b31becdc828171b',1,'UIModelObject']]],
+  ['set_5fclipped_5fvalue_1',['set_clipped_value',['../class_u_i_controlled_incremental_value.html#a428e1f2a8063a48f04ec45c4050af36d',1,'UIControlledIncrementalValue']]],
+  ['set_5fdisplay_5fscreen_2',['set_display_screen',['../class_u_i_widget.html#ab0428db23b7794e60579466e62ba4290',1,'UIWidget']]],
+  ['set_5fdisplayed_5fmodel_3',['set_displayed_model',['../class_u_i_widget.html#a00531cfc7083d9a17f3dd63e4155375c',1,'UIWidget']]],
+  ['set_5ffont_4',['set_font',['../class_framebuffer.html#ad27d96389ab6be3c82fc03a4cb8eaf64',1,'Framebuffer']]],
+  ['show_5',['show',['../class_s_s_d1306.html#a9877895dcf33190e2fa712c8bf46bbb8',1,'SSD1306::show()'],['../class_s_s_d1306.html#a67f56b6c4fd626c6b60488e9aebfc077',1,'SSD1306::show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y)'],['../class_u_i_display_device.html#aea99bda7a2f1e6744076fce90e28ef57',1,'UIDisplayDevice::show()=0'],['../class_u_i_display_device.html#aa87594dc5c9085523809519fe0d85f5d',1,'UIDisplayDevice::show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y)=0']]],
+  ['show_5fbus_5fmap_6',['show_bus_map',['../classhw___i2_c__master.html#abf366a85839e4cf744b6e0649c72dac2',1,'hw_I2C_master']]],
+  ['single_5fbyte_5fread_7',['single_byte_read',['../classhw___i2_c__master.html#a22b68c1d146d681dd845943c24d2be26',1,'hw_I2C_master']]],
+  ['slave_5fisr_8',['slave_isr',['../classhw___i2_c__slave.html#ab13882640975c4aa6c828d2ad713375b',1,'hw_I2C_slave']]],
+  ['switchbutton_9',['SwitchButton',['../class_switch_button.html#a1a24a88e0e3b151081552537f9cde431',1,'SwitchButton']]],
+  ['switchbuttonwithirq_10',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html#a268acfd3b3414ddc8df3ff19b8386600',1,'SwitchButtonWithIRQ']]]
 ];
