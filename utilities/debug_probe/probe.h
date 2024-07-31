@@ -1,8 +1,7 @@
 /**
  * @file probe.h
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief The Probe provides a convenient class that can be used to observe behavior of programs.
- * It may be used with a logical analyser. The one used here has eight channel, numbered from 0 to 7.
+ * @brief 
  * @version 0.1
  * @date 2024-05-30
  *
@@ -15,7 +14,8 @@
 #include "pico/stdlib.h"
 
 /**
- * @brief
+ * @brief   The Probe provides a convenient class that can be used to observe behavior of programs.
+ * It may be used with a logical analyser. The one used here has eight channels, numbered from 0 to 7.
  *
  */
 class Probe
