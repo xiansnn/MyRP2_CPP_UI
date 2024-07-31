@@ -291,46 +291,52 @@ public:
 };
 
 /**
- * @brief
+ * @brief This is an Abstract class that is used to implement the manager of object on a screen.
+ * 
+ * An UIObjectManager is built from :
+ * 
+ * - UIModelObject : It inherits of the status and is controlled by a UIController.
+ * 
+ * - UIControlledIncrementalValue : It is associated with a value that represents the current managed UIModelObject under focus or active.
  *
  */
 class UIObjectManager : public UIControlledIncrementalValue
 {
 protected:
     /**
-     * @brief
+     * @brief The list of amaged objects
      *
      */
     std::vector<UIModelObject *> managed_models;
     /**
-     * @brief
+     * @brief the reference to the current active model object
      *
      */
     UIModelObject *current_active_model;
     /**
-     * @brief
+     * @brief change the status of model object under focus to IS_ACTIVE
      *
      */
     void make_managed_object_active();
     /**
-     * @brief
+     * @brief leave the current managed object and return control to the manager
      *
      */
     void make_manager_active();
     /**
-     * @brief
+     * @brief set focus on the next model in the list.
      *
      */
     virtual void increment_focus();
     /**
-     * @brief
+     * @brief set focus on the previous model in the list.
      *
      */
     virtual void decrement_focus();
 
 public:
     /**
-     * @brief
+     * @brief create a new UIObjectManager.
      *
      */
     UIObjectManager(/* args */);
@@ -340,7 +346,7 @@ public:
      */
     ~UIObjectManager();
     /**
-     * @brief
+     * @brief add a new UIModelObject to the list of managed objects.
      *
      * @param _new_model
      */
@@ -348,32 +354,29 @@ public:
 };
 
 /**
- * @brief
- *
+ * @brief UIController is the abstract class that hosts all controller object in the Model-View-Controll design pattern.
  */
 class UIController
 {
 protected:
     /**
-     * @brief
-     *
+     * @brief The reference to the UIModelObject currently under control.
      */
     UIModelObject *current_controlled_object{nullptr};
 
 public:
     /**
-     * @brief
-     *
+     * @brief create a UIController object
      */
     UIController(/* args */);
     /**
      * @brief Destroy the UIController object
-     *
      */
     ~UIController();
     /**
-     * @brief
-     *
+     * @brief if the current controlled object is different from _new_controlled_object, change the current controlled object this new one.
+     * 
+     * The controller of the new controlled object is updated.
      * @param _new_controlled_object
      */
     void update_current_controlled_object(UIModelObject *_new_controlled_object);
