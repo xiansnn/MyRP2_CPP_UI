@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tab_5fsize_0',['tab_size',['../struct_struct_framebuffer_text.html#a38eee6376d7aec3f021084781cf08c86',1,'StructFramebufferText']]]
+  ['fg_5fcolor_0',['fg_color',['../struct_struct_framebuffer_text.html#addd57ada13f684e04a1ac84c60d089a6',1,'StructFramebufferText']]],
+  ['font_1',['font',['../struct_struct_framebuffer_text.html#aa322a812c7ad59f9fda0384e641cf059',1,'StructFramebufferText']]]
 ];

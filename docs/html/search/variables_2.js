@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fg_5fcolor_0',['fg_color',['../struct_struct_framebuffer_text.html#addd57ada13f684e04a1ac84c60d089a6',1,'StructFramebufferText']]],
-  ['font_1',['font',['../struct_struct_framebuffer_text.html#aa322a812c7ad59f9fda0384e641cf059',1,'StructFramebufferText']]]
+  ['current_5factive_5fmodel_0',['current_active_model',['../class_u_i_object_manager.html#a248450861ee5a475f6df3af1001a68be',1,'UIObjectManager']]],
+  ['current_5fcontrolled_5fobject_1',['current_controlled_object',['../class_u_i_controller.html#a3776f935f634072e9c2a4c91aea11433',1,'UIController']]]
 ];

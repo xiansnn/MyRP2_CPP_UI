@@ -122,8 +122,10 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> is a kind of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> that have special feature such as a value that can be incremented or decremented. This value runs between a min_value and a max_value.  <a href="class_u_i_controlled_incremental_value.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_object_manager.html">UIObjectManager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an Abstract class that is used to implement the manager of object on a screen.  <a href="class_u_i_object_manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_controller.html">UIController</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> is the abstract class that hosts all controller object in the Model-View-Controll design pattern.  <a href="class_u_i_controller.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_widget.html">UIWidget</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +146,7 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="#afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98">TIME_OUT</a>
 <br />
  }</td></tr>
-<tr class="memdesc:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of predefined events that a <a class="el" href="class_u_i_controller.html">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification.  <a href="#afe97f6c9e5f8fc59c735ff67fa2255b4">More...</a><br /></td></tr>
+<tr class="memdesc:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of predefined events that a <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification.  <a href="#afe97f6c9e5f8fc59c735ff67fa2255b4">More...</a><br /></td></tr>
 <tr class="separator:afe97f6c9e5f8fc59c735ff67fa2255b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57c20ec1ef250b4ad060705786762112" id="r_a57c20ec1ef250b4ad060705786762112"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> { <a class="el" href="#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab">IS_WAITING</a>
 , <a class="el" href="#a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac">HAS_FOCUS</a>
@@ -179,7 +181,7 @@ Enumerations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The list of predefined events that a <a class="el" href="class_u_i_controller.html">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification. </p>
+<p>The list of predefined events that a <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> can send to the controlled <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>, leaving it the responsibility to act as required by its specification. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a722d122e81cbbe543bd5520bb8678c0e" name="afe97f6c9e5f8fc59c735ff67fa2255b4a722d122e81cbbe543bd5520bb8678c0e"></a>NOOP&#160;</td><td class="fielddoc"><p>null event, no operation expected. </p>
 </td></tr>
@@ -189,19 +191,19 @@ Enumerations</h2></td></tr>
 <p>Not implemented. // TODO To find a way to do "DOUBLE_PUSH" </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646" name="afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646"></a>LONG_PUSH&#160;</td><td class="fielddoc"><p>event triggered when a button is held more than a configurable duration. </p>
-<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> object. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84" name="afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84"></a>RELEASED_AFTER_LONG_TIME&#160;</td><td class="fielddoc"><p>event triggered when a button is released after a configurable duration. </p>
-<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> object. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90" name="afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90"></a>RELEASED_AFTER_SHORT_TIME&#160;</td><td class="fielddoc"><p>event triggered when a button is released before a configurable duration. </p>
-<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+<p>The duration configuration is under implemented <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> object. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534" name="afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534"></a>INCREMENT&#160;</td><td class="fielddoc"><p>event that signals the user trig an increment order. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106" name="afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106"></a>DECREMENT&#160;</td><td class="fielddoc"><p>event that signals the user trig an decerement order. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98" name="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98"></a>TIME_OUT&#160;</td><td class="fielddoc"><p>event that signals nothing happens after a configurable period of time. The period of time configuration is under implemented <a class="el" href="class_u_i_controller.html">UIController</a> object. </p>
+<tr><td class="fieldname"><a id="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98" name="afe97f6c9e5f8fc59c735ff67fa2255b4aa52c72b25366cc2977dc7c505cf06a98"></a>TIME_OUT&#160;</td><td class="fielddoc"><p>event that signals nothing happens after a configurable period of time. The period of time configuration is under implemented <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> object. </p>
 <p>Not implemented. //TODO find a way to do "TIME_OUT" </p>
 </td></tr>
 </table>

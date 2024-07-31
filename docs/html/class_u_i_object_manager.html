@@ -104,6 +104,11 @@ $(function(){initNavTree('class_u_i_object_manager.html',''); initResizable(true
   <div class="headertitle"><div class="title">UIObjectManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is an Abstract class that is used to implement the manager of object on a screen.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ui__core_8h_source.html">ui_core.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for UIObjectManager:</div>
 <div class="dyncontent">
@@ -118,11 +123,16 @@ Inheritance diagram for UIObjectManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1b76be0065fcaa83f7e38997aba18ca5" id="r_a1b76be0065fcaa83f7e38997aba18ca5"><td class="memItemLeft" align="right" valign="top"><a id="a1b76be0065fcaa83f7e38997aba18ca5" name="a1b76be0065fcaa83f7e38997aba18ca5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>UIObjectManager</b> ()</td></tr>
+<tr class="memdesc:a1b76be0065fcaa83f7e38997aba18ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a new <a class="el" href="class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen.">UIObjectManager</a>. <br /></td></tr>
+<tr class="separator:a1b76be0065fcaa83f7e38997aba18ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b63c49e0fd5b2c8ac33e60ccf84d66" id="r_a81b63c49e0fd5b2c8ac33e60ccf84d66"><td class="memItemLeft" align="right" valign="top"><a id="a81b63c49e0fd5b2c8ac33e60ccf84d66" name="a81b63c49e0fd5b2c8ac33e60ccf84d66"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~UIObjectManager</b> ()</td></tr>
-<tr class="memdesc:a81b63c49e0fd5b2c8ac33e60ccf84d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_object_manager.html">UIObjectManager</a> object. <br /></td></tr>
+<tr class="memdesc:a81b63c49e0fd5b2c8ac33e60ccf84d66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen.">UIObjectManager</a> object. <br /></td></tr>
 <tr class="separator:a81b63c49e0fd5b2c8ac33e60ccf84d66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adccc078134b98fe806047c86369f2e1c" id="r_adccc078134b98fe806047c86369f2e1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adccc078134b98fe806047c86369f2e1c">add_managed_model</a> (<a class="el" href="class_u_i_model_object.html">UIModelObject</a> *_new_model)</td></tr>
+<tr class="memdesc:adccc078134b98fe806047c86369f2e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> to the list of managed objects.  <br /></td></tr>
 <tr class="separator:adccc078134b98fe806047c86369f2e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_u_i_controlled_incremental_value"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_u_i_controlled_incremental_value')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a></td></tr>
 <tr class="memitem:ac2186659f8715ff9822861415cd38cf7 inherit pub_methods_class_u_i_controlled_incremental_value" id="r_ac2186659f8715ff9822861415cd38cf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_controlled_incremental_value.html#ac2186659f8715ff9822861415cd38cf7">UIControlledIncrementalValue</a> (int min_value=0, int max_value=10, bool is_wrappable=false, int increment=1)</td></tr>
@@ -188,24 +198,30 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_change_flag</b>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1bab4cf4e46d7dd6347ae8b8c6fb4d4a" id="r_a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"><td class="memItemLeft" align="right" valign="top"><a id="a1bab4cf4e46d7dd6347ae8b8c6fb4d4a" name="a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>make_managed_object_active</b> ()</td></tr>
+<tr class="memdesc:a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the status of model object under focus to IS_ACTIVE <br /></td></tr>
 <tr class="separator:a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d33e1d2261233004012a004b157ec01" id="r_a6d33e1d2261233004012a004b157ec01"><td class="memItemLeft" align="right" valign="top"><a id="a6d33e1d2261233004012a004b157ec01" name="a6d33e1d2261233004012a004b157ec01"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>make_manager_active</b> ()</td></tr>
+<tr class="memdesc:a6d33e1d2261233004012a004b157ec01"><td class="mdescLeft">&#160;</td><td class="mdescRight">leave the current managed object and return control to the manager <br /></td></tr>
 <tr class="separator:a6d33e1d2261233004012a004b157ec01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add85faf6ab3788fe2e200a074fba9601" id="r_add85faf6ab3788fe2e200a074fba9601"><td class="memItemLeft" align="right" valign="top"><a id="add85faf6ab3788fe2e200a074fba9601" name="add85faf6ab3788fe2e200a074fba9601"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>increment_focus</b> ()</td></tr>
+<tr class="memdesc:add85faf6ab3788fe2e200a074fba9601"><td class="mdescLeft">&#160;</td><td class="mdescRight">set focus on the next model in the list. <br /></td></tr>
 <tr class="separator:add85faf6ab3788fe2e200a074fba9601"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecbaeeae8b3627a631dfb5c739e5ebf3" id="r_aecbaeeae8b3627a631dfb5c739e5ebf3"><td class="memItemLeft" align="right" valign="top"><a id="aecbaeeae8b3627a631dfb5c739e5ebf3" name="aecbaeeae8b3627a631dfb5c739e5ebf3"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>decrement_focus</b> ()</td></tr>
+<tr class="memdesc:aecbaeeae8b3627a631dfb5c739e5ebf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">set focus on the previous model in the list. <br /></td></tr>
 <tr class="separator:aecbaeeae8b3627a631dfb5c739e5ebf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ab1d6f0601a5a4fe8e5609661c349a01c" id="r_ab1d6f0601a5a4fe8e5609661c349a01c"><td class="memItemLeft" align="right" valign="top"><a id="ab1d6f0601a5a4fe8e5609661c349a01c" name="ab1d6f0601a5a4fe8e5609661c349a01c"></a>
 std::vector&lt; <a class="el" href="class_u_i_model_object.html">UIModelObject</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>managed_models</b></td></tr>
+<tr class="memdesc:ab1d6f0601a5a4fe8e5609661c349a01c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of amaged objects. <br /></td></tr>
 <tr class="separator:ab1d6f0601a5a4fe8e5609661c349a01c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a248450861ee5a475f6df3af1001a68be" id="r_a248450861ee5a475f6df3af1001a68be"><td class="memItemLeft" align="right" valign="top"><a id="a248450861ee5a475f6df3af1001a68be" name="a248450861ee5a475f6df3af1001a68be"></a>
 <a class="el" href="class_u_i_model_object.html">UIModelObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>current_active_model</b></td></tr>
+<tr class="memdesc:a248450861ee5a475f6df3af1001a68be"><td class="mdescLeft">&#160;</td><td class="mdescRight">the reference to the current active model object <br /></td></tr>
 <tr class="separator:a248450861ee5a475f6df3af1001a68be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_u_i_controlled_incremental_value"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_u_i_controlled_incremental_value')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_u_i_controlled_incremental_value.html">UIControlledIncrementalValue</a></td></tr>
 <tr class="memitem:a2664b329f998c9893899f5a897f851f4 inherit pro_attribs_class_u_i_controlled_incremental_value" id="r_a2664b329f998c9893899f5a897f851f4"><td class="memItemLeft" align="right" valign="top">
@@ -224,7 +240,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>increment</b></td></tr
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td></tr>
 <tr class="separator:a73b3a10b2774cf4ce94902925ffc9ad9 inherit pro_attribs_class_u_i_controlled_incremental_value"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is an Abstract class that is used to implement the manager of object on a screen. </p>
+<p>An <a class="el" href="class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen.">UIObjectManager</a> is built from :</p>
+<ul>
+<li><a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> : It inherits of the status and is controlled by a <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>.</li>
+<li><a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a> : It is associated with a value that represents the current managed <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> under focus or active. </li>
+</ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="adccc078134b98fe806047c86369f2e1c" name="adccc078134b98fe806047c86369f2e1c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adccc078134b98fe806047c86369f2e1c">&#9670;&#160;</a></span>add_managed_model()</h2>
 
@@ -239,6 +262,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>add a new <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> to the list of managed objects. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_new_model</td><td></td></tr>
