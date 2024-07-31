@@ -136,8 +136,15 @@ public:
     ~Framebuffer();
 
     /**
-     * @brief Fill the pixel_buffer with "0" (BLACK). Reset also character position to (0,0).
+     * @brief Get the framebuffer format object
+     * 
+     * @return FramebufferFormat 
      */
+    FramebufferFormat get_framebuffer_format();
+
+    /**
+     * @brief Fill the pixel_buffer with "0" (BLACK). Reset also character position to (0,0).
+     */ 
     void clear_pixel_buffer();
     /**
      * @brief Write all framebuffer memory with "0" (or "1") if color c is BLACK (resp. WHITE).

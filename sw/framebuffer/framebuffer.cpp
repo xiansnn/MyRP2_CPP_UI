@@ -38,6 +38,11 @@ Framebuffer::~Framebuffer()
     delete[] this->text_buffer;
 }
 
+FramebufferFormat Framebuffer::get_framebuffer_format()
+{
+    return this->frame_format;
+}
+
 void Framebuffer::fill(FramebufferColor c)
 {
     assert(this->frame_format == FramebufferFormat::MONO_VLSB);
