@@ -383,70 +383,51 @@ public:
 };
 
 /**
- * @brief
+ * @brief A widget is a displayed object on a device screen. It inherits from all framebuffer features, giving it textual and graphical capabilities.
+ * 
+ * Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics.
+ * 
+ * It is located within the display device screen at an anchor point (x,y). 
+ * 
  *
  */
 class UIWidget : public Framebuffer
 {
 private:
-    /**
-     * @brief
-     *
-     */
     UIDisplayDevice *display_screen{nullptr};
-    /**
-     * @brief
-     *
-     */
     UIModelObject *displayed_model{nullptr};
-    /**
-     * @brief
-     *
-     */
     bool widget_with_border{true};
-    /**
-     * @brief
-     *
-     */
     uint8_t widget_anchor_x;
-    /**
-     * @brief
-     *
-     */
     uint8_t widget_anchor_y;
-    /**
-     * @brief
-     *
-     */
 
 protected:
     /**
-     * @brief
+     * @brief A widget can be composed by several widget.
      *
      */
     std::vector<UIWidget *> widgets;
     /**
-     * @brief
+     * @brief As a widget can be surrounded by a border, the actual widget width is not the associated framebuffer width.
      *
      */
     size_t widget_width{128};
     /**
-     * @brief
+     * @brief As a widget can be surrounded by a border, the actual widget height is not the associated framebuffer height.
      *
      */
     size_t widget_height{8};
     /**
-     * @brief
+     * @brief this is the actual horizontal start of the widget drawing area, taken into account the presence of border.
      *
      */
     uint8_t widget_start_x;
     /**
-     * @brief
+     * @brief this is the actual vertical start of the widget drawing area, taken into account the presence of border.
      *
      */
     uint8_t widget_start_y;
     /**
-     * @brief
+     * @brief this is the border size of the widget
      *
      */
     uint8_t widget_border_width;
@@ -463,36 +444,37 @@ protected:
      */
     void set_display_screen(UIDisplayDevice *_new_display_device);
     /**
-     * @brief
+     * @brief draw a rectangle around the widget
      *
      */
     void draw_border();
     /**
-     * @brief
+     * @brief draw the graphical element of the widget
      *
      */
     virtual void draw() = 0;
 
 public:
     /**
-     * @brief
+     * @brief A special feature that can be used when we want a widget to blink. The blinking is based on the system clock time divided by half the blinking period.
+     * When the result is even, the widgete is drawn in WHITE, otherwise it is drawn in BLACK.
      *
-     * @param _blink_period
+     * @param _blink_period The period of the blinking, in microseconds
      * @return FramebufferColor
      */
     static FramebufferColor blinking_us(uint32_t _blink_period);
     /**
      * @brief Construct a new UIWidget object
      *
-     * @param display_screen
-     * @param frame_width
-     * @param frame_height
-     * @param widget_anchor_x
-     * @param widget_anchor_y
-     * @param widget_with_border
-     * @param widget_border_width
-     * @param framebuffer_format
-     * @param framebuffer_txt_cnf
+     * @param display_screen   The display device on which the widget is drawn.
+     * @param frame_width The width of the widget including the border
+     * @param frame_height   the height of the widget including the border
+     * @param widget_anchor_x  the horizontal position where the widget start on the device screen
+     * @param widget_anchor_y  the vertical position where the widget start on the device screen
+     * @param widget_with_border   The flag that indicates whether the widget has a border or not
+     * @param widget_border_width   the width of the border
+     * @param framebuffer_format  the addressing format of the actual display device
+     * @param framebuffer_txt_cnf   a default textual configuration, with 8x8 font size
      */
     UIWidget(UIDisplayDevice *display_screen,
              size_t frame_width,
@@ -508,7 +490,7 @@ public:
      */
     ~UIWidget();
     /**
-     * @brief
+     * @brief  add sub_widget to the current widget
      *
      * @param _sub_widget
      */
