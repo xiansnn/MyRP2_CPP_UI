@@ -475,6 +475,8 @@ public:
      * @param widget_border_width   the width of the border
      * @param framebuffer_format  the addressing format of the actual display device
      * @param framebuffer_txt_cnf   a default textual configuration, with 8x8 font size
+     * 
+     * \image html widget.png 
      */
     UIWidget(UIDisplayDevice *display_screen,
              size_t frame_width,
