@@ -115,7 +115,7 @@ Inheritance diagram for Framebuffer:</div>
   <img src="class_framebuffer.png" usemap="#Framebuffer_map" alt=""/>
   <map id="Framebuffer_map" name="Framebuffer_map">
 <area href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e...." alt="UIDisplayDevice" shape="rect" coords="0,56,234,80"/>
-<area href="class_u_i_widget.html" alt="UIWidget" shape="rect" coords="488,56,722,80"/>
+<area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="488,56,722,80"/>
 <area href="class_s_s_d1306.html" alt="SSD1306" shape="rect" coords="0,112,234,136"/>
 <area href="class_test_cursor_widget_with_incremental_value.html" alt="TestCursorWidgetWithIncrementalValue" shape="rect" coords="244,112,478,136"/>
 <area href="class_test_object_manager_widget.html" alt="TestObjectManagerWidget" shape="rect" coords="488,112,722,136"/>
@@ -132,6 +132,9 @@ Public Member Functions</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~Framebuffer</b> ()</td></tr>
 <tr class="memdesc:a037bf3e17455354d5d907ceea00313dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display.">Framebuffer</a> object. <br /></td></tr>
 <tr class="separator:a037bf3e17455354d5d907ceea00313dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d111e29829fef4318d355cb0841e83" id="r_a65d111e29829fef4318d355cb0841e83"><td class="memItemLeft" align="right" valign="top">FramebufferFormat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65d111e29829fef4318d355cb0841e83">get_framebuffer_format</a> ()</td></tr>
+<tr class="memdesc:a65d111e29829fef4318d355cb0841e83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the framebuffer format object.  <br /></td></tr>
+<tr class="separator:a65d111e29829fef4318d355cb0841e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b470c2ef236fcfbfd371ee800992154" id="r_a7b470c2ef236fcfbfd371ee800992154"><td class="memItemLeft" align="right" valign="top"><a id="a7b470c2ef236fcfbfd371ee800992154" name="a7b470c2ef236fcfbfd371ee800992154"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b> ()</td></tr>
 <tr class="memdesc:a7b470c2ef236fcfbfd371ee800992154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fill the pixel_buffer with "0" (BLACK). Reset also character position to (0,0). <br /></td></tr>
@@ -243,9 +246,6 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
     <tr><td class="paramname">frame_format</td><td>The way the memory byte are translated by the dispaly driver device. <div class="image">
 <img src="framebuffer.png" alt=""/>
 </div>
- <div class="image">
-<img src="framebuffer.png" alt=""/>
-</div>
  </td></tr>
   </table>
   </dd>
@@ -325,6 +325,26 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a65d111e29829fef4318d355cb0841e83" name="a65d111e29829fef4318d355cb0841e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d111e29829fef4318d355cb0841e83">&#9670;&#160;</a></span>get_framebuffer_format()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FramebufferFormat Framebuffer::get_framebuffer_format </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the framebuffer format object. </p>
+<dl class="section return"><dt>Returns</dt><dd>FramebufferFormat </dd></dl>
 
 </div>
 </div>

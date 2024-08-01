@@ -102,23 +102,34 @@ $(function(){initNavTree('struct_struct_switch_button_config.html',''); initResi
   <div class="headertitle"><div class="title">StructSwitchButtonConfig Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>These are the values used to configure a switch button.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="switch__button_8h_source.html">switch_button.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a4e47fb7bb9be95c661e3b7811cf57280" id="r_a4e47fb7bb9be95c661e3b7811cf57280"><td class="memItemLeft" align="right" valign="top"><a id="a4e47fb7bb9be95c661e3b7811cf57280" name="a4e47fb7bb9be95c661e3b7811cf57280"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>debounce_delay_us</b> = DEBOUNCE_us</td></tr>
+<tr class="memdesc:a4e47fb7bb9be95c661e3b7811cf57280"><td class="mdescLeft">&#160;</td><td class="mdescRight">The time during which all changes in the switch state is ignored. <br /></td></tr>
 <tr class="separator:a4e47fb7bb9be95c661e3b7811cf57280"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7965d4a3d2cf3629b5de8d7470316d31" id="r_a7965d4a3d2cf3629b5de8d7470316d31"><td class="memItemLeft" align="right" valign="top"><a id="a7965d4a3d2cf3629b5de8d7470316d31" name="a7965d4a3d2cf3629b5de8d7470316d31"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us</b> = LONG_RELEASE_DELAY_us</td></tr>
+<tr class="memdesc:a7965d4a3d2cf3629b5de8d7470316d31"><td class="mdescLeft">&#160;</td><td class="mdescRight">if the button is released after long_release_delay_us (in microseconds) a <a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84" title="event triggered when a button is released after a configurable duration.">ControlEvent::RELEASED_AFTER_LONG_TIME</a> is returned, else a <a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90" title="event triggered when a button is released before a configurable duration.">ControlEvent::RELEASED_AFTER_SHORT_TIME</a> is released. <br /></td></tr>
 <tr class="separator:a7965d4a3d2cf3629b5de8d7470316d31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab29ec76f04b66649031c23fe77ad1c7c" id="r_ab29ec76f04b66649031c23fe77ad1c7c"><td class="memItemLeft" align="right" valign="top"><a id="ab29ec76f04b66649031c23fe77ad1c7c" name="ab29ec76f04b66649031c23fe77ad1c7c"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_push_delay_us</b> = LONG_PUSH_DELAY_us</td></tr>
+<tr class="memdesc:ab29ec76f04b66649031c23fe77ad1c7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">when a button is pushed more than long_push_delay_us (in microseconds) a <a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646" title="event triggered when a button is held more than a configurable duration.">ControlEvent::LONG_PUSH</a> is returned. <br /></td></tr>
 <tr class="separator:ab29ec76f04b66649031c23fe77ad1c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada2fe04ef2578633373b0cfe0c6f71df" id="r_ada2fe04ef2578633373b0cfe0c6f71df"><td class="memItemLeft" align="right" valign="top"><a id="ada2fe04ef2578633373b0cfe0c6f71df" name="ada2fe04ef2578633373b0cfe0c6f71df"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>active_lo</b> = true</td></tr>
+<tr class="memdesc:ada2fe04ef2578633373b0cfe0c6f71df"><td class="mdescLeft">&#160;</td><td class="mdescRight">this indicates that when the button is pushed, a logical LO (0) signal is read. <br /></td></tr>
 <tr class="separator:ada2fe04ef2578633373b0cfe0c6f71df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>These are the values used to configure a switch button. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_switch/<a class="el" href="switch__button_8h_source.html">switch_button.h</a></li>
 </ul>
 </div><!-- contents -->

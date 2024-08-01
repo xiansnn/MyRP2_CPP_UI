@@ -113,11 +113,13 @@ $(function(){initNavTree('switch__button_8h.html',''); initResizable(true); });
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_struct_switch_button_config.html">StructSwitchButtonConfig</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">These are the values used to configure a switch button.  <a href="struct_struct_switch_button_config.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button.html">SwitchButton</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_switch_button.html" title="SwitchButton can be associated with UIController only if button belongs to a UI.">SwitchButton</a> can be associated with <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> only if button belongs to a UI.  <a href="class_switch_button.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> status is sampled periodically by software. Switch status is the status of the physical switch device.  <a href="class_switch_button.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button_with_i_r_q.html">SwitchButtonWithIRQ</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt...">SwitchButtonWithIRQ</a> status is processed by an Interrupt Service Routine. It is derived from SwithButton, but debouncing, press and release are processed differently.  <a href="class_switch_button_with_i_r_q.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -140,9 +142,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:aa46074d34fe2d6631c6bd9dc74633657" id="r_aa46074d34fe2d6631c6bd9dc74633657"><td class="memItemLeft" align="right" valign="top"><a id="aa46074d34fe2d6631c6bd9dc74633657" name="aa46074d34fe2d6631c6bd9dc74633657"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>ButtonState</b> { <b>ACTIVE</b>
-, <b>INACTIVE</b>
+<tr class="memitem:aa46074d34fe2d6631c6bd9dc74633657" id="r_aa46074d34fe2d6631c6bd9dc74633657"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa46074d34fe2d6631c6bd9dc74633657">ButtonState</a> { <a class="el" href="#aa46074d34fe2d6631c6bd9dc74633657a18ff74f43da410c5529f7d6fca84f115">ACTIVE</a>
+, <a class="el" href="#aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2">INACTIVE</a>
  }</td></tr>
+<tr class="memdesc:aa46074d34fe2d6631c6bd9dc74633657"><td class="mdescLeft">&#160;</td><td class="mdescRight">The logical state of the switch.  <a href="#aa46074d34fe2d6631c6bd9dc74633657">More...</a><br /></td></tr>
 <tr class="separator:aa46074d34fe2d6631c6bd9dc74633657"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -150,7 +153,38 @@ Enumerations</h2></td></tr>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-05-30</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="aa46074d34fe2d6631c6bd9dc74633657" name="aa46074d34fe2d6631c6bd9dc74633657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46074d34fe2d6631c6bd9dc74633657">&#9670;&#160;</a></span>ButtonState</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="#aa46074d34fe2d6631c6bd9dc74633657">ButtonState</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The logical state of the switch. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa46074d34fe2d6631c6bd9dc74633657a18ff74f43da410c5529f7d6fca84f115" name="aa46074d34fe2d6631c6bd9dc74633657a18ff74f43da410c5529f7d6fca84f115"></a>ACTIVE&#160;</td><td class="fielddoc"><p>the switch is pushed </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2" name="aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2"></a>INACTIVE&#160;</td><td class="fielddoc"><p>the switch is not pushed </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

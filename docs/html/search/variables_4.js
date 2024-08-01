@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['managed_5fmodels_0',['managed_models',['../class_u_i_object_manager.html#ab1d6f0601a5a4fe8e5609661c349a01c',1,'UIObjectManager']]]
+  ['fg_5fcolor_0',['fg_color',['../struct_struct_framebuffer_text.html#addd57ada13f684e04a1ac84c60d089a6',1,'StructFramebufferText']]],
+  ['font_1',['font',['../struct_struct_framebuffer_text.html#aa322a812c7ad59f9fda0384e641cf059',1,'StructFramebufferText']]]
 ];

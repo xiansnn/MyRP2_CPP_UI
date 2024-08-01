@@ -125,7 +125,6 @@ public:
      * Usually defined by "y" starting at "0" on top upleft corner, running downward and ending at frame_height-1 position.
      * @param frame_format   The way the memory byte are translated by the dispaly driver device.
      * \image html framebuffer.png 
-     * \image html framebuffer.png 
      */
     Framebuffer(size_t frame_width,
                 size_t frame_height,

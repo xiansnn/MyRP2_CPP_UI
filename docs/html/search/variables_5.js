@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tab_5fsize_0',['tab_size',['../struct_struct_framebuffer_text.html#a38eee6376d7aec3f021084781cf08c86',1,'StructFramebufferText']]]
+  ['gpio_0',['gpio',['../class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0',1,'SwitchButton']]]
 ];

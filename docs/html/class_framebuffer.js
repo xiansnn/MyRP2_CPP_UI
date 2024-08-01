@@ -6,6 +6,7 @@ var class_framebuffer =
     [ "clear_pixel_buffer", "class_framebuffer.html#a7b470c2ef236fcfbfd371ee800992154", null ],
     [ "clear_text_buffer", "class_framebuffer.html#a471d9d9a24d51b9df2a89362abd2e607", null ],
     [ "fill", "class_framebuffer.html#ac71de6e7a85fc62b53f795ce994c9ec1", null ],
+    [ "get_framebuffer_format", "class_framebuffer.html#a65d111e29829fef4318d355cb0841e83", null ],
     [ "hline", "class_framebuffer.html#ae464d1772ef80976c1faf8b2abb42903", null ],
     [ "init_text_buffer", "class_framebuffer.html#ad55894974ba23bd04e280fe40afed813", null ],
     [ "line", "class_framebuffer.html#a8b7d45e8d169a9899d124a7f6de9ce16", null ],
