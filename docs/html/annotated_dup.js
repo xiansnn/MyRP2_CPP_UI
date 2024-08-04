@@ -22,7 +22,7 @@ var annotated_dup =
     [ "TestCursorWidgetWithIncrementalValue", "class_test_cursor_widget_with_incremental_value.html", "class_test_cursor_widget_with_incremental_value" ],
     [ "TestIncrementalValue", "class_test_incremental_value.html", "class_test_incremental_value" ],
     [ "TestObjectManagerWidget", "class_test_object_manager_widget.html", "class_test_object_manager_widget" ],
-    [ "TestSetOfWidget", "class_test_set_of_widget.html", null ],
+    [ "TestSetOfWidget", "class_test_set_of_widget.html", "class_test_set_of_widget" ],
     [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", "class_u_i_controlled_incremental_value" ],
     [ "UIController", "class_u_i_controller.html", "class_u_i_controller" ],
     [ "UIDisplayDevice", "class_u_i_display_device.html", "class_u_i_display_device" ],

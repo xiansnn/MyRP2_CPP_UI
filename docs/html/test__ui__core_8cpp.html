@@ -106,10 +106,10 @@ $(function(){initNavTree('test__ui__core_8cpp.html',''); initResizable(true); })
 
 <p>This is the main test program of the UI_core.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="test__controlled__value_8h_source.html">test_controlled_value.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="test__manager_8h_source.html">test_manager.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;test_controlled_value.h&quot;</code><br />
+<code>#include &quot;test_manager.h&quot;</code><br />
 <code>#include &quot;rotary_encoder.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="test__widget__on__serial__monitor_8h_source.html">test_widget_on_serial_monitor.h</a>&quot;</code><br />
+<code>#include &quot;test_widget_on_serial_monitor.h&quot;</code><br />
 <code>#include &lt;map&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="probe_8h_source.html">probe.h</a>&quot;</code><br />
@@ -128,11 +128,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a64d11a233c32f2da60996f97a98ccea4" id="r_a64d11a233c32f2da60996f97a98ccea4"><td class="memItemLeft" align="right" valign="top"><a id="a64d11a233c32f2da60996f97a98ccea4" name="a64d11a233c32f2da60996f97a98ccea4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>shared_irq_call_back</b> (uint gpio, uint32_t event_mask)</td></tr>
+<tr class="memitem:a64d11a233c32f2da60996f97a98ccea4" id="r_a64d11a233c32f2da60996f97a98ccea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a> (uint gpio, uint32_t event_mask)</td></tr>
 <tr class="separator:a64d11a233c32f2da60996f97a98ccea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -163,7 +161,56 @@ Variables</h2></td></tr>
 <p>If the manager IS_ACTIVE, rotating the encoder changes the focus, a short click on the encoder central switch, makes IS_ACTIVE the current controlled value with focus. Rotating the encoder changes now the value of the controlledIncrementalValue. A short click, now, validates the value and pass the control to the manager. </p><dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-05-30</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
-</div><h2 class="groupheader">Variable Documentation</h2>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<p>INFINITE LOOP:</p>
+<p>END OF LOOP:</p>
+
+</div>
+</div>
+<a id="a64d11a233c32f2da60996f97a98ccea4" name="a64d11a233c32f2da60996f97a98ccea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d11a233c32f2da60996f97a98ccea4">&#9670;&#160;</a></span>shared_irq_call_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shared_irq_call_back </td>
+          <td>(</td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>gpio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>event_mask</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gpio</td><td></td></tr>
+    <tr><td class="paramname">event_mask</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
 <a id="ab658d0c37f443698651f4c02ba6abfeb" name="ab658d0c37f443698651f4c02ba6abfeb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab658d0c37f443698651f4c02ba6abfeb">&#9670;&#160;</a></span>cfg_central_switch</h2>
 
@@ -211,8 +258,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Initial value:</b><div class="fragment"><div class="line">= <a class="code hl_class" href="class_rotary_encoder.html">RotaryEncoder</a>(ENCODER_CLK_GPIO, ENCODER_DT_GPIO,</div>
-<div class="line">                                      shared_irq_call_back, cfg_encoder_clk)</div>
+<div class="line">                                      <a class="code hl_function" href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a>, cfg_encoder_clk)</div>
 <div class="ttc" id="aclass_rotary_encoder_html"><div class="ttname"><a href="class_rotary_encoder.html">RotaryEncoder</a></div><div class="ttdoc">The rotary encoder is a device used to control a value the can be incremented/decremented by the user...</div><div class="ttdef"><b>Definition</b> rotary_encoder.h:21</div></div>
+<div class="ttc" id="atest__ui__core_8cpp_html_a64d11a233c32f2da60996f97a98ccea4"><div class="ttname"><a href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a></div><div class="ttdeci">void shared_irq_call_back(uint gpio, uint32_t event_mask)</div><div class="ttdef"><b>Definition</b> test_ui_core.cpp:54</div></div>
 </div><!-- fragment -->
 </div>
 </div>
