@@ -1,27 +1,39 @@
-/**
- * @file test_controlled_value.h
- * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
- * @version 0.1
- * @date 2024-05-30
- * 
- * @copyright Copyright (c) 2024
- * 
- */
 #if !defined(CONTROLLED_VALUE_H)
 #define CONTROLLED_VALUE_H
 
 #include "ui_core.h"
 
+/**
+ * @brief Construct an implementation of UIControlledIncrementalValue for test_ui_core program.
+ * 
+ */
 class TestIncrementalValue : public UIControlledIncrementalValue
 {
 private:
     std::string name;
 
 public:
-    TestIncrementalValue(std::string _name, int _min_value = 0, int _max_value = 10, bool _is_wrapable = false, int increment = 1);
+    /**
+     * @brief Construct a new Test Incremental Value object
+     * 
+     * @param _name 
+     * @param _min_value 
+     * @param _max_value 
+     * @param _is_wrappable 
+     * @param increment 
+     */
+    TestIncrementalValue(std::string _name, int _min_value = 0, int _max_value = 10, bool _is_wrappable = false, int increment = 1);
+    /**
+     * @brief Destroy the Test Incremental Value object
+     * 
+     */
     ~TestIncrementalValue();
     void process_control_event(ControlEvent _event);
+    /**
+     * @brief Get the name object
+     * 
+     * @return std::string 
+     */
     std::string get_name();
 };
 

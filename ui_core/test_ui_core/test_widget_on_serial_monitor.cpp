@@ -1,7 +1,7 @@
 /**
  * @file test_widget_on_serial_monitor.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief This is the companion file of test_ui_core program
  * @version 0.1
  * @date 2024-05-30
  * 

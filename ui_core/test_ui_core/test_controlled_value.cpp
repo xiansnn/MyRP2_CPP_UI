@@ -1,7 +1,7 @@
 /**
  * @file test_controlled_value.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief companion file to test_ui_core.cpp
  * @version 0.1
  * @date 2024-05-30
  * 
@@ -10,8 +10,8 @@
  */
 #include "test_controlled_value.h"
 
-TestIncrementalValue::TestIncrementalValue(std::string _name, int _min_value, int _max_value, bool _is_wrapable, int increment)
-    : UIControlledIncrementalValue(_min_value, _max_value, _is_wrapable, increment)
+TestIncrementalValue::TestIncrementalValue(std::string _name, int _min_value, int _max_value, bool _is_wrappable, int increment)
+    : UIControlledIncrementalValue(_min_value, _max_value, _is_wrappable, increment)
 {
     this->name = _name;
 }
@@ -20,6 +20,17 @@ TestIncrementalValue::~TestIncrementalValue()
 {
 }
 
+/**
+ * @brief The event processed by TestIncrementalValue for this test are:
+ * 
+ * - LONG_PUSH: set value to 0.
+ * 
+ * - INCREMENT:
+ * 
+ * - DECREMENT:
+ * 
+ * @param _event 
+ */
 void TestIncrementalValue::process_control_event(ControlEvent _event)
 {
     switch (_event)

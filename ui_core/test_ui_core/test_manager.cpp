@@ -1,7 +1,7 @@
 /**
  * @file test_manager.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief companion file to test_ui_core.cpp
  * @version 0.1
  * @date 2024-05-30
  * 
@@ -10,6 +10,7 @@
  */
 #include "test_manager.h"
 
+
 Test_Manager::Test_Manager(UIController * _controller)
     : UIObjectManager()
 {
@@ -17,10 +18,27 @@ Test_Manager::Test_Manager(UIController * _controller)
     update_current_controller(_controller);
 }
 
+/**
+ * @brief Destroy the Test_Manager::Test_Manager object
+ * 
+ */
 Test_Manager::~Test_Manager()
 {
 }
 
+/**
+ * @brief The event processed by Test_Manager for this test are:
+ * 
+ * - LONG_PUSH: if manager is not active, processed by the current_active_model
+ * 
+ * - RELEASED_AFTER_SHORT_TIME: switch activation between the manager and the current model.
+ * 
+ * - INCREMENT: focus to next model
+ * 
+ * - DECREMENT: focus to previous model
+ * 
+ * @param _event 
+ */
 void Test_Manager::process_control_event(ControlEvent _event)
 {
     switch (_event)

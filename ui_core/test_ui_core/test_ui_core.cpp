@@ -45,6 +45,12 @@ RotaryEncoder encoder = RotaryEncoder(ENCODER_CLK_GPIO, ENCODER_DT_GPIO,
 
 SwitchButton central_switch = SwitchButton(CENTRAL_SWITCH_GPIO, cfg_central_switch);
 
+/**
+ * @brief 
+ * 
+ * @param gpio 
+ * @param event_mask 
+ */
 void shared_irq_call_back(uint gpio, uint32_t event_mask)
 {
     pr_D1.pulse_us(10);
@@ -60,6 +66,11 @@ void shared_irq_call_back(uint gpio, uint32_t event_mask)
     };
 }
 
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 int main()
 {
     pr_D1.hi();
@@ -91,6 +102,10 @@ int main()
 
     pr_D1.lo();
 
+    /**
+     * @brief INFINITE LOOP:
+     * 
+     */
     while (true)
     {
         pr_D4.pulse_us(10);
@@ -101,6 +116,9 @@ int main()
         pr_D5.lo();
         sleep_ms(20);
     }
-
+    /**
+     * @brief END OF LOOP:
+     * 
+     */
     return 0;
 }

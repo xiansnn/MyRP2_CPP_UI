@@ -1,28 +1,28 @@
-/**
- * @file test_manager.h
- * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
- * @version 0.1
- * @date 2024-05-30
- * 
- * @copyright Copyright (c) 2024
- * 
- */
 #if !defined(TEST_MANAGER_H)
 #define TEST_MANAGER_H
 
 #include "ui_core.h"
 
+/**
+ * @brief implement a UIObjectManager for test_ui_core program
+ *
+ */
 class Test_Manager : public UIObjectManager
 {
 private:
 public:
-    Test_Manager(UIController * _controller);
+    /**
+     * @brief Construct a new Test_Manager object
+     * 
+     * @param _controller 
+     */
+    Test_Manager(UIController *_controller);
+    /**
+     * @brief Destroy the Test_Manager object
+     * 
+     */
     ~Test_Manager();
     void process_control_event(ControlEvent _event);
 };
-
-
-
 
 #endif // TEST_MANAGER_H

@@ -1,7 +1,7 @@
 /**
  * @file test_probe.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief this test program generates a signal pulse on each probe channel indefinitely.
  * @version 0.1
  * @date 2023-05-02
  * 
@@ -12,15 +12,10 @@
 #include "pico/time.h"
 
 
-/**
- * @brief this test program generates a signal pulse on each probe channel indefinitely.
- * 
- * @return int 
- */
 int main()
 {
     /**
-     * @brief Initialisation of a set of Probe, one for each channel.
+     * @brief SETUP: Initialisation of a set of Probe, one for each channel.
      */
 
     Probe p0 = Probe(0);
@@ -35,14 +30,13 @@ int main()
     Probe *probes[] = {&p0, &p1, &p2, &p3, &p4, &p5, &p6, &p7};
 
     /**
-     * @brief run an infinite loop.
+     * @brief LOOP: run an infinite loop.
      * 
      */
     while (true)
     {
         /**
-         * @brief Scan each channel and generate a pulse on the corresponding GPIO.
-         * 
+         * @brief      Scan each channel and generate a pulse on the corresponding GPIO.
          */
         for (size_t i = 0; i < 8; i++)
         {
@@ -53,5 +47,9 @@ int main()
         }
         sleep_us(2000);
     }
+    /**
+     * @brief ENDLOOP:
+     * 
+     */
     return 0;
 }
