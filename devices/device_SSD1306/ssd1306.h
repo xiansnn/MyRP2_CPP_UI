@@ -22,6 +22,11 @@
 #define VERTICAL_ADDRESSING_MODE 1
 #define PAGE_ADDRESSING_MODE 2
 
+/**
+ * @brief configuration data for SSD1306 OLED display.
+ * refer to datasheet for more details.
+ * 
+ */
 struct StructConfigSSD1306
 
 {
@@ -38,7 +43,7 @@ struct StructConfigSSD1306
     uint8_t frequency_factor = 0;
 } ;
 
-typedef struct StructConfigScrollSSD1306
+struct StructConfigScrollSSD1306
 {
     bool scroll_H_to_right = true;           // if true SSD1306_SET_R_HORIZ_SCROLL else SSD1306_SET_L_HORIZ_SCROLL
     bool scroll_V_and_H_to_right = true;     // if true SSD1306_SET_VERTICAL_R_HORIZ_SCROLL else SSD1306_SET_VERTICAL_L_HORIZ_SCROLL
@@ -46,9 +51,9 @@ typedef struct StructConfigScrollSSD1306
     uint8_t time_frame_interval = _2_FRAMES; // 0 <= value <= 7
     uint8_t scroll_H_end_page = 7;           // 0 <= value <= 7
     uint8_t vertical_scrolling_offset = 5;   // 0 <= value <= 63
-} config_scroll_t;
+} ;
 
-typedef struct StructRenderArea
+struct StructRenderArea
 {
     uint8_t start_col{0};
     uint8_t end_col{SSD1306_WIDTH - 1};
@@ -57,7 +62,7 @@ typedef struct StructRenderArea
     size_t width{SSD1306_WIDTH};
     size_t height{SSD1306_HEIGHT};
     size_t buflen{SSD1306_BUF_LEN};
-} render_area_t;
+} ;
 
 class SSD1306 : public UIDisplayDevice
 {
@@ -80,12 +85,12 @@ private:
 
 public:
     SSD1306(HW_I2C_Master *master, StructConfigSSD1306 device_config);
-    static render_area_t compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
+    static StructRenderArea compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
     void show(); // when we need to show the full device area
     void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y); // when we need to show a framebuffer in a given render area
     // void show(Framebuffer *frame, frame_data_t data);
-    void show_render_area(uint8_t *data_buffer, render_area_t screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE); // when we need to show a render area with a given framebuffer
-    void fill_pattern_and_show_GDDRAM(uint8_t pattern, render_area_t area);
+    void show_render_area(uint8_t *data_buffer, StructRenderArea screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE); // when we need to show a render area with a given framebuffer
+    void fill_pattern_and_show_GDDRAM(uint8_t pattern, StructRenderArea area);
     void clear_pixel_buffer_and_show_full_screen();
 
     void set_contrast(uint8_t value);
@@ -94,8 +99,8 @@ public:
     void set_inverse_color(bool inverse);
     void set_display_OFF();
     void set_display_ON();
-    void horizontal_scroll(bool on, config_scroll_t scroll_data);
-    void vertical_scroll(bool on, config_scroll_t scroll_data);
+    void horizontal_scroll(bool on, StructConfigScrollSSD1306 scroll_data);
+    void vertical_scroll(bool on, StructConfigScrollSSD1306 scroll_data);
 };
 
 #endif // SSD1306_H

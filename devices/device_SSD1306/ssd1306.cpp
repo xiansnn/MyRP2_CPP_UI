@@ -27,9 +27,9 @@ SSD1306::SSD1306(HW_I2C_Master *master, StructConfigSSD1306 init_config)
     this->init();
 }
 
-render_area_t SSD1306::compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)
+StructRenderArea SSD1306::compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)
 {
-    render_area_t area;
+    StructRenderArea area;
     area.start_col = start_col;
     area.end_col = end_col;
     area.start_page = start_line / SSD1306_PAGE_HEIGHT;
@@ -68,7 +68,7 @@ void SSD1306::set_display_ON()
     this->send_cmd(SSD1306_SET_DISPLAY_NORMAL_ON);
 }
 
-void SSD1306::fill_pattern_and_show_GDDRAM(uint8_t pattern, render_area_t area)
+void SSD1306::fill_pattern_and_show_GDDRAM(uint8_t pattern, StructRenderArea area)
 {
     uint8_t image[SSD1306_BUF_LEN];
     memset(image, pattern, area.buflen);
@@ -113,7 +113,7 @@ void SSD1306::init_MUX_ratio(uint8_t value)
     this->send_cmd(value - 1);
 }
 
-void SSD1306::show_render_area(uint8_t *data_buffer, const render_area_t screen_area, const uint8_t addressing_mode)
+void SSD1306::show_render_area(uint8_t *data_buffer, const StructRenderArea screen_area, const uint8_t addressing_mode)
 {
     assert((addressing_mode >= 0) & (addressing_mode <= 2));
     this->send_cmd(SSD1306_SET_MEM_MODE);
@@ -228,7 +228,7 @@ void SSD1306::init_charge_pump_enabled(bool enabled)
     this->send_cmd(value);
 }
 
-void SSD1306::horizontal_scroll(bool on, config_scroll_t scroll_data)
+void SSD1306::horizontal_scroll(bool on, StructConfigScrollSSD1306 scroll_data)
 { // configure horizontal scrolling by 1 column
     uint8_t cmds[8];
     if (scroll_data.scroll_H_to_right)
@@ -248,7 +248,7 @@ void SSD1306::horizontal_scroll(bool on, config_scroll_t scroll_data)
     this->send_cmd_list(cmds, count_of(cmds));
 }
 
-void SSD1306::vertical_scroll(bool on, config_scroll_t scroll_data)
+void SSD1306::vertical_scroll(bool on, StructConfigScrollSSD1306 scroll_data)
 {
     uint8_t cmds[7];
     if (scroll_data.scroll_H_to_right)
