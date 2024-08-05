@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MyRP2_CPP_UI: StructI2CXferResult Struct Reference</title>
+<title>MyRP2_CPP_UI: StructRenderArea Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('struct_struct_i2_c_xfer_result.html',''); initResizable(true); });
+$(function(){initNavTree('struct_struct_render_area.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,32 +98,44 @@ $(function(){initNavTree('struct_struct_i2_c_xfer_result.html',''); initResizabl
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="struct_struct_i2_c_xfer_result-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">StructI2CXferResult Struct Reference</div></div>
+<a href="struct_struct_render_area-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">StructRenderArea Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ab3d5b420258c562b8bfcb4f5555b3ab9" id="r_ab3d5b420258c562b8bfcb4f5555b3ab9"><td class="memItemLeft" align="right" valign="top"><a id="ab3d5b420258c562b8bfcb4f5555b3ab9" name="ab3d5b420258c562b8bfcb4f5555b3ab9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> = false</td></tr>
-<tr class="separator:ab3d5b420258c562b8bfcb4f5555b3ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5eccfa0c611ebb13ae23e6875a8d1a28" id="r_a5eccfa0c611ebb13ae23e6875a8d1a28"><td class="memItemLeft" align="right" valign="top"><a id="a5eccfa0c611ebb13ae23e6875a8d1a28" name="a5eccfa0c611ebb13ae23e6875a8d1a28"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>context</b> = &quot;&quot;</td></tr>
-<tr class="separator:a5eccfa0c611ebb13ae23e6875a8d1a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af09357ba0c59e30896045b7760853037" id="r_af09357ba0c59e30896045b7760853037"><td class="memItemLeft" align="right" valign="top"><a id="af09357ba0c59e30896045b7760853037" name="af09357ba0c59e30896045b7760853037"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>xfer_size</b> = 0</td></tr>
-<tr class="separator:af09357ba0c59e30896045b7760853037"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcd0542e6361e0b479603945625dcbff" id="r_afcd0542e6361e0b479603945625dcbff"><td class="memItemLeft" align="right" valign="top"><a id="afcd0542e6361e0b479603945625dcbff" name="afcd0542e6361e0b479603945625dcbff"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_col</b> {0}</td></tr>
+<tr class="separator:afcd0542e6361e0b479603945625dcbff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad434501bad83213336c5629103d29ebe" id="r_ad434501bad83213336c5629103d29ebe"><td class="memItemLeft" align="right" valign="top"><a id="ad434501bad83213336c5629103d29ebe" name="ad434501bad83213336c5629103d29ebe"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_col</b> {SSD1306_WIDTH - 1}</td></tr>
+<tr class="separator:ad434501bad83213336c5629103d29ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28dc9ee072deeeffbea1906aa07a72ba" id="r_a28dc9ee072deeeffbea1906aa07a72ba"><td class="memItemLeft" align="right" valign="top"><a id="a28dc9ee072deeeffbea1906aa07a72ba" name="a28dc9ee072deeeffbea1906aa07a72ba"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>start_page</b> {0}</td></tr>
+<tr class="separator:a28dc9ee072deeeffbea1906aa07a72ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be25e3187547308c08941e9320a3b14" id="r_a4be25e3187547308c08941e9320a3b14"><td class="memItemLeft" align="right" valign="top"><a id="a4be25e3187547308c08941e9320a3b14" name="a4be25e3187547308c08941e9320a3b14"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>end_page</b> {SSD1306_NUM_PAGES - 1}</td></tr>
+<tr class="separator:a4be25e3187547308c08941e9320a3b14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8cea5e64674a599a11a423c8f817aee" id="r_ab8cea5e64674a599a11a423c8f817aee"><td class="memItemLeft" align="right" valign="top"><a id="ab8cea5e64674a599a11a423c8f817aee" name="ab8cea5e64674a599a11a423c8f817aee"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>width</b> {SSD1306_WIDTH}</td></tr>
+<tr class="separator:ab8cea5e64674a599a11a423c8f817aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2157f9d541ce3e5e36d4492a176f9c1" id="r_ae2157f9d541ce3e5e36d4492a176f9c1"><td class="memItemLeft" align="right" valign="top"><a id="ae2157f9d541ce3e5e36d4492a176f9c1" name="ae2157f9d541ce3e5e36d4492a176f9c1"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>height</b> {SSD1306_HEIGHT}</td></tr>
+<tr class="separator:ae2157f9d541ce3e5e36d4492a176f9c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b8452b6b590c3d72f07a2b114d1c90" id="r_a11b8452b6b590c3d72f07a2b114d1c90"><td class="memItemLeft" align="right" valign="top"><a id="a11b8452b6b590c3d72f07a2b114d1c90" name="a11b8452b6b590c3d72f07a2b114d1c90"></a>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>buflen</b> {SSD1306_BUF_LEN}</td></tr>
+<tr class="separator:a11b8452b6b590c3d72f07a2b114d1c90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/hw/hw_I2C/<a class="el" href="hw__i2c_8h_source.html">hw_i2c.h</a></li>
+<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_SSD1306/<a class="el" href="ssd1306_8h_source.html">ssd1306.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a></li>
+    <li class="navelem"><a class="el" href="struct_struct_render_area.html">StructRenderArea</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

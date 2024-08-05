@@ -1,7 +1,7 @@
 var searchData=
 [
   ['blinking_5fus_0',['blinking_us',['../class_u_i_widget.html#aa1e0d4d78d9abfc7f9a761bb8ca41585',1,'UIWidget']]],
-  ['burst_5fbyte_5fread_1',['burst_byte_read',['../classhw___i2_c__master.html#a3fcd08137089965070388ecf3ca74d20',1,'hw_I2C_master']]],
-  ['burst_5fbyte_5fwrite_2',['burst_byte_write',['../classhw___i2_c__master.html#af6cb6e0b4730b0bbfeac85b866f13b32',1,'hw_I2C_master']]],
-  ['bus_5fscan_3',['bus_scan',['../classhw___i2_c__master.html#a6d146309534ac13f01e287a1cfc0ee5d',1,'hw_I2C_master']]]
+  ['burst_5fbyte_5fread_1',['burst_byte_read',['../class_h_w___i2_c___master.html#a2b9718381e8b8a2633f8de46a9512af1',1,'HW_I2C_Master']]],
+  ['burst_5fbyte_5fwrite_2',['burst_byte_write',['../class_h_w___i2_c___master.html#a491b1726425dc6e4716a7f08a7c0c7b4',1,'HW_I2C_Master']]],
+  ['bus_5fscan_3',['bus_scan',['../class_h_w___i2_c___master.html#a81b01ac8db26400774c892f76b1917de',1,'HW_I2C_Master']]]
 ];

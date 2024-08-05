@@ -6,6 +6,6 @@ var searchData=
   ['hline_3',['hline',['../class_framebuffer.html#ae464d1772ef80976c1faf8b2abb42903',1,'Framebuffer']]],
   ['hw_20directory_4',['&quot;hw&quot; directory',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md5',1,'']]],
   ['hw_5fi2c_2ecpp_5',['hw_i2c.cpp',['../hw__i2c_8cpp.html',1,'']]],
-  ['hw_5fi2c_5fmaster_6',['hw_I2C_master',['../classhw___i2_c__master.html',1,'hw_I2C_master'],['../classhw___i2_c__master.html#adbe831a40bc2a353f13e28b71267738d',1,'hw_I2C_master::hw_I2C_master()']]],
-  ['hw_5fi2c_5fslave_7',['hw_I2C_slave',['../classhw___i2_c__slave.html',1,'hw_I2C_slave'],['../classhw___i2_c__slave.html#a80642512c9f6f8641c36fdaf7cc8f8a8',1,'hw_I2C_slave::hw_I2C_slave()']]]
+  ['hw_5fi2c_5fmaster_6',['HW_I2C_Master',['../class_h_w___i2_c___master.html',1,'HW_I2C_Master'],['../class_h_w___i2_c___master.html#aac25277d779898ef8f27f3d069fee296',1,'HW_I2C_Master::HW_I2C_Master()']]],
+  ['hw_5fi2c_5fslave_7',['HW_I2C_Slave',['../class_h_w___i2_c___slave.html',1,'HW_I2C_Slave'],['../class_h_w___i2_c___slave.html#a8ab83567a8fd1b93dcc382d075b37097',1,'HW_I2C_Slave::HW_I2C_Slave()']]]
 ];

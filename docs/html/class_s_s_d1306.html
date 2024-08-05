@@ -116,9 +116,9 @@ Inheritance diagram for SSD1306:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:afa535a706fe75712daedbed8b79262c5" id="r_afa535a706fe75712daedbed8b79262c5"><td class="memItemLeft" align="right" valign="top"><a id="afa535a706fe75712daedbed8b79262c5" name="afa535a706fe75712daedbed8b79262c5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>SSD1306</b> (<a class="el" href="classhw___i2_c__master.html">hw_I2C_master</a> *master, <a class="el" href="struct_struct_config_s_s_d1306.html">config_SSD1306_t</a> device_config)</td></tr>
-<tr class="separator:afa535a706fe75712daedbed8b79262c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c55553d922b24c84ae10078a537773b" id="r_a2c55553d922b24c84ae10078a537773b"><td class="memItemLeft" align="right" valign="top"><a id="a2c55553d922b24c84ae10078a537773b" name="a2c55553d922b24c84ae10078a537773b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SSD1306</b> (<a class="el" href="class_h_w___i2_c___master.html">HW_I2C_Master</a> *master, <a class="el" href="struct_struct_config_s_s_d1306.html">StructConfigSSD1306</a> device_config)</td></tr>
+<tr class="separator:a2c55553d922b24c84ae10078a537773b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9877895dcf33190e2fa712c8bf46bbb8" id="r_a9877895dcf33190e2fa712c8bf46bbb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9877895dcf33190e2fa712c8bf46bbb8">show</a> ()</td></tr>
 <tr class="memdesc:a9877895dcf33190e2fa712c8bf46bbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an pure virtual member function that all final derived class must implement. It transfers the framebuffer buffer to the entire display screen buffer.  <br /></td></tr>
 <tr class="separator:a9877895dcf33190e2fa712c8bf46bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,10 +126,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a67f56b6c4fd626c6b60488e9aebfc077"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is an pure virtual member function that all final derived class must implement. It transfers the framebuffer buffer to the a part of display screen buffer starting at the (anchor_x, anchor_y) coordinates of the screen , expressed in pixel.  <br /></td></tr>
 <tr class="separator:a67f56b6c4fd626c6b60488e9aebfc077"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10418427f7dcbd483fa6d2a4f2b6d18f" id="r_a10418427f7dcbd483fa6d2a4f2b6d18f"><td class="memItemLeft" align="right" valign="top"><a id="a10418427f7dcbd483fa6d2a4f2b6d18f" name="a10418427f7dcbd483fa6d2a4f2b6d18f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>show_render_area</b> (uint8_t *data_buffer, <a class="el" href="structstruct__render__area.html">render_area_t</a> screen_area, uint8_t addressing_mode=HORIZONTAL_ADDRESSING_MODE)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>show_render_area</b> (uint8_t *data_buffer, <a class="el" href="struct_struct_render_area.html">render_area_t</a> screen_area, uint8_t addressing_mode=HORIZONTAL_ADDRESSING_MODE)</td></tr>
 <tr class="separator:a10418427f7dcbd483fa6d2a4f2b6d18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3f540ee3e58af7cb2e3d79b9d257055" id="r_ad3f540ee3e58af7cb2e3d79b9d257055"><td class="memItemLeft" align="right" valign="top"><a id="ad3f540ee3e58af7cb2e3d79b9d257055" name="ad3f540ee3e58af7cb2e3d79b9d257055"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_pattern_and_show_GDDRAM</b> (uint8_t pattern, <a class="el" href="structstruct__render__area.html">render_area_t</a> area)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_pattern_and_show_GDDRAM</b> (uint8_t pattern, <a class="el" href="struct_struct_render_area.html">render_area_t</a> area)</td></tr>
 <tr class="separator:ad3f540ee3e58af7cb2e3d79b9d257055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab82e79530ac6743f1ec1040c4d6ac68d" id="r_ab82e79530ac6743f1ec1040c4d6ac68d"><td class="memItemLeft" align="right" valign="top"><a id="ab82e79530ac6743f1ec1040c4d6ac68d" name="ab82e79530ac6743f1ec1040c4d6ac68d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer_and_show_full_screen</b> ()</td></tr>
@@ -153,10 +153,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_display_OFF</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_display_ON</b> ()</td></tr>
 <tr class="separator:ae1ff6651fa144bacc2e9ab192f8b313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0fd7606f3b90373143f2dea3454816c" id="r_ac0fd7606f3b90373143f2dea3454816c"><td class="memItemLeft" align="right" valign="top"><a id="ac0fd7606f3b90373143f2dea3454816c" name="ac0fd7606f3b90373143f2dea3454816c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>horizontal_scroll</b> (bool on, <a class="el" href="structconfig__scroll__ssd1306.html">config_scroll_t</a> scroll_data)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>horizontal_scroll</b> (bool on, <a class="el" href="struct_struct_config_scroll_s_s_d1306.html">config_scroll_t</a> scroll_data)</td></tr>
 <tr class="separator:ac0fd7606f3b90373143f2dea3454816c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0543dea849c71980acb48b3c5a6129d2" id="r_a0543dea849c71980acb48b3c5a6129d2"><td class="memItemLeft" align="right" valign="top"><a id="a0543dea849c71980acb48b3c5a6129d2" name="a0543dea849c71980acb48b3c5a6129d2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vertical_scroll</b> (bool on, <a class="el" href="structconfig__scroll__ssd1306.html">config_scroll_t</a> scroll_data)</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>vertical_scroll</b> (bool on, <a class="el" href="struct_struct_config_scroll_s_s_d1306.html">config_scroll_t</a> scroll_data)</td></tr>
 <tr class="separator:a0543dea849c71980acb48b3c5a6129d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_u_i_display_device"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_u_i_display_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a></td></tr>
 <tr class="memitem:a7a31ddf37113196411f2dc2d65750f31 inherit pub_methods_class_u_i_display_device" id="r_a7a31ddf37113196411f2dc2d65750f31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_display_device.html#a7a31ddf37113196411f2dc2d65750f31">UIDisplayDevice</a> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB, <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> txt_cnf={.font=font_8x8})</td></tr>
@@ -231,7 +231,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next_char</b> ()</td>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aad7dae0461c4a6dd288efa25675cd27b" id="r_aad7dae0461c4a6dd288efa25675cd27b"><td class="memItemLeft" align="right" valign="top"><a id="aad7dae0461c4a6dd288efa25675cd27b" name="aad7dae0461c4a6dd288efa25675cd27b"></a>
-static <a class="el" href="structstruct__render__area.html">render_area_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>compute_render_area</b> (uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)</td></tr>
+static <a class="el" href="struct_struct_render_area.html">render_area_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>compute_render_area</b> (uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)</td></tr>
 <tr class="separator:aad7dae0461c4a6dd288efa25675cd27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
