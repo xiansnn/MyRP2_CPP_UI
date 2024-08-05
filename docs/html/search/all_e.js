@@ -8,7 +8,7 @@ var searchData=
   ['shared_5firq_5fcall_5fback_5',['shared_irq_call_back',['../test__ui__core_8cpp.html#a64d11a233c32f2da60996f97a98ccea4',1,'test_ui_core.cpp']]],
   ['show_6',['show',['../class_s_s_d1306.html#a9877895dcf33190e2fa712c8bf46bbb8',1,'SSD1306::show()'],['../class_s_s_d1306.html#a67f56b6c4fd626c6b60488e9aebfc077',1,'SSD1306::show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y)'],['../class_u_i_display_device.html#aea99bda7a2f1e6744076fce90e28ef57',1,'UIDisplayDevice::show()=0'],['../class_u_i_display_device.html#aa87594dc5c9085523809519fe0d85f5d',1,'UIDisplayDevice::show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y)=0']]],
   ['show_5fbus_5fmap_7',['show_bus_map',['../class_h_w___i2_c___master.html#a7bb14c9d7d91e461aac2f4eaf8a7e735',1,'HW_I2C_Master']]],
-  ['single_5fbyte_5fread_8',['single_byte_read',['../class_h_w___i2_c___master.html#a362322567048a3f7811be0d922ac10c1',1,'HW_I2C_Master']]],
+  ['single_5fbyte_5fread_8',['single_byte_read',['../class_h_w___i2_c___master.html#af889b6fd4a9f3018c7f8dbc2e51b5dc3',1,'HW_I2C_Master']]],
   ['slave_5fisr_9',['slave_isr',['../class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd',1,'HW_I2C_Slave']]],
   ['ssd1306_10',['SSD1306',['../class_s_s_d1306.html',1,'']]],
   ['still_20in_20construction_11',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
