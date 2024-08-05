@@ -28,13 +28,13 @@ Probe pr_D5 = Probe(5);
 Probe pr_D6 = Probe(6);
 Probe pr_D7 = Probe(7);
 
-config_master_i2c_t cfg_i2c{
+StructConfigMasterI2C cfg_i2c{
     .i2c = i2c0,
     .sda_pin = 8,
     .scl_pin = 9,
     .baud_rate = I2C_FAST_MODE};
 
-config_SSD1306_t cfg_ssd1306{
+StructConfigSSD1306 cfg_ssd1306{
     .i2c_address = 0x3C,
     .vertical_offset = 0,
     .scan_SEG_inverse_direction = true,

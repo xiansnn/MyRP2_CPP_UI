@@ -17,7 +17,7 @@ Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
 
 
-config_master_i2c_t master_config{
+StructConfigMasterI2C master_config{
     .i2c = i2c0,
     .sda_pin = 8,
     .scl_pin = 9,
@@ -26,7 +26,7 @@ config_master_i2c_t master_config{
 
 static void i2c_slave_handler(i2c_inst_t *i2c, i2c_slave_event_t event);
 
-config_slave_i2c_t slave_config{
+StructConfigSlaveI2C slave_config{
     .i2c = i2c1,
     .sda_pin = 6,
     .scl_pin = 7,
