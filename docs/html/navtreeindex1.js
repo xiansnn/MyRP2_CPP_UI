@@ -1,5 +1,17 @@
 var NAVTREEINDEX1 =
 {
+"test__ssd1306_8cpp.html#aa8c6498ebb1c3d57c3d71c5338f76a9e":[2,0,0,0,0,0,1,2,3,10],
+"test__ssd1306_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[2,0,0,0,0,0,1,2,3,0],
+"test__streams_8cpp.html":[2,0,0,0,0,0,3,0,6],
+"test__switch__button_8cpp.html":[2,0,0,0,0,0,1,3,2],
+"test__switch__button__irq_8cpp.html":[2,0,0,0,0,0,1,3,3],
+"test__ui__core_8cpp.html":[2,0,0,0,0,0,4,0,4],
+"test__ui__core_8cpp.html#a64d11a233c32f2da60996f97a98ccea4":[2,0,0,0,0,0,4,0,4,1],
+"test__ui__core_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[2,0,0,0,0,0,4,0,4,0],
+"test__widget__on__serial__monitor_8cpp.html":[2,0,0,0,0,0,4,0,5],
+"test__widget__on__serial__monitor_8h_source.html":[2,0,0,0,0,0,4,0,6],
+"ui__core_8h.html":[2,0,0,0,0,0,4,1],
+"ui__core_8h.html#a57c20ec1ef250b4ad060705786762112":[2,0,0,0,0,0,4,1,7],
 "ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab":[2,0,0,0,0,0,4,1,7,0],
 "ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089":[2,0,0,0,0,0,4,1,7,2],
 "ui__core_8h.html#a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac":[2,0,0,0,0,0,4,1,7,1],
