@@ -12,7 +12,7 @@
 #define I2C_FAST_MODE_PLUS 1000 * 1000        // <= 1Mb/s
 #define I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE 256 // default value used by context_t
 
-typedef struct i2c_xfer_result
+typedef struct StructI2CXferResult
 {
     bool error = false;
     std::string context ="";
@@ -20,7 +20,7 @@ typedef struct i2c_xfer_result
 } i2c_xfer_result_t;
 
 
-typedef struct config_master_i2c
+typedef struct StructConfigMasterI2C
 {
     i2c_inst_t *i2c = i2c0;
     uint sda_pin = 04;
@@ -28,7 +28,7 @@ typedef struct config_master_i2c
     uint baud_rate = I2C_STANDARD_MODE;
 } config_master_i2c_t;
 
-typedef struct config_slave_i2c
+typedef struct StructConfigSlaveI2C
 {
     i2c_inst_t *i2c = i2c1;
     uint sda_pin = 06;
@@ -40,14 +40,14 @@ typedef struct config_slave_i2c
 
 } config_slave_i2c_t;
 
-class hw_I2C_master
+class HW_I2C_Master
 {
 private:
     i2c_inst_t *i2c;
     uint time_out_us_per_byte;
 
 public:
-    hw_I2C_master(config_master_i2c_t master_config);
+    HW_I2C_Master(config_master_i2c_t master_config);
     i2c_xfer_result_t burst_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len);
     i2c_xfer_result_t single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);
     i2c_xfer_result_t single_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);
@@ -57,21 +57,21 @@ public:
     void show_bus_map();
 };
 
-typedef struct slave_memory
+typedef struct StructSlaveMemory
 {
     uint8_t mem[I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE]{};
     uint8_t mem_address = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE - 1; // init: the slave points to its last memory address
     bool mem_address_written = false;
 } context_t;
 
-class hw_I2C_slave
+class HW_I2C_Slave
 {
 private:
     i2c_inst_t *i2c;
 
 public:
     context_t context;
-    hw_I2C_slave(config_slave_i2c_t slave_config);
+    HW_I2C_Slave(config_slave_i2c_t slave_config);
     void slave_isr(i2c_slave_event_t event);
 };
 

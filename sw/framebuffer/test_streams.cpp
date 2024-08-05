@@ -394,7 +394,7 @@ int main()
 
 {
     stdio_init_all();
-    hw_I2C_master master = hw_I2C_master(cfg_i2c);
+    HW_I2C_Master master = HW_I2C_Master(cfg_i2c);
     SSD1306 display = SSD1306(&master, cfg_ssd1306);
 
     while (true)

@@ -24,8 +24,8 @@ config_slave_i2c_t slave_config{
     .slave_memory_size = 256,
     .handler = i2c_slave_handler};
 
-hw_I2C_master master = hw_I2C_master(master_config);
-hw_I2C_slave slave = hw_I2C_slave(slave_config);
+HW_I2C_Master master = HW_I2C_Master(master_config);
+HW_I2C_Slave slave = HW_I2C_Slave(slave_config);
 
 static void i2c_slave_handler(i2c_inst_t *i2c, i2c_slave_event_t event)
 {

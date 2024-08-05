@@ -36,8 +36,8 @@ config_slave_i2c_t slave_config{
     .handler = i2c_slave_handler};
 
 
-hw_I2C_master master = hw_I2C_master(master_config);
-hw_I2C_slave slave = hw_I2C_slave(slave_config);                          
+HW_I2C_Master master = HW_I2C_Master(master_config);
+HW_I2C_Slave slave = HW_I2C_Slave(slave_config);                          
 
 
 /**

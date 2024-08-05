@@ -1,3 +1,14 @@
+/**
+ * @file test_ssd1306.cpp
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief This file contains a set of functions that exercice the main feautures of the OLED display SSD1306.
+ * Test functions are more or less are derived from https://github.com/Harbys/pico-ssd1306 works.
+ * @version 0.1
+ * @date 2024-08-05
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #include "ssd1306.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,6 +43,13 @@ config_SSD1306_t cfg_ssd1306{
     .frequency_divider = 1,
     .frequency_factor = 0};
 
+/**
+ * @brief test contrast command.
+ * 
+ * repeat 3 times [contrast 0, contrast 255, contrast 127]
+ * 
+ * @param display 
+ */
 void test_contrast(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -50,6 +68,12 @@ void test_contrast(SSD1306 *display)
     }
 };
 
+/**
+ * @brief  test addressing mode.
+ * successsive test[horizontal addressing mode, verticale addressing mode, page addressing mode]
+ * 
+ * @param display 
+ */
 void test_addressing_mode(SSD1306 *display)
 {
     uint8_t image[128 * 8]{0x00};
@@ -85,6 +109,11 @@ void test_addressing_mode(SSD1306 *display)
     }
 };
 
+/**
+ * @brief test blink command
+ * 
+ * @param display 
+ */
 void test_blink(SSD1306 *display)
 {
     render_area_t area;
@@ -101,6 +130,11 @@ void test_blink(SSD1306 *display)
         sleep_ms(1000);
     }
 };
+/**
+ * @brief tst auto scrolling function of the SSD1306 device
+ * 
+ * @param display 
+ */
 void test_scrolling(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -125,6 +159,11 @@ void test_scrolling(SSD1306 *display)
     sleep_ms(5000);
     display->vertical_scroll(false, scroll_data);
 };
+/**
+ * @brief  Check that we can draw a line that outfit the framebuffer without consequences
+ * 
+ * @param display 
+ */
 void test_outofframe_line(SSD1306 *display)
 {
     int y0, x1, y1;
@@ -143,6 +182,11 @@ void test_outofframe_line(SSD1306 *display)
         display->show();
     }
 };
+/**
+ * @brief test framebuffer line function
+ * 
+ * @param display 
+ */
 void test_fb_line(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -194,6 +238,11 @@ void test_fb_line(SSD1306 *display)
     sleep_ms(1000);
 };
 
+/**
+ * @brief test framebuffer hline function
+ * 
+ * @param display 
+ */
 void test_fb_hline(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -211,6 +260,11 @@ void test_fb_hline(SSD1306 *display)
     display->show();
     sleep_ms(1000);
 }
+/**
+ * @brief test framebuffer vline function
+ * 
+ * @param display 
+ */
 void test_fb_vline(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -229,6 +283,11 @@ void test_fb_vline(SSD1306 *display)
     sleep_ms(1000);
 }
 
+/**
+ * @brief test framebuffer rect function
+ * 
+ * @param display 
+ */
 void test_fb_rect(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -239,6 +298,11 @@ void test_fb_rect(SSD1306 *display)
     display->show();
     sleep_ms(2000);
 }
+/**
+ * @brief test capability of drawing a framebuffer inside another framebuffer
+ * 
+ * @param display 
+ */
 void test_fb_in_fb(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -259,6 +323,11 @@ void test_fb_in_fb(SSD1306 *display)
     sleep_ms(1000);
 }
 
+/**
+ * @brief test framebuffer circle function
+ * 
+ * @param display 
+ */
 void test_fb_circle(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
@@ -270,12 +339,31 @@ void test_fb_circle(SSD1306 *display)
     sleep_ms(2000);
 }
 
+/**
+ * @brief main test program of SSD1306 OLED display driver
+ * 
+ * @return int 
+ */
 int main()
 {
+    /**
+     * @brief SETUP:
+     * 
+     * I2C interface
+     * SSD1306 device
+     * 
+     */
     stdio_init_all();
     // create I2C bus hw peripheral and display
-    hw_I2C_master master = hw_I2C_master(cfg_i2c);
+    HW_I2C_Master master = HW_I2C_Master(cfg_i2c);
     SSD1306 display = SSD1306(&master, cfg_ssd1306);
+
+    /**
+     * @brief LOOP: infinite
+     * 
+     * run succesive test of all SSD1306 features
+     * 
+     */
 
     while (true)
     {
@@ -293,5 +381,9 @@ int main()
         test_fb_in_fb(&display);
     }
 
+    /**
+     * @brief END:
+     * 
+     */
     return 0;
 }

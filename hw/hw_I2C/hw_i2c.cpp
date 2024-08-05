@@ -27,7 +27,7 @@
  *
  * @param cfg
  */
-hw_I2C_master::hw_I2C_master(config_master_i2c_t cfg)
+HW_I2C_Master::HW_I2C_Master(config_master_i2c_t cfg)
 {
     this->i2c = cfg.i2c;
     this->time_out_us_per_byte = 8 * 1500000 / cfg.baud_rate; // with 50% margin
@@ -61,7 +61,7 @@ hw_I2C_master::hw_I2C_master(config_master_i2c_t cfg)
  * @param len the size of the block of data. Can be 1 for single byte write
  * @return int Number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged, no device present.
  */
-i2c_xfer_result_t hw_I2C_master::burst_byte_write(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *src, size_t len)
+i2c_xfer_result_t HW_I2C_Master::burst_byte_write(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *src, size_t len)
 {
     size_t nb;
     i2c_xfer_result_t result;
@@ -81,7 +81,7 @@ i2c_xfer_result_t hw_I2C_master::burst_byte_write(uint8_t slave_address, uint8_t
     return result;
 }
 
-i2c_xfer_result_t hw_I2C_master::single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)
+i2c_xfer_result_t HW_I2C_Master::single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)
 {
     int nb;
     i2c_xfer_result_t result;
@@ -109,7 +109,7 @@ i2c_xfer_result_t hw_I2C_master::single_byte_write(uint8_t slave_address, uint8_
  * @param dest Pointer to buffer to receive data
  * @return int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present.
  */
-i2c_xfer_result_t hw_I2C_master::single_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest)
+i2c_xfer_result_t HW_I2C_Master::single_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest)
 {
     int nb;
     i2c_xfer_result_t result;
@@ -149,7 +149,7 @@ i2c_xfer_result_t hw_I2C_master::single_byte_read(uint8_t slave_address, uint8_t
  * @param len the size of the block of data
  * @return int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present or PICO_ERROR_TIMEOUT
  */
-i2c_xfer_result_t hw_I2C_master::burst_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest, size_t len)
+i2c_xfer_result_t HW_I2C_Master::burst_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest, size_t len)
 {
     size_t nb;
     i2c_xfer_result_t result;
@@ -184,7 +184,7 @@ i2c_xfer_result_t hw_I2C_master::burst_byte_read(uint8_t slave_address, uint8_t 
  *
  * @return std::set<uint8_t> the set of responding addresses
  */
-std::set<uint8_t> hw_I2C_master::bus_scan()
+std::set<uint8_t> HW_I2C_Master::bus_scan()
 {
     std::set<uint8_t> device_address_set;
     for (uint8_t addr = 0x08; addr < 0x78; addr++)
@@ -192,7 +192,7 @@ std::set<uint8_t> hw_I2C_master::bus_scan()
             device_address_set.insert(addr);
     return device_address_set;
 }
-bool hw_I2C_master::device_is_connected(uint8_t slave_address)
+bool HW_I2C_Master::device_is_connected(uint8_t slave_address)
 {
     int nb;
     uint8_t rxdata;
@@ -204,7 +204,7 @@ bool hw_I2C_master::device_is_connected(uint8_t slave_address)
  * @brief a utility that provides a map of responding devices
  *
  */
-void hw_I2C_master::show_bus_map()
+void HW_I2C_Master::show_bus_map()
 {
     printf("Connected slave's map \n");
     printf("   0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F\n");
@@ -224,7 +224,7 @@ void hw_I2C_master::show_bus_map()
  *
  * @param event the type of data/command received
  */
-void hw_I2C_slave::slave_isr(i2c_slave_event_t event)
+void HW_I2C_Slave::slave_isr(i2c_slave_event_t event)
 {
     switch (event)
     {
@@ -266,7 +266,7 @@ void hw_I2C_slave::slave_isr(i2c_slave_event_t event)
  * @param handler the IRQ handler. NOTICE: This handler is the one given to NVIC IRQ map.
  * It seems that it must be a static function defined in the main code.
  */
-hw_I2C_slave::hw_I2C_slave(config_slave_i2c_t cfg)
+HW_I2C_Slave::HW_I2C_Slave(config_slave_i2c_t cfg)
 {
     this->i2c = cfg.i2c;
 

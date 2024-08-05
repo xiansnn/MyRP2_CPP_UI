@@ -22,7 +22,7 @@
 #define VERTICAL_ADDRESSING_MODE 1
 #define PAGE_ADDRESSING_MODE 2
 
-typedef struct config_SSD1306
+typedef struct StructConfigSSD1306
 
 {
     uint8_t i2c_address = 0x3C;
@@ -38,7 +38,7 @@ typedef struct config_SSD1306
     uint8_t frequency_factor = 0;
 } config_SSD1306_t;
 
-typedef struct config_scroll_ssd1306
+typedef struct StructConfigScrollSSD1306
 {
     bool scroll_H_to_right = true;           // if true SSD1306_SET_R_HORIZ_SCROLL else SSD1306_SET_L_HORIZ_SCROLL
     bool scroll_V_and_H_to_right = true;     // if true SSD1306_SET_VERTICAL_R_HORIZ_SCROLL else SSD1306_SET_VERTICAL_L_HORIZ_SCROLL
@@ -48,7 +48,7 @@ typedef struct config_scroll_ssd1306
     uint8_t vertical_scrolling_offset = 5;   // 0 <= value <= 63
 } config_scroll_t;
 
-typedef struct struct_render_area
+typedef struct StructRenderArea
 {
     uint8_t start_col{0};
     uint8_t end_col{SSD1306_WIDTH - 1};
@@ -62,7 +62,7 @@ typedef struct struct_render_area
 class SSD1306 : public UIDisplayDevice
 {
 private:
-    hw_I2C_master *i2c_master;
+    HW_I2C_Master *i2c_master;
     config_SSD1306_t device_config;
 
     void init();
@@ -79,7 +79,7 @@ private:
     void send_buf(uint8_t buf[], size_t buflen);
 
 public:
-    SSD1306(hw_I2C_master *master, config_SSD1306_t device_config);
+    SSD1306(HW_I2C_Master *master, config_SSD1306_t device_config);
     static render_area_t compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
     void show(); // when we need to show the full device area
     void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y); // when we need to show a framebuffer in a given render area

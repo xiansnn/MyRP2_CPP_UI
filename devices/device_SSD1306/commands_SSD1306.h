@@ -1,3 +1,13 @@
+/**
+ * @file commands_SSD1306.h
+ * @author xiansnn (xiansnn@hotmail.com)
+ * @brief This file contains all the defineition of SSD1306 commands
+ * @version 0.1
+ * @date 2024-08-05
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #if !defined(CONFIG_SSD1306_H)
 #define CONFIG_SSD1306_H
 
