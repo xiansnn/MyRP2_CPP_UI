@@ -25,7 +25,7 @@
 /**
  * @brief configuration data for SSD1306 OLED display.
  * refer to datasheet for more details.
- * 
+ *
  */
 struct StructConfigSSD1306
 
@@ -41,8 +41,13 @@ struct StructConfigSSD1306
     uint8_t contrast = 127;
     uint8_t frequency_divider = 1;
     uint8_t frequency_factor = 0;
-} ;
+};
 
+/**
+ * @brief configuration data for SSD1306 OLED display scrolling feature.
+ * refer to datasheet for more details.
+ *
+ */
 struct StructConfigScrollSSD1306
 {
     bool scroll_H_to_right = true;           // if true SSD1306_SET_R_HORIZ_SCROLL else SSD1306_SET_L_HORIZ_SCROLL
@@ -51,8 +56,12 @@ struct StructConfigScrollSSD1306
     uint8_t time_frame_interval = _2_FRAMES; // 0 <= value <= 7
     uint8_t scroll_H_end_page = 7;           // 0 <= value <= 7
     uint8_t vertical_scrolling_offset = 5;   // 0 <= value <= 63
-} ;
+};
 
+/**
+ * @brief data used to compute the render area position in the display framebuffer reference, including the size of the reequired buffer.
+ *
+ */
 struct StructRenderArea
 {
     uint8_t start_col{0};
@@ -62,7 +71,7 @@ struct StructRenderArea
     size_t width{SSD1306_WIDTH};
     size_t height{SSD1306_HEIGHT};
     size_t buflen{SSD1306_BUF_LEN};
-} ;
+};
 
 class SSD1306 : public UIDisplayDevice
 {
@@ -84,22 +93,101 @@ private:
     void send_buf(uint8_t buf[], size_t buflen);
 
 public:
+    /**
+     * @brief Construct a new SSD1306 object
+     *
+     * @param master the I2C master interface driver HW_I2C_Master
+     * @param device_config the configuration according to StructConfigSSD1306
+     */
     SSD1306(HW_I2C_Master *master, StructConfigSSD1306 device_config);
+    /**
+     * @brief A static member function that converts the area we want to display into device specific parameters.
+     *
+     * @param start_col
+     * @param end_col
+     * @param start_line
+     * @param end_line
+     * @return StructRenderArea
+     */
     static StructRenderArea compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
-    void show(); // when we need to show the full device area
-    void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y); // when we need to show a framebuffer in a given render area
-    // void show(Framebuffer *frame, frame_data_t data);
-    void show_render_area(uint8_t *data_buffer, StructRenderArea screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE); // when we need to show a render area with a given framebuffer
+    /**
+     * @brief the SSD1306 implementation of the show function. Used when we need to show the full device area
+     *
+     */
+    void show();
+    /**
+     * @brief  the SSD1306 implementation of the show function. Used when we need to show a framebuffer in a given render area
+     *
+     * @param frame the framebuffer we want to show on the display
+     * @param anchor_x where we want to position (x) the frambuffer
+     * @param anchor_y where we want to position (y) the frambuffer
+     */
+    void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y);
+    /**
+     * @brief // when we need to show a render area with a given framebuffer
+     *
+     * @param data_buffer
+     * @param screen_area
+     * @param addressing_mode
+     */
+    void show_render_area(uint8_t *data_buffer, StructRenderArea screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE);
+    /**
+     * @brief fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels.
+     * The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)
+     * @param pattern
+     * @param area
+     */
     void fill_pattern_and_show_GDDRAM(uint8_t pattern, StructRenderArea area);
+    /**
+     * @brief write 0x00 into the device framebuffer
+     *
+     */
     void clear_pixel_buffer_and_show_full_screen();
-
+    /**
+     * @brief Set the contrast object. refer to datasheet of SSD1306 device.
+     *
+     * @param value
+     */
     void set_contrast(uint8_t value);
+    /**
+     * @brief Set the display from RAM object
+     * 
+     */
     void set_display_from_RAM();
+    /**
+     * @brief Set the all pixel ON 
+     * 
+     */
     void set_all_pixel_ON();
+    /**
+     * @brief Set the inverse color object
+     * 
+     * @param inverse 
+     */
     void set_inverse_color(bool inverse);
+    /**
+     * @brief Set the display OFF object
+     * 
+     */
     void set_display_OFF();
+    /**
+     * @brief Set the display ON object
+     * 
+     */
     void set_display_ON();
+    /**
+     * @brief 
+     * 
+     * @param on 
+     * @param scroll_data 
+     */
     void horizontal_scroll(bool on, StructConfigScrollSSD1306 scroll_data);
+    /**
+     * @brief 
+     * 
+     * @param on 
+     * @param scroll_data 
+     */
     void vertical_scroll(bool on, StructConfigScrollSSD1306 scroll_data);
 };
 
