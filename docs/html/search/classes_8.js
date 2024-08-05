@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['test_5fmanager_0',['Test_Manager',['../class_test___manager.html',1,'']]],
-  ['testcursorwidgetwithincrementalvalue_1',['TestCursorWidgetWithIncrementalValue',['../class_test_cursor_widget_with_incremental_value.html',1,'']]],
-  ['testincrementalvalue_2',['TestIncrementalValue',['../class_test_incremental_value.html',1,'']]],
-  ['testobjectmanagerwidget_3',['TestObjectManagerWidget',['../class_test_object_manager_widget.html',1,'']]],
-  ['testsetofwidget_4',['TestSetOfWidget',['../class_test_set_of_widget.html',1,'']]]
+  ['uicontrolledincrementalvalue_0',['UIControlledIncrementalValue',['../class_u_i_controlled_incremental_value.html',1,'']]],
+  ['uicontroller_1',['UIController',['../class_u_i_controller.html',1,'']]],
+  ['uidisplaydevice_2',['UIDisplayDevice',['../class_u_i_display_device.html',1,'']]],
+  ['uimodelobject_3',['UIModelObject',['../class_u_i_model_object.html',1,'']]],
+  ['uiobjectmanager_4',['UIObjectManager',['../class_u_i_object_manager.html',1,'']]],
+  ['uiwidget_5',['UIWidget',['../class_u_i_widget.html',1,'']]]
 ];

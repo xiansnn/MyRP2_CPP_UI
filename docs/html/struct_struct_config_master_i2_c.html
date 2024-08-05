@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MyRP2_CPP_UI: C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_SSD1306 Directory Reference</title>
+<title>MyRP2_CPP_UI: StructConfigMasterI2C Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('dir_a978cf0798c5262c136d7547bbb2c521.html',''); initResizable(true); });
+$(function(){initNavTree('struct_struct_config_master_i2_c.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -96,29 +96,37 @@ $(function(){initNavTree('dir_a978cf0798c5262c136d7547bbb2c521.html',''); initRe
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">device_SSD1306 Directory Reference</div></div>
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="struct_struct_config_master_i2_c-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">StructConfigMasterI2C Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="files" name="files"></a>
-Files</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="commands___s_s_d1306_8h_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="commands___s_s_d1306_8h.html">commands_SSD1306.h</a></td></tr>
-<tr class="memdesc:commands___s_s_d1306_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contains all the defineition of <a class="el" href="class_s_s_d1306.html">SSD1306</a> commands. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="raspberry26x32_8h_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>raspberry26x32.h</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><a href="ssd1306_8h_source.html"><span class="icondoc"></span></a>&#160;</td><td class="memItemRight" valign="bottom"><b>ssd1306.h</b></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top"><span class="icondoc"></span>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test__ssd1306_8cpp.html">test_ssd1306.cpp</a></td></tr>
-<tr class="memdesc:test__ssd1306_8cpp"><td class="mdescLeft">&#160;</td><td class="mdescRight">This file contains a set of functions that exercice the main feautures of the OLED display <a class="el" href="class_s_s_d1306.html">SSD1306</a>. Test functions are more or less are derived from <a href="https://github.com/Harbys/pico-ssd1306">https://github.com/Harbys/pico-ssd1306</a> works. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:aac6d4d2f4051e15f476d4fc62a3947dc" id="r_aac6d4d2f4051e15f476d4fc62a3947dc"><td class="memItemLeft" align="right" valign="top"><a id="aac6d4d2f4051e15f476d4fc62a3947dc" name="aac6d4d2f4051e15f476d4fc62a3947dc"></a>
+i2c_inst_t *&#160;</td><td class="memItemRight" valign="bottom"><b>i2c</b> = i2c0</td></tr>
+<tr class="separator:aac6d4d2f4051e15f476d4fc62a3947dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f99cb7a9d778e4433b721593e731bf4" id="r_a6f99cb7a9d778e4433b721593e731bf4"><td class="memItemLeft" align="right" valign="top"><a id="a6f99cb7a9d778e4433b721593e731bf4" name="a6f99cb7a9d778e4433b721593e731bf4"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>sda_pin</b> = 04</td></tr>
+<tr class="separator:a6f99cb7a9d778e4433b721593e731bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5baaa4e5ce1b0ca945b0edfa7f1be4f" id="r_ac5baaa4e5ce1b0ca945b0edfa7f1be4f"><td class="memItemLeft" align="right" valign="top"><a id="ac5baaa4e5ce1b0ca945b0edfa7f1be4f" name="ac5baaa4e5ce1b0ca945b0edfa7f1be4f"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>scl_pin</b> = 05</td></tr>
+<tr class="separator:ac5baaa4e5ce1b0ca945b0edfa7f1be4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4346229cdbdbd1d34e52c5da8286c0" id="r_a5f4346229cdbdbd1d34e52c5da8286c0"><td class="memItemLeft" align="right" valign="top"><a id="a5f4346229cdbdbd1d34e52c5da8286c0" name="a5f4346229cdbdbd1d34e52c5da8286c0"></a>
+uint&#160;</td><td class="memItemRight" valign="bottom"><b>baud_rate</b> = I2C_STANDARD_MODE</td></tr>
+<tr class="separator:a5f4346229cdbdbd1d34e52c5da8286c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/hw/hw_I2C/<a class="el" href="hw__i2c_8h_source.html">hw_i2c.h</a></li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_83479ca8445b084a39a9716b3e7c10e1.html">chris</a></li><li class="navelem"><a class="el" href="dir_ba412ed9cbc5502d4bd0776b8722a0ca.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_e8a225bfacbb433bca1ba3570f442c47.html">MyRP2_CPP_UI</a></li><li class="navelem"><a class="el" href="dir_0f7344c674768d46c86f8b2759036310.html">devices</a></li><li class="navelem"><a class="el" href="dir_a978cf0798c5262c136d7547bbb2c521.html">device_SSD1306</a></li>
+    <li class="navelem"><a class="el" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>
