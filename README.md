@@ -2,10 +2,12 @@
 This repository proposes a User Interface alternative version for RPi Pico.
 All the classes defined here rely on the RPi Pico SDK version 1.5.1
 
+Up to now, only one display device is available. It is the OLEd SSD1306. Most of The code was derived from [Harbys github repository](https://github.com/Harbys/pico-ssd1306) works and framebuffer API aws inspired from mycropython API we can find [here](https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf).
+
 ## Complete documentation (still in construction)
 Access to the the project web page with external browser [here](https://xiansnn.github.io/MyRP2_CPP_UI/).
 
-Once open with browser, you will find doxygen documentation [here](docs/html/index.html)
+After opening this pages with your web browser, you will find doxygen documentation [here](docs/html/index.html)
 
 
 ## Motivation
