@@ -107,7 +107,7 @@ Complete documentation (still in construction)</h1>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Motivation</h1>
 <p>I know that we can find lot of well defined and used UI interface e.g. Adafruit in Arduino environment, but the main motivation was first to have fun devoloping (quite) from scratch a user interface en C++.</p>
-<p>The second motivation was to have a set of C++ classes that make development of Raspberry Pi Pico C++ application more friendly with a small UI with OLED display (the one I've got is the <a class="el" href="class_s_s_d1306.html">SSD1306</a> 0.92").
+<p>The second motivation was to have a set of C++ classes that make development of Raspberry Pi Pico C++ application more friendly with a small UI with OLED display (the one I've got is the <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> 0.92").
 Considering the time required to refresh the small OLED screen through the I2C link, I've consider that it will be worth thinking about something that refreshes parts of the screen only when data have been changed.
 This is why I've started thinking about framebuffer and the way we can upload part of framebuffer to the display. I then developped C++ classes to handle SSD1306 and framebuffer.
 

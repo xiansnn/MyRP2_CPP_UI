@@ -111,96 +111,107 @@ $(function(){initNavTree('hw__i2c_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define I2C_STANDARD_MODE 100 * 1000          </span><span class="comment">// &lt;= 100kb/s</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#define I2C_FAST_MODE 400 * 1000              </span><span class="comment">// &lt;= 400kb/s</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define I2C_FAST_MODE_PLUS 1000 * 1000        </span><span class="comment">// &lt;= 1Mb/s</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE 256 </span><span class="comment">// default value used by context_t</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE 256 </span><span class="comment">// default value used by StructConfigSlaveI2C</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="struct_struct_i2_c_xfer_result.html">   15</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">bool</span> error = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    std::string context = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">int</span> xfer_size = 0;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_struct_i2_c_xfer_result.html">   19</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">bool</span> error = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    std::string context = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">int</span> xfer_size = 0;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
 </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    i2c_inst_t *i2c = i2c0;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    uint sda_pin = 04;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    uint scl_pin = 05;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    uint baud_rate = I2C_STANDARD_MODE;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html">   29</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html#aac6d4d2f4051e15f476d4fc62a3947dc">   34</a></span>    i2c_inst_t *<a class="code hl_variable" href="struct_struct_config_master_i2_c.html#aac6d4d2f4051e15f476d4fc62a3947dc">i2c</a> = i2c0;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html#a6f99cb7a9d778e4433b721593e731bf4">   38</a></span>    uint <a class="code hl_variable" href="struct_struct_config_master_i2_c.html#a6f99cb7a9d778e4433b721593e731bf4">sda_pin</a> = 04;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html#ac5baaa4e5ce1b0ca945b0edfa7f1be4f">   42</a></span>    uint <a class="code hl_variable" href="struct_struct_config_master_i2_c.html#ac5baaa4e5ce1b0ca945b0edfa7f1be4f">scl_pin</a> = 05;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="struct_struct_config_master_i2_c.html#a5f4346229cdbdbd1d34e52c5da8286c0">   49</a></span>    uint <a class="code hl_variable" href="struct_struct_config_master_i2_c.html#a5f4346229cdbdbd1d34e52c5da8286c0">baud_rate</a> = I2C_STANDARD_MODE;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
 </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>{</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    i2c_inst_t *i2c = i2c1;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    uint sda_pin = 06;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    uint scl_pin = 07;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    uint baud_rate = I2C_STANDARD_MODE;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    uint8_t slave_address = 0x55;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">size_t</span> slave_memory_size = 256;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    i2c_slave_handler_t handler;</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html">   55</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#a051a9501de064637faacfbf08f6d8006">   60</a></span>    i2c_inst_t *<a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#a051a9501de064637faacfbf08f6d8006">i2c</a> = i2c1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#aca1241a88e5d533ab90a525ace30f462">   64</a></span>    uint <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#aca1241a88e5d533ab90a525ace30f462">sda_pin</a> = 06;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#ac8442bd665d42f4c698a2942d5a39e62">   68</a></span>    uint <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#ac8442bd665d42f4c698a2942d5a39e62">scl_pin</a> = 07;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#ae7a96c6d027599728ab9de9f44e8fa37">   75</a></span>    uint <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#ae7a96c6d027599728ab9de9f44e8fa37">baud_rate</a> = I2C_STANDARD_MODE;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#a7e3254c109eeffcc28cb167f30648b33">   79</a></span>    uint8_t <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#a7e3254c109eeffcc28cb167f30648b33">slave_address</a> = 0x55;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#a70368100d259dc523ff6b8887b4fb376">   83</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#a70368100d259dc523ff6b8887b4fb376">slave_memory_size</a> = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="struct_struct_config_slave_i2_c.html#a63eb8f10c48de50dddafe8cfe8487b8b">   87</a></span>    i2c_slave_handler_t <a class="code hl_variable" href="struct_struct_config_slave_i2_c.html#a63eb8f10c48de50dddafe8cfe8487b8b">handler</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_h_w___i2_c___master.html">   41</a></span><span class="keyword">class </span><a class="code hl_class" href="class_h_w___i2_c___master.html">HW_I2C_Master</a></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    i2c_inst_t *i2c;</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    uint time_out_us_per_byte;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_function" href="class_h_w___i2_c___master.html#aac25277d779898ef8f27f3d069fee296">HW_I2C_Master</a>(<a class="code hl_struct" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a> master_config);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#aaa80a7cee469172fee690ce634a63ea2">burst_byte_write</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, <span class="keywordtype">size_t</span> len);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#af889b6fd4a9f3018c7f8dbc2e51b5dc3">single_byte_read</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#a5537470be884c662b2120250cd11c794">burst_byte_read</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, <span class="keywordtype">size_t</span> len);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    std::set&lt;uint8_t&gt; <a class="code hl_function" href="class_h_w___i2_c___master.html#a81b01ac8db26400774c892f76b1917de">bus_scan</a>();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> device_is_connected(uint8_t slave_address);</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_w___i2_c___master.html#a7bb14c9d7d91e461aac2f4eaf8a7e735">show_bus_map</a>();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="};">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_h_w___i2_c___master.html">   93</a></span><span class="keyword">class </span><a class="code hl_class" href="class_h_w___i2_c___master.html">HW_I2C_Master</a></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>{</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    i2c_inst_t *i2c;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uint time_out_us_per_byte;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="class_h_w___i2_c___master.html#aac25277d779898ef8f27f3d069fee296">HW_I2C_Master</a>(<a class="code hl_struct" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a> master_config);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#aaa80a7cee469172fee690ce634a63ea2">burst_byte_write</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, <span class="keywordtype">size_t</span> len);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#af889b6fd4a9f3018c7f8dbc2e51b5dc3">single_byte_read</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_struct" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> <a class="code hl_function" href="class_h_w___i2_c___master.html#a5537470be884c662b2120250cd11c794">burst_byte_read</a>(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, <span class="keywordtype">size_t</span> len);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    std::set&lt;uint8_t&gt; <a class="code hl_function" href="class_h_w___i2_c___master.html#a81b01ac8db26400774c892f76b1917de">bus_scan</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">bool</span> device_is_connected(uint8_t slave_address);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_w___i2_c___master.html#a7bb14c9d7d91e461aac2f4eaf8a7e735">show_bus_map</a>();</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>};</div>
 </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
-<div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_struct_slave_memory.html">   58</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_slave_memory.html">StructSlaveMemory</a></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>{</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    uint8_t mem[I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE]{};</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    uint8_t mem_address = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE - 1; <span class="comment">// init: the slave points to its last memory address</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> mem_address_written = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="foldopen" id="foldopen00114" data-start="{" data-end="};">
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="struct_struct_slave_memory.html">  114</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_struct_slave_memory.html">StructSlaveMemory</a></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>{</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    uint8_t mem[I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE]{};</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    uint8_t mem_address = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE - 1; <span class="comment">// init: the slave points to its last memory address</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keywordtype">bool</span> mem_address_written = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>};</div>
 </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="foldopen" id="foldopen00065" data-start="{" data-end="};">
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_h_w___i2_c___slave.html">   65</a></span><span class="keyword">class </span><a class="code hl_class" href="class_h_w___i2_c___slave.html">HW_I2C_Slave</a></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>{</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    i2c_inst_t *i2c;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_struct" href="struct_struct_slave_memory.html">StructSlaveMemory</a> context;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_function" href="class_h_w___i2_c___slave.html#a8ab83567a8fd1b93dcc382d075b37097">HW_I2C_Slave</a>(<a class="code hl_struct" href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a> slave_config);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd">slave_isr</a>(i2c_slave_event_t event);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>};</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="foldopen" id="foldopen00125" data-start="{" data-end="};">
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="class_h_w___i2_c___slave.html">  125</a></span><span class="keyword">class </span><a class="code hl_class" href="class_h_w___i2_c___slave.html">HW_I2C_Slave</a></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>{</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    i2c_inst_t *i2c;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_struct" href="struct_struct_slave_memory.html">StructSlaveMemory</a> context;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_function" href="class_h_w___i2_c___slave.html#a8ab83567a8fd1b93dcc382d075b37097">HW_I2C_Slave</a>(<a class="code hl_struct" href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a> slave_config);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd">slave_isr</a>(i2c_slave_event_t event);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>};</div>
 </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#endif </span><span class="comment">// HW_I2C_H</span></div>
-<div class="ttc" id="aclass_h_w___i2_c___master_html"><div class="ttname"><a href="class_h_w___i2_c___master.html">HW_I2C_Master</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:42</div></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="preprocessor">#endif </span><span class="comment">// HW_I2C_H</span></div>
+<div class="ttc" id="aclass_h_w___i2_c___master_html"><div class="ttname"><a href="class_h_w___i2_c___master.html">HW_I2C_Master</a></div><div class="ttdoc">this is a C++ wrapper for the original pico SDK i2c master API</div><div class="ttdef"><b>Definition</b> hw_i2c.h:94</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_a5537470be884c662b2120250cd11c794"><div class="ttname"><a href="class_h_w___i2_c___master.html#a5537470be884c662b2120250cd11c794">HW_I2C_Master::burst_byte_read</a></div><div class="ttdeci">StructI2CXferResult burst_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, size_t len)</div><div class="ttdoc">Helper to read a block of data starting at a slave memory address. Read will block the processor (syn...</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:152</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_a7bb14c9d7d91e461aac2f4eaf8a7e735"><div class="ttname"><a href="class_h_w___i2_c___master.html#a7bb14c9d7d91e461aac2f4eaf8a7e735">HW_I2C_Master::show_bus_map</a></div><div class="ttdeci">void show_bus_map()</div><div class="ttdoc">a utility that provides a map of responding devices</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:207</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_a81b01ac8db26400774c892f76b1917de"><div class="ttname"><a href="class_h_w___i2_c___master.html#a81b01ac8db26400774c892f76b1917de">HW_I2C_Master::bus_scan</a></div><div class="ttdeci">std::set&lt; uint8_t &gt; bus_scan()</div><div class="ttdoc">A utility that scan the I2C bus and return the set of answering devices.</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:187</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_aaa80a7cee469172fee690ce634a63ea2"><div class="ttname"><a href="class_h_w___i2_c___master.html#aaa80a7cee469172fee690ce634a63ea2">HW_I2C_Master::burst_byte_write</a></div><div class="ttdeci">StructI2CXferResult burst_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len)</div><div class="ttdoc">Helper to write a block of data starting at a slave memory address. The size of the block can be 1 fo...</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:64</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_aac25277d779898ef8f27f3d069fee296"><div class="ttname"><a href="class_h_w___i2_c___master.html#aac25277d779898ef8f27f3d069fee296">HW_I2C_Master::HW_I2C_Master</a></div><div class="ttdeci">HW_I2C_Master(StructConfigMasterI2C master_config)</div><div class="ttdoc">Construct a new hw I2C master::hw I2C master object.</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:30</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___master_html_af889b6fd4a9f3018c7f8dbc2e51b5dc3"><div class="ttname"><a href="class_h_w___i2_c___master.html#af889b6fd4a9f3018c7f8dbc2e51b5dc3">HW_I2C_Master::single_byte_read</a></div><div class="ttdeci">StructI2CXferResult single_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest)</div><div class="ttdoc">Helper to read a single byte of data at a slave memory address. Read will block the processor (synchr...</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:112</div></div>
-<div class="ttc" id="aclass_h_w___i2_c___slave_html"><div class="ttname"><a href="class_h_w___i2_c___slave.html">HW_I2C_Slave</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:66</div></div>
+<div class="ttc" id="aclass_h_w___i2_c___slave_html"><div class="ttname"><a href="class_h_w___i2_c___slave.html">HW_I2C_Slave</a></div><div class="ttdoc">this is a C++ wrapper for the original pico SDK i2c slave API</div><div class="ttdef"><b>Definition</b> hw_i2c.h:126</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___slave_html_a8ab83567a8fd1b93dcc382d075b37097"><div class="ttname"><a href="class_h_w___i2_c___slave.html#a8ab83567a8fd1b93dcc382d075b37097">HW_I2C_Slave::HW_I2C_Slave</a></div><div class="ttdeci">HW_I2C_Slave(StructConfigSlaveI2C slave_config)</div><div class="ttdoc">Construct a new hw I2C slave::hw I2C slave object.</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:269</div></div>
 <div class="ttc" id="aclass_h_w___i2_c___slave_html_ad1cd7139bba4bb865c6da8d08ff7dacd"><div class="ttname"><a href="class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd">HW_I2C_Slave::slave_isr</a></div><div class="ttdeci">void slave_isr(i2c_slave_event_t event)</div><div class="ttdoc">this is the actual Interrupt Service Routine executed by the slave after each received data</div><div class="ttdef"><b>Definition</b> hw_i2c.cpp:227</div></div>
-<div class="ttc" id="astruct_struct_config_master_i2_c_html"><div class="ttname"><a href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:23</div></div>
-<div class="ttc" id="astruct_struct_config_slave_i2_c_html"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:31</div></div>
-<div class="ttc" id="astruct_struct_i2_c_xfer_result_html"><div class="ttname"><a href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:16</div></div>
-<div class="ttc" id="astruct_struct_slave_memory_html"><div class="ttname"><a href="struct_struct_slave_memory.html">StructSlaveMemory</a></div><div class="ttdef"><b>Definition</b> hw_i2c.h:59</div></div>
+<div class="ttc" id="astruct_struct_config_master_i2_c_html"><div class="ttname"><a href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></div><div class="ttdoc">The configuration data of I2C interface used as Master.</div><div class="ttdef"><b>Definition</b> hw_i2c.h:30</div></div>
+<div class="ttc" id="astruct_struct_config_master_i2_c_html_a5f4346229cdbdbd1d34e52c5da8286c0"><div class="ttname"><a href="struct_struct_config_master_i2_c.html#a5f4346229cdbdbd1d34e52c5da8286c0">StructConfigMasterI2C::baud_rate</a></div><div class="ttdeci">uint baud_rate</div><div class="ttdoc">the I2C baudrate:</div><div class="ttdef"><b>Definition</b> hw_i2c.h:49</div></div>
+<div class="ttc" id="astruct_struct_config_master_i2_c_html_a6f99cb7a9d778e4433b721593e731bf4"><div class="ttname"><a href="struct_struct_config_master_i2_c.html#a6f99cb7a9d778e4433b721593e731bf4">StructConfigMasterI2C::sda_pin</a></div><div class="ttdeci">uint sda_pin</div><div class="ttdoc">the associated gpio pin for data</div><div class="ttdef"><b>Definition</b> hw_i2c.h:38</div></div>
+<div class="ttc" id="astruct_struct_config_master_i2_c_html_aac6d4d2f4051e15f476d4fc62a3947dc"><div class="ttname"><a href="struct_struct_config_master_i2_c.html#aac6d4d2f4051e15f476d4fc62a3947dc">StructConfigMasterI2C::i2c</a></div><div class="ttdeci">i2c_inst_t * i2c</div><div class="ttdoc">the I2C interface used in the rp2040: i2c0 or i2c1</div><div class="ttdef"><b>Definition</b> hw_i2c.h:34</div></div>
+<div class="ttc" id="astruct_struct_config_master_i2_c_html_ac5baaa4e5ce1b0ca945b0edfa7f1be4f"><div class="ttname"><a href="struct_struct_config_master_i2_c.html#ac5baaa4e5ce1b0ca945b0edfa7f1be4f">StructConfigMasterI2C::scl_pin</a></div><div class="ttdeci">uint scl_pin</div><div class="ttdoc">the associated gpio pin for clock</div><div class="ttdef"><b>Definition</b> hw_i2c.h:42</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html">StructConfigSlaveI2C</a></div><div class="ttdoc">The configuration data of I2C interface used as Slave.</div><div class="ttdef"><b>Definition</b> hw_i2c.h:56</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_a051a9501de064637faacfbf08f6d8006"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#a051a9501de064637faacfbf08f6d8006">StructConfigSlaveI2C::i2c</a></div><div class="ttdeci">i2c_inst_t * i2c</div><div class="ttdoc">the I2C interface used in the rp2040: i2c0 or i2c1</div><div class="ttdef"><b>Definition</b> hw_i2c.h:60</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_a63eb8f10c48de50dddafe8cfe8487b8b"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#a63eb8f10c48de50dddafe8cfe8487b8b">StructConfigSlaveI2C::handler</a></div><div class="ttdeci">i2c_slave_handler_t handler</div><div class="ttdoc">a function pointer, required by pico SDK, to the program that manage the reception of i2c message by ...</div><div class="ttdef"><b>Definition</b> hw_i2c.h:87</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_a70368100d259dc523ff6b8887b4fb376"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#a70368100d259dc523ff6b8887b4fb376">StructConfigSlaveI2C::slave_memory_size</a></div><div class="ttdeci">size_t slave_memory_size</div><div class="ttdoc">the size of the memory buffer reserved by the slave interface (default to 256)</div><div class="ttdef"><b>Definition</b> hw_i2c.h:83</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_a7e3254c109eeffcc28cb167f30648b33"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#a7e3254c109eeffcc28cb167f30648b33">StructConfigSlaveI2C::slave_address</a></div><div class="ttdeci">uint8_t slave_address</div><div class="ttdoc">the i2c slave address at which the interface responds</div><div class="ttdef"><b>Definition</b> hw_i2c.h:79</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_ac8442bd665d42f4c698a2942d5a39e62"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#ac8442bd665d42f4c698a2942d5a39e62">StructConfigSlaveI2C::scl_pin</a></div><div class="ttdeci">uint scl_pin</div><div class="ttdoc">the associated gpio pin for clock</div><div class="ttdef"><b>Definition</b> hw_i2c.h:68</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_aca1241a88e5d533ab90a525ace30f462"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#aca1241a88e5d533ab90a525ace30f462">StructConfigSlaveI2C::sda_pin</a></div><div class="ttdeci">uint sda_pin</div><div class="ttdoc">the associated gpio pin for data</div><div class="ttdef"><b>Definition</b> hw_i2c.h:64</div></div>
+<div class="ttc" id="astruct_struct_config_slave_i2_c_html_ae7a96c6d027599728ab9de9f44e8fa37"><div class="ttname"><a href="struct_struct_config_slave_i2_c.html#ae7a96c6d027599728ab9de9f44e8fa37">StructConfigSlaveI2C::baud_rate</a></div><div class="ttdeci">uint baud_rate</div><div class="ttdoc">the I2C baudrate:</div><div class="ttdef"><b>Definition</b> hw_i2c.h:75</div></div>
+<div class="ttc" id="astruct_struct_i2_c_xfer_result_html"><div class="ttname"><a href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a></div><div class="ttdoc">this data structure collects result when an I2C transfer is done. It gives a more verbose error descr...</div><div class="ttdef"><b>Definition</b> hw_i2c.h:20</div></div>
+<div class="ttc" id="astruct_struct_slave_memory_html"><div class="ttname"><a href="struct_struct_slave_memory.html">StructSlaveMemory</a></div><div class="ttdoc">this is the structure of the memory used by the slave i2c interface</div><div class="ttdef"><b>Definition</b> hw_i2c.h:115</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

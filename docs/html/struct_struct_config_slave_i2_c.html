@@ -102,31 +102,66 @@ $(function(){initNavTree('struct_struct_config_slave_i2_c.html',''); initResizab
   <div class="headertitle"><div class="title">StructConfigSlaveI2C Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The configuration data of I2C interface used as Slave.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="hw__i2c_8h_source.html">hw_i2c.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a051a9501de064637faacfbf08f6d8006" id="r_a051a9501de064637faacfbf08f6d8006"><td class="memItemLeft" align="right" valign="top"><a id="a051a9501de064637faacfbf08f6d8006" name="a051a9501de064637faacfbf08f6d8006"></a>
 i2c_inst_t *&#160;</td><td class="memItemRight" valign="bottom"><b>i2c</b> = i2c1</td></tr>
+<tr class="memdesc:a051a9501de064637faacfbf08f6d8006"><td class="mdescLeft">&#160;</td><td class="mdescRight">the I2C interface used in the rp2040: i2c0 or i2c1 <br /></td></tr>
 <tr class="separator:a051a9501de064637faacfbf08f6d8006"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca1241a88e5d533ab90a525ace30f462" id="r_aca1241a88e5d533ab90a525ace30f462"><td class="memItemLeft" align="right" valign="top"><a id="aca1241a88e5d533ab90a525ace30f462" name="aca1241a88e5d533ab90a525ace30f462"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>sda_pin</b> = 06</td></tr>
+<tr class="memdesc:aca1241a88e5d533ab90a525ace30f462"><td class="mdescLeft">&#160;</td><td class="mdescRight">the associated gpio pin for data <br /></td></tr>
 <tr class="separator:aca1241a88e5d533ab90a525ace30f462"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8442bd665d42f4c698a2942d5a39e62" id="r_ac8442bd665d42f4c698a2942d5a39e62"><td class="memItemLeft" align="right" valign="top"><a id="ac8442bd665d42f4c698a2942d5a39e62" name="ac8442bd665d42f4c698a2942d5a39e62"></a>
 uint&#160;</td><td class="memItemRight" valign="bottom"><b>scl_pin</b> = 07</td></tr>
+<tr class="memdesc:ac8442bd665d42f4c698a2942d5a39e62"><td class="mdescLeft">&#160;</td><td class="mdescRight">the associated gpio pin for clock <br /></td></tr>
 <tr class="separator:ac8442bd665d42f4c698a2942d5a39e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7a96c6d027599728ab9de9f44e8fa37" id="r_ae7a96c6d027599728ab9de9f44e8fa37"><td class="memItemLeft" align="right" valign="top"><a id="ae7a96c6d027599728ab9de9f44e8fa37" name="ae7a96c6d027599728ab9de9f44e8fa37"></a>
-uint&#160;</td><td class="memItemRight" valign="bottom"><b>baud_rate</b> = I2C_STANDARD_MODE</td></tr>
+<tr class="memitem:ae7a96c6d027599728ab9de9f44e8fa37" id="r_ae7a96c6d027599728ab9de9f44e8fa37"><td class="memItemLeft" align="right" valign="top">uint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7a96c6d027599728ab9de9f44e8fa37">baud_rate</a> = I2C_STANDARD_MODE</td></tr>
+<tr class="memdesc:ae7a96c6d027599728ab9de9f44e8fa37"><td class="mdescLeft">&#160;</td><td class="mdescRight">the I2C baudrate:  <br /></td></tr>
 <tr class="separator:ae7a96c6d027599728ab9de9f44e8fa37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e3254c109eeffcc28cb167f30648b33" id="r_a7e3254c109eeffcc28cb167f30648b33"><td class="memItemLeft" align="right" valign="top"><a id="a7e3254c109eeffcc28cb167f30648b33" name="a7e3254c109eeffcc28cb167f30648b33"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>slave_address</b> = 0x55</td></tr>
+<tr class="memdesc:a7e3254c109eeffcc28cb167f30648b33"><td class="mdescLeft">&#160;</td><td class="mdescRight">the i2c slave address at which the interface responds <br /></td></tr>
 <tr class="separator:a7e3254c109eeffcc28cb167f30648b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70368100d259dc523ff6b8887b4fb376" id="r_a70368100d259dc523ff6b8887b4fb376"><td class="memItemLeft" align="right" valign="top"><a id="a70368100d259dc523ff6b8887b4fb376" name="a70368100d259dc523ff6b8887b4fb376"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>slave_memory_size</b> = 256</td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><b>slave_memory_size</b> = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE</td></tr>
+<tr class="memdesc:a70368100d259dc523ff6b8887b4fb376"><td class="mdescLeft">&#160;</td><td class="mdescRight">the size of the memory buffer reserved by the slave interface (default to 256) <br /></td></tr>
 <tr class="separator:a70368100d259dc523ff6b8887b4fb376"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63eb8f10c48de50dddafe8cfe8487b8b" id="r_a63eb8f10c48de50dddafe8cfe8487b8b"><td class="memItemLeft" align="right" valign="top"><a id="a63eb8f10c48de50dddafe8cfe8487b8b" name="a63eb8f10c48de50dddafe8cfe8487b8b"></a>
 i2c_slave_handler_t&#160;</td><td class="memItemRight" valign="bottom"><b>handler</b></td></tr>
+<tr class="memdesc:a63eb8f10c48de50dddafe8cfe8487b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">a function pointer, required by pico SDK, to the program that manage the reception of i2c message by the slave interface <br /></td></tr>
 <tr class="separator:a63eb8f10c48de50dddafe8cfe8487b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The configuration data of I2C interface used as Slave. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae7a96c6d027599728ab9de9f44e8fa37" name="ae7a96c6d027599728ab9de9f44e8fa37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7a96c6d027599728ab9de9f44e8fa37">&#9670;&#160;</a></span>baud_rate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint StructConfigSlaveI2C::baud_rate = I2C_STANDARD_MODE</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the I2C baudrate: </p>
+<ul>
+<li>I2C_STANDARD_MODE = 100kb/s</li>
+<li>I2C_FAST_MODE = 400kb/s</li>
+<li>I2C_FAST_MODE_PLUS = 1Mb/s </li>
+</ul>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/hw/hw_I2C/<a class="el" href="hw__i2c_8h_source.html">hw_i2c.h</a></li>
 </ul>
