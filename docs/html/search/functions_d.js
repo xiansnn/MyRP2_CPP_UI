@@ -16,8 +16,9 @@ var searchData=
   ['show_5fbus_5fmap_13',['show_bus_map',['../class_h_w___i2_c___master.html#a7bb14c9d7d91e461aac2f4eaf8a7e735',1,'HW_I2C_Master']]],
   ['show_5frender_5farea_14',['show_render_area',['../class_s_s_d1306.html#a1fe65054842e27166f555c7c2278d12f',1,'SSD1306']]],
   ['single_5fbyte_5fread_15',['single_byte_read',['../class_h_w___i2_c___master.html#af889b6fd4a9f3018c7f8dbc2e51b5dc3',1,'HW_I2C_Master']]],
-  ['slave_5fisr_16',['slave_isr',['../class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd',1,'HW_I2C_Slave']]],
-  ['ssd1306_17',['SSD1306',['../class_s_s_d1306.html#a2c55553d922b24c84ae10078a537773b',1,'SSD1306']]],
-  ['switchbutton_18',['SwitchButton',['../class_switch_button.html#a1a24a88e0e3b151081552537f9cde431',1,'SwitchButton']]],
-  ['switchbuttonwithirq_19',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html#a268acfd3b3414ddc8df3ff19b8386600',1,'SwitchButtonWithIRQ']]]
+  ['single_5fbyte_5fwrite_16',['single_byte_write',['../class_h_w___i2_c___master.html#a2037f97fb1d2fe034fd5eea9e12d91d9',1,'HW_I2C_Master']]],
+  ['slave_5fisr_17',['slave_isr',['../class_h_w___i2_c___slave.html#ad1cd7139bba4bb865c6da8d08ff7dacd',1,'HW_I2C_Slave']]],
+  ['ssd1306_18',['SSD1306',['../class_s_s_d1306.html#a2c55553d922b24c84ae10078a537773b',1,'SSD1306']]],
+  ['switchbutton_19',['SwitchButton',['../class_switch_button.html#a1a24a88e0e3b151081552537f9cde431',1,'SwitchButton']]],
+  ['switchbuttonwithirq_20',['SwitchButtonWithIRQ',['../class_switch_button_with_i_r_q.html#a268acfd3b3414ddc8df3ff19b8386600',1,'SwitchButtonWithIRQ']]]
 ];

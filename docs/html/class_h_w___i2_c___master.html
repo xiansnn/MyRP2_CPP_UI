@@ -111,29 +111,28 @@ $(function(){initNavTree('class_h_w___i2_c___master.html',''); initResizable(tru
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aac25277d779898ef8f27f3d069fee296" id="r_aac25277d779898ef8f27f3d069fee296"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac25277d779898ef8f27f3d069fee296">HW_I2C_Master</a> (<a class="el" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a> master_config)</td></tr>
-<tr class="memdesc:aac25277d779898ef8f27f3d069fee296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new hw I2C master::hw I2C master object.  <br /></td></tr>
+<tr class="memdesc:aac25277d779898ef8f27f3d069fee296"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new hw i2c master object.  <br /></td></tr>
 <tr class="separator:aac25277d779898ef8f27f3d069fee296"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa80a7cee469172fee690ce634a63ea2" id="r_aaa80a7cee469172fee690ce634a63ea2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa80a7cee469172fee690ce634a63ea2">burst_byte_write</a> (uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len)</td></tr>
-<tr class="memdesc:aaa80a7cee469172fee690ce634a63ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to write a block of data starting at a slave memory address. The size of the block can be 1 for single byte write. Write will block the processor (synchronous execution).  <br /></td></tr>
+<tr class="memdesc:aaa80a7cee469172fee690ce634a63ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">a convenient C++ member wrapper to write a block of data starting at a slave memory address. The operation is bounded by a timeout.  <br /></td></tr>
 <tr class="separator:aaa80a7cee469172fee690ce634a63ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2037f97fb1d2fe034fd5eea9e12d91d9" id="r_a2037f97fb1d2fe034fd5eea9e12d91d9"><td class="memItemLeft" align="right" valign="top"><a id="a2037f97fb1d2fe034fd5eea9e12d91d9" name="a2037f97fb1d2fe034fd5eea9e12d91d9"></a>
-<a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a>&#160;</td><td class="memItemRight" valign="bottom"><b>single_byte_write</b> (uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)</td></tr>
+<tr class="memitem:a2037f97fb1d2fe034fd5eea9e12d91d9" id="r_a2037f97fb1d2fe034fd5eea9e12d91d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2037f97fb1d2fe034fd5eea9e12d91d9">single_byte_write</a> (uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)</td></tr>
+<tr class="memdesc:a2037f97fb1d2fe034fd5eea9e12d91d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">a convenient C++ member wrapper to write a single byte at a slave memory address. The operation is bounded by a timeout.  <br /></td></tr>
 <tr class="separator:a2037f97fb1d2fe034fd5eea9e12d91d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af889b6fd4a9f3018c7f8dbc2e51b5dc3" id="r_af889b6fd4a9f3018c7f8dbc2e51b5dc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af889b6fd4a9f3018c7f8dbc2e51b5dc3">single_byte_read</a> (uint8_t slave_address, uint8_t mem_addr, uint8_t *dest)</td></tr>
-<tr class="memdesc:af889b6fd4a9f3018c7f8dbc2e51b5dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to read a single byte of data at a slave memory address. Read will block the processor (synchronous execution).  <br /></td></tr>
+<tr class="memdesc:af889b6fd4a9f3018c7f8dbc2e51b5dc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">a convenient C++ member wrapper to read a single byte at a slave memory address. The operation is bounded by a timeout.  <br /></td></tr>
 <tr class="separator:af889b6fd4a9f3018c7f8dbc2e51b5dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5537470be884c662b2120250cd11c794" id="r_a5537470be884c662b2120250cd11c794"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5537470be884c662b2120250cd11c794">burst_byte_read</a> (uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, size_t len)</td></tr>
-<tr class="memdesc:a5537470be884c662b2120250cd11c794"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper to read a block of data starting at a slave memory address. Read will block the processor (synchronous execution).  <br /></td></tr>
+<tr class="memdesc:a5537470be884c662b2120250cd11c794"><td class="mdescLeft">&#160;</td><td class="mdescRight">a convenient C++ member wrapper to read a block of data starting at a slave memory address. The operation is bounded by a timeout.  <br /></td></tr>
 <tr class="separator:a5537470be884c662b2120250cd11c794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81b01ac8db26400774c892f76b1917de" id="r_a81b01ac8db26400774c892f76b1917de"><td class="memItemLeft" align="right" valign="top">std::set&lt; uint8_t &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a81b01ac8db26400774c892f76b1917de">bus_scan</a> ()</td></tr>
 <tr class="memdesc:a81b01ac8db26400774c892f76b1917de"><td class="mdescLeft">&#160;</td><td class="mdescRight">A utility that scan the I2C bus and return the set of answering devices.  <br /></td></tr>
 <tr class="separator:a81b01ac8db26400774c892f76b1917de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad767e0f547fe485ffdfe0b37678a64f9" id="r_ad767e0f547fe485ffdfe0b37678a64f9"><td class="memItemLeft" align="right" valign="top"><a id="ad767e0f547fe485ffdfe0b37678a64f9" name="ad767e0f547fe485ffdfe0b37678a64f9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>device_is_connected</b> (uint8_t slave_address)</td></tr>
+<tr class="memitem:ad767e0f547fe485ffdfe0b37678a64f9" id="r_ad767e0f547fe485ffdfe0b37678a64f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad767e0f547fe485ffdfe0b37678a64f9">device_is_connected</a> (uint8_t slave_address)</td></tr>
+<tr class="memdesc:ad767e0f547fe485ffdfe0b37678a64f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">utility to know if a device is connected  <br /></td></tr>
 <tr class="separator:ad767e0f547fe485ffdfe0b37678a64f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bb14c9d7d91e461aac2f4eaf8a7e735" id="r_a7bb14c9d7d91e461aac2f4eaf8a7e735"><td class="memItemLeft" align="right" valign="top"><a id="a7bb14c9d7d91e461aac2f4eaf8a7e735" name="a7bb14c9d7d91e461aac2f4eaf8a7e735"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</td></tr>
-<tr class="memdesc:a7bb14c9d7d91e461aac2f4eaf8a7e735"><td class="mdescLeft">&#160;</td><td class="mdescRight">a utility that provides a map of responding devices <br /></td></tr>
+<tr class="memitem:a7bb14c9d7d91e461aac2f4eaf8a7e735" id="r_a7bb14c9d7d91e461aac2f4eaf8a7e735"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7bb14c9d7d91e461aac2f4eaf8a7e735">show_bus_map</a> ()</td></tr>
+<tr class="memdesc:a7bb14c9d7d91e461aac2f4eaf8a7e735"><td class="mdescLeft">&#160;</td><td class="mdescRight">a utility that provides a map of responding devices.  <br /></td></tr>
 <tr class="separator:a7bb14c9d7d91e461aac2f4eaf8a7e735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -148,16 +147,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
         <tr>
           <td class="memname">HW_I2C_Master::HW_I2C_Master </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></td>          <td class="paramname"><span class="paramname"><em>cfg</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_struct_config_master_i2_c.html">StructConfigMasterI2C</a></td>          <td class="paramname"><span class="paramname"><em>master_config</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new hw I2C master::hw I2C master object. </p>
+<p>Construct a new hw i2c master object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">cfg</td><td></td></tr>
+    <tr><td class="paramname">master_config</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -179,7 +178,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slave_mem_addr</em></span>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mem_addr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -194,17 +193,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
       </table>
 </div><div class="memdoc">
 
-<p>Helper to read a block of data starting at a slave memory address. Read will block the processor (synchronous execution). </p>
+<p>a convenient C++ member wrapper to read a block of data starting at a slave memory address. The operation is bounded by a timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">slave_address</td><td>the slave address </td></tr>
-    <tr><td class="paramname">slave_mem_addr</td><td>the starting address of slave memory to read from </td></tr>
+    <tr><td class="paramname">mem_addr</td><td>the starting address of slave memory to read from </td></tr>
     <tr><td class="paramname">dest</td><td>Pointer to buffer to receive data </td></tr>
     <tr><td class="paramname">len</td><td>the size of the block of data </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present or PICO_ERROR_TIMEOUT </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_i2_c_xfer_result.html" title="this data structure collects result when an I2C transfer is done. It gives a more verbose error descr...">StructI2CXferResult</a> </dd></dl>
 
 </div>
 </div>
@@ -222,7 +221,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slave_mem_addr</em></span>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mem_addr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -237,17 +236,17 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
       </table>
 </div><div class="memdoc">
 
-<p>Helper to write a block of data starting at a slave memory address. The size of the block can be 1 for single byte write. Write will block the processor (synchronous execution). </p>
+<p>a convenient C++ member wrapper to write a block of data starting at a slave memory address. The operation is bounded by a timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">slave_address</td><td>the slave address </td></tr>
     <tr><td class="paramname">slave_mem_addr</td><td>the slave memory </td></tr>
     <tr><td class="paramname">src</td><td>the address of the block of data </td></tr>
-    <tr><td class="paramname">len</td><td>the size of the block of data. Can be 1 for single byte write </td></tr>
+    <tr><td class="paramname">len</td><td>the size of the block of data. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int Number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged, no device present. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_i2_c_xfer_result.html" title="this data structure collects result when an I2C transfer is done. It gives a more verbose error descr...">StructI2CXferResult</a> </dd></dl>
 
 </div>
 </div>
@@ -271,6 +270,54 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
 
 </div>
 </div>
+<a id="ad767e0f547fe485ffdfe0b37678a64f9" name="ad767e0f547fe485ffdfe0b37678a64f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad767e0f547fe485ffdfe0b37678a64f9">&#9670;&#160;</a></span>device_is_connected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool HW_I2C_Master::device_is_connected </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slave_address</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>utility to know if a device is connected </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slave_address</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true the device responds ACK to a write </dd>
+<dd>
+false no response </dd></dl>
+
+</div>
+</div>
+<a id="a7bb14c9d7d91e461aac2f4eaf8a7e735" name="a7bb14c9d7d91e461aac2f4eaf8a7e735"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb14c9d7d91e461aac2f4eaf8a7e735">&#9670;&#160;</a></span>show_bus_map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HW_I2C_Master::show_bus_map </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a utility that provides a map of responding devices. </p>
+<p>The map is displayed on the serial terminal </p>
+
+</div>
+</div>
 <a id="af889b6fd4a9f3018c7f8dbc2e51b5dc3" name="af889b6fd4a9f3018c7f8dbc2e51b5dc3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af889b6fd4a9f3018c7f8dbc2e51b5dc3">&#9670;&#160;</a></span>single_byte_read()</h2>
 
@@ -285,7 +332,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slave_mem_addr</em></span>, </td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mem_addr</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -295,16 +342,53 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>show_bus_map</b> ()</
       </table>
 </div><div class="memdoc">
 
-<p>Helper to read a single byte of data at a slave memory address. Read will block the processor (synchronous execution). </p>
+<p>a convenient C++ member wrapper to read a single byte at a slave memory address. The operation is bounded by a timeout. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">slave_address</td><td>the slave address </td></tr>
-    <tr><td class="paramname">slave_mem_addr</td><td>the address of slave memory to read from </td></tr>
+    <tr><td class="paramname">mem_addr</td><td>the address of slave memory to read from </td></tr>
     <tr><td class="paramname">dest</td><td>Pointer to buffer to receive data </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_i2_c_xfer_result.html" title="this data structure collects result when an I2C transfer is done. It gives a more verbose error descr...">StructI2CXferResult</a> </dd></dl>
+
+</div>
+</div>
+<a id="a2037f97fb1d2fe034fd5eea9e12d91d9" name="a2037f97fb1d2fe034fd5eea9e12d91d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2037f97fb1d2fe034fd5eea9e12d91d9">&#9670;&#160;</a></span>single_byte_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_struct_i2_c_xfer_result.html">StructI2CXferResult</a> HW_I2C_Master::single_byte_write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>slave_address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mem_addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mem_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a convenient C++ member wrapper to write a single byte at a slave memory address. The operation is bounded by a timeout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">slave_address</td><td>the slave address </td></tr>
+    <tr><td class="paramname">mem_addr</td><td>the slave memory </td></tr>
+    <tr><td class="paramname">mem_value</td><td>the byte to write </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_i2_c_xfer_result.html" title="this data structure collects result when an I2C transfer is done. It gives a more verbose error descr...">StructI2CXferResult</a> </dd></dl>
 
 </div>
 </div>

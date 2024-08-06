@@ -133,9 +133,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>slave_address</b> 
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>slave_memory_size</b> = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE</td></tr>
 <tr class="memdesc:a70368100d259dc523ff6b8887b4fb376"><td class="mdescLeft">&#160;</td><td class="mdescRight">the size of the memory buffer reserved by the slave interface (default to 256) <br /></td></tr>
 <tr class="separator:a70368100d259dc523ff6b8887b4fb376"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63eb8f10c48de50dddafe8cfe8487b8b" id="r_a63eb8f10c48de50dddafe8cfe8487b8b"><td class="memItemLeft" align="right" valign="top"><a id="a63eb8f10c48de50dddafe8cfe8487b8b" name="a63eb8f10c48de50dddafe8cfe8487b8b"></a>
-i2c_slave_handler_t&#160;</td><td class="memItemRight" valign="bottom"><b>handler</b></td></tr>
-<tr class="memdesc:a63eb8f10c48de50dddafe8cfe8487b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">a function pointer, required by pico SDK, to the program that manage the reception of i2c message by the slave interface <br /></td></tr>
+<tr class="memitem:a63eb8f10c48de50dddafe8cfe8487b8b" id="r_a63eb8f10c48de50dddafe8cfe8487b8b"><td class="memItemLeft" align="right" valign="top">i2c_slave_handler_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a63eb8f10c48de50dddafe8cfe8487b8b">handler</a></td></tr>
+<tr class="memdesc:a63eb8f10c48de50dddafe8cfe8487b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">a function pointer to the IRQ handler, required by pico SDK, to the program that manage the reception of i2c message by the slave interface  <br /></td></tr>
 <tr class="separator:a63eb8f10c48de50dddafe8cfe8487b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -159,6 +158,23 @@ i2c_slave_handler_t&#160;</td><td class="memItemRight" valign="bottom"><b>handle
 <li>I2C_FAST_MODE = 400kb/s</li>
 <li>I2C_FAST_MODE_PLUS = 1Mb/s </li>
 </ul>
+
+</div>
+</div>
+<a id="a63eb8f10c48de50dddafe8cfe8487b8b" name="a63eb8f10c48de50dddafe8cfe8487b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63eb8f10c48de50dddafe8cfe8487b8b">&#9670;&#160;</a></span>handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">i2c_slave_handler_t StructConfigSlaveI2C::handler</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>a function pointer to the IRQ handler, required by pico SDK, to the program that manage the reception of i2c message by the slave interface </p>
+<p>NOTICE: This handler is the one given to NVIC IRQ map. It seems that it must be a static function defined in the main code. </p>
 
 </div>
 </div>

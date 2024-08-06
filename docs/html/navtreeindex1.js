@@ -1,5 +1,13 @@
 var NAVTREEINDEX1 =
 {
+"switch__button_8h_source.html":[2,0,0,0,0,0,1,3,1],
+"test__controlled__value_8cpp.html":[2,0,0,0,0,0,4,0,0],
+"test__controlled__value_8h_source.html":[2,0,0,0,0,0,4,0,1],
+"test__i2c__bus__scan_8cpp.html":[2,0,0,0,0,0,2,0,2],
+"test__manager_8cpp.html":[2,0,0,0,0,0,4,0,2],
+"test__manager_8h_source.html":[2,0,0,0,0,0,4,0,3],
+"test__probe_8cpp.html":[2,0,0,0,0,0,5,0,1],
+"test__probe_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[2,0,0,0,0,0,5,0,1,0],
 "test__ssd1306_8cpp.html":[2,0,0,0,0,0,1,2,3],
 "test__ssd1306_8cpp.html#a0cd57e7a7b84bfa88298e0f1e5bd188d":[2,0,0,0,0,0,1,2,3,4],
 "test__ssd1306_8cpp.html#a34114ac07ba756fd3bd2950972be2ae1":[2,0,0,0,0,0,1,2,3,7],

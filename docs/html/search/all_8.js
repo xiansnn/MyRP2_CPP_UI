@@ -1,8 +1,16 @@
 var searchData=
 [
-  ['line_0',['line',['../class_framebuffer.html#a8b7d45e8d169a9899d124a7f6de9ce16',1,'Framebuffer']]],
-  ['lo_1',['lo',['../class_probe.html#ade2391514faaee5f3acfffc4d3cb2de8',1,'Probe']]],
-  ['long_5fpush_2',['LONG_PUSH',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4a66d354703a5722b875b56431d89fb646',1,'ui_core.h']]],
-  ['long_5fpush_5fdelay_5fus_3',['long_push_delay_us',['../struct_struct_switch_button_config.html#ab29ec76f04b66649031c23fe77ad1c7c',1,'StructSwitchButtonConfig::long_push_delay_us'],['../class_switch_button.html#ac3efe4e87a09e753245b7b50916169ed',1,'SwitchButton::long_push_delay_us']]],
-  ['long_5frelease_5fdelay_5fus_4',['long_release_delay_us',['../struct_struct_switch_button_config.html#a7965d4a3d2cf3629b5de8d7470316d31',1,'StructSwitchButtonConfig::long_release_delay_us'],['../class_switch_button.html#a5cf488e4819df6fd8cc5cd3811d33354',1,'SwitchButton::long_release_delay_us']]]
+  ['i2c_0',['i2c',['../struct_struct_config_master_i2_c.html#aac6d4d2f4051e15f476d4fc62a3947dc',1,'StructConfigMasterI2C::i2c'],['../struct_struct_config_slave_i2_c.html#a051a9501de064637faacfbf08f6d8006',1,'StructConfigSlaveI2C::i2c']]],
+  ['in_20construction_1',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
+  ['inactive_2',['INACTIVE',['../switch__button_8h.html#aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2',1,'switch_button.h']]],
+  ['increment_3',['INCREMENT',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534',1,'ui_core.h']]],
+  ['increment_5ffocus_4',['increment_focus',['../class_u_i_object_manager.html#add85faf6ab3788fe2e200a074fba9601',1,'UIObjectManager']]],
+  ['increment_5fvalue_5',['increment_value',['../class_u_i_controlled_incremental_value.html#a1f2e0d88e66e06576c00531c32cf8175',1,'UIControlledIncrementalValue']]],
+  ['init_5ftext_5fbuffer_6',['init_text_buffer',['../class_framebuffer.html#ad55894974ba23bd04e280fe40afed813',1,'Framebuffer']]],
+  ['interrupt_5fservice_5froutine_7',['interrupt_service_routine',['../class_rotary_encoder.html#ae7ad35ae64d2b815c25ac72a51702e6f',1,'RotaryEncoder']]],
+  ['irq_5fenabled_8',['irq_enabled',['../class_switch_button_with_i_r_q.html#a261dc80eca218e3733c6a0cf637c25e8',1,'SwitchButtonWithIRQ']]],
+  ['is_5factive_9',['IS_ACTIVE',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089',1,'ui_core.h']]],
+  ['is_5fbutton_5factive_10',['is_button_active',['../class_switch_button.html#aa9fdb807158ad5f9c2af77541a6da8a5',1,'SwitchButton']]],
+  ['is_5fswitch_5factive_11',['is_switch_active',['../class_switch_button.html#a7e862eb1123eb54a4589f88537b68374',1,'SwitchButton']]],
+  ['is_5fwaiting_12',['IS_WAITING',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab',1,'ui_core.h']]]
 ];

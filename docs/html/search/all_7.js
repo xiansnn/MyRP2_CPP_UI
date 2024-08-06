@@ -1,16 +1,13 @@
 var searchData=
 [
-  ['i2c_0',['i2c',['../struct_struct_config_master_i2_c.html#aac6d4d2f4051e15f476d4fc62a3947dc',1,'StructConfigMasterI2C::i2c'],['../struct_struct_config_slave_i2_c.html#a051a9501de064637faacfbf08f6d8006',1,'StructConfigSlaveI2C::i2c']]],
-  ['in_20construction_1',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
-  ['inactive_2',['INACTIVE',['../switch__button_8h.html#aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2',1,'switch_button.h']]],
-  ['increment_3',['INCREMENT',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4a90cf1f5206b348a822cc1a453a587534',1,'ui_core.h']]],
-  ['increment_5ffocus_4',['increment_focus',['../class_u_i_object_manager.html#add85faf6ab3788fe2e200a074fba9601',1,'UIObjectManager']]],
-  ['increment_5fvalue_5',['increment_value',['../class_u_i_controlled_incremental_value.html#a1f2e0d88e66e06576c00531c32cf8175',1,'UIControlledIncrementalValue']]],
-  ['init_5ftext_5fbuffer_6',['init_text_buffer',['../class_framebuffer.html#ad55894974ba23bd04e280fe40afed813',1,'Framebuffer']]],
-  ['interrupt_5fservice_5froutine_7',['interrupt_service_routine',['../class_rotary_encoder.html#ae7ad35ae64d2b815c25ac72a51702e6f',1,'RotaryEncoder']]],
-  ['irq_5fenabled_8',['irq_enabled',['../class_switch_button_with_i_r_q.html#a261dc80eca218e3733c6a0cf637c25e8',1,'SwitchButtonWithIRQ']]],
-  ['is_5factive_9',['IS_ACTIVE',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089',1,'ui_core.h']]],
-  ['is_5fbutton_5factive_10',['is_button_active',['../class_switch_button.html#aa9fdb807158ad5f9c2af77541a6da8a5',1,'SwitchButton']]],
-  ['is_5fswitch_5factive_11',['is_switch_active',['../class_switch_button.html#a7e862eb1123eb54a4589f88537b68374',1,'SwitchButton']]],
-  ['is_5fwaiting_12',['IS_WAITING',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab',1,'ui_core.h']]]
+  ['handler_0',['handler',['../struct_struct_config_slave_i2_c.html#a63eb8f10c48de50dddafe8cfe8487b8b',1,'StructConfigSlaveI2C']]],
+  ['has_5fchanged_1',['has_changed',['../class_u_i_model_object.html#ae79a9f2c84215e09309dcefde3711138',1,'UIModelObject']]],
+  ['has_5ffocus_2',['HAS_FOCUS',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112ac21f0eab1363c0a1274cd38acea090ac',1,'ui_core.h']]],
+  ['hi_3',['hi',['../class_probe.html#a493e1f46f0123ae6a18d7bd6e79d74f1',1,'Probe']]],
+  ['hline_4',['hline',['../class_framebuffer.html#ae464d1772ef80976c1faf8b2abb42903',1,'Framebuffer']]],
+  ['horizontal_5fscroll_5',['horizontal_scroll',['../class_s_s_d1306.html#acccca9c49aca5eb40b08a3212b75e827',1,'SSD1306']]],
+  ['hw_20directory_6',['&quot;hw&quot; directory',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['hw_5fi2c_2ecpp_7',['hw_i2c.cpp',['../hw__i2c_8cpp.html',1,'']]],
+  ['hw_5fi2c_5fmaster_8',['HW_I2C_Master',['../class_h_w___i2_c___master.html',1,'HW_I2C_Master'],['../class_h_w___i2_c___master.html#aac25277d779898ef8f27f3d069fee296',1,'HW_I2C_Master::HW_I2C_Master()']]],
+  ['hw_5fi2c_5fslave_9',['HW_I2C_Slave',['../class_h_w___i2_c___slave.html',1,'HW_I2C_Slave'],['../class_h_w___i2_c___slave.html#a8ab83567a8fd1b93dcc382d075b37097',1,'HW_I2C_Slave::HW_I2C_Slave()']]]
 ];

@@ -9,9 +9,10 @@ var searchData=
   ['complete_20documentation_20still_20in_20construction_6',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
   ['compute_5frender_5farea_7',['compute_render_area',['../class_s_s_d1306.html#a244e534005ed8e99934bd99eafe6b0e7',1,'SSD1306']]],
   ['construction_8',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
-  ['controlevent_9',['ControlEvent',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4',1,'ui_core.h']]],
-  ['controlledobjectstatus_10',['ControlledObjectStatus',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112',1,'ui_core.h']]],
-  ['copy_11',['copy',['../class_probe.html#a3ca878200b9a6d5744366b23fe0051c9',1,'Probe']]],
-  ['current_5factive_5fmodel_12',['current_active_model',['../class_u_i_object_manager.html#a248450861ee5a475f6df3af1001a68be',1,'UIObjectManager']]],
-  ['current_5fcontrolled_5fobject_13',['current_controlled_object',['../class_u_i_controller.html#a3776f935f634072e9c2a4c91aea11433',1,'UIController']]]
+  ['context_9',['context',['../struct_struct_i2_c_xfer_result.html#a5eccfa0c611ebb13ae23e6875a8d1a28',1,'StructI2CXferResult']]],
+  ['controlevent_10',['ControlEvent',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4',1,'ui_core.h']]],
+  ['controlledobjectstatus_11',['ControlledObjectStatus',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112',1,'ui_core.h']]],
+  ['copy_12',['copy',['../class_probe.html#a3ca878200b9a6d5744366b23fe0051c9',1,'Probe']]],
+  ['current_5factive_5fmodel_13',['current_active_model',['../class_u_i_object_manager.html#a248450861ee5a475f6df3af1001a68be',1,'UIObjectManager']]],
+  ['current_5fcontrolled_5fobject_14',['current_controlled_object',['../class_u_i_controller.html#a3776f935f634072e9c2a4c91aea11433',1,'UIController']]]
 ];
