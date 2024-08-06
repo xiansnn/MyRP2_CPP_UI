@@ -103,23 +103,86 @@ $(function(){initNavTree('class_m_s_g_e_q7.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
-<p>//TODO doc  
+<p>The <a class="el" href="class_m_s_g_e_q7.html" title="The MSGEQ7 is an 7-band audio filter.">MSGEQ7</a> is an 7-band audio filter.  
  <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="msgeq7_8h_source.html">msgeq7.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5d30e2ac12bbf4927b3154859d6f1ee0" id="r_a5d30e2ac12bbf4927b3154859d6f1ee0"><td class="memItemLeft" align="right" valign="top"><a id="a5d30e2ac12bbf4927b3154859d6f1ee0" name="a5d30e2ac12bbf4927b3154859d6f1ee0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MSGEQ7</b> (uint strobe_gpio, uint reset_gpio, uint signal_out)</td></tr>
+<tr class="memitem:a5d30e2ac12bbf4927b3154859d6f1ee0" id="r_a5d30e2ac12bbf4927b3154859d6f1ee0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d30e2ac12bbf4927b3154859d6f1ee0">MSGEQ7</a> (uint strobe_gpio, uint reset_gpio, uint signal_out)</td></tr>
+<tr class="memdesc:a5d30e2ac12bbf4927b3154859d6f1ee0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_m_s_g_e_q7.html" title="The MSGEQ7 is an 7-band audio filter.">MSGEQ7</a> object.  <br /></td></tr>
 <tr class="separator:a5d30e2ac12bbf4927b3154859d6f1ee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac03d0f7a0c833169f67ea4d5a8712c38" id="r_ac03d0f7a0c833169f67ea4d5a8712c38"><td class="memItemLeft" align="right" valign="top"><a id="ac03d0f7a0c833169f67ea4d5a8712c38" name="ac03d0f7a0c833169f67ea4d5a8712c38"></a>
-std::array&lt; uint16_t, 7 &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_spectrum</b> ()</td></tr>
+<tr class="memitem:a13c0ce63c7eff6467a02bea3dcf04f54" id="r_a13c0ce63c7eff6467a02bea3dcf04f54"><td class="memItemLeft" align="right" valign="top"><a id="a13c0ce63c7eff6467a02bea3dcf04f54" name="a13c0ce63c7eff6467a02bea3dcf04f54"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~MSGEQ7</b> ()</td></tr>
+<tr class="memdesc:a13c0ce63c7eff6467a02bea3dcf04f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_m_s_g_e_q7.html" title="The MSGEQ7 is an 7-band audio filter.">MSGEQ7</a> object. <br /></td></tr>
+<tr class="separator:a13c0ce63c7eff6467a02bea3dcf04f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac03d0f7a0c833169f67ea4d5a8712c38" id="r_ac03d0f7a0c833169f67ea4d5a8712c38"><td class="memItemLeft" align="right" valign="top">std::array&lt; uint16_t, 7 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac03d0f7a0c833169f67ea4d5a8712c38">get_spectrum</a> ()</td></tr>
+<tr class="memdesc:ac03d0f7a0c833169f67ea4d5a8712c38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the spectrum object.  <br /></td></tr>
 <tr class="separator:ac03d0f7a0c833169f67ea4d5a8712c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>//TODO doc </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><p>The <a class="el" href="class_m_s_g_e_q7.html" title="The MSGEQ7 is an 7-band audio filter.">MSGEQ7</a> is an 7-band audio filter. </p>
+<p>The band frequencies are centered around: 63Hz, 160Hz, 400Hz, 1000Hz, 2500Hz, 6250Hz, 16000Hz. After a pulse on "reset_gpio" pin, a peak detector for each band is multiplexed on the pin "signal_out" at each pulse on pin "strobe_gpio". </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5d30e2ac12bbf4927b3154859d6f1ee0" name="a5d30e2ac12bbf4927b3154859d6f1ee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d30e2ac12bbf4927b3154859d6f1ee0">&#9670;&#160;</a></span>MSGEQ7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MSGEQ7::MSGEQ7 </td>
+          <td>(</td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>strobe_gpio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>reset_gpio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>signal_out</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="class_m_s_g_e_q7.html" title="The MSGEQ7 is an 7-band audio filter.">MSGEQ7</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">strobe_gpio</td><td>the gpio connected to strobe </td></tr>
+    <tr><td class="paramname">reset_gpio</td><td>the gpio connected to reset </td></tr>
+    <tr><td class="paramname">signal_out</td><td>the gpio connected to the analog multiplexed peak detector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac03d0f7a0c833169f67ea4d5a8712c38" name="ac03d0f7a0c833169f67ea4d5a8712c38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03d0f7a0c833169f67ea4d5a8712c38">&#9670;&#160;</a></span>get_spectrum()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt; uint16_t, 7 &gt; MSGEQ7::get_spectrum </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the spectrum object. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::array&lt;uint16_t,7&gt; a table with 16bit values for each band </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_MSGEQ7/<a class="el" href="msgeq7_8h_source.html">msgeq7.h</a></li>
 <li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_MSGEQ7/<b>msgeq7.cpp</b></li>
 </ul>
