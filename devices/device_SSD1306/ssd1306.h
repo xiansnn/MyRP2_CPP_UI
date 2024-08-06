@@ -73,6 +73,10 @@ struct StructRenderArea
     size_t buflen{SSD1306_BUF_LEN};
 };
 
+/**
+ * @brief SSD1306 OLED display device driver
+ * 
+ */
 class SSD1306 : public UIDisplayDevice
 {
 private:
