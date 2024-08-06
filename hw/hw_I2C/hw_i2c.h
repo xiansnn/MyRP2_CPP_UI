@@ -18,8 +18,26 @@
  */
 struct StructI2CXferResult
 {
+    /**
+     * @brief flag that indicates if an error occurred.
+     *
+     */
     bool error = false;
+    /**
+     * @brief a clear indication of where the error occurred:
+     * - "burst_byte_write [write cmd][data*]"
+     * - "single_byte_write [write cmd][byte]"
+     * - "single_byte_read [write cmd]"
+     * - "single_byte_read [read byte]"
+     * - "burst_byte_read [write cmd]"
+     * - "burst_byte_read [read data*]"
+     *
+     */
     std::string context = "";
+    /**
+     * @brief the number of byte transfered.
+     * 
+     */
     int xfer_size = 0;
 };
 
@@ -82,7 +100,10 @@ struct StructConfigSlaveI2C
      */
     size_t slave_memory_size = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE;
     /**
-     * @brief a function pointer, required by pico SDK, to the program that manage the reception of i2c message by the slave interface
+     * @brief a function pointer to the IRQ handler, required by pico SDK, to the program that manage the reception of i2c message by the slave interface
+     *
+     * NOTICE: This handler is the one given to NVIC IRQ map.
+     * It seems that it must be a static function defined in the main code.
      */
     i2c_slave_handler_t handler;
 };
@@ -97,19 +118,77 @@ private:
     uint time_out_us_per_byte;
 
 public:
+    /**
+     * @brief Construct a new hw i2c master object
+     *
+     * @param master_config
+     */
     HW_I2C_Master(StructConfigMasterI2C master_config);
+    /**
+     * @brief a convenient C++ member wrapper to write a block of data starting at a slave memory address.
+     * The operation is bounded by a timeout.
+     *
+     * @param slave_address the slave address
+     * @param slave_mem_addr the slave memory
+     * @param src the address of the block of data
+     * @param len the size of the block of data.
+     * @return StructI2CXferResult
+     */
     StructI2CXferResult burst_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len);
+    /**
+     * @brief a convenient C++ member wrapper to write a single byte at a slave memory address.
+     * The operation is bounded by a timeout.
+     *
+     * @param slave_address the slave address
+     * @param mem_addr the slave memory
+     * @param mem_value the byte to write
+     * @return StructI2CXferResult
+     */
     StructI2CXferResult single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);
+    /**
+     * @brief a convenient C++ member wrapper to read a single byte at a slave memory address.
+     * The operation is bounded by a timeout.
+     * @param slave_address the slave address
+     * @param mem_addr the address of slave memory to read from
+     * @param dest Pointer to buffer to receive data
+     * @return StructI2CXferResult
+     */
     StructI2CXferResult single_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);
+    /**
+     * @brief a convenient C++ member wrapper to read a block of data starting at a slave memory address.
+     * The operation is bounded by a timeout.
+     * @param slave_address the slave address
+     * @param mem_addr the starting address of slave memory to read from
+     * @param dest Pointer to buffer to receive data
+     * @param len the size of the block of data
+     * @return StructI2CXferResult
+     */
     StructI2CXferResult burst_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, size_t len);
+    /**
+     * @brief A utility that scan the I2C bus and return the set of answering devices
+     *
+     * @return std::set<uint8_t> the set of responding addresses
+     */
     std::set<uint8_t> bus_scan();
+    /**
+     * @brief utility to know if a device is connected
+     *
+     * @param slave_address
+     * @return true the device responds ACK to a write
+     * @return false no response
+     */
     bool device_is_connected(uint8_t slave_address);
+    /**
+     * @brief a utility that provides a map of responding devices.
+     *
+     * The map is displayed on the serial terminal
+     */
     void show_bus_map();
 };
 
 /**
  * @brief this is the structure of the memory used by the slave i2c interface
- * 
+ *
  */
 struct StructSlaveMemory
 {
@@ -120,7 +199,7 @@ struct StructSlaveMemory
 
 /**
  * @brief this is a C++ wrapper for the original pico SDK i2c slave API
- * 
+ *
  */
 class HW_I2C_Slave
 {
@@ -129,7 +208,17 @@ private:
 
 public:
     StructSlaveMemory context;
+    /**
+     * @brief Construct a new hw i2c slave object
+     *
+     * @param slave_config
+     */
     HW_I2C_Slave(StructConfigSlaveI2C slave_config);
+    /**
+     * @brief this is the actual Interrupt Service Routine executed by the slave after each received data
+     *
+     * @param event the type of data/command received
+     */
     void slave_isr(i2c_slave_event_t event);
 };
 

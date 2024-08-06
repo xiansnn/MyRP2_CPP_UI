@@ -14,25 +14,10 @@
 #include <stdio.h>
 #include <string>
 
-// void probe_i2c_error(std::string msg, int nb)
-// {
-
-//     printf("context:%s; return value:%d",msg.c_str(),nb);
-//     sleep_us(10);
-
-// }
-
-/**
- * @brief Construct a new hw I2C master::hw I2C master object
- *
- * @param cfg
- */
 HW_I2C_Master::HW_I2C_Master(StructConfigMasterI2C cfg)
 {
     this->i2c = cfg.i2c;
     this->time_out_us_per_byte = 8 * 1500000 / cfg.baud_rate; // with 50% margin
-    // std::string msg = "demarrage I2C master\n";
-    // printf(msg.c_str());
 
     // As suggested by RP2040 data sheet
     gpio_init(cfg.sda_pin);
@@ -50,17 +35,6 @@ HW_I2C_Master::HW_I2C_Master(StructConfigMasterI2C cfg)
     i2c_init(this->i2c, cfg.baud_rate);
 }
 
-/**
- * @brief Helper to write a block of data starting at a slave memory address.
- * The size of the block can be 1  for single byte write.
- * Write will block the processor (synchronous execution).
- *
- * @param slave_address the slave address
- * @param slave_mem_addr the slave memory
- * @param src the address of the block of data
- * @param len the size of the block of data. Can be 1 for single byte write
- * @return int Number of bytes written, or PICO_ERROR_GENERIC if address not acknowledged, no device present.
- */
 StructI2CXferResult HW_I2C_Master::burst_byte_write(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *src, size_t len)
 {
     size_t nb;
@@ -100,15 +74,6 @@ StructI2CXferResult HW_I2C_Master::single_byte_write(uint8_t slave_address, uint
     return result;
 }
 
-/**
- * @brief Helper to read a single byte of data at a slave memory address.
- * Read will block the processor (synchronous execution).
- *
- * @param slave_address the slave address
- * @param slave_mem_addr the address of slave memory to read from
- * @param dest Pointer to buffer to receive data
- * @return int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present.
- */
 StructI2CXferResult HW_I2C_Master::single_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest)
 {
     int nb;
@@ -139,16 +104,6 @@ StructI2CXferResult HW_I2C_Master::single_byte_read(uint8_t slave_address, uint8
     return result;
 }
 
-/**
- * @brief Helper to read a block of data starting at a slave memory address.
- * Read will block the processor (synchronous execution).
- *
- * @param slave_address the slave address
- * @param slave_mem_addr the starting address of slave memory to read from
- * @param dest Pointer to buffer to receive data
- * @param len the size of the block of data
- * @return int Number of bytes read, or PICO_ERROR_GENERIC if address not acknowledged, no device present or PICO_ERROR_TIMEOUT
- */
 StructI2CXferResult HW_I2C_Master::burst_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest, size_t len)
 {
     size_t nb;
@@ -171,19 +126,14 @@ StructI2CXferResult HW_I2C_Master::burst_byte_read(uint8_t slave_address, uint8_
     result.xfer_size = nb;
     if (nb < 0 || nb != len)
     {
-        result.context ="burst_byte_read [read data*]";
+        result.context = "burst_byte_read [read data*]";
         result.error = true;
         return result;
     }
-    result.error=false;
+    result.error = false;
     return result;
 }
 
-/**
- * @brief A utility that scan the I2C bus and return the set of answering devices
- *
- * @return std::set<uint8_t> the set of responding addresses
- */
 std::set<uint8_t> HW_I2C_Master::bus_scan()
 {
     std::set<uint8_t> device_address_set;
@@ -200,10 +150,6 @@ bool HW_I2C_Master::device_is_connected(uint8_t slave_address)
     return (nb < 0 ? false : true);
 }
 
-/**
- * @brief a utility that provides a map of responding devices
- *
- */
 void HW_I2C_Master::show_bus_map()
 {
     printf("Connected slave's map \n");
@@ -219,11 +165,6 @@ void HW_I2C_Master::show_bus_map()
     printf("done\n");
 }
 
-/**
- * @brief this is the actual Interrupt Service Routine executed by the slave after each received data
- *
- * @param event the type of data/command received
- */
 void HW_I2C_Slave::slave_isr(i2c_slave_event_t event)
 {
     switch (event)
@@ -255,17 +196,6 @@ void HW_I2C_Slave::slave_isr(i2c_slave_event_t event)
     }
 }
 
-/**
- * @brief Construct a new hw I2C slave::hw I2C slave object
- *
- * @param i2c The I2C hardware instance. Either i2c0 or i2c1.
- * @param sda the associated SDA pin
- * @param scl the associated SCL pin
- * @param baud_rate the requested transmission speed
- * @param slave_address the slave address to respond with
- * @param handler the IRQ handler. NOTICE: This handler is the one given to NVIC IRQ map.
- * It seems that it must be a static function defined in the main code.
- */
 HW_I2C_Slave::HW_I2C_Slave(StructConfigSlaveI2C cfg)
 {
     this->i2c = cfg.i2c;
