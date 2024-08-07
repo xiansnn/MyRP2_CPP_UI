@@ -49,7 +49,7 @@ public:
  * It write status and value of Test_Manager on the serial monitor
  *
  */
-class TestObjectManagerWidget : public UIWidget
+class Test_ObjectManagerWidget : public UIWidget
 {
 private:
     Test_Manager * actual_displayed_object;
@@ -60,12 +60,12 @@ public:
      * 
      * @param _manager 
      */
-    TestObjectManagerWidget(Test_Manager* _manager);
+    Test_ObjectManagerWidget(Test_Manager* _manager);
     /**
      * @brief Destroy the Test Object Manager Widget object
      * 
      */
-    ~TestObjectManagerWidget();
+    ~Test_ObjectManagerWidget();
     /**
      * @brief Implement a refresh function adapted to the current test program with the private function draw()
      * 
@@ -77,7 +77,7 @@ public:
  * @brief test the composite widget features
  * 
  */
-class TestSetOfWidget : public UIWidget
+class Test_SetOfWidget : public UIWidget
 {
 private:
     /* data */
@@ -87,12 +87,12 @@ public:
      * @brief 
      * 
      */
-    TestSetOfWidget(/* args */);
+    Test_SetOfWidget(/* args */);
     /**
      * @brief Destroy the Test Set Of Widget object
      * 
      */
-    ~TestSetOfWidget();
+    ~Test_SetOfWidget();
 };
 
 

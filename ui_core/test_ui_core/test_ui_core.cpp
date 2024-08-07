@@ -86,9 +86,9 @@ int main()
 
     Test_Manager manager = Test_Manager(&encoder);
 
-    TestObjectManagerWidget manager_widget = TestObjectManagerWidget(&manager);
+    Test_ObjectManagerWidget manager_widget = Test_ObjectManagerWidget(&manager);
 
-    TestSetOfWidget set_of_widget = TestSetOfWidget();
+    Test_SetOfWidget set_of_widget = Test_SetOfWidget();
     set_of_widget.add_widget(&manager_widget);
     set_of_widget.add_widget(&value_0_widget);
     set_of_widget.add_widget(&value_1_widget);

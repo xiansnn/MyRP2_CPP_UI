@@ -65,24 +65,24 @@ void Test_CursorWidgetWithIncrementalValue::draw()
     }
 }
 
-void TestObjectManagerWidget::draw()
+void Test_ObjectManagerWidget::draw()
 {
     std::string text = "manager " + status_to_string[actual_displayed_object->get_status()] + " with value=" + std::to_string(actual_displayed_object->get_value()) + "\n";
     printf(text.c_str());
 }
 
-TestObjectManagerWidget::TestObjectManagerWidget(Test_Manager *_manager)
+Test_ObjectManagerWidget::Test_ObjectManagerWidget(Test_Manager *_manager)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
     this->set_displayed_model(_manager);
     this->actual_displayed_object = _manager;
 }
 
-TestObjectManagerWidget::~TestObjectManagerWidget()
+Test_ObjectManagerWidget::~Test_ObjectManagerWidget()
 {
 }
 
-void TestObjectManagerWidget::refresh()
+void Test_ObjectManagerWidget::refresh()
 {
     if (this->actual_displayed_object->has_changed())
     {
@@ -91,15 +91,15 @@ void TestObjectManagerWidget::refresh()
     }
 }
 
-void TestSetOfWidget::draw()
+void Test_SetOfWidget::draw()
 {
 }
 
-TestSetOfWidget::TestSetOfWidget()
+Test_SetOfWidget::Test_SetOfWidget()
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
 }
 
-TestSetOfWidget::~TestSetOfWidget()
+Test_SetOfWidget::~Test_SetOfWidget()
 {
 }
