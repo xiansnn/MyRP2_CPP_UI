@@ -45,7 +45,7 @@ enum class ButtonState
  * @brief These are the values used to configure a switch button
  *
  */
-struct StructSwitchButtonConfig
+struct Struct_SwitchButtonConfig
 {
     /**
      * @brief The time during which all changes in the switch state is ignored
@@ -139,9 +139,9 @@ public:
      * @brief Construct a new SwitchButton object
      *
      * @param gpio the microcontroller GPIO that read the switch status
-     * @param conf the configuration data according StructSwitchButtonConfig
+     * @param conf the configuration data according Struct_SwitchButtonConfig
      */
-    SwitchButton(uint gpio, StructSwitchButtonConfig conf = {});
+    SwitchButton(uint gpio, Struct_SwitchButtonConfig conf = {});
     /**
      * @brief Destroy the SwitchButton object
      *
@@ -199,7 +199,7 @@ public:
      * @param conf the configuration value of the switch
      * @param event_mask_config the rising/falling edge configuratio of the irq
      */
-    SwitchButtonWithIRQ(uint gpio, gpio_irq_callback_t call_back, StructSwitchButtonConfig conf = {},
+    SwitchButtonWithIRQ(uint gpio, gpio_irq_callback_t call_back, Struct_SwitchButtonConfig conf = {},
                         uint32_t event_mask_config = GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE);
     /**
      * @brief Destroy the SwitchButtonWithIRQ object

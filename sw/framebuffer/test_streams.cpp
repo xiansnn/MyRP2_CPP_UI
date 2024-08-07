@@ -25,13 +25,13 @@ Probe pr_D5 = Probe(5);
 Probe pr_D6 = Probe(6);
 Probe pr_D7 = Probe(7);
 
-StructConfigMasterI2C cfg_i2c{
+Struct_ConfigMasterI2C cfg_i2c{
     .i2c = i2c0,
     .sda_pin = 8,
     .scl_pin = 9,
     .baud_rate = I2C_FAST_MODE};
 
-StructConfigSSD1306 cfg_ssd1306{
+Struct_ConfigSSD1306 cfg_ssd1306{
     .i2c_address = 0x3C,
     .vertical_offset = 0,
     .scan_SEG_inverse_direction = true,
@@ -48,7 +48,7 @@ void test_ostringstream_format(SSD1306 *display)
 
     const unsigned char *current_font{font_5x8};
 
-    StructFramebufferText txt_conf = {
+    Struct_FramebufferText txt_conf = {
         .font = current_font,
         .wrap = false};
     display->init_text_buffer(txt_conf);
@@ -97,7 +97,7 @@ void test_sprintf_format(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
 
-    StructFramebufferText cfg_fb_txt = {
+    Struct_FramebufferText cfg_fb_txt = {
         .font = font_8x8,
         .wrap = false};
     display->init_text_buffer(cfg_fb_txt);
@@ -240,7 +240,7 @@ void test_text_and_graph(SSD1306 *display)
 {
 #define DEGREE "\xF8"
     display->clear_pixel_buffer_and_show_full_screen();
-    StructFramebufferText title_config = {
+    Struct_FramebufferText title_config = {
         .font = font_8x8};
     uint8_t w = title_config.font[FONT_WIDTH];
     uint8_t h = title_config.font[FONT_HEIGHT];
@@ -344,7 +344,7 @@ void test_font_size(SSD1306 *display)
 
 void test_full_screen_text(SSD1306 *display)
 {
-    StructFramebufferText txt_conf = {
+    Struct_FramebufferText txt_conf = {
         .font = font_8x8,
         .wrap = true,
     };
@@ -369,7 +369,7 @@ void test_full_screen_text(SSD1306 *display)
 
 void test_auto_next_char(SSD1306 *display)
 {
-    StructFramebufferText txt_conf = {
+    Struct_FramebufferText txt_conf = {
         .font = font_8x8,
         .wrap = true,
         .auto_next_char = false};

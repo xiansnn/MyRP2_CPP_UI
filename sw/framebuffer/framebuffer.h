@@ -46,7 +46,7 @@ enum class FramebufferColor
 /**
  * @brief Data structure that holds all configuration parameters used by textual primitives
  */
-struct StructFramebufferText
+struct Struct_FramebufferText
 {
     /**
      * @brief The font used. Current font are defined according to IBM CP437. The font files are derived from https://github.com/Harbys/pico-ssd1306 works.
@@ -88,7 +88,7 @@ struct StructFramebufferText
  * 
  * Optionnally, when framebuffer contains text, a text_buffer that contains characters chain is used. It is created and initialized by
  *  init_text_buffer function member.
- * The configuration of this buffer is defined by StructFramebufferText.
+ * The configuration of this buffer is defined by Struct_FramebufferText.
  * 
  *
  */
@@ -100,7 +100,7 @@ private:
     FramebufferFormat frame_format;
     uint8_t current_char_line{0};
     uint8_t current_char_column{0};
-    StructFramebufferText frame_text_config{};
+    Struct_FramebufferText frame_text_config{};
 
     void ellipse(uint8_t x_center, uint8_t y_center, uint8_t x_radius, uint8_t y_radius, bool fill, uint8_t quadrant, FramebufferColor c);
     void drawChar(const unsigned char *font, char c, uint8_t anchor_x, uint8_t anchor_y);
@@ -208,7 +208,7 @@ public:
      * 
      * @param   frame_text_config 
      */
-    void init_text_buffer(StructFramebufferText frame_text_config);
+    void init_text_buffer(Struct_FramebufferText frame_text_config);
     /**
      * @brief   Set text buffer memory to "0" and set character line and column to 0
      */

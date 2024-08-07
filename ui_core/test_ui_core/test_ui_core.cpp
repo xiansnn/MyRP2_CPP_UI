@@ -30,13 +30,13 @@ Probe pr_D1 = Probe(1);
 Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
 
-StructSwitchButtonConfig cfg_central_switch{
+Struct_SwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 5000,
     .long_release_delay_us = 1000000,
     .long_push_delay_us = 1000000,
     .active_lo = true};
 
-StructSwitchButtonConfig cfg_encoder_clk{
+Struct_SwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 5000};
 
 void shared_irq_call_back(uint gpio, uint32_t event_mask);

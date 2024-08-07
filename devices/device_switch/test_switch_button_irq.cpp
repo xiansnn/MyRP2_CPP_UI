@@ -25,12 +25,12 @@ Probe pr_D5 = Probe(5); // bounces discarded
 // channel 6 : encoder DT pin
 // channel 7 : encoder clk pin
 
-StructSwitchButtonConfig cfg_central_switch{
+Struct_SwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 5000,
     .long_release_delay_us = 2000000,
     .long_push_delay_us = 1000000};
 
-StructSwitchButtonConfig cfg_encoder_clk{
+Struct_SwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 1000,
 };
 

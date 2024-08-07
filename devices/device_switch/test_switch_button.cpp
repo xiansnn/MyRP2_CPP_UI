@@ -16,11 +16,11 @@
 #define CENTRAL_SWITCH_GPIO 6
 #define ENCODER_CLK_GPIO 26
 
-StructSwitchButtonConfig cfg_central_switch{
+Struct_SwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 1000,
     .long_release_delay_us = 2000000,
     .long_push_delay_us = 1000000};
-StructSwitchButtonConfig cfg_encoder_clk{
+Struct_SwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 1000,
 };
 

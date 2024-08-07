@@ -28,13 +28,13 @@ Probe pr_D5 = Probe(5);
 Probe pr_D6 = Probe(6);
 Probe pr_D7 = Probe(7);
 
-StructConfigMasterI2C cfg_i2c{
+Struct_ConfigMasterI2C cfg_i2c{
     .i2c = i2c0,
     .sda_pin = 8,
     .scl_pin = 9,
     .baud_rate = I2C_FAST_MODE};
 
-StructConfigSSD1306 cfg_ssd1306{
+Struct_ConfigSSD1306 cfg_ssd1306{
     .i2c_address = 0x3C,
     .vertical_offset = 0,
     .scan_SEG_inverse_direction = true,
@@ -53,7 +53,7 @@ StructConfigSSD1306 cfg_ssd1306{
 void test_contrast(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
-    StructRenderArea area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
+    Struct_RenderArea area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
     display->fill_pattern_and_show_GDDRAM(0x55, area);
     area = SSD1306::compute_render_area(32, 96, 16, 32);
     display->fill_pattern_and_show_GDDRAM(0xFF, area);
@@ -80,7 +80,7 @@ void test_addressing_mode(SSD1306 *display)
     memset(image, 0xFE, sizeof(image));
     sleep_ms(1000);
     display->clear_pixel_buffer_and_show_full_screen();
-    StructRenderArea area;
+    Struct_RenderArea area;
     // HORIZONTAL_ADDRESSING_MODE
     for (size_t i = 0; i < 4; i++)
     {
@@ -116,7 +116,7 @@ void test_addressing_mode(SSD1306 *display)
  */
 void test_blink(SSD1306 *display)
 {
-    StructRenderArea area;
+    Struct_RenderArea area;
     display->clear_pixel_buffer_and_show_full_screen();
     area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
     display->fill_pattern_and_show_GDDRAM(0x81, area);
@@ -139,7 +139,7 @@ void test_scrolling(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
     // render 3 cute little raspberries
-    StructRenderArea area = SSD1306::compute_render_area(0, IMG_WIDTH - 1, 0, IMG_HEIGHT - 1);
+    Struct_RenderArea area = SSD1306::compute_render_area(0, IMG_WIDTH - 1, 0, IMG_HEIGHT - 1);
     uint8_t offset = 5 + IMG_WIDTH; // 5px padding
     for (int i = 0; i < 3; i++)
     {
@@ -148,7 +148,7 @@ void test_scrolling(SSD1306 *display)
         area.end_col += offset;
     }
     // start scrolling
-    StructConfigScrollSSD1306 scroll_data = {
+    Struct_ConfigScrollSSD1306 scroll_data = {
         .time_frame_interval = _25_FRAMES,
         .vertical_scrolling_offset = 1};
     display->horizontal_scroll(true, scroll_data);
@@ -191,7 +191,7 @@ void test_fb_line(SSD1306 *display)
 {
     display->clear_pixel_buffer_and_show_full_screen();
     FramebufferColor c = FramebufferColor::BLACK;
-    StructRenderArea full_screen_area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
+    Struct_RenderArea full_screen_area = SSD1306::compute_render_area(0, SSD1306_WIDTH - 1, 0, SSD1306_HEIGHT - 1);
     for (int i = 0; i < 2; i++)
     {
         if (c == FramebufferColor::BLACK)

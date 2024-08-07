@@ -65,7 +65,7 @@ void Framebuffer::clear_text_buffer()
     current_char_line = 0;
 }
 
-void Framebuffer::init_text_buffer(StructFramebufferText _framebuffer_txt_cnf)
+void Framebuffer::init_text_buffer(Struct_FramebufferText _framebuffer_txt_cnf)
 {
     this->frame_text_config = _framebuffer_txt_cnf;
     set_font(_framebuffer_txt_cnf.font);

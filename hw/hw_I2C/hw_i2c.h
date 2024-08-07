@@ -16,7 +16,7 @@
  * @brief this data structure collects result when an I2C transfer is done.
  * It gives a more verbose error description : a context and the number of transfered byte.
  */
-struct StructI2CXferResult
+struct Struct_I2CXferResult
 {
     /**
      * @brief flag that indicates if an error occurred.
@@ -44,7 +44,7 @@ struct StructI2CXferResult
 /**
  * @brief The configuration data of I2C interface used as Master
  */
-struct StructConfigMasterI2C
+struct Struct_ConfigMasterI2C
 {
     /**
      * @brief the I2C interface used in the rp2040: i2c0 or i2c1
@@ -70,7 +70,7 @@ struct StructConfigMasterI2C
 /**
  * @brief The configuration data of I2C interface used as Slave
  */
-struct StructConfigSlaveI2C
+struct Struct_ConfigSlaveI2C
 {
     /**
      * @brief the I2C interface used in the rp2040: i2c0 or i2c1
@@ -123,7 +123,7 @@ public:
      *
      * @param master_config
      */
-    HW_I2C_Master(StructConfigMasterI2C master_config);
+    HW_I2C_Master(Struct_ConfigMasterI2C master_config);
     /**
      * @brief a convenient C++ member wrapper to write a block of data starting at a slave memory address.
      * The operation is bounded by a timeout.
@@ -132,9 +132,9 @@ public:
      * @param slave_mem_addr the slave memory
      * @param src the address of the block of data
      * @param len the size of the block of data.
-     * @return StructI2CXferResult
+     * @return Struct_I2CXferResult
      */
-    StructI2CXferResult burst_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len);
+    Struct_I2CXferResult burst_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t *src, size_t len);
     /**
      * @brief a convenient C++ member wrapper to write a single byte at a slave memory address.
      * The operation is bounded by a timeout.
@@ -142,18 +142,18 @@ public:
      * @param slave_address the slave address
      * @param mem_addr the slave memory
      * @param mem_value the byte to write
-     * @return StructI2CXferResult
+     * @return Struct_I2CXferResult
      */
-    StructI2CXferResult single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);
+    Struct_I2CXferResult single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value);
     /**
      * @brief a convenient C++ member wrapper to read a single byte at a slave memory address.
      * The operation is bounded by a timeout.
      * @param slave_address the slave address
      * @param mem_addr the address of slave memory to read from
      * @param dest Pointer to buffer to receive data
-     * @return StructI2CXferResult
+     * @return Struct_I2CXferResult
      */
-    StructI2CXferResult single_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);
+    Struct_I2CXferResult single_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest);
     /**
      * @brief a convenient C++ member wrapper to read a block of data starting at a slave memory address.
      * The operation is bounded by a timeout.
@@ -161,9 +161,9 @@ public:
      * @param mem_addr the starting address of slave memory to read from
      * @param dest Pointer to buffer to receive data
      * @param len the size of the block of data
-     * @return StructI2CXferResult
+     * @return Struct_I2CXferResult
      */
-    StructI2CXferResult burst_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, size_t len);
+    Struct_I2CXferResult burst_byte_read(uint8_t slave_address, uint8_t mem_addr, uint8_t *dest, size_t len);
     /**
      * @brief A utility that scan the I2C bus and return the set of answering devices
      *
@@ -190,7 +190,7 @@ public:
  * @brief this is the structure of the memory used by the slave i2c interface
  *
  */
-struct StructSlaveMemory
+struct Struct_SlaveMemory
 {
     uint8_t mem[I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE]{};
     uint8_t mem_address = I2C_SLAVE_DEFAULT_MAX_MEMORY_SIZE - 1; // init: the slave points to its last memory address
@@ -207,13 +207,13 @@ private:
     i2c_inst_t *i2c;
 
 public:
-    StructSlaveMemory context;
+    Struct_SlaveMemory context;
     /**
      * @brief Construct a new hw i2c slave object
      *
      * @param slave_config
      */
-    HW_I2C_Slave(StructConfigSlaveI2C slave_config);
+    HW_I2C_Slave(Struct_ConfigSlaveI2C slave_config);
     /**
      * @brief this is the actual Interrupt Service Routine executed by the slave after each received data
      *
