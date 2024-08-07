@@ -8,20 +8,20 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "test_controlled_value.h"
+#include "t_controlled_value.h"
 
-TestIncrementalValue::TestIncrementalValue(std::string _name, int _min_value, int _max_value, bool _is_wrappable, int increment)
+Test_IncrementalValue::Test_IncrementalValue(std::string _name, int _min_value, int _max_value, bool _is_wrappable, int increment)
     : UIControlledIncrementalValue(_min_value, _max_value, _is_wrappable, increment)
 {
     this->name = _name;
 }
 
-TestIncrementalValue::~TestIncrementalValue()
+Test_IncrementalValue::~Test_IncrementalValue()
 {
 }
 
 /**
- * @brief The event processed by TestIncrementalValue for this test are:
+ * @brief The event processed by Test_IncrementalValue for this test are:
  * 
  * - LONG_PUSH: set value to 0.
  * 
@@ -31,7 +31,7 @@ TestIncrementalValue::~TestIncrementalValue()
  * 
  * @param _event 
  */
-void TestIncrementalValue::process_control_event(ControlEvent _event)
+void Test_IncrementalValue::process_control_event(ControlEvent _event)
 {
     switch (_event)
     {
@@ -45,12 +45,12 @@ void TestIncrementalValue::process_control_event(ControlEvent _event)
         decrement_value();
         break;
     default:
-        printf("TestIncrementalValue::process_control_event(ControlEvent _event) = default\n");
+        printf("Test_IncrementalValue::process_control_event(ControlEvent _event) = default\n");
         break;
     }
 }
 
-std::string TestIncrementalValue::get_name()
+std::string Test_IncrementalValue::get_name()
 {
     return name;
 }

@@ -14,10 +14,10 @@
  * @copyright Copyright (c) 2024
  *
  */
-#include "test_controlled_value.h"
-#include "test_manager.h"
+#include "t_controlled_value.h"
+#include "t_manager.h"
 #include "rotary_encoder.h"
-#include "test_widget_on_serial_monitor.h"
+#include "t_widget_on_serial_monitor.h"
 #include <map>
 #include <string>
 #include "probe.h"
@@ -76,13 +76,13 @@ int main()
     pr_D1.hi();
     stdio_init_all();
 
-    TestIncrementalValue value_0 = TestIncrementalValue("val0", 0, 5, true, 1);
-    TestIncrementalValue value_1 = TestIncrementalValue("val1", 0, 10, false, 1);
-    TestIncrementalValue value_2 = TestIncrementalValue("val2", -20, 3, false, 1);
+    Test_IncrementalValue value_0 = Test_IncrementalValue("val0", 0, 5, true, 1);
+    Test_IncrementalValue value_1 = Test_IncrementalValue("val1", 0, 10, false, 1);
+    Test_IncrementalValue value_2 = Test_IncrementalValue("val2", -20, 3, false, 1);
 
-    TestCursorWidgetWithIncrementalValue value_0_widget = TestCursorWidgetWithIncrementalValue(&value_0);
-    TestCursorWidgetWithIncrementalValue value_1_widget = TestCursorWidgetWithIncrementalValue(&value_1);
-    TestCursorWidgetWithIncrementalValue value_2_widget = TestCursorWidgetWithIncrementalValue(&value_2);
+    Test_CursorWidgetWithIncrementalValue value_0_widget = Test_CursorWidgetWithIncrementalValue(&value_0);
+    Test_CursorWidgetWithIncrementalValue value_1_widget = Test_CursorWidgetWithIncrementalValue(&value_1);
+    Test_CursorWidgetWithIncrementalValue value_2_widget = Test_CursorWidgetWithIncrementalValue(&value_2);
 
     Test_Manager manager = Test_Manager(&encoder);
 

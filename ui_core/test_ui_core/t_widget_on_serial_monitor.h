@@ -2,18 +2,18 @@
 #define WIDGET_PRINT_SERIAL_MONITOR_H
 
 #include <string>
-#include "test_controlled_value.h"
-#include "test_manager.h"
+#include "t_controlled_value.h"
+#include "t_manager.h"
 
 #include "ui_core.h"
 
 /**
  * @brief This is an implementation of a pseudo-widget for test_ui_core program.
  * 
- * It write status and value of TestIncrementalValue on the serial monitor
+ * It write status and value of Test_IncrementalValue on the serial monitor
  * 
  */
-class TestCursorWidgetWithIncrementalValue : public UIWidget
+class Test_CursorWidgetWithIncrementalValue : public UIWidget
 {
 private:
     float char_position_slope;
@@ -21,7 +21,7 @@ private:
     uint8_t max_line_width = 21;
     int value_to_char_position();
 
-    TestIncrementalValue *actual_displayed_object;
+    Test_IncrementalValue *actual_displayed_object;
     void draw();
 
 public:
@@ -30,12 +30,12 @@ public:
      * 
      * @param _actual_displayed_object 
      */
-    TestCursorWidgetWithIncrementalValue(TestIncrementalValue *_actual_displayed_object);
+    Test_CursorWidgetWithIncrementalValue(Test_IncrementalValue *_actual_displayed_object);
     /**
      * @brief Destroy the Test Cursor Widget With Incremental Value object
      * 
      */
-    ~TestCursorWidgetWithIncrementalValue();
+    ~Test_CursorWidgetWithIncrementalValue();
     /**
      * @brief Implement a refresh function adapted to the current test program with the private function draw()
      * 

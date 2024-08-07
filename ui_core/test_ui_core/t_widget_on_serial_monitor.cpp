@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "test_widget_on_serial_monitor.h"
+#include "t_widget_on_serial_monitor.h"
 #include <sstream>
 
 std::map<ControlledObjectStatus, std::string> status_to_string{
@@ -16,7 +16,7 @@ std::map<ControlledObjectStatus, std::string> status_to_string{
     {ControlledObjectStatus::HAS_FOCUS, "HAS_FOCUS"},
     {ControlledObjectStatus::IS_ACTIVE, "IS_ACTIVE"}};
 
-TestCursorWidgetWithIncrementalValue::TestCursorWidgetWithIncrementalValue(TestIncrementalValue *_actual_displayed_object)
+Test_CursorWidgetWithIncrementalValue::Test_CursorWidgetWithIncrementalValue(Test_IncrementalValue *_actual_displayed_object)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
     this->set_displayed_model(_actual_displayed_object);
@@ -26,11 +26,11 @@ TestCursorWidgetWithIncrementalValue::TestCursorWidgetWithIncrementalValue(TestI
     char_position_offset = 1 - char_position_slope * actual_displayed_object->get_min_value();
 }
 
-TestCursorWidgetWithIncrementalValue::~TestCursorWidgetWithIncrementalValue()
+Test_CursorWidgetWithIncrementalValue::~Test_CursorWidgetWithIncrementalValue()
 {
 }
 
-void TestCursorWidgetWithIncrementalValue::refresh()
+void Test_CursorWidgetWithIncrementalValue::refresh()
 {
     if (this->actual_displayed_object->has_changed())
     {
@@ -39,12 +39,12 @@ void TestCursorWidgetWithIncrementalValue::refresh()
     }
 }
 
-int TestCursorWidgetWithIncrementalValue::value_to_char_position()
+int Test_CursorWidgetWithIncrementalValue::value_to_char_position()
 {
     return (char_position_slope * actual_displayed_object->get_value() + char_position_offset);
 }
 
-void TestCursorWidgetWithIncrementalValue::draw()
+void Test_CursorWidgetWithIncrementalValue::draw()
 {
     switch (actual_displayed_object->get_status())
     {
