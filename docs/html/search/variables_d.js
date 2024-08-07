@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tab_5fsize_0',['tab_size',['../struct_struct_framebuffer_text.html#a38eee6376d7aec3f021084781cf08c86',1,'StructFramebufferText']]]
+  ['tab_5fsize_0',['tab_size',['../structstruct___framebuffer_text.html#a9c1d5ffd45c7b00b83cae0ee6ecfb2f3',1,'struct_FramebufferText']]]
 ];

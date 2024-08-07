@@ -1,6 +1,6 @@
 var class_u_i_widget =
 [
-    [ "UIWidget", "class_u_i_widget.html#a91eb578573cca545c1dd378323734007", null ],
+    [ "UIWidget", "class_u_i_widget.html#ae9e9ebf97c6fe90a156b0f91f581b317", null ],
     [ "~UIWidget", "class_u_i_widget.html#a9d4a57bc7a557151612c87058be8b9c7", null ],
     [ "add_widget", "class_u_i_widget.html#a77b60ee8bae791e3239fdc6c27472b83", null ],
     [ "draw", "class_u_i_widget.html#a4e47a854c6f81c81990d61448f8ce8d8", null ],

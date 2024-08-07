@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fg_5fcolor_0',['fg_color',['../struct_struct_framebuffer_text.html#addd57ada13f684e04a1ac84c60d089a6',1,'StructFramebufferText']]],
-  ['font_1',['font',['../struct_struct_framebuffer_text.html#aa322a812c7ad59f9fda0384e641cf059',1,'StructFramebufferText']]]
+  ['fg_5fcolor_0',['fg_color',['../structstruct___framebuffer_text.html#a3c19c4a2abd368a40bf071452f372cc3',1,'struct_FramebufferText']]],
+  ['font_1',['font',['../structstruct___framebuffer_text.html#af9d2a4c9d160910fdd30cbcb92dd554e',1,'struct_FramebufferText']]]
 ];

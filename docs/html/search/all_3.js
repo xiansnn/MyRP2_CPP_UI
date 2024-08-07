@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['debounce_5fdelay_5fus_0',['debounce_delay_us',['../struct_struct_switch_button_config.html#a4e47fb7bb9be95c661e3b7811cf57280',1,'StructSwitchButtonConfig::debounce_delay_us'],['../class_switch_button.html#ab52dd7c8fd5e882b29a642c7961d0822',1,'SwitchButton::debounce_delay_us']]],
+  ['debounce_5fdelay_5fus_0',['debounce_delay_us',['../structstruct___switch_button_config.html#afda88b49bf1ed6cf2460ebaeaa25e4d8',1,'struct_SwitchButtonConfig::debounce_delay_us'],['../class_switch_button.html#ab52dd7c8fd5e882b29a642c7961d0822',1,'SwitchButton::debounce_delay_us']]],
   ['decrement_1',['DECREMENT',['../ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4ac0ffa6e46086551bc5113d1238faf106',1,'ui_core.h']]],
   ['decrement_5ffocus_2',['decrement_focus',['../class_u_i_object_manager.html#aecbaeeae8b3627a631dfb5c739e5ebf3',1,'UIObjectManager']]],
   ['decrement_5fvalue_3',['decrement_value',['../class_u_i_controlled_incremental_value.html#afd999667d7ae68a76cdea8dc062d3652',1,'UIControlledIncrementalValue']]],

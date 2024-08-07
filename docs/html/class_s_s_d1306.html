@@ -121,21 +121,21 @@ Inheritance diagram for SSD1306:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2c55553d922b24c84ae10078a537773b" id="r_a2c55553d922b24c84ae10078a537773b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2c55553d922b24c84ae10078a537773b">SSD1306</a> (<a class="el" href="class_h_w___i2_c___master.html">HW_I2C_Master</a> *master, <a class="el" href="struct_struct_config_s_s_d1306.html">StructConfigSSD1306</a> device_config)</td></tr>
-<tr class="memdesc:a2c55553d922b24c84ae10078a537773b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> object.  <br /></td></tr>
-<tr class="separator:a2c55553d922b24c84ae10078a537773b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8fc891acd28a44e8b2c274c92cd57b" id="r_a4d8fc891acd28a44e8b2c274c92cd57b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d8fc891acd28a44e8b2c274c92cd57b">SSD1306</a> (<a class="el" href="class_h_w___i2_c___master.html">HW_I2C_Master</a> *master, <a class="el" href="structstruct___config_s_s_d1306.html">struct_ConfigSSD1306</a> device_config)</td></tr>
+<tr class="memdesc:a4d8fc891acd28a44e8b2c274c92cd57b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> object.  <br /></td></tr>
+<tr class="separator:a4d8fc891acd28a44e8b2c274c92cd57b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9877895dcf33190e2fa712c8bf46bbb8" id="r_a9877895dcf33190e2fa712c8bf46bbb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9877895dcf33190e2fa712c8bf46bbb8">show</a> ()</td></tr>
 <tr class="memdesc:a9877895dcf33190e2fa712c8bf46bbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> implementation of the show function. Used when we need to show the full device area  <br /></td></tr>
 <tr class="separator:a9877895dcf33190e2fa712c8bf46bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f56b6c4fd626c6b60488e9aebfc077" id="r_a67f56b6c4fd626c6b60488e9aebfc077"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67f56b6c4fd626c6b60488e9aebfc077">show</a> (<a class="el" href="class_framebuffer.html">Framebuffer</a> *frame, uint8_t anchor_x, uint8_t anchor_y)</td></tr>
 <tr class="memdesc:a67f56b6c4fd626c6b60488e9aebfc077"><td class="mdescLeft">&#160;</td><td class="mdescRight">the <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> implementation of the show function. Used when we need to show a framebuffer in a given render area  <br /></td></tr>
 <tr class="separator:a67f56b6c4fd626c6b60488e9aebfc077"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fe65054842e27166f555c7c2278d12f" id="r_a1fe65054842e27166f555c7c2278d12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1fe65054842e27166f555c7c2278d12f">show_render_area</a> (uint8_t *data_buffer, <a class="el" href="struct_struct_render_area.html">StructRenderArea</a> screen_area, uint8_t addressing_mode=HORIZONTAL_ADDRESSING_MODE)</td></tr>
-<tr class="memdesc:a1fe65054842e27166f555c7c2278d12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">// when we need to show a render area with a given framebuffer  <br /></td></tr>
-<tr class="separator:a1fe65054842e27166f555c7c2278d12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abccbff114c2fe8be4c16a5dcc48b7bc7" id="r_abccbff114c2fe8be4c16a5dcc48b7bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abccbff114c2fe8be4c16a5dcc48b7bc7">fill_pattern_and_show_GDDRAM</a> (uint8_t pattern, <a class="el" href="struct_struct_render_area.html">StructRenderArea</a> area)</td></tr>
-<tr class="memdesc:abccbff114c2fe8be4c16a5dcc48b7bc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels. The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)  <br /></td></tr>
-<tr class="separator:abccbff114c2fe8be4c16a5dcc48b7bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1b862b2b184108094ad32177ffb92a" id="r_a5d1b862b2b184108094ad32177ffb92a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5d1b862b2b184108094ad32177ffb92a">show_render_area</a> (uint8_t *data_buffer, <a class="el" href="structstruct___render_area.html">struct_RenderArea</a> screen_area, uint8_t addressing_mode=HORIZONTAL_ADDRESSING_MODE)</td></tr>
+<tr class="memdesc:a5d1b862b2b184108094ad32177ffb92a"><td class="mdescLeft">&#160;</td><td class="mdescRight">// when we need to show a render area with a given framebuffer  <br /></td></tr>
+<tr class="separator:a5d1b862b2b184108094ad32177ffb92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a764babad3f6a4d12cfa600ce7fd1b751" id="r_a764babad3f6a4d12cfa600ce7fd1b751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764babad3f6a4d12cfa600ce7fd1b751">fill_pattern_and_show_GDDRAM</a> (uint8_t pattern, <a class="el" href="structstruct___render_area.html">struct_RenderArea</a> area)</td></tr>
+<tr class="memdesc:a764babad3f6a4d12cfa600ce7fd1b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels. The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)  <br /></td></tr>
+<tr class="separator:a764babad3f6a4d12cfa600ce7fd1b751"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab82e79530ac6743f1ec1040c4d6ac68d" id="r_ab82e79530ac6743f1ec1040c4d6ac68d"><td class="memItemLeft" align="right" valign="top"><a id="ab82e79530ac6743f1ec1040c4d6ac68d" name="ab82e79530ac6743f1ec1040c4d6ac68d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer_and_show_full_screen</b> ()</td></tr>
 <tr class="memdesc:ab82e79530ac6743f1ec1040c4d6ac68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">write 0x00 into the device framebuffer <br /></td></tr>
@@ -162,14 +162,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_display_OFF</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_display_ON</b> ()</td></tr>
 <tr class="memdesc:ae1ff6651fa144bacc2e9ab192f8b313a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display ON object. <br /></td></tr>
 <tr class="separator:ae1ff6651fa144bacc2e9ab192f8b313a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acccca9c49aca5eb40b08a3212b75e827" id="r_acccca9c49aca5eb40b08a3212b75e827"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acccca9c49aca5eb40b08a3212b75e827">horizontal_scroll</a> (bool on, <a class="el" href="struct_struct_config_scroll_s_s_d1306.html">StructConfigScrollSSD1306</a> scroll_data)</td></tr>
-<tr class="separator:acccca9c49aca5eb40b08a3212b75e827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69aa8d85dbb155be5eccee3bc4b8e4d1" id="r_a69aa8d85dbb155be5eccee3bc4b8e4d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a69aa8d85dbb155be5eccee3bc4b8e4d1">vertical_scroll</a> (bool on, <a class="el" href="struct_struct_config_scroll_s_s_d1306.html">StructConfigScrollSSD1306</a> scroll_data)</td></tr>
-<tr class="separator:a69aa8d85dbb155be5eccee3bc4b8e4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3228383e41ea93124a1da0a619dc6b11" id="r_a3228383e41ea93124a1da0a619dc6b11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3228383e41ea93124a1da0a619dc6b11">horizontal_scroll</a> (bool on, <a class="el" href="structstruct___config_scroll_s_s_d1306.html">struct_ConfigScrollSSD1306</a> scroll_data)</td></tr>
+<tr class="separator:a3228383e41ea93124a1da0a619dc6b11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25a4d90a656b9fd2f1b2d220cc9f8e2b" id="r_a25a4d90a656b9fd2f1b2d220cc9f8e2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a25a4d90a656b9fd2f1b2d220cc9f8e2b">vertical_scroll</a> (bool on, <a class="el" href="structstruct___config_scroll_s_s_d1306.html">struct_ConfigScrollSSD1306</a> scroll_data)</td></tr>
+<tr class="separator:a25a4d90a656b9fd2f1b2d220cc9f8e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_u_i_display_device"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_u_i_display_device')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a></td></tr>
-<tr class="memitem:a7a31ddf37113196411f2dc2d65750f31 inherit pub_methods_class_u_i_display_device" id="r_a7a31ddf37113196411f2dc2d65750f31"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_display_device.html#a7a31ddf37113196411f2dc2d65750f31">UIDisplayDevice</a> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB, <a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> txt_cnf={.font=font_8x8})</td></tr>
-<tr class="memdesc:a7a31ddf37113196411f2dc2d65750f31 inherit pub_methods_class_u_i_display_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e....">UIDisplayDevice</a> object.  <br /></td></tr>
-<tr class="separator:a7a31ddf37113196411f2dc2d65750f31 inherit pub_methods_class_u_i_display_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aaaddcf19f1472a593d56b49a546b1d inherit pub_methods_class_u_i_display_device" id="r_a3aaaddcf19f1472a593d56b49a546b1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_display_device.html#a3aaaddcf19f1472a593d56b49a546b1d">UIDisplayDevice</a> (size_t width, size_t height, FramebufferFormat format=FramebufferFormat::MONO_VLSB, <a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a> txt_cnf={.font=font_8x8})</td></tr>
+<tr class="memdesc:a3aaaddcf19f1472a593d56b49a546b1d inherit pub_methods_class_u_i_display_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e....">UIDisplayDevice</a> object.  <br /></td></tr>
+<tr class="separator:a3aaaddcf19f1472a593d56b49a546b1d inherit pub_methods_class_u_i_display_device"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4184e12c219116cbf80f02f3034e0ef inherit pub_methods_class_u_i_display_device" id="r_ac4184e12c219116cbf80f02f3034e0ef"><td class="memItemLeft" align="right" valign="top">
 virtual&#160;</td><td class="memItemRight" valign="bottom"><b>~UIDisplayDevice</b> ()</td></tr>
 <tr class="memdesc:ac4184e12c219116cbf80f02f3034e0ef inherit pub_methods_class_u_i_display_device"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e....">UIDisplayDevice</a> object. <br /></td></tr>
@@ -207,9 +207,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b
 <tr class="memitem:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#a4eb865f19596a64e30862697ab737318">circle</a> (int radius, int x_center, int y_center, bool <a class="el" href="class_framebuffer.html#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
 <tr class="memdesc:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a cercle of size radius, centered at (x_center, y_center)  <br /></td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer" id="r_ad55894974ba23bd04e280fe40afed813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#ad55894974ba23bd04e280fe40afed813">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> frame_text_config)</td></tr>
-<tr class="memdesc:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
-<tr class="separator:ad55894974ba23bd04e280fe40afed813 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2fec25f3bb6f584d239b85e9facd04 inherit pub_methods_class_framebuffer" id="r_a9d2fec25f3bb6f584d239b85e9facd04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_framebuffer.html#a9d2fec25f3bb6f584d239b85e9facd04">init_text_buffer</a> (<a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a> frame_text_config)</td></tr>
+<tr class="memdesc:a9d2fec25f3bb6f584d239b85e9facd04 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
+<tr class="separator:a9d2fec25f3bb6f584d239b85e9facd04 inherit pub_methods_class_framebuffer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607 inherit pub_methods_class_framebuffer" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
 <tr class="memdesc:a471d9d9a24d51b9df2a89362abd2e607 inherit pub_methods_class_framebuffer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text buffer memory to "0" and set character line and column to 0. <br /></td></tr>
@@ -238,9 +238,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next_char</b> ()</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a244e534005ed8e99934bd99eafe6b0e7" id="r_a244e534005ed8e99934bd99eafe6b0e7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="struct_struct_render_area.html">StructRenderArea</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a244e534005ed8e99934bd99eafe6b0e7">compute_render_area</a> (uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)</td></tr>
-<tr class="memdesc:a244e534005ed8e99934bd99eafe6b0e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static member function that converts the area we want to display into device specific parameters.  <br /></td></tr>
-<tr class="separator:a244e534005ed8e99934bd99eafe6b0e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a077e87e76e6c5ad59e2ad5ecd11e21fa" id="r_a077e87e76e6c5ad59e2ad5ecd11e21fa"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structstruct___render_area.html">struct_RenderArea</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a077e87e76e6c5ad59e2ad5ecd11e21fa">compute_render_area</a> (uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line)</td></tr>
+<tr class="memdesc:a077e87e76e6c5ad59e2ad5ecd11e21fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static member function that converts the area we want to display into device specific parameters.  <br /></td></tr>
+<tr class="separator:a077e87e76e6c5ad59e2ad5ecd11e21fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -267,8 +267,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> OLED display device driver. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2c55553d922b24c84ae10078a537773b" name="a2c55553d922b24c84ae10078a537773b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c55553d922b24c84ae10078a537773b">&#9670;&#160;</a></span>SSD1306()</h2>
+<a id="a4d8fc891acd28a44e8b2c274c92cd57b" name="a4d8fc891acd28a44e8b2c274c92cd57b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8fc891acd28a44e8b2c274c92cd57b">&#9670;&#160;</a></span>SSD1306()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -281,7 +281,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_config_s_s_d1306.html">StructConfigSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>device_config</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structstruct___config_s_s_d1306.html">struct_ConfigSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>device_config</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -290,7 +290,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">master</td><td>the I2C master interface driver <a class="el" href="class_h_w___i2_c___master.html" title="this is a C++ wrapper for the original pico SDK i2c master API">HW_I2C_Master</a> </td></tr>
-    <tr><td class="paramname">device_config</td><td>the configuration according to <a class="el" href="struct_struct_config_s_s_d1306.html" title="configuration data for SSD1306 OLED display. refer to datasheet for more details.">StructConfigSSD1306</a> </td></tr>
+    <tr><td class="paramname">device_config</td><td>the configuration according to <a class="el" href="structstruct___config_s_s_d1306.html" title="configuration data for SSD1306 OLED display. refer to datasheet for more details.">struct_ConfigSSD1306</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,8 +298,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a244e534005ed8e99934bd99eafe6b0e7" name="a244e534005ed8e99934bd99eafe6b0e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a244e534005ed8e99934bd99eafe6b0e7">&#9670;&#160;</a></span>compute_render_area()</h2>
+<a id="a077e87e76e6c5ad59e2ad5ecd11e21fa" name="a077e87e76e6c5ad59e2ad5ecd11e21fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a077e87e76e6c5ad59e2ad5ecd11e21fa">&#9670;&#160;</a></span>compute_render_area()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -308,7 +308,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_struct_render_area.html">StructRenderArea</a> SSD1306::compute_render_area </td>
+          <td class="memname"><a class="el" href="structstruct___render_area.html">struct_RenderArea</a> SSD1306::compute_render_area </td>
           <td>(</td>
           <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>start_col</em></span>, </td>
         </tr>
@@ -345,12 +345,12 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="struct_struct_render_area.html" title="data used to compute the render area position in the display framebuffer reference,...">StructRenderArea</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structstruct___render_area.html" title="data used to compute the render area position in the display framebuffer reference,...">struct_RenderArea</a> </dd></dl>
 
 </div>
 </div>
-<a id="abccbff114c2fe8be4c16a5dcc48b7bc7" name="abccbff114c2fe8be4c16a5dcc48b7bc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abccbff114c2fe8be4c16a5dcc48b7bc7">&#9670;&#160;</a></span>fill_pattern_and_show_GDDRAM()</h2>
+<a id="a764babad3f6a4d12cfa600ce7fd1b751" name="a764babad3f6a4d12cfa600ce7fd1b751"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764babad3f6a4d12cfa600ce7fd1b751">&#9670;&#160;</a></span>fill_pattern_and_show_GDDRAM()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -363,7 +363,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_render_area.html">StructRenderArea</a></td>          <td class="paramname"><span class="paramname"><em>area</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structstruct___render_area.html">struct_RenderArea</a></td>          <td class="paramname"><span class="paramname"><em>area</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -379,8 +379,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
-<a id="acccca9c49aca5eb40b08a3212b75e827" name="acccca9c49aca5eb40b08a3212b75e827"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acccca9c49aca5eb40b08a3212b75e827">&#9670;&#160;</a></span>horizontal_scroll()</h2>
+<a id="a3228383e41ea93124a1da0a619dc6b11" name="a3228383e41ea93124a1da0a619dc6b11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3228383e41ea93124a1da0a619dc6b11">&#9670;&#160;</a></span>horizontal_scroll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +393,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_config_scroll_s_s_d1306.html">StructConfigScrollSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>scroll_data</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structstruct___config_scroll_s_s_d1306.html">struct_ConfigScrollSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>scroll_data</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -532,8 +532,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
-<a id="a1fe65054842e27166f555c7c2278d12f" name="a1fe65054842e27166f555c7c2278d12f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fe65054842e27166f555c7c2278d12f">&#9670;&#160;</a></span>show_render_area()</h2>
+<a id="a5d1b862b2b184108094ad32177ffb92a" name="a5d1b862b2b184108094ad32177ffb92a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1b862b2b184108094ad32177ffb92a">&#9670;&#160;</a></span>show_render_area()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -546,7 +546,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_render_area.html">StructRenderArea</a></td>          <td class="paramname"><span class="paramname"><em>screen_area</em></span>, </td>
+          <td class="paramtype"><a class="el" href="structstruct___render_area.html">struct_RenderArea</a></td>          <td class="paramname"><span class="paramname"><em>screen_area</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -568,8 +568,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
-<a id="a69aa8d85dbb155be5eccee3bc4b8e4d1" name="a69aa8d85dbb155be5eccee3bc4b8e4d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69aa8d85dbb155be5eccee3bc4b8e4d1">&#9670;&#160;</a></span>vertical_scroll()</h2>
+<a id="a25a4d90a656b9fd2f1b2d220cc9f8e2b" name="a25a4d90a656b9fd2f1b2d220cc9f8e2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25a4d90a656b9fd2f1b2d220cc9f8e2b">&#9670;&#160;</a></span>vertical_scroll()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -582,7 +582,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_config_scroll_s_s_d1306.html">StructConfigScrollSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>scroll_data</em></span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structstruct___config_scroll_s_s_d1306.html">struct_ConfigScrollSSD1306</a></td>          <td class="paramname"><span class="paramname"><em>scroll_data</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">

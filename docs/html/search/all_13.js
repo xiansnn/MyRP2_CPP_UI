@@ -6,5 +6,5 @@ var searchData=
   ['widget_5fstart_5fy_3',['widget_start_y',['../class_u_i_widget.html#a3623e045f6e261ae165c7a74609e2ef1',1,'UIWidget']]],
   ['widget_5fwidth_4',['widget_width',['../class_u_i_widget.html#a260da15791550684b921cfbf81734796',1,'UIWidget']]],
   ['widgets_5',['widgets',['../class_u_i_widget.html#a723e330610d231171f2b6a71226f5afc',1,'UIWidget']]],
-  ['wrap_6',['wrap',['../struct_struct_framebuffer_text.html#a3ff77c5461443c7f9cd53126bbd056b0',1,'StructFramebufferText']]]
+  ['wrap_6',['wrap',['../structstruct___framebuffer_text.html#a4d8b493ce4f251aaa9bcd5810d3b8138',1,'struct_FramebufferText']]]
 ];

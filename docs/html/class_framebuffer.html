@@ -114,12 +114,12 @@ Inheritance diagram for Framebuffer:</div>
  <div class="center">
   <img src="class_framebuffer.png" usemap="#Framebuffer_map" alt=""/>
   <map id="Framebuffer_map" name="Framebuffer_map">
-<area href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e...." alt="UIDisplayDevice" shape="rect" coords="0,56,234,80"/>
-<area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="488,56,722,80"/>
-<area href="class_s_s_d1306.html" title="SSD1306 OLED display device driver." alt="SSD1306" shape="rect" coords="0,112,234,136"/>
-<area href="class_test_cursor_widget_with_incremental_value.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="TestCursorWidgetWithIncrementalValue" shape="rect" coords="244,112,478,136"/>
-<area href="class_test_object_manager_widget.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="TestObjectManagerWidget" shape="rect" coords="488,112,722,136"/>
-<area href="class_test_set_of_widget.html" title="test the composite widget features" alt="TestSetOfWidget" shape="rect" coords="732,112,966,136"/>
+<area href="class_u_i_display_device.html" title="This is the abstract class to handle all generic behavior of physical display devices (e...." alt="UIDisplayDevice" shape="rect" coords="0,56,241,80"/>
+<area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="502,56,743,80"/>
+<area href="class_s_s_d1306.html" title="SSD1306 OLED display device driver." alt="SSD1306" shape="rect" coords="0,112,241,136"/>
+<area href="class_test___cursor_widget_with_incremental_value.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="Test_CursorWidgetWithIncrementalValue" shape="rect" coords="251,112,492,136"/>
+<area href="class_test___object_manager_widget.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="Test_ObjectManagerWidget" shape="rect" coords="502,112,743,136"/>
+<area href="class_test___set_of_widget.html" title="test the composite widget features" alt="Test_SetOfWidget" shape="rect" coords="753,112,994,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -157,9 +157,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer</b
 <tr class="memitem:a4eb865f19596a64e30862697ab737318" id="r_a4eb865f19596a64e30862697ab737318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb865f19596a64e30862697ab737318">circle</a> (int radius, int x_center, int y_center, bool <a class="el" href="#ac71de6e7a85fc62b53f795ce994c9ec1">fill</a>=false, FramebufferColor c=FramebufferColor::WHITE)</td></tr>
 <tr class="memdesc:a4eb865f19596a64e30862697ab737318"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a cercle of size radius, centered at (x_center, y_center)  <br /></td></tr>
 <tr class="separator:a4eb865f19596a64e30862697ab737318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad55894974ba23bd04e280fe40afed813" id="r_ad55894974ba23bd04e280fe40afed813"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad55894974ba23bd04e280fe40afed813">init_text_buffer</a> (<a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a> frame_text_config)</td></tr>
-<tr class="memdesc:ad55894974ba23bd04e280fe40afed813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
-<tr class="separator:ad55894974ba23bd04e280fe40afed813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d2fec25f3bb6f584d239b85e9facd04" id="r_a9d2fec25f3bb6f584d239b85e9facd04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9d2fec25f3bb6f584d239b85e9facd04">init_text_buffer</a> (<a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a> frame_text_config)</td></tr>
+<tr class="memdesc:a9d2fec25f3bb6f584d239b85e9facd04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the textual features of framebuffer, according to the configuration data structure frame_text_config.  <br /></td></tr>
+<tr class="separator:a9d2fec25f3bb6f584d239b85e9facd04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a471d9d9a24d51b9df2a89362abd2e607" id="r_a471d9d9a24d51b9df2a89362abd2e607"><td class="memItemLeft" align="right" valign="top"><a id="a471d9d9a24d51b9df2a89362abd2e607" name="a471d9d9a24d51b9df2a89362abd2e607"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_text_buffer</b> ()</td></tr>
 <tr class="memdesc:a471d9d9a24d51b9df2a89362abd2e607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set text buffer memory to "0" and set character line and column to 0. <br /></td></tr>
@@ -212,7 +212,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <p>This framebuffer implementation is derived from the mycropython API and more explanations can be found there <a href="https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf">https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf</a>.</p>
 <p>The current implementation supports only MONO_VLSB frame_format (monochrome display with vertically addressed pixel LSB being on top) and tested with OLED <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a>.</p>
 <p>The core of framebuffer is the pixel_buffer, a memory space that contains pixel values. This pixel_buffer is computed and initialized by the framebuffer constructor.</p>
-<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters chain is used. It is created and initialized by init_text_buffer function member. The configuration of this buffer is defined by <a class="el" href="struct_struct_framebuffer_text.html" title="Data structure that holds all configuration parameters used by textual primitives.">StructFramebufferText</a>. </p>
+<p>Optionnally, when framebuffer contains text, a text_buffer that contains characters chain is used. It is created and initialized by init_text_buffer function member. The configuration of this buffer is defined by <a class="el" href="structstruct___framebuffer_text.html" title="Data structure that holds all configuration parameters used by textual primitives.">struct_FramebufferText</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25c9cadebb3531112c5085e981962407" name="a25c9cadebb3531112c5085e981962407"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25c9cadebb3531112c5085e981962407">&#9670;&#160;</a></span>Framebuffer()</h2>
@@ -390,8 +390,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
-<a id="ad55894974ba23bd04e280fe40afed813" name="ad55894974ba23bd04e280fe40afed813"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad55894974ba23bd04e280fe40afed813">&#9670;&#160;</a></span>init_text_buffer()</h2>
+<a id="a9d2fec25f3bb6f584d239b85e9facd04" name="a9d2fec25f3bb6f584d239b85e9facd04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d2fec25f3bb6f584d239b85e9facd04">&#9670;&#160;</a></span>init_text_buffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -399,7 +399,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
         <tr>
           <td class="memname">void Framebuffer::init_text_buffer </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_struct_framebuffer_text.html">StructFramebufferText</a></td>          <td class="paramname"><span class="paramname"><em>frame_text_config</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a></td>          <td class="paramname"><span class="paramname"><em>frame_text_config</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

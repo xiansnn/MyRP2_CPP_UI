@@ -23,6 +23,9 @@ During my professional period of activities, I've got knowledge about Model Base
 
 ## Files organisation
 The files directories have been inspired by the Pico SDK.
+Structures are named struct_xxxx.
+Classes created for testing or example purpose are named test_xxx.
+Files created for test or example purpose are named t_xxxx/
 ### "hw" directory
 I'll place here C++ classes that abstract in some way the corresponding SDK functions related the HW peripheral of the Pico.
 The first one is I2C.

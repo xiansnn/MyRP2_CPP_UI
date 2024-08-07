@@ -8,7 +8,7 @@ var class_framebuffer =
     [ "fill", "class_framebuffer.html#ac71de6e7a85fc62b53f795ce994c9ec1", null ],
     [ "get_framebuffer_format", "class_framebuffer.html#a65d111e29829fef4318d355cb0841e83", null ],
     [ "hline", "class_framebuffer.html#ae464d1772ef80976c1faf8b2abb42903", null ],
-    [ "init_text_buffer", "class_framebuffer.html#ad55894974ba23bd04e280fe40afed813", null ],
+    [ "init_text_buffer", "class_framebuffer.html#a9d2fec25f3bb6f584d239b85e9facd04", null ],
     [ "line", "class_framebuffer.html#a8b7d45e8d169a9899d124a7f6de9ce16", null ],
     [ "next_char", "class_framebuffer.html#a7e480702cd3607f488ed7c19142c8b36", null ],
     [ "next_line", "class_framebuffer.html#a982a7f4b22ea3aa5f8b9a31dc71ca679", null ],

@@ -122,9 +122,9 @@ Inheritance diagram for SwitchButton:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1a24a88e0e3b151081552537f9cde431" id="r_a1a24a88e0e3b151081552537f9cde431"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a24a88e0e3b151081552537f9cde431">SwitchButton</a> (uint <a class="el" href="#a68fccab1c920eec2fbd4fc2d1f5b29e0">gpio</a>, <a class="el" href="struct_struct_switch_button_config.html">StructSwitchButtonConfig</a> conf={})</td></tr>
-<tr class="memdesc:a1a24a88e0e3b151081552537f9cde431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> object.  <br /></td></tr>
-<tr class="separator:a1a24a88e0e3b151081552537f9cde431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab26a40e2b63115a23ff499e360768693" id="r_ab26a40e2b63115a23ff499e360768693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab26a40e2b63115a23ff499e360768693">SwitchButton</a> (uint <a class="el" href="#a68fccab1c920eec2fbd4fc2d1f5b29e0">gpio</a>, <a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> conf={})</td></tr>
+<tr class="memdesc:ab26a40e2b63115a23ff499e360768693"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> object.  <br /></td></tr>
+<tr class="separator:ab26a40e2b63115a23ff499e360768693"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aaf08da555f8418572d502e8221fcec" id="r_a3aaf08da555f8418572d502e8221fcec"><td class="memItemLeft" align="right" valign="top"><a id="a3aaf08da555f8418572d502e8221fcec" name="a3aaf08da555f8418572d502e8221fcec"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~SwitchButton</b> ()</td></tr>
 <tr class="memdesc:a3aaf08da555f8418572d502e8221fcec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> object. <br /></td></tr>
@@ -182,8 +182,8 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us
 <p>Button status is the logical status of the button (regardless the switch is wired active Lo or HI) During each period, the status of the button is compared to the previous status and the function member <a class="el" href="#ad488b9db3ed6b1709f1eda137a69f52e" title="the periodic routine that process deboucing, press and release of the switch.">process_sample_event()</a> return an evant accordingly.</p>
 <p><a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> can be associated with <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> only if button belongs to a UI. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a1a24a88e0e3b151081552537f9cde431" name="a1a24a88e0e3b151081552537f9cde431"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a24a88e0e3b151081552537f9cde431">&#9670;&#160;</a></span>SwitchButton()</h2>
+<a id="ab26a40e2b63115a23ff499e360768693" name="ab26a40e2b63115a23ff499e360768693"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab26a40e2b63115a23ff499e360768693">&#9670;&#160;</a></span>SwitchButton()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,7 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_struct_switch_button_config.html">StructSwitchButtonConfig</a></td>          <td class="paramname"><span class="paramname"><em>conf</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
+          <td class="paramtype"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a></td>          <td class="paramname"><span class="paramname"><em>conf</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -205,7 +205,7 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gpio</td><td>the microcontroller GPIO that read the switch status </td></tr>
-    <tr><td class="paramname">conf</td><td>the configuration data according <a class="el" href="struct_struct_switch_button_config.html" title="These are the values used to configure a switch button.">StructSwitchButtonConfig</a> </td></tr>
+    <tr><td class="paramname">conf</td><td>the configuration data according <a class="el" href="structstruct___switch_button_config.html" title="These are the values used to configure a switch button.">struct_SwitchButtonConfig</a> </td></tr>
   </table>
   </dd>
 </dl>

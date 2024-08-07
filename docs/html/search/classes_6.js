@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['test_5fmanager_0',['Test_Manager',['../class_test___manager.html',1,'']]],
-  ['testcursorwidgetwithincrementalvalue_1',['TestCursorWidgetWithIncrementalValue',['../class_test_cursor_widget_with_incremental_value.html',1,'']]],
-  ['testincrementalvalue_2',['TestIncrementalValue',['../class_test_incremental_value.html',1,'']]],
-  ['testobjectmanagerwidget_3',['TestObjectManagerWidget',['../class_test_object_manager_widget.html',1,'']]],
-  ['testsetofwidget_4',['TestSetOfWidget',['../class_test_set_of_widget.html',1,'']]]
+  ['test_5fcursorwidgetwithincrementalvalue_0',['Test_CursorWidgetWithIncrementalValue',['../class_test___cursor_widget_with_incremental_value.html',1,'']]],
+  ['test_5fincrementalvalue_1',['Test_IncrementalValue',['../class_test___incremental_value.html',1,'']]],
+  ['test_5fmanager_2',['Test_Manager',['../class_test___manager.html',1,'']]],
+  ['test_5fobjectmanagerwidget_3',['Test_ObjectManagerWidget',['../class_test___object_manager_widget.html',1,'']]],
+  ['test_5fsetofwidget_4',['Test_SetOfWidget',['../class_test___set_of_widget.html',1,'']]]
 ];

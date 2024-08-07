@@ -100,10 +100,11 @@ $(function(){initNavTree('md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p__
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="autotoc_md0"></a>This repository proposes a User Interface alternative version for RPi Pico. All the classes defined here rely on the RPi Pico SDK version 1.5.1</p>
+<p>Up to now, only one display device is available. It is the OLED <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a>. Most of The code was derived from <a href="https://github.com/Harbys/pico-ssd1306">Harbys github repository</a> works and framebuffer API aws inspired from mycropython API we can find <a href="https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf">here</a>.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 Complete documentation (still in construction)</h1>
 <p>Access to the the project web page with external browser <a href="https://xiansnn.github.io/MyRP2_CPP_UI/">here</a>.</p>
-<p>Once open with browser, you will find doxygen documentation <a href="docs/html/index.html">here</a></p>
+<p>After opening this pages with your web browser, you will find doxygen documentation <a href="docs/html/index.html">here</a></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Motivation</h1>
 <p>I know that we can find lot of well defined and used UI interface e.g. Adafruit in Arduino environment, but the main motivation was first to have fun devoloping (quite) from scratch a user interface en C++.</p>
@@ -116,6 +117,9 @@ During my professional period of activities, I've got knowledge about Model Base
 
 @section autotoc_md4 Files organisation
 The files directories have been inspired by the Pico SDK.
+Structures are named struct_xxxx.
+Classes created for testing or example purpose are named test_xxx.
+Files created for test or example purpose are named t_xxxx/
 @subsection autotoc_md5 "hw" directory
 I'll place here C++ classes that abstract in some way the corresponding SDK functions related the HW peripheral of the Pico.
 The first one is I2C.
