@@ -2,8 +2,8 @@
 #define WIDGET_PRINT_SERIAL_MONITOR_H
 
 #include <string>
-#include "test_controlled_value.h"
-#include "test_manager.h"
+#include "t_controlled_value.h"
+#include "t_manager.h"
 
 #include "ui_core.h"
 

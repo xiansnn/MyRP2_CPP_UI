@@ -14,10 +14,10 @@
  * @copyright Copyright (c) 2024
  *
  */
-#include "test_controlled_value.h"
-#include "test_manager.h"
+#include "t_controlled_value.h"
+#include "t_manager.h"
 #include "rotary_encoder.h"
-#include "test_widget_on_serial_monitor.h"
+#include "t_widget_on_serial_monitor.h"
 #include <map>
 #include <string>
 #include "probe.h"

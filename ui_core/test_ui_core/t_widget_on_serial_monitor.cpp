@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "test_widget_on_serial_monitor.h"
+#include "t_widget_on_serial_monitor.h"
 #include <sstream>
 
 std::map<ControlledObjectStatus, std::string> status_to_string{

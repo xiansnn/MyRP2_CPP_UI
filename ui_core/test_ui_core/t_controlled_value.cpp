@@ -8,7 +8,7 @@
  * @copyright Copyright (c) 2024
  * 
  */
-#include "test_controlled_value.h"
+#include "t_controlled_value.h"
 
 TestIncrementalValue::TestIncrementalValue(std::string _name, int _min_value, int _max_value, bool _is_wrappable, int increment)
     : UIControlledIncrementalValue(_min_value, _max_value, _is_wrappable, increment)

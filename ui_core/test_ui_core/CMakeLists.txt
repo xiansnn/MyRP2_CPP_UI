@@ -1,8 +1,8 @@
 add_executable(test_ui_core 
                 test_ui_core.cpp
-                test_manager.cpp
-                test_controlled_value.cpp
-                test_widget_on_serial_monitor.cpp
+                t_manager.cpp
+                t_controlled_value.cpp
+                t_widget_on_serial_monitor.cpp
                 )
 target_link_libraries(test_ui_core 
                 pico_stdlib
