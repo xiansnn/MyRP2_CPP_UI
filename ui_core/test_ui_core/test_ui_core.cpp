@@ -30,13 +30,13 @@ Probe pr_D1 = Probe(1);
 Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
 
-Struct_SwitchButtonConfig cfg_central_switch{
+struct_SwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 5000,
     .long_release_delay_us = 1000000,
     .long_push_delay_us = 1000000,
     .active_lo = true};
 
-Struct_SwitchButtonConfig cfg_encoder_clk{
+struct_SwitchButtonConfig cfg_encoder_clk{
     .debounce_delay_us = 5000};
 
 void shared_irq_call_back(uint gpio, uint32_t event_mask);
@@ -76,19 +76,19 @@ int main()
     pr_D1.hi();
     stdio_init_all();
 
-    Test_IncrementalValue value_0 = Test_IncrementalValue("val0", 0, 5, true, 1);
-    Test_IncrementalValue value_1 = Test_IncrementalValue("val1", 0, 10, false, 1);
-    Test_IncrementalValue value_2 = Test_IncrementalValue("val2", -20, 3, false, 1);
+    test_IncrementalValue value_0 = test_IncrementalValue("val0", 0, 5, true, 1);
+    test_IncrementalValue value_1 = test_IncrementalValue("val1", 0, 10, false, 1);
+    test_IncrementalValue value_2 = test_IncrementalValue("val2", -20, 3, false, 1);
 
-    Test_CursorWidgetWithIncrementalValue value_0_widget = Test_CursorWidgetWithIncrementalValue(&value_0);
-    Test_CursorWidgetWithIncrementalValue value_1_widget = Test_CursorWidgetWithIncrementalValue(&value_1);
-    Test_CursorWidgetWithIncrementalValue value_2_widget = Test_CursorWidgetWithIncrementalValue(&value_2);
+    test_CursorWidgetWithIncrementalValue value_0_widget = test_CursorWidgetWithIncrementalValue(&value_0);
+    test_CursorWidgetWithIncrementalValue value_1_widget = test_CursorWidgetWithIncrementalValue(&value_1);
+    test_CursorWidgetWithIncrementalValue value_2_widget = test_CursorWidgetWithIncrementalValue(&value_2);
 
-    Test_Manager manager = Test_Manager(&encoder);
+    test_Manager manager = test_Manager(&encoder);
 
-    Test_ObjectManagerWidget manager_widget = Test_ObjectManagerWidget(&manager);
+    test_ObjectManagerWidget manager_widget = test_ObjectManagerWidget(&manager);
 
-    Test_SetOfWidget set_of_widget = Test_SetOfWidget();
+    test_SetOfWidget set_of_widget = test_SetOfWidget();
     set_of_widget.add_widget(&manager_widget);
     set_of_widget.add_widget(&value_0_widget);
     set_of_widget.add_widget(&value_1_widget);

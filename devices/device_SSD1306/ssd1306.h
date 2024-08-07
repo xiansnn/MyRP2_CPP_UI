@@ -27,7 +27,7 @@
  * refer to datasheet for more details.
  *
  */
-struct Struct_ConfigSSD1306
+struct struct_ConfigSSD1306
 
 {
     uint8_t i2c_address = 0x3C;
@@ -48,7 +48,7 @@ struct Struct_ConfigSSD1306
  * refer to datasheet for more details.
  *
  */
-struct Struct_ConfigScrollSSD1306
+struct struct_ConfigScrollSSD1306
 {
     bool scroll_H_to_right = true;           // if true SSD1306_SET_R_HORIZ_SCROLL else SSD1306_SET_L_HORIZ_SCROLL
     bool scroll_V_and_H_to_right = true;     // if true SSD1306_SET_VERTICAL_R_HORIZ_SCROLL else SSD1306_SET_VERTICAL_L_HORIZ_SCROLL
@@ -62,7 +62,7 @@ struct Struct_ConfigScrollSSD1306
  * @brief data used to compute the render area position in the display framebuffer reference, including the size of the reequired buffer.
  *
  */
-struct Struct_RenderArea
+struct struct_RenderArea
 {
     uint8_t start_col{0};
     uint8_t end_col{SSD1306_WIDTH - 1};
@@ -81,7 +81,7 @@ class SSD1306 : public UIDisplayDevice
 {
 private:
     HW_I2C_Master *i2c_master;
-    Struct_ConfigSSD1306 device_config;
+    struct_ConfigSSD1306 device_config;
 
     void init();
     void init_MUX_ratio(uint8_t value);
@@ -101,9 +101,9 @@ public:
      * @brief Construct a new SSD1306 object
      *
      * @param master the I2C master interface driver HW_I2C_Master
-     * @param device_config the configuration according to Struct_ConfigSSD1306
+     * @param device_config the configuration according to struct_ConfigSSD1306
      */
-    SSD1306(HW_I2C_Master *master, Struct_ConfigSSD1306 device_config);
+    SSD1306(HW_I2C_Master *master, struct_ConfigSSD1306 device_config);
     /**
      * @brief A static member function that converts the area we want to display into device specific parameters.
      *
@@ -111,9 +111,9 @@ public:
      * @param end_col
      * @param start_line
      * @param end_line
-     * @return Struct_RenderArea
+     * @return struct_RenderArea
      */
-    static Struct_RenderArea compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
+    static struct_RenderArea compute_render_area(uint8_t start_col, uint8_t end_col, uint8_t start_line, uint8_t end_line);
     /**
      * @brief the SSD1306 implementation of the show function. Used when we need to show the full device area
      *
@@ -134,14 +134,14 @@ public:
      * @param screen_area
      * @param addressing_mode
      */
-    void show_render_area(uint8_t *data_buffer, Struct_RenderArea screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE);
+    void show_render_area(uint8_t *data_buffer, struct_RenderArea screen_area, uint8_t addressing_mode = HORIZONTAL_ADDRESSING_MODE);
     /**
      * @brief fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels.
      * The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)
      * @param pattern
      * @param area
      */
-    void fill_pattern_and_show_GDDRAM(uint8_t pattern, Struct_RenderArea area);
+    void fill_pattern_and_show_GDDRAM(uint8_t pattern, struct_RenderArea area);
     /**
      * @brief write 0x00 into the device framebuffer
      *
@@ -185,14 +185,14 @@ public:
      * @param on 
      * @param scroll_data 
      */
-    void horizontal_scroll(bool on, Struct_ConfigScrollSSD1306 scroll_data);
+    void horizontal_scroll(bool on, struct_ConfigScrollSSD1306 scroll_data);
     /**
      * @brief 
      * 
      * @param on 
      * @param scroll_data 
      */
-    void vertical_scroll(bool on, Struct_ConfigScrollSSD1306 scroll_data);
+    void vertical_scroll(bool on, struct_ConfigScrollSSD1306 scroll_data);
 };
 
 #endif // SSD1306_H

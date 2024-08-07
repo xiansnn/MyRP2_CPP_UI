@@ -32,7 +32,7 @@ public:
      * @param clk_conf the configuration of the clock, view as a switch (with debouncing issue)
      */
     RotaryEncoder(uint encoder_clk_gpio, uint encoder_dt_gpio,
-                  gpio_irq_callback_t call_back, Struct_SwitchButtonConfig clk_conf = {});
+                  gpio_irq_callback_t call_back, struct_SwitchButtonConfig clk_conf = {});
     /**
      * @brief Destroy the Rotary Encoder object
      * 

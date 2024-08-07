@@ -113,7 +113,7 @@ public:
      * @param format The framebuffer format ... see Framebuffer class FramebufferFormat enumeration
      * @param txt_cnf A structure of data that reflect the framebuffer member related to text primitives
      */
-    UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, Struct_FramebufferText txt_cnf = {.font = font_8x8});
+    UIDisplayDevice(size_t width, size_t height, FramebufferFormat format = FramebufferFormat::MONO_VLSB, struct_FramebufferText txt_cnf = {.font = font_8x8});
     /**
      * @brief Destroy the UIDisplayDevice object
      *
@@ -486,7 +486,7 @@ public:
              bool widget_with_border,
              uint8_t widget_border_width = 1,
              FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB,
-             Struct_FramebufferText framebuffer_txt_cnf = {.font = font_8x8});
+             struct_FramebufferText framebuffer_txt_cnf = {.font = font_8x8});
     /**
      * @brief Destroy the UIWidget object
      */

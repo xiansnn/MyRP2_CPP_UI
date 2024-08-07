@@ -11,7 +11,7 @@
 #include "t_manager.h"
 
 
-Test_Manager::Test_Manager(UIController * _controller)
+test_Manager::test_Manager(UIController * _controller)
     : UIObjectManager()
 {
     make_manager_active();
@@ -19,15 +19,15 @@ Test_Manager::Test_Manager(UIController * _controller)
 }
 
 /**
- * @brief Destroy the Test_Manager::Test_Manager object
+ * @brief Destroy the test_Manager::test_Manager object
  * 
  */
-Test_Manager::~Test_Manager()
+test_Manager::~test_Manager()
 {
 }
 
 /**
- * @brief The event processed by Test_Manager for this test are:
+ * @brief The event processed by test_Manager for this test are:
  * 
  * - LONG_PUSH: if manager is not active, processed by the current_active_model
  * 
@@ -39,7 +39,7 @@ Test_Manager::~Test_Manager()
  * 
  * @param _event 
  */
-void Test_Manager::process_control_event(ControlEvent _event)
+void test_Manager::process_control_event(ControlEvent _event)
 {
     switch (_event)
     {

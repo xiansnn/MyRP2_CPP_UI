@@ -4,7 +4,7 @@
 #include <string>
 
 RotaryEncoder::RotaryEncoder(uint encoder_clk_gpio, uint encoder_dt_gpio, gpio_irq_callback_t call_back,
-                             Struct_SwitchButtonConfig clk_conf)
+                             struct_SwitchButtonConfig clk_conf)
     : SwitchButtonWithIRQ(encoder_clk_gpio, call_back, clk_conf), UIController()
 {
     this->dt_gpio = encoder_dt_gpio;

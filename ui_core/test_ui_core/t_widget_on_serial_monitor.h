@@ -10,10 +10,10 @@
 /**
  * @brief This is an implementation of a pseudo-widget for test_ui_core program.
  * 
- * It write status and value of Test_IncrementalValue on the serial monitor
+ * It write status and value of test_IncrementalValue on the serial monitor
  * 
  */
-class Test_CursorWidgetWithIncrementalValue : public UIWidget
+class test_CursorWidgetWithIncrementalValue : public UIWidget
 {
 private:
     float char_position_slope;
@@ -21,7 +21,7 @@ private:
     uint8_t max_line_width = 21;
     int value_to_char_position();
 
-    Test_IncrementalValue *actual_displayed_object;
+    test_IncrementalValue *actual_displayed_object;
     void draw();
 
 public:
@@ -30,12 +30,12 @@ public:
      * 
      * @param _actual_displayed_object 
      */
-    Test_CursorWidgetWithIncrementalValue(Test_IncrementalValue *_actual_displayed_object);
+    test_CursorWidgetWithIncrementalValue(test_IncrementalValue *_actual_displayed_object);
     /**
      * @brief Destroy the Test Cursor Widget With Incremental Value object
      * 
      */
-    ~Test_CursorWidgetWithIncrementalValue();
+    ~test_CursorWidgetWithIncrementalValue();
     /**
      * @brief Implement a refresh function adapted to the current test program with the private function draw()
      * 
@@ -49,10 +49,10 @@ public:
  * It write status and value of Test_Manager on the serial monitor
  *
  */
-class Test_ObjectManagerWidget : public UIWidget
+class test_ObjectManagerWidget : public UIWidget
 {
 private:
-    Test_Manager * actual_displayed_object;
+    test_Manager * actual_displayed_object;
     void draw();
 public:
     /**
@@ -60,12 +60,12 @@ public:
      * 
      * @param _manager 
      */
-    Test_ObjectManagerWidget(Test_Manager* _manager);
+    test_ObjectManagerWidget(test_Manager* _manager);
     /**
      * @brief Destroy the Test Object Manager Widget object
      * 
      */
-    ~Test_ObjectManagerWidget();
+    ~test_ObjectManagerWidget();
     /**
      * @brief Implement a refresh function adapted to the current test program with the private function draw()
      * 
@@ -77,7 +77,7 @@ public:
  * @brief test the composite widget features
  * 
  */
-class Test_SetOfWidget : public UIWidget
+class test_SetOfWidget : public UIWidget
 {
 private:
     /* data */
@@ -87,12 +87,12 @@ public:
      * @brief 
      * 
      */
-    Test_SetOfWidget(/* args */);
+    test_SetOfWidget(/* args */);
     /**
      * @brief Destroy the Test Set Of Widget object
      * 
      */
-    ~Test_SetOfWidget();
+    ~test_SetOfWidget();
 };
 
 

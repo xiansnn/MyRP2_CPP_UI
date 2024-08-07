@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <string>
 
-HW_I2C_Master::HW_I2C_Master(Struct_ConfigMasterI2C cfg)
+HW_I2C_Master::HW_I2C_Master(struct_ConfigMasterI2C cfg)
 {
     this->i2c = cfg.i2c;
     this->time_out_us_per_byte = 8 * 1500000 / cfg.baud_rate; // with 50% margin
@@ -35,10 +35,10 @@ HW_I2C_Master::HW_I2C_Master(Struct_ConfigMasterI2C cfg)
     i2c_init(this->i2c, cfg.baud_rate);
 }
 
-Struct_I2CXferResult HW_I2C_Master::burst_byte_write(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *src, size_t len)
+struct_I2CXferResult HW_I2C_Master::burst_byte_write(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *src, size_t len)
 {
     size_t nb;
-    Struct_I2CXferResult result;
+    struct_I2CXferResult result;
     uint8_t write_buf[len + 1] = {slave_mem_addr};
     memcpy(write_buf + 1, src, len);
     // nb = i2c_write_blocking(this->i2c, slave_address, write_buf, len + 1, false);
@@ -55,10 +55,10 @@ Struct_I2CXferResult HW_I2C_Master::burst_byte_write(uint8_t slave_address, uint
     return result;
 }
 
-Struct_I2CXferResult HW_I2C_Master::single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)
+struct_I2CXferResult HW_I2C_Master::single_byte_write(uint8_t slave_address, uint8_t mem_addr, uint8_t mem_value)
 {
     int nb;
-    Struct_I2CXferResult result;
+    struct_I2CXferResult result;
     uint8_t write_buf[] = {mem_addr, mem_value};
     // nb = i2c_write_blocking(this->i2c, slave_address, write_buf, 2, false);
     uint timeout = this->time_out_us_per_byte * 3;
@@ -74,10 +74,10 @@ Struct_I2CXferResult HW_I2C_Master::single_byte_write(uint8_t slave_address, uin
     return result;
 }
 
-Struct_I2CXferResult HW_I2C_Master::single_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest)
+struct_I2CXferResult HW_I2C_Master::single_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest)
 {
     int nb;
-    Struct_I2CXferResult result;
+    struct_I2CXferResult result;
     uint8_t cmd_buf[]{slave_mem_addr};
 
     // i2c_write_blocking(this->i2c, slave_address, cmd_buf, 1, true);
@@ -104,10 +104,10 @@ Struct_I2CXferResult HW_I2C_Master::single_byte_read(uint8_t slave_address, uint
     return result;
 }
 
-Struct_I2CXferResult HW_I2C_Master::burst_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest, size_t len)
+struct_I2CXferResult HW_I2C_Master::burst_byte_read(uint8_t slave_address, uint8_t slave_mem_addr, uint8_t *dest, size_t len)
 {
     size_t nb;
-    Struct_I2CXferResult result;
+    struct_I2CXferResult result;
     uint8_t cmd_buf[]{slave_mem_addr};
     // i2c_write_blocking(this->i2c, slave_address, cmd_buf, 1, true);
     uint timeout = this->time_out_us_per_byte * 2;
@@ -196,7 +196,7 @@ void HW_I2C_Slave::slave_isr(i2c_slave_event_t event)
     }
 }
 
-HW_I2C_Slave::HW_I2C_Slave(Struct_ConfigSlaveI2C cfg)
+HW_I2C_Slave::HW_I2C_Slave(struct_ConfigSlaveI2C cfg)
 {
     this->i2c = cfg.i2c;
 

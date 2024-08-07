@@ -7,21 +7,21 @@
  * @brief implement a UIObjectManager for test_ui_core program
  *
  */
-class Test_Manager : public UIObjectManager
+class test_Manager : public UIObjectManager
 {
 private:
 public:
     /**
-     * @brief Construct a new Test_Manager object
+     * @brief Construct a new test_Manager object
      * 
      * @param _controller 
      */
-    Test_Manager(UIController *_controller);
+    test_Manager(UIController *_controller);
     /**
      * @brief Destroy the Test_Manager object
      * 
      */
-    ~Test_Manager();
+    ~test_Manager();
     void process_control_event(ControlEvent _event);
 };
 

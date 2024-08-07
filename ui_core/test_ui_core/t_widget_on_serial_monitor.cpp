@@ -16,7 +16,7 @@ std::map<ControlledObjectStatus, std::string> status_to_string{
     {ControlledObjectStatus::HAS_FOCUS, "HAS_FOCUS"},
     {ControlledObjectStatus::IS_ACTIVE, "IS_ACTIVE"}};
 
-Test_CursorWidgetWithIncrementalValue::Test_CursorWidgetWithIncrementalValue(Test_IncrementalValue *_actual_displayed_object)
+test_CursorWidgetWithIncrementalValue::test_CursorWidgetWithIncrementalValue(test_IncrementalValue *_actual_displayed_object)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
     this->set_displayed_model(_actual_displayed_object);
@@ -26,11 +26,11 @@ Test_CursorWidgetWithIncrementalValue::Test_CursorWidgetWithIncrementalValue(Tes
     char_position_offset = 1 - char_position_slope * actual_displayed_object->get_min_value();
 }
 
-Test_CursorWidgetWithIncrementalValue::~Test_CursorWidgetWithIncrementalValue()
+test_CursorWidgetWithIncrementalValue::~test_CursorWidgetWithIncrementalValue()
 {
 }
 
-void Test_CursorWidgetWithIncrementalValue::refresh()
+void test_CursorWidgetWithIncrementalValue::refresh()
 {
     if (this->actual_displayed_object->has_changed())
     {
@@ -39,12 +39,12 @@ void Test_CursorWidgetWithIncrementalValue::refresh()
     }
 }
 
-int Test_CursorWidgetWithIncrementalValue::value_to_char_position()
+int test_CursorWidgetWithIncrementalValue::value_to_char_position()
 {
     return (char_position_slope * actual_displayed_object->get_value() + char_position_offset);
 }
 
-void Test_CursorWidgetWithIncrementalValue::draw()
+void test_CursorWidgetWithIncrementalValue::draw()
 {
     switch (actual_displayed_object->get_status())
     {
@@ -65,24 +65,24 @@ void Test_CursorWidgetWithIncrementalValue::draw()
     }
 }
 
-void Test_ObjectManagerWidget::draw()
+void test_ObjectManagerWidget::draw()
 {
     std::string text = "manager " + status_to_string[actual_displayed_object->get_status()] + " with value=" + std::to_string(actual_displayed_object->get_value()) + "\n";
     printf(text.c_str());
 }
 
-Test_ObjectManagerWidget::Test_ObjectManagerWidget(Test_Manager *_manager)
+test_ObjectManagerWidget::test_ObjectManagerWidget(test_Manager *_manager)
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
     this->set_displayed_model(_manager);
     this->actual_displayed_object = _manager;
 }
 
-Test_ObjectManagerWidget::~Test_ObjectManagerWidget()
+test_ObjectManagerWidget::~test_ObjectManagerWidget()
 {
 }
 
-void Test_ObjectManagerWidget::refresh()
+void test_ObjectManagerWidget::refresh()
 {
     if (this->actual_displayed_object->has_changed())
     {
@@ -91,15 +91,15 @@ void Test_ObjectManagerWidget::refresh()
     }
 }
 
-void Test_SetOfWidget::draw()
+void test_SetOfWidget::draw()
 {
 }
 
-Test_SetOfWidget::Test_SetOfWidget()
+test_SetOfWidget::test_SetOfWidget()
     : UIWidget(nullptr, 128, 8, 0, 0, false)
 {
 }
 
-Test_SetOfWidget::~Test_SetOfWidget()
+test_SetOfWidget::~test_SetOfWidget()
 {
 }

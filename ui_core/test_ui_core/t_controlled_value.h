@@ -7,7 +7,7 @@
  * @brief Construct an implementation of UIControlledIncrementalValue for test_ui_core program.
  * 
  */
-class Test_IncrementalValue : public UIControlledIncrementalValue
+class test_IncrementalValue : public UIControlledIncrementalValue
 {
 private:
     std::string name;
@@ -22,12 +22,12 @@ public:
      * @param _is_wrappable 
      * @param increment 
      */
-    Test_IncrementalValue(std::string _name, int _min_value = 0, int _max_value = 10, bool _is_wrappable = false, int increment = 1);
+    test_IncrementalValue(std::string _name, int _min_value = 0, int _max_value = 10, bool _is_wrappable = false, int increment = 1);
     /**
      * @brief Destroy the Test Incremental Value object
      * 
      */
-    ~Test_IncrementalValue();
+    ~test_IncrementalValue();
     void process_control_event(ControlEvent _event);
     /**
      * @brief Get the name object

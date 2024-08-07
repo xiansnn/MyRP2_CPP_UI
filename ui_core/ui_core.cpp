@@ -1,6 +1,6 @@
 #include "ui_core.h"
 
-UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, Struct_FramebufferText txt_cnf)
+UIDisplayDevice::UIDisplayDevice(size_t width, size_t height, FramebufferFormat format, struct_FramebufferText txt_cnf)
     : Framebuffer(width, height, format)
 {
 }
@@ -205,7 +205,7 @@ UIWidget::UIWidget( UIDisplayDevice *_display_screen,
                     bool _widget_with_border,
                     uint8_t _widget_border_width, 
                     FramebufferFormat _framebuffer_format, 
-                    Struct_FramebufferText _framebuffer_txt_cnf)
+                    struct_FramebufferText _framebuffer_txt_cnf)
     : Framebuffer(_frame_width, _frame_height, _framebuffer_format)
 {
     this->display_screen = _display_screen;
