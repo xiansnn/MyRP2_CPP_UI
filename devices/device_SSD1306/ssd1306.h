@@ -128,7 +128,7 @@ public:
      */
     void show(Framebuffer *frame, uint8_t anchor_x, uint8_t anchor_y);
     /**
-     * @brief // when we need to show a render area with a given framebuffer
+     * @brief  when we need to show a render area with a given framebuffer
      *
      * @param data_buffer
      * @param screen_area
@@ -138,6 +138,7 @@ public:
     /**
      * @brief fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels.
      * The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)
+     * \bug //FIXME seems not working well when anchor_y or height is not multiple of 8. Suspect pb around transfer of framebuffer memory into device GDDRAM
      * @param pattern
      * @param area
      */

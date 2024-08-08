@@ -35,7 +35,7 @@ enum class ControlEvent
     /**
      * @brief event triggered when a button is double-pushed
      * 
-     * Not implemented. // TODO  To find a way to do "DOUBLE_PUSH"
+     * \todo  Not implemented. // TODO  To find a way to do "DOUBLE_PUSH"
      */
     DOUBLE_PUSH, 
     /**
@@ -68,7 +68,7 @@ enum class ControlEvent
      * @brief event that signals nothing happens after a configurable period of time.
      * The period of time configuration is under implemented UIController object.
      * 
-     * Not implemented. //TODO find a way to do "TIME_OUT"
+     * \todo Not implemented. //TODO find a way to do "TIME_OUT"
      */
     TIME_OUT 
 };
@@ -419,10 +419,13 @@ protected:
     /**
      * @brief this is the actual horizontal start of the widget drawing area, taken into account the presence of border.
      *
+     * WARNING: works fine if widget_height is a multiple of 8
      */
     uint8_t widget_start_x;
     /**
      * @brief this is the actual vertical start of the widget drawing area, taken into account the presence of border.
+     * 
+     * WARNING: works fine if widget_start_y is a multiple of 8
      *
      */
     uint8_t widget_start_y;
@@ -431,6 +434,13 @@ protected:
      *
      */
     uint8_t widget_border_width;
+    /**
+     * @brief draw a rectangle around the widget
+     *
+     */
+    void draw_border();
+
+public:
     /**
      * @brief Set the displayed model object
      *
@@ -444,17 +454,10 @@ protected:
      */
     void set_display_screen(UIDisplayDevice *_new_display_device);
     /**
-     * @brief draw a rectangle around the widget
-     *
-     */
-    void draw_border();
-    /**
      * @brief draw the graphical element of the widget
      *
      */
     virtual void draw() = 0;
-
-public:
     /**
      * @brief A special feature that can be used when we want a widget to blink. The blinking is based on the system clock time divided by half the blinking period.
      * When the result is even, the widgete is drawn in WHITE, otherwise it is drawn in BLACK.

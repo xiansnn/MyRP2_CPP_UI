@@ -100,11 +100,14 @@ void test_addressing_mode(SSD1306 *display)
         display->clear_pixel_buffer_and_show_full_screen();
     }
     // PAGE_ADDRESSING_MODE
+    /**
+     * \todo// FIXME PAGE_ADDRESSING_MODE seems misbehave depending on what was executed before
+     */
     for (size_t i = 0; i < 8; i++)
     {
         memset(image, 0x55, sizeof(image));
         area = SSD1306::compute_render_area(i * 10, 100 + i * 10, 8 * i, 8 * i);
-        display->show_render_area(image, area, PAGE_ADDRESSING_MODE); // FIXME semble dependre de ce qu'il y a avant
+        display->show_render_area(image, area, PAGE_ADDRESSING_MODE); 
         sleep_ms(1000);
     }
 };
