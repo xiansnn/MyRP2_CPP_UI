@@ -116,15 +116,25 @@ Inheritance diagram for UIWidget:</div>
  <div class="center">
   <img src="class_u_i_widget.png" usemap="#UIWidget_map" alt=""/>
   <map id="UIWidget_map" name="UIWidget_map">
-<area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="251,0,492,24"/>
-<area href="class_test___cursor_widget_with_incremental_value.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="Test_CursorWidgetWithIncrementalValue" shape="rect" coords="0,112,241,136"/>
-<area href="class_test___object_manager_widget.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="Test_ObjectManagerWidget" shape="rect" coords="251,112,492,136"/>
-<area href="class_test___set_of_widget.html" title="test the composite widget features" alt="Test_SetOfWidget" shape="rect" coords="502,112,743,136"/>
+<area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="370,0,607,24"/>
+<area href="classtest___cursor_widget_with_incremental_value.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="test_CursorWidgetWithIncrementalValue" shape="rect" coords="0,112,237,136"/>
+<area href="classtest___object_manager_widget.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="test_ObjectManagerWidget" shape="rect" coords="247,112,484,136"/>
+<area href="classtest___set_of_widget.html" title="test the composite widget features" alt="test_SetOfWidget" shape="rect" coords="494,112,731,136"/>
+<area href="classw___square_led.html" alt="w_SquareLed" shape="rect" coords="741,112,978,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a00531cfc7083d9a17f3dd63e4155375c" id="r_a00531cfc7083d9a17f3dd63e4155375c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00531cfc7083d9a17f3dd63e4155375c">set_displayed_model</a> (<a class="el" href="class_u_i_model_object.html">UIModelObject</a> *_new_displayed_model)</td></tr>
+<tr class="memdesc:a00531cfc7083d9a17f3dd63e4155375c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed model object.  <br /></td></tr>
+<tr class="separator:a00531cfc7083d9a17f3dd63e4155375c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0428db23b7794e60579466e62ba4290" id="r_ab0428db23b7794e60579466e62ba4290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0428db23b7794e60579466e62ba4290">set_display_screen</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *_new_display_device)</td></tr>
+<tr class="memdesc:ab0428db23b7794e60579466e62ba4290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display screen object.  <br /></td></tr>
+<tr class="separator:ab0428db23b7794e60579466e62ba4290"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e47a854c6f81c81990d61448f8ce8d8" id="r_a4e47a854c6f81c81990d61448f8ce8d8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e47a854c6f81c81990d61448f8ce8d8">draw</a> ()=0</td></tr>
+<tr class="memdesc:a4e47a854c6f81c81990d61448f8ce8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the graphical element of the widget  <br /></td></tr>
+<tr class="separator:a4e47a854c6f81c81990d61448f8ce8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e9ebf97c6fe90a156b0f91f581b317" id="r_ae9e9ebf97c6fe90a156b0f91f581b317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae9e9ebf97c6fe90a156b0f91f581b317">UIWidget</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *display_screen, size_t frame_width, size_t frame_height, uint8_t widget_anchor_x, uint8_t widget_anchor_y, bool widget_with_border, uint8_t <a class="el" href="#acd07c6d3c1543f94eca2a3e79ebf636c">widget_border_width</a>=1, FramebufferFormat framebuffer_format=FramebufferFormat::MONO_VLSB, <a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a> framebuffer_txt_cnf={.font=font_8x8})</td></tr>
 <tr class="memdesc:ae9e9ebf97c6fe90a156b0f91f581b317"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,...">UIWidget</a> object.  <br /></td></tr>
 <tr class="separator:ae9e9ebf97c6fe90a156b0f91f581b317"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,20 +218,10 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a00531cfc7083d9a17f3dd63e4155375c" id="r_a00531cfc7083d9a17f3dd63e4155375c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a00531cfc7083d9a17f3dd63e4155375c">set_displayed_model</a> (<a class="el" href="class_u_i_model_object.html">UIModelObject</a> *_new_displayed_model)</td></tr>
-<tr class="memdesc:a00531cfc7083d9a17f3dd63e4155375c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the displayed model object.  <br /></td></tr>
-<tr class="separator:a00531cfc7083d9a17f3dd63e4155375c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0428db23b7794e60579466e62ba4290" id="r_ab0428db23b7794e60579466e62ba4290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0428db23b7794e60579466e62ba4290">set_display_screen</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *_new_display_device)</td></tr>
-<tr class="memdesc:ab0428db23b7794e60579466e62ba4290"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display screen object.  <br /></td></tr>
-<tr class="separator:ab0428db23b7794e60579466e62ba4290"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8343ea2acadbfb296a53f91aa043277" id="r_ae8343ea2acadbfb296a53f91aa043277"><td class="memItemLeft" align="right" valign="top"><a id="ae8343ea2acadbfb296a53f91aa043277" name="ae8343ea2acadbfb296a53f91aa043277"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</td></tr>
 <tr class="memdesc:ae8343ea2acadbfb296a53f91aa043277"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a rectangle around the widget <br /></td></tr>
 <tr class="separator:ae8343ea2acadbfb296a53f91aa043277"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e47a854c6f81c81990d61448f8ce8d8" id="r_a4e47a854c6f81c81990d61448f8ce8d8"><td class="memItemLeft" align="right" valign="top"><a id="a4e47a854c6f81c81990d61448f8ce8d8" name="a4e47a854c6f81c81990d61448f8ce8d8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()=0</td></tr>
-<tr class="memdesc:a4e47a854c6f81c81990d61448f8ce8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the graphical element of the widget <br /></td></tr>
-<tr class="separator:a4e47a854c6f81c81990d61448f8ce8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -237,13 +237,11 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_width</b> {1
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_height</b> {8}</td></tr>
 <tr class="memdesc:abd71d95580622d0468f29e99a30a0c00"><td class="mdescLeft">&#160;</td><td class="mdescRight">As a widget can be surrounded by a border, the actual widget height is not the associated framebuffer height. <br /></td></tr>
 <tr class="separator:abd71d95580622d0468f29e99a30a0c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc3d5b47355b80605824e9064602d8a" id="r_a3cc3d5b47355b80605824e9064602d8a"><td class="memItemLeft" align="right" valign="top"><a id="a3cc3d5b47355b80605824e9064602d8a" name="a3cc3d5b47355b80605824e9064602d8a"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_start_x</b></td></tr>
-<tr class="memdesc:a3cc3d5b47355b80605824e9064602d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is the actual horizontal start of the widget drawing area, taken into account the presence of border. <br /></td></tr>
+<tr class="memitem:a3cc3d5b47355b80605824e9064602d8a" id="r_a3cc3d5b47355b80605824e9064602d8a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3cc3d5b47355b80605824e9064602d8a">widget_start_x</a></td></tr>
+<tr class="memdesc:a3cc3d5b47355b80605824e9064602d8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is the actual horizontal start of the widget drawing area, taken into account the presence of border.  <br /></td></tr>
 <tr class="separator:a3cc3d5b47355b80605824e9064602d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3623e045f6e261ae165c7a74609e2ef1" id="r_a3623e045f6e261ae165c7a74609e2ef1"><td class="memItemLeft" align="right" valign="top"><a id="a3623e045f6e261ae165c7a74609e2ef1" name="a3623e045f6e261ae165c7a74609e2ef1"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_start_y</b></td></tr>
-<tr class="memdesc:a3623e045f6e261ae165c7a74609e2ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is the actual vertical start of the widget drawing area, taken into account the presence of border. <br /></td></tr>
+<tr class="memitem:a3623e045f6e261ae165c7a74609e2ef1" id="r_a3623e045f6e261ae165c7a74609e2ef1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3623e045f6e261ae165c7a74609e2ef1">widget_start_y</a></td></tr>
+<tr class="memdesc:a3623e045f6e261ae165c7a74609e2ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is the actual vertical start of the widget drawing area, taken into account the presence of border.  <br /></td></tr>
 <tr class="separator:a3623e045f6e261ae165c7a74609e2ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd07c6d3c1543f94eca2a3e79ebf636c" id="r_acd07c6d3c1543f94eca2a3e79ebf636c"><td class="memItemLeft" align="right" valign="top"><a id="acd07c6d3c1543f94eca2a3e79ebf636c" name="acd07c6d3c1543f94eca2a3e79ebf636c"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_border_width</b></td></tr>
@@ -412,6 +410,35 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 </div>
 </div>
+<a id="a4e47a854c6f81c81990d61448f8ce8d8" name="a4e47a854c6f81c81990d61448f8ce8d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e47a854c6f81c81990d61448f8ce8d8">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void UIWidget::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>draw the graphical element of the widget </p>
+
+<p>Implemented in <a class="el" href="classw___square_led.html#a9ea6dd04cd6c11bb6f7ed6577663fb6f">w_SquareLed</a>.</p>
+
+</div>
+</div>
 <a id="aa4f073bb32f76aecc03c0a59a11cc7f3" name="aa4f073bb32f76aecc03c0a59a11cc7f3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4f073bb32f76aecc03c0a59a11cc7f3">&#9670;&#160;</a></span>refresh()</h2>
 
@@ -439,7 +466,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <p>First: Scan all contained sub-widgets if any and call <a class="el" href="#aa4f073bb32f76aecc03c0a59a11cc7f3" title="WARNING : This function can be redefined. When several widget display one Model, only le last one mus...">refresh()</a> member function of each of them.</p>
 <p>Then: apply <a class="el" href="#aa4f073bb32f76aecc03c0a59a11cc7f3" title="WARNING : This function can be redefined. When several widget display one Model, only le last one mus...">refresh()</a> on the containing widget if any changes require a screen redraw and finally : clear model change flag</p>
 
-<p>Reimplemented in <a class="el" href="class_test___cursor_widget_with_incremental_value.html#a9511574d9e1e67ba9a6b8fd8f2c91fc5">Test_CursorWidgetWithIncrementalValue</a>, and <a class="el" href="class_test___object_manager_widget.html#a879e4953a97ffb6ec3c5c2a14fb8a84e">Test_ObjectManagerWidget</a>.</p>
+<p>Reimplemented in <a class="el" href="classtest___cursor_widget_with_incremental_value.html#aad35c8f9be35da59df09045972f52823">test_CursorWidgetWithIncrementalValue</a>, and <a class="el" href="classtest___object_manager_widget.html#a977f244acdd6c6cebc731e74849fb2b0">test_ObjectManagerWidget</a>.</p>
 
 </div>
 </div>
@@ -448,9 +475,6 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void UIWidget::set_display_screen </td>
@@ -459,11 +483,6 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Set the display screen object. </p>
@@ -494,7 +513,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -506,6 +525,57 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3cc3d5b47355b80605824e9064602d8a" name="a3cc3d5b47355b80605824e9064602d8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc3d5b47355b80605824e9064602d8a">&#9670;&#160;</a></span>widget_start_x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t UIWidget::widget_start_x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this is the actual horizontal start of the widget drawing area, taken into account the presence of border. </p>
+<p>WARNING: works fine if widget_height is a multiple of 8 </p>
+
+</div>
+</div>
+<a id="a3623e045f6e261ae165c7a74609e2ef1" name="a3623e045f6e261ae165c7a74609e2ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3623e045f6e261ae165c7a74609e2ef1">&#9670;&#160;</a></span>widget_start_y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t UIWidget::widget_start_y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>this is the actual vertical start of the widget drawing area, taken into account the presence of border. </p>
+<p>WARNING: works fine if widget_start_y is a multiple of 8 </p>
 
 </div>
 </div>

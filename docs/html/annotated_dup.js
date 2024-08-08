@@ -18,15 +18,17 @@ var annotated_dup =
     [ "struct_SwitchButtonConfig", "structstruct___switch_button_config.html", "structstruct___switch_button_config" ],
     [ "SwitchButton", "class_switch_button.html", "class_switch_button" ],
     [ "SwitchButtonWithIRQ", "class_switch_button_with_i_r_q.html", "class_switch_button_with_i_r_q" ],
-    [ "Test_CursorWidgetWithIncrementalValue", "class_test___cursor_widget_with_incremental_value.html", "class_test___cursor_widget_with_incremental_value" ],
-    [ "Test_IncrementalValue", "class_test___incremental_value.html", "class_test___incremental_value" ],
-    [ "Test_Manager", "class_test___manager.html", "class_test___manager" ],
-    [ "Test_ObjectManagerWidget", "class_test___object_manager_widget.html", "class_test___object_manager_widget" ],
-    [ "Test_SetOfWidget", "class_test___set_of_widget.html", "class_test___set_of_widget" ],
+    [ "test_CursorWidgetWithIncrementalValue", "classtest___cursor_widget_with_incremental_value.html", "classtest___cursor_widget_with_incremental_value" ],
+    [ "test_IncrementalValue", "classtest___incremental_value.html", "classtest___incremental_value" ],
+    [ "test_Manager", "classtest___manager.html", "classtest___manager" ],
+    [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", "classtest___object_manager_widget" ],
+    [ "test_SetOfWidget", "classtest___set_of_widget.html", "classtest___set_of_widget" ],
+    [ "test_square_led_model", "classtest__square__led__model.html", "classtest__square__led__model" ],
     [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", "class_u_i_controlled_incremental_value" ],
     [ "UIController", "class_u_i_controller.html", "class_u_i_controller" ],
     [ "UIDisplayDevice", "class_u_i_display_device.html", "class_u_i_display_device" ],
     [ "UIModelObject", "class_u_i_model_object.html", "class_u_i_model_object" ],
     [ "UIObjectManager", "class_u_i_object_manager.html", "class_u_i_object_manager" ],
-    [ "UIWidget", "class_u_i_widget.html", "class_u_i_widget" ]
+    [ "UIWidget", "class_u_i_widget.html", "class_u_i_widget" ],
+    [ "w_SquareLed", "classw___square_led.html", "classw___square_led" ]
 ];

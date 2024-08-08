@@ -5,9 +5,10 @@ var hierarchy =
         [ "SSD1306", "class_s_s_d1306.html", null ]
       ] ],
       [ "UIWidget", "class_u_i_widget.html", [
-        [ "Test_CursorWidgetWithIncrementalValue", "class_test___cursor_widget_with_incremental_value.html", null ],
-        [ "Test_ObjectManagerWidget", "class_test___object_manager_widget.html", null ],
-        [ "Test_SetOfWidget", "class_test___set_of_widget.html", null ]
+        [ "test_CursorWidgetWithIncrementalValue", "classtest___cursor_widget_with_incremental_value.html", null ],
+        [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", null ],
+        [ "test_SetOfWidget", "classtest___set_of_widget.html", null ],
+        [ "w_SquareLed", "classw___square_led.html", null ]
       ] ]
     ] ],
     [ "HW_I2C_Master", "class_h_w___i2_c___master.html", null ],
@@ -33,10 +34,11 @@ var hierarchy =
     ] ],
     [ "UIModelObject", "class_u_i_model_object.html", [
       [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", [
-        [ "Test_IncrementalValue", "class_test___incremental_value.html", null ],
         [ "UIObjectManager", "class_u_i_object_manager.html", [
-          [ "Test_Manager", "class_test___manager.html", null ]
-        ] ]
-      ] ]
+          [ "test_Manager", "classtest___manager.html", null ]
+        ] ],
+        [ "test_IncrementalValue", "classtest___incremental_value.html", null ]
+      ] ],
+      [ "test_square_led_model", "classtest__square__led__model.html", null ]
     ] ]
 ];

@@ -37,6 +37,8 @@ var NAVTREE =
         [ "\"utilities\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md9", null ]
       ] ]
     ] ],
+    [ "Bug List", "bug.html", null ],
+    [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -61,7 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "12x16__font_8h_source.html",
-"test__i2c__bus__scan_8cpp.html"
+"switch__button_8h.html#aa46074d34fe2d6631c6bd9dc74633657a6b273343c454f9c53dcfc9c4ccf171d2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

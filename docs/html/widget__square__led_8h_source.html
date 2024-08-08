@@ -99,7 +99,39 @@ $(function(){initNavTree('widget__square__led_8h_source.html',''); initResizable
   <div class="headertitle"><div class="title">widget_square_led.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="ui__core_8h.html">ui_core.h</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="foldopen" id="foldopen00003" data-start="{" data-end="};">
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno"><a class="line" href="classw___square_led.html">    3</a></span><span class="keyword">class </span><a class="code hl_class" href="classw___square_led.html">w_SquareLed</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_u_i_widget.html">UIWidget</a></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">bool</span> lit = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keywordtype">bool</span> blinking = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    uint32_t blink_period;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_class" href="classw___square_led.html">w_SquareLed</a>(<a class="code hl_class" href="class_u_i_display_device.html">UIDisplayDevice</a> *display_screen,</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                <span class="keywordtype">size_t</span> width,</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>                <span class="keywordtype">size_t</span> height,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                uint8_t widget_anchor_x,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                uint8_t widget_anchor_y,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                FramebufferColor color = FramebufferColor::WHITE,</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>                FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <a class="code hl_class" href="classw___square_led.html">~w_SquareLed</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordtype">void</span> light_on();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> light_off();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> set_blink(uint32_t blink_period);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> blink_off();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classw___square_led.html#a9ea6dd04cd6c11bb6f7ed6577663fb6f">draw</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="ttc" id="aclass_u_i_display_device_html"><div class="ttname"><a href="class_u_i_display_device.html">UIDisplayDevice</a></div><div class="ttdoc">This is the abstract class to handle all generic behavior of physical display devices (e....</div><div class="ttdef"><b>Definition</b> ui_core.h:105</div></div>
+<div class="ttc" id="aclass_u_i_widget_html"><div class="ttname"><a href="class_u_i_widget.html">UIWidget</a></div><div class="ttdoc">A widget is a displayed object on a device screen. It inherits from all framebuffer features,...</div><div class="ttdef"><b>Definition</b> ui_core.h:395</div></div>
+<div class="ttc" id="aclassw___square_led_html"><div class="ttname"><a href="classw___square_led.html">w_SquareLed</a></div><div class="ttdef"><b>Definition</b> widget_square_led.h:4</div></div>
+<div class="ttc" id="aclassw___square_led_html_a9ea6dd04cd6c11bb6f7ed6577663fb6f"><div class="ttname"><a href="classw___square_led.html#a9ea6dd04cd6c11bb6f7ed6577663fb6f">w_SquareLed::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">draw the graphical element of the widget</div><div class="ttdef"><b>Definition</b> widget_square_led.cpp:36</div></div>
+<div class="ttc" id="aui__core_8h_html"><div class="ttname"><a href="ui__core_8h.html">ui_core.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
