@@ -138,7 +138,6 @@ public:
     /**
      * @brief fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels.
      * The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)
-     * \bug //FIXME seems not working well when anchor_y or height is not multiple of 8. Suspect pb around transfer of framebuffer memory into device GDDRAM
      * @param pattern
      * @param area
      */
@@ -147,7 +146,7 @@ public:
      * @brief write 0x00 into the device framebuffer
      *
      */
-    void clear_pixel_buffer_and_show_full_screen();
+    void clear_full_screen();
     /**
      * @brief Set the contrast object. refer to datasheet of SSD1306 device.
      *

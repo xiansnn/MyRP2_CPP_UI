@@ -386,8 +386,12 @@ public:
  * @brief A widget is a displayed object on a device screen. It inherits from all framebuffer features, giving it textual and graphical capabilities.
  * 
  * Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics.
- * 
  * It is located within the display device screen at an anchor point (x,y). 
+ * 
+ * IMPORTANT NOTICE:  The widget is effectively drawn if something has changed in the UIModelObejct it represents. This allows to save drawing processing time.
+ * However there is a strong limitation : only the widget buffer is transered to the device GDDRAM, based of its specific addressing scheme. 
+ * As a result, if the widget is located such that the buffer is written across device pages, the contents of the overwritten pages is lost.
+ * This is why the widget height and the widget_anchor_y must be multiple of 8. Doing so the widget buffer bytes do not ovewrite pixel outside the widget border.
  * 
  *
  */

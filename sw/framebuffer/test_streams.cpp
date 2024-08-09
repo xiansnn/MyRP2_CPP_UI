@@ -43,7 +43,7 @@ struct_ConfigSSD1306 cfg_ssd1306{
 void test_ostringstream_format(SSD1306 *display)
 {
     pr_D4.hi();
-    display->clear_pixel_buffer_and_show_full_screen();
+    display->clear_full_screen();
     pr_D4.lo(); // 25.74 ms
 
     const unsigned char *current_font{font_5x8};
@@ -95,7 +95,7 @@ void test_ostringstream_format(SSD1306 *display)
 
 void test_sprintf_format(SSD1306 *display)
 {
-    display->clear_pixel_buffer_and_show_full_screen();
+    display->clear_full_screen();
 
     struct_FramebufferText cfg_fb_txt = {
         .font = font_8x8,
@@ -239,7 +239,7 @@ void test_sprintf_format(SSD1306 *display)
 void test_text_and_graph(SSD1306 *display)
 {
 #define DEGREE "\xF8"
-    display->clear_pixel_buffer_and_show_full_screen();
+    display->clear_full_screen();
     struct_FramebufferText title_config = {
         .font = font_8x8};
     uint8_t w = title_config.font[FONT_WIDTH];
@@ -310,7 +310,7 @@ void test_text_and_graph(SSD1306 *display)
 }
 void test_font_size(SSD1306 *display)
 {
-    display->clear_pixel_buffer_and_show_full_screen();
+    display->clear_full_screen();
     const unsigned char *current_font[4]{font_5x8, font_8x8, font_12x16, font_16x32};
     char *c_str = new char[display->max_line + 1];
     sprintf(c_str, "Test");

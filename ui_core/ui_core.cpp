@@ -197,17 +197,19 @@ FramebufferColor UIWidget::blinking_us(uint32_t _blink_period)
     return ((time_us_32() / _blink_period) % 2) ? FramebufferColor::WHITE : FramebufferColor::BLACK;
 }
 
-UIWidget::UIWidget( UIDisplayDevice *_display_screen, 
-                    size_t _frame_width, 
-                    size_t _frame_height, 
-                    uint8_t _widget_anchor_x, 
-                    uint8_t _widget_anchor_y, 
-                    bool _widget_with_border,
-                    uint8_t _widget_border_width, 
-                    FramebufferFormat _framebuffer_format, 
-                    struct_FramebufferText _framebuffer_txt_cnf)
+UIWidget::UIWidget(UIDisplayDevice *_display_screen,
+                   size_t _frame_width,
+                   size_t _frame_height,
+                   uint8_t _widget_anchor_x,
+                   uint8_t _widget_anchor_y,
+                   bool _widget_with_border,
+                   uint8_t _widget_border_width,
+                   FramebufferFormat _framebuffer_format,
+                   struct_FramebufferText _framebuffer_txt_cnf)
     : Framebuffer(_frame_width, _frame_height, _framebuffer_format)
 {
+    assert(_frame_height % 8 == 0);          // check widget height limitation
+    assert(_widget_anchor_y % 8 == 0); // check widget anchor y limitation
     this->display_screen = _display_screen;
     this->widget_anchor_x = _widget_anchor_x;
     this->widget_anchor_y = _widget_anchor_y;
