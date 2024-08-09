@@ -272,8 +272,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A widget is a displayed object on a device screen. It inherits from all framebuffer features, giving it textual and graphical capabilities. </p>
-<p>Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics.</p>
-<p>It is located within the display device screen at an anchor point (x,y). </p>
+<p>Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics. It is located within the display device screen at an anchor point (x,y).</p>
+<p>IMPORTANT NOTICE: The widget is effectively drawn if something has changed in the UIModelObejct it represents. This allows to save drawing processing time. However there is a strong limitation : only the widget buffer is transered to the device GDDRAM, based of its specific addressing scheme. As a result, if the widget is located such that the buffer is written across device pages, the contents of the overwritten pages is lost. This is why the widget height and the widget_anchor_y must be multiple of 8. Doing so the widget buffer bytes do not ovewrite pixel outside the widget border. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ae9e9ebf97c6fe90a156b0f91f581b317" name="ae9e9ebf97c6fe90a156b0f91f581b317"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae9e9ebf97c6fe90a156b0f91f581b317">&#9670;&#160;</a></span>UIWidget()</h2>

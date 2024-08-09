@@ -8,6 +8,8 @@ var NAVTREEINDEX1 =
 "test__i2c__bus__scan_8cpp.html":[4,0,0,0,0,0,1,0,2],
 "test__probe_8cpp.html":[4,0,0,0,0,0,4,0,1],
 "test__probe_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,0,0,0,0,4,0,1,0],
+"test__square__led_8cpp.html":[4,0,0,0,0,0,2,1,0],
+"test__square__led_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,0,0,0,0,2,1,0,1],
 "test__ssd1306_8cpp.html":[4,0,0,0,0,0,0,2,3],
 "test__ssd1306_8cpp.html#a0cd57e7a7b84bfa88298e0f1e5bd188d":[4,0,0,0,0,0,0,2,3,4],
 "test__ssd1306_8cpp.html#a34114ac07ba756fd3bd2950972be2ae1":[4,0,0,0,0,0,0,2,3,7],
@@ -44,5 +46,5 @@ var NAVTREEINDEX1 =
 "ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4ad384edb3d3d3cb51350c9b2a1451ea90":[4,0,0,0,0,0,3,1,6,5],
 "ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4af7e84b3c12997ec227d0c17657261c84":[4,0,0,0,0,0,3,1,6,4],
 "ui__core_8h_source.html":[4,0,0,0,0,0,3,1],
-"widget__square__led_8h_source.html":[4,0,0,0,0,0,2,1,0]
+"widget__square__led_8h_source.html":[4,0,0,0,0,0,2,1,1]
 };

@@ -136,10 +136,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a764babad3f6a4d12cfa600ce7fd1b751" id="r_a764babad3f6a4d12cfa600ce7fd1b751"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a764babad3f6a4d12cfa600ce7fd1b751">fill_pattern_and_show_GDDRAM</a> (uint8_t pattern, <a class="el" href="structstruct___render_area.html">struct_RenderArea</a> area)</td></tr>
 <tr class="memdesc:a764babad3f6a4d12cfa600ce7fd1b751"><td class="mdescLeft">&#160;</td><td class="mdescRight">fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels. The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format)  <br /></td></tr>
 <tr class="separator:a764babad3f6a4d12cfa600ce7fd1b751"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab82e79530ac6743f1ec1040c4d6ac68d" id="r_ab82e79530ac6743f1ec1040c4d6ac68d"><td class="memItemLeft" align="right" valign="top"><a id="ab82e79530ac6743f1ec1040c4d6ac68d" name="ab82e79530ac6743f1ec1040c4d6ac68d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_pixel_buffer_and_show_full_screen</b> ()</td></tr>
-<tr class="memdesc:ab82e79530ac6743f1ec1040c4d6ac68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">write 0x00 into the device framebuffer <br /></td></tr>
-<tr class="separator:ab82e79530ac6743f1ec1040c4d6ac68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad87336fcd8a4b110caf5a96d20e597e8" id="r_ad87336fcd8a4b110caf5a96d20e597e8"><td class="memItemLeft" align="right" valign="top"><a id="ad87336fcd8a4b110caf5a96d20e597e8" name="ad87336fcd8a4b110caf5a96d20e597e8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_full_screen</b> ()</td></tr>
+<tr class="memdesc:ad87336fcd8a4b110caf5a96d20e597e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">write 0x00 into the device framebuffer <br /></td></tr>
+<tr class="separator:ad87336fcd8a4b110caf5a96d20e597e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4322aca81cf05c9f9b9e5f40874cb7b" id="r_ae4322aca81cf05c9f9b9e5f40874cb7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae4322aca81cf05c9f9b9e5f40874cb7b">set_contrast</a> (uint8_t value)</td></tr>
 <tr class="memdesc:ae4322aca81cf05c9f9b9e5f40874cb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the contrast object. refer to datasheet of <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> device.  <br /></td></tr>
 <tr class="separator:ae4322aca81cf05c9f9b9e5f40874cb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -369,7 +369,6 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 </div><div class="memdoc">
 
 <p>fill a pattern in the device framebuffer. this make it visible as soon as the device transfer the framebuffer to the pixels. The pattern is a vertical byte representing 8 vertical pixels (refer to MONO_VLSB framebuffer format) </p>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug</a></b></dt><dd>//FIXME seems not working well when anchor_y or height is not multiple of 8. Suspect pb around transfer of framebuffer memory into device GDDRAM </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pattern</td><td></td></tr>

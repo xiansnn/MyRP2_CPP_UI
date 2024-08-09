@@ -62,7 +62,7 @@ var NAVTREEINDEX0 =
 "class_s_s_d1306.html#a7dd92a993f881125bd81057c35d82c87":[3,0,6,9],
 "class_s_s_d1306.html#a8c752a77ba2889496a3f80a937818dff":[3,0,6,6],
 "class_s_s_d1306.html#a9877895dcf33190e2fa712c8bf46bbb8":[3,0,6,10],
-"class_s_s_d1306.html#ab82e79530ac6743f1ec1040c4d6ac68d":[3,0,6,1],
+"class_s_s_d1306.html#ad87336fcd8a4b110caf5a96d20e597e8":[3,0,6,1],
 "class_s_s_d1306.html#ae1ff6651fa144bacc2e9ab192f8b313a":[3,0,6,8],
 "class_s_s_d1306.html#ae4322aca81cf05c9f9b9e5f40874cb7b":[3,0,6,5],
 "class_s_s_d1306.html#aee29b36a9af5d427c0665dfaf942445e":[3,0,6,4],

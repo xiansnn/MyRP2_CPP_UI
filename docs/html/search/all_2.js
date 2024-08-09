@@ -2,8 +2,8 @@ var searchData=
 [
   ['circle_0',['circle',['../class_framebuffer.html#a4eb865f19596a64e30862697ab737318',1,'Framebuffer']]],
   ['clear_5fchange_5fflag_1',['clear_change_flag',['../class_u_i_model_object.html#aff2fe32c66d4c1637627a253274fd383',1,'UIModelObject']]],
-  ['clear_5fpixel_5fbuffer_2',['clear_pixel_buffer',['../class_framebuffer.html#a7b470c2ef236fcfbfd371ee800992154',1,'Framebuffer']]],
-  ['clear_5fpixel_5fbuffer_5fand_5fshow_5ffull_5fscreen_3',['clear_pixel_buffer_and_show_full_screen',['../class_s_s_d1306.html#ab82e79530ac6743f1ec1040c4d6ac68d',1,'SSD1306']]],
+  ['clear_5ffull_5fscreen_2',['clear_full_screen',['../class_s_s_d1306.html#ad87336fcd8a4b110caf5a96d20e597e8',1,'SSD1306']]],
+  ['clear_5fpixel_5fbuffer_3',['clear_pixel_buffer',['../class_framebuffer.html#a7b470c2ef236fcfbfd371ee800992154',1,'Framebuffer']]],
   ['clear_5ftext_5fbuffer_4',['clear_text_buffer',['../class_framebuffer.html#a471d9d9a24d51b9df2a89362abd2e607',1,'Framebuffer']]],
   ['commands_5fssd1306_2eh_5',['commands_SSD1306.h',['../commands___s_s_d1306_8h.html',1,'']]],
   ['complete_20documentation_20still_20in_20construction_6',['Complete documentation (still in construction)',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md1',1,'']]],
