@@ -307,7 +307,9 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_border_widt
 <p>Guidance to implement this function:</p>
 <ul>
 <li>First: Scan all contained sub-widgets if any and call <a class="el" href="#a1a7a0d270d8c0f4319d0abaa34cdf3a4" title="(re)draw the graphical elements of the widget.">draw_refresh()</a> member function of each of them.</li>
-<li>Then: apply <a class="el" href="#a1a7a0d270d8c0f4319d0abaa34cdf3a4" title="(re)draw the graphical elements of the widget.">draw_refresh()</a> on the containing widget if any changes require a screen redraw and finally : clear model change flag if needed. WARNING : When several widget display one Model, only le last one must clear_change_flag() </li>
+<li>Then: check if any changes require a screen redraw</li>
+<li>if redraw() required , execute the effective widget drawing (can be a private memeber function)</li>
+<li>and finally : clear model change flag if needed. WARNING : When several widget display one Model, only le last one must clear_change_flag() </li>
 </ul>
 <p>First: Scan all contained sub-widgets if any and call <a class="el" href="#a1a7a0d270d8c0f4319d0abaa34cdf3a4" title="(re)draw the graphical elements of the widget.">draw_refresh()</a> member function of each of them.</p>
 <p>Then: apply <a class="el" href="#a1a7a0d270d8c0f4319d0abaa34cdf3a4" title="(re)draw the graphical elements of the widget.">draw_refresh()</a> on the containing widget if any changes require a screen redraw and finally : clear model change flag</p>
