@@ -240,29 +240,3 @@ void UIWidget::add_widget(UIWidget *_sub_widget)
 {
     this->widgets.push_back(_sub_widget);
 }
-
-void UIWidget::refresh()
-{
-    /**
-     * @brief First: Scan all contained sub-widgets if any and call refresh() member function of each of them.
-     *
-     */
-    if (widgets.size() != 0)
-    {
-        for (auto &&w : widgets)
-            w->refresh();
-    }
-    /**
-     * @brief Then: apply refresh() on the containing widget if any changes require a screen redraw
-     * and finally : clear model change flag
-     *
-     */
-    if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
-    {
-        draw();
-        if (widget_with_border)
-            draw_border();
-        this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-        this->displayed_model->clear_change_flag();
-    }
-}

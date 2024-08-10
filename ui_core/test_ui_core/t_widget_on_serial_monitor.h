@@ -22,7 +22,6 @@ private:
     int value_to_char_position();
 
     test_IncrementalValue *actual_displayed_object;
-    void draw();
 
 public:
     /**
@@ -37,10 +36,11 @@ public:
      */
     ~test_CursorWidgetWithIncrementalValue();
     /**
-     * @brief Implement a refresh function adapted to the current test program with the private function draw()
+     * @brief Implement a draw_refresh function adapted to the current test program with the private function draw()
      * 
      */
-    void refresh();
+    void draw_refresh();
+    void draw();
 };
 
 /**
@@ -53,7 +53,6 @@ class test_ObjectManagerWidget : public UIWidget
 {
 private:
     test_Manager * actual_displayed_object;
-    void draw();
 public:
     /**
      * @brief Construct a new Test Object Manager Widget object
@@ -67,10 +66,11 @@ public:
      */
     ~test_ObjectManagerWidget();
     /**
-     * @brief Implement a refresh function adapted to the current test program with the private function draw()
+     * @brief Implement a draw_refresh function adapted to the current test program with the private function draw()
      * 
      */
-    void refresh();
+    void draw_refresh();
+    void draw();
 };
 
 /**
@@ -81,7 +81,6 @@ class test_SetOfWidget : public UIWidget
 {
 private:
     /* data */
-    void draw();
 public:
     /**
      * @brief 
@@ -93,6 +92,7 @@ public:
      * 
      */
     ~test_SetOfWidget();
+    void draw_refresh();
 };
 
 

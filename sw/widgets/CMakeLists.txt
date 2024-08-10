@@ -12,6 +12,7 @@ target_link_libraries(test_square_led
                     hardware_i2c 
                     # hw_i2c 
                     framebuffer
+                    switch_button
                     widgets
                     )
 pico_add_extra_outputs(test_square_led)

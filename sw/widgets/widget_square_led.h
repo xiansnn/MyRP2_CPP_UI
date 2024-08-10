@@ -22,5 +22,7 @@ public:
     void set_blink(uint32_t blink_period);
     void blink_off();
 
-    void draw();
+    void  draw_refresh() ;
+
+
 };

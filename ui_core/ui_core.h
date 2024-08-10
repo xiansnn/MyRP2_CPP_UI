@@ -34,25 +34,25 @@ enum class ControlEvent
     PUSH,
     /**
      * @brief event triggered when a button is double-pushed
-     * 
+     *
      * \todo  Not implemented. // TODO  To find a way to do "DOUBLE_PUSH"
      */
-    DOUBLE_PUSH, 
+    DOUBLE_PUSH,
     /**
      * @brief event triggered when a button is held more than a configurable duration.
-     * 
+     *
      * The duration configuration is under implemented UIController object.
      */
     LONG_PUSH,
     /**
      * @brief event triggered when a button is released after a configurable duration.
-     * 
+     *
      * The duration configuration is under implemented UIController object.
      */
     RELEASED_AFTER_LONG_TIME,
     /**
      * @brief event triggered when a button is released before a configurable duration.
-     * 
+     *
      * The duration configuration is under implemented UIController object.
      */
     RELEASED_AFTER_SHORT_TIME,
@@ -67,10 +67,10 @@ enum class ControlEvent
     /**
      * @brief event that signals nothing happens after a configurable period of time.
      * The period of time configuration is under implemented UIController object.
-     * 
+     *
      * \todo Not implemented. //TODO find a way to do "TIME_OUT"
      */
-    TIME_OUT 
+    TIME_OUT
 };
 
 /**
@@ -139,7 +139,7 @@ public:
 /**
  * @brief This is the Model abstract class of Model_View_Control design pattern.
  *
- * It handles change_flag, a semaphore used to indicate that a screen refresh is required.
+ * It handles change_flag, a semaphore used to indicate that a screen draw_refresh is required.
  *
  *The controller or any other entities that modify the model must set the change_flag
  * and the widget in charge of its screen representation must clear the change_flag
@@ -292,11 +292,11 @@ public:
 
 /**
  * @brief This is an Abstract class that is used to implement the manager of object on a screen.
- * 
+ *
  * An UIObjectManager is built from :
- * 
+ *
  * - UIModelObject : It inherits of the status and is controlled by a UIController.
- * 
+ *
  * - UIControlledIncrementalValue : It is associated with a value that represents the current managed UIModelObject under focus or active.
  *
  */
@@ -375,7 +375,7 @@ public:
     ~UIController();
     /**
      * @brief if the current controlled object is different from _new_controlled_object, change the current controlled object this new one.
-     * 
+     *
      * The controller of the new controlled object is updated.
      * @param _new_controlled_object
      */
@@ -384,27 +384,46 @@ public:
 
 /**
  * @brief A widget is a displayed object on a device screen. It inherits from all framebuffer features, giving it textual and graphical capabilities.
- * 
+ *
  * Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics.
- * It is located within the display device screen at an anchor point (x,y). 
- * 
+ * It is located within the display device screen at an anchor point (x,y).
+ *
  * IMPORTANT NOTICE:  The widget is effectively drawn if something has changed in the UIModelObejct it represents. This allows to save drawing processing time.
- * However there is a strong limitation : only the widget buffer is transered to the device GDDRAM, based of its specific addressing scheme. 
+ * However there is a strong limitation : only the widget buffer is transered to the device GDDRAM, based of its specific addressing scheme.
  * As a result, if the widget is located such that the buffer is written across device pages, the contents of the overwritten pages is lost.
  * This is why the widget height and the widget_anchor_y must be multiple of 8. Doing so the widget buffer bytes do not ovewrite pixel outside the widget border.
- * 
+ *
  *
  */
 class UIWidget : public Framebuffer
 {
 private:
-    UIDisplayDevice *display_screen{nullptr};
-    UIModelObject *displayed_model{nullptr};
-    bool widget_with_border{true};
-    uint8_t widget_anchor_x;
-    uint8_t widget_anchor_y;
-
 protected:
+    /**
+     * @brief
+     *
+     */
+    uint8_t widget_anchor_x;
+    /**
+     * @brief
+     *
+     */
+    uint8_t widget_anchor_y;
+    /**
+     * @brief
+     *
+     */
+    UIDisplayDevice *display_screen{nullptr};
+    /**
+     * @brief
+     *
+     */
+    bool widget_with_border{true};
+    /**
+     * @brief the model object that the widget displays
+     *
+     */
+    UIModelObject *displayed_model{nullptr};
     /**
      * @brief A widget can be composed by several widget.
      *
@@ -428,7 +447,7 @@ protected:
     uint8_t widget_start_x;
     /**
      * @brief this is the actual vertical start of the widget drawing area, taken into account the presence of border.
-     * 
+     *
      * WARNING: works fine if widget_start_y is a multiple of 8
      *
      */
@@ -457,11 +476,7 @@ public:
      * @param _new_display_device
      */
     void set_display_screen(UIDisplayDevice *_new_display_device);
-    /**
-     * @brief draw the graphical element of the widget
-     *
-     */
-    virtual void draw() = 0;
+
     /**
      * @brief A special feature that can be used when we want a widget to blink. The blinking is based on the system clock time divided by half the blinking period.
      * When the result is even, the widgete is drawn in WHITE, otherwise it is drawn in BLACK.
@@ -482,8 +497,8 @@ public:
      * @param widget_border_width   the width of the border
      * @param framebuffer_format  the addressing format of the actual display device
      * @param framebuffer_txt_cnf   a default textual configuration, with 8x8 font size
-     * 
-     * \image html widget.png 
+     *
+     * \image html widget.png
      */
     UIWidget(UIDisplayDevice *display_screen,
              size_t frame_width,
@@ -505,9 +520,19 @@ public:
      */
     void add_widget(UIWidget *_sub_widget);
     /**
-     * @brief WARNING : This function can be redefined. When several widget display one Model, only le last one must clear_change_flag()
+     * @brief (re)draw the graphical elements of the widget.
+     * 
+     * To save running time, we can (re)draw the widget only if the associated UIModelObject has_changed.
+     * 
+     * Guidance to implement this function:
+     * 
+     * - First: Scan all contained sub-widgets if any and call draw_refresh() member function of each of them.
+     * - Then: check if any changes require a screen redraw
+     * - if redraw() required , execute the effective widget drawing (can be a private memeber function)
+     * - and finally : clear model change flag if needed.
+     *       WARNING : When several widget display one Model, only le last one must clear_change_flag()
      */
-    virtual void refresh();
+    virtual void draw_refresh() = 0;
 };
 
 #endif // UI_CORE_H

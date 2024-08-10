@@ -33,14 +33,17 @@ void w_SquareLed::blink_off()
     this->blinking = false;
 }
 
-void w_SquareLed::draw()
+void w_SquareLed::draw_refresh() // TODO revoir un draw_refresh et un draw optimisant squareled et basé sur un model approprié
+
 {
+    if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
+    {/// draw()
     if (this->lit)
     {
         if (this->blinking)
         {
             rect(0, 0, frame_width, frame_height, true, blinking_us(this->blink_period));
-            draw_border();
+            // no need to call draw_border() as long as widget_with_border is true.
         }
         else
         {
@@ -50,6 +53,12 @@ void w_SquareLed::draw()
     else
     {
         rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
-        draw_border();
+        // no need to call draw_border() as long as widget_with_border is true.
+    }
+    /// end draw()
+        if (widget_with_border)
+            draw_border();
+        this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        this->displayed_model->clear_change_flag();
     }
 }

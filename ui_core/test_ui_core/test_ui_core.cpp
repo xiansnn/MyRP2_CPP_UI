@@ -112,7 +112,7 @@ int main()
         ControlEvent event = central_switch.process_sample_event();
         manager.process_control_event(event);
         pr_D5.hi();
-        set_of_widget.refresh();
+        set_of_widget.draw_refresh();
         pr_D5.lo();
         sleep_ms(20);
     }
