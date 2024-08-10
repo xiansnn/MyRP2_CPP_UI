@@ -37,25 +37,26 @@ void w_SquareLed::draw_refresh() // TODO revoir un draw_refresh et un draw optim
 
 {
     if ((this->displayed_model != nullptr) and (this->displayed_model->has_changed()))
-    {/// draw()
-    if (this->lit)
-    {
-        if (this->blinking)
+    { 
+        /// draw()
+        if (this->lit)
         {
-            rect(0, 0, frame_width, frame_height, true, blinking_us(this->blink_period));
-            // no need to call draw_border() as long as widget_with_border is true.
+            if (this->blinking)
+            {
+                rect(0, 0, frame_width, frame_height, true, blinking_us(this->blink_period));
+                // no need to call draw_border() as long as widget_with_border is true.
+            }
+            else
+            {
+                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+            }
         }
         else
         {
-            rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+            // no need to call draw_border() as long as widget_with_border is true.
         }
-    }
-    else
-    {
-        rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
-        // no need to call draw_border() as long as widget_with_border is true.
-    }
-    /// end draw()
+        /// end draw()
         if (widget_with_border)
             draw_border();
         this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);

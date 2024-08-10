@@ -43,8 +43,11 @@ struct_ConfigSSD1306 cfg_ssd1306{
 class test_square_led_model : public UIModelObject
 {
 private:
-    /* data */
+
+
 public:
+    bool blinking_object = true;
+    bool on_off_object = true;
     test_square_led_model();
     ~test_square_led_model();
     void process_control_event(ControlEvent _event);
@@ -91,8 +94,6 @@ int main()
     while (true)
     {
         ControlEvent event = central_switch.process_sample_event();
-        printf("event :%d\n", event);
-
         pr_D5.hi();
         blinking_led.draw_refresh();
         blinking_model.set_change_flag();
@@ -117,5 +118,18 @@ test_square_led_model::~test_square_led_model()
 
 void test_square_led_model::process_control_event(ControlEvent _event)
 {
+    switch (_event)
+    {
+    case ControlEvent::PUSH:
+        on_off_object = !on_off_object;
+        set_change_flag();
+        break;
+    case ControlEvent::LONG_PUSH:
+        blinking_object = !blinking_object;
+        set_change_flag();
+        break;
 
+    default:
+        break;
+    }
 }
