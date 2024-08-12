@@ -14,5 +14,6 @@ var searchData=
   ['test_5fmanager_11',['test_Manager',['../classtest___manager.html#a40e30ae813073dc63e1dd252b581ae3c',1,'test_Manager']]],
   ['test_5fobjectmanagerwidget_12',['test_ObjectManagerWidget',['../classtest___object_manager_widget.html#abfa8e09864f26d129afae5e4b429e2c0',1,'test_ObjectManagerWidget']]],
   ['test_5foutofframe_5fline_13',['test_outofframe_line',['../test__ssd1306_8cpp.html#aa8c6498ebb1c3d57c3d71c5338f76a9e',1,'test_ssd1306.cpp']]],
-  ['test_5fscrolling_14',['test_scrolling',['../test__ssd1306_8cpp.html#a9d120bcb3409d2979e6eb51b43cb76a8',1,'test_ssd1306.cpp']]]
+  ['test_5fscrolling_14',['test_scrolling',['../test__ssd1306_8cpp.html#a9d120bcb3409d2979e6eb51b43cb76a8',1,'test_ssd1306.cpp']]],
+  ['test_5fsquare_5fled_5fwidget_15',['test_square_led_widget',['../classtest__square__led__widget.html#a35003052ee83bb12e4bc20b84af8f05d',1,'test_square_led_widget']]]
 ];

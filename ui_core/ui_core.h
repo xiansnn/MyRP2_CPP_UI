@@ -158,13 +158,14 @@ private:
      *
      */
     ControlledObjectStatus status{ControlledObjectStatus::IS_WAITING};
+
     /**
      * @brief A point er to the controller of this model.
      *
      */
     UIController *current_controller{nullptr};
-
 protected:
+
 public:
     /**
      * @brief Construct the UIModelObject object
@@ -177,7 +178,7 @@ public:
      */
     ~UIModelObject();
     /**
-     * @brief
+     * @brief get the change flag status
      *
      * @return true means the redraw is required
      * @return false means the model is unchanged
@@ -213,6 +214,15 @@ public:
      * @return ControlledObjectStatus
      */
     ControlledObjectStatus get_status();
+
+    /**
+     * @brief Get the current controller object. 
+     * 
+     * NOTICE: It is usually necessary to recast the abstract return UIController into the actual controller
+     * 
+     * @return UIController* 
+     */
+    UIController *get_current_controller();
     /**
      * @brief The purpose of this function is to implement the behavior of the implemented model object when a ControlEvent is received.
      *
@@ -359,12 +369,11 @@ public:
 class UIController
 {
 protected:
+public:
     /**
      * @brief The reference to the UIModelObject currently under control.
      */
     UIModelObject *current_controlled_object{nullptr};
-
-public:
     /**
      * @brief create a UIController object
      */
@@ -388,10 +397,13 @@ public:
  * Being a framebuffer, it is defined by a width and a height, line and column of text, and graphics.
  * It is located within the display device screen at an anchor point (x,y).
  *
- * IMPORTANT NOTICE:  The widget is effectively drawn if something has changed in the UIModelObejct it represents. This allows to save drawing processing time.
+ * IMPORTANT NOTICE 1:  The widget is effectively drawn if something has changed in the UIModelObejct it represents. This allows to save drawing processing time.
  * However there is a strong limitation : only the widget buffer is transered to the device GDDRAM, based of its specific addressing scheme.
  * As a result, if the widget is located such that the buffer is written across device pages, the contents of the overwritten pages is lost.
  * This is why the widget height and the widget_anchor_y must be multiple of 8. Doing so the widget buffer bytes do not ovewrite pixel outside the widget border.
+ *
+ * IMPORTANT NOTICE 2: The final widget implementation must know what actual model object it displays. This final implementation must have a member (can be private)
+ * e.g. <final_type> * actual_displayed_object; of the actual <final_type> implementation of UIModelObject. This can be inialised by the constructor.
  *
  *
  */
@@ -419,11 +431,6 @@ protected:
      *
      */
     bool widget_with_border{true};
-    /**
-     * @brief the model object that the widget displays
-     *
-     */
-    UIModelObject *displayed_model{nullptr};
     /**
      * @brief A widget can be composed by several widget.
      *
@@ -464,12 +471,7 @@ protected:
     void draw_border();
 
 public:
-    /**
-     * @brief Set the displayed model object
-     *
-     * @param _new_displayed_model
-     */
-    virtual void set_displayed_model(UIModelObject *_new_displayed_model);
+
     /**
      * @brief Set the display screen object
      *
@@ -521,16 +523,16 @@ public:
     void add_widget(UIWidget *_sub_widget);
     /**
      * @brief (re)draw the graphical elements of the widget.
-     * 
+     *
      * To save running time, we can (re)draw the widget only if the associated UIModelObject has_changed.
-     * 
+     *
      * Guidance to implement this function:
-     * 
+     *
      * - First: Scan all contained sub-widgets if any and call draw_refresh() member function of each of them.
      * - Then: check if any changes require a screen redraw
      * - if redraw() required , execute the effective widget drawing (can be a private memeber function)
      * - and finally : clear model change flag if needed.
-     *       WARNING : When several widget display one Model, only le last one must clear_change_flag()
+     *       WARNING : When several widget display one Model, only the last one must clear_change_flag()
      */
     virtual void draw_refresh() = 0;
 };

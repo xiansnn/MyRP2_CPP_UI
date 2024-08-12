@@ -2,10 +2,11 @@
 
 class w_SquareLed : public UIWidget
 {
-private:
-    bool lit = true;
+protected:
+    bool lit_status = true;
     bool blinking = false;
     uint32_t blink_period;
+    
 
 public:
     w_SquareLed(UIDisplayDevice *display_screen,
@@ -21,8 +22,9 @@ public:
     void light_off();
     void set_blink(uint32_t blink_period);
     void blink_off();
+    void blink_on();
 
-    void  draw_refresh() ;
+
 
 
 };

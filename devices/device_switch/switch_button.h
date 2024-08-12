@@ -77,7 +77,7 @@ struct struct_SwitchButtonConfig
  * Button status is the logical status of the button (regardless the switch is wired active Lo or HI)
  * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an evant accordingly.
  *
- * SwitchButton can be associated with UIController only if button belongs to a UI.
+ * SwitchButton can be associated with UIController if button belongs to a UI. In such case a new class must be created that inherits from SwitchButton and UIController.
  *
  */
 class SwitchButton

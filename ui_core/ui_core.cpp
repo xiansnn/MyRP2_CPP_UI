@@ -50,6 +50,11 @@ ControlledObjectStatus UIModelObject::get_status()
     return this->status;
 }
 
+UIController* UIModelObject::get_current_controller()
+{
+    return this->current_controller;
+}
+
 void UIModelObject::set_change_flag()
 {
     this->change_flag = true;
@@ -224,11 +229,6 @@ UIWidget::UIWidget(UIDisplayDevice *_display_screen,
 
 UIWidget::~UIWidget()
 {
-}
-
-void UIWidget::set_displayed_model(UIModelObject *_new_displayed_model)
-{
-    this->displayed_model = _new_displayed_model;
 }
 
 void UIWidget::set_display_screen(UIDisplayDevice *_new_display_device)

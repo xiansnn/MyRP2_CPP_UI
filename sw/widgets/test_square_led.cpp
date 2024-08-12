@@ -42,16 +42,52 @@ struct_ConfigSSD1306 cfg_ssd1306{
 
 class test_square_led_model : public UIModelObject
 {
-private:
-
-
+protected:
 public:
-    bool blinking_object = true;
-    bool on_off_object = true;
+    bool blinking_status = true;
+    bool on_status = true;
     test_square_led_model();
     ~test_square_led_model();
     void process_control_event(ControlEvent _event);
 };
+
+class test_square_led_widget : public w_SquareLed
+{
+private:
+    test_square_led_model *actual_displayed_model;
+
+public:
+    test_square_led_widget(test_square_led_model *actual_displayed_model,
+                           UIDisplayDevice *display_screen,
+                           size_t width,
+                           size_t height,
+                           uint8_t widget_anchor_x,
+                           uint8_t widget_anchor_y);
+    ~test_square_led_widget();
+    void draw_refresh();
+};
+
+/**
+ * @brief this is an example of device that inherits from UIController
+ * 
+ */
+class test_switch_button : public SwitchButton, public UIController
+{
+private:
+    /* data */
+public:
+    test_switch_button(uint gpio, struct_SwitchButtonConfig conf);
+    ~test_switch_button();
+};
+
+test_switch_button::test_switch_button(uint gpio, struct_SwitchButtonConfig conf)
+    : SwitchButton(gpio, conf), UIController()
+{
+}
+
+test_switch_button::~test_switch_button()
+{
+}
 
 /**
  * @brief
@@ -60,30 +96,23 @@ public:
  */
 int main()
 {
+    /// main steps:
     stdio_init_all();
-    /// create I2C bus hw peripheral and display
+    ///  1- create I2C bus hw peripheral and display
     HW_I2C_Master master = HW_I2C_Master(cfg_i2c);
     SSD1306 display = SSD1306(&master, cfg_ssd1306);
-    /// create blinking_led led1 led 2 as w_SquareLed
-    w_SquareLed blinking_led = w_SquareLed(&display, 8, 8, 20, 32);
-    w_SquareLed led1 = w_SquareLed(&display, 8, 8, 60, 32);
-    w_SquareLed led2 = w_SquareLed(&display, 8, 8, 100, 32);
-    /// create blinking_model model1 model2 as displayed object for blinking_led led1 led2
-    test_square_led_model blinking_model = test_square_led_model();
-    test_square_led_model model1 = test_square_led_model();
-    test_square_led_model model2 = test_square_led_model();
-    blinking_led.set_display_screen(&display);
-    led1.set_display_screen(&display);
-    led2.set_display_screen(&display);
-    blinking_led.set_displayed_model(&blinking_model);
-    led1.set_displayed_model(&model1);
-    led2.set_displayed_model(&model2);
-    /// create a switchbutton
-    SwitchButton central_switch = SwitchButton(CENTRAL_SWITCH_GPIO, cfg_central_switch);
+    /// 2- create test_common_model  as displayed object for blinking_led on_off_led
+    test_square_led_model test_common_model = test_square_led_model();
+    /// 3- create blinking_led on_off_led as test_square_led_widget
+    test_square_led_widget on_off_led = test_square_led_widget(&test_common_model, &display, 16, 8, 60, 32);
+    /// 4- create a switchbutton
+    test_switch_button central_switch = test_switch_button(CENTRAL_SWITCH_GPIO, cfg_central_switch);
+    central_switch.update_current_controlled_object(&test_common_model);
 
-    blinking_led.set_blink(1000000);
-    led1.light_on();
-    led2.light_off();
+    on_off_led.set_blink(1000000);
+    // on_off_led.light_on();
+
+    /// 5- clean up the scren
 
     pr_D4.hi();
     display.clear_full_screen();
@@ -92,13 +121,27 @@ int main()
     pr_D4.lo();
 
     while (true)
+    /// 6- start infinite loop
+
     {
-        ControlEvent event = central_switch.process_sample_event();
+        /// - get UI switch button event and process it.
+        ControlEvent event = ((test_switch_button *)test_common_model.get_current_controller())->process_sample_event();
+        // ControlEvent event = central_switch.process_sample_event();
+        test_common_model.process_control_event(event);
+        /**
+         * NOTICE:There is a simpler way to get event. We can also forget UIController and use directly SwitchButton in
+         * the following way:
+         * \code
+         * ControlEvent event = central_switch.process_sample_event();
+         * test_common_model.process_control_event(event);
+         * \endcode
+         *  This avoid the burden of casting UIController and can be used when there is not special need to have UIModelObject aware about wich is displaying its data.
+         *
+         */
+
         pr_D5.hi();
-        blinking_led.draw_refresh();
-        blinking_model.set_change_flag();
-        led1.draw_refresh();
-        led2.draw_refresh();
+        /// - refresh the widget
+        on_off_led.draw_refresh();
         pr_D5.lo();
 
         sleep_ms(20);
@@ -120,16 +163,78 @@ void test_square_led_model::process_control_event(ControlEvent _event)
 {
     switch (_event)
     {
-    case ControlEvent::PUSH:
-        on_off_object = !on_off_object;
+    case ControlEvent::RELEASED_AFTER_SHORT_TIME:
+        on_status = !on_status;
+        printf("on_off=%d\n", on_status);
         set_change_flag();
         break;
     case ControlEvent::LONG_PUSH:
-        blinking_object = !blinking_object;
+        blinking_status = !blinking_status;
+        printf("blink=%d\n", blinking_status);
         set_change_flag();
         break;
 
     default:
         break;
+    }
+}
+
+/**
+ * @brief Construct a new test square led widget::test square led widget object
+ * 
+ * @param actual_displayed_model 
+ * @param display_screen 
+ * @param width 
+ * @param height 
+ * @param widget_anchor_x 
+ * @param widget_anchor_y 
+ */
+test_square_led_widget::test_square_led_widget(test_square_led_model *actual_displayed_model,
+                                               UIDisplayDevice *display_screen,
+                                               size_t width,
+                                               size_t height,
+                                               uint8_t widget_anchor_x,
+                                               uint8_t widget_anchor_y)
+    : w_SquareLed(display_screen, width, height, widget_anchor_x, widget_anchor_y)
+{
+    this->actual_displayed_model = actual_displayed_model;
+}
+
+test_square_led_widget::~test_square_led_widget()
+{
+}
+
+/**
+ * @brief This function implements a special draw_refresh that takes into account the on/off and blinking status of the model.
+ *
+ * It insures that the widget consumes processing time only when its on/off status has changed.
+ *
+ */
+void test_square_led_widget::draw_refresh()
+{
+    {
+        // if (blinking) // to insure that blinking routine is execute every sample period //TODO improve blinking algorithm
+        // {
+        //     rect(0, 0, frame_width, frame_height, true, blinking_us(this->blink_period));
+        //     draw_border();
+        // }
+
+        if ((this->actual_displayed_model != nullptr) and (this->actual_displayed_model->has_changed())) // check if something changed
+        {
+            /// check if the model on_status is different from the widget lit_status
+            if ((actual_displayed_model->on_status) and (!lit_status))
+            {
+                this->light_on();
+                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+            }
+            if ((!actual_displayed_model->on_status) and (lit_status))
+            {
+                this->light_off();
+                rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+                draw_border();
+            }
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+            this->actual_displayed_model->clear_change_flag();
+        }
     }
 }
