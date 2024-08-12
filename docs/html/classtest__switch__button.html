@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MyRP2_CPP_UI: RotaryEncoder Class Reference</title>
+<title>MyRP2_CPP_UI: test_switch_button Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_rotary_encoder.html',''); initResizable(true); });
+$(function(){initNavTree('classtest__switch__button.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -98,53 +98,29 @@ $(function(){initNavTree('class_rotary_encoder.html',''); initResizable(true); }
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="class_rotary_encoder-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">RotaryEncoder Class Reference</div></div>
+<a href="classtest__switch__button-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">test_switch_button Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>The rotary encoder is a device used to control a value the can be incremented/decremented by the user. It can be associated with <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a>.  
+<p>this is an example of device that inherits from <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>  
  <a href="#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="rotary__encoder_8h_source.html">rotary_encoder.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for RotaryEncoder:</div>
+Inheritance diagram for test_switch_button:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_rotary_encoder.png" usemap="#RotaryEncoder_map" alt=""/>
-  <map id="RotaryEncoder_map" name="RotaryEncoder_map">
-<area href="class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt..." alt="SwitchButtonWithIRQ" shape="rect" coords="0,56,129,80"/>
-<area href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design..." alt="UIController" shape="rect" coords="139,56,268,80"/>
-<area href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ..." alt="SwitchButton" shape="rect" coords="0,0,129,24"/>
+  <img src="classtest__switch__button.png" usemap="#test_5Fswitch_5Fbutton_map" alt=""/>
+  <map id="test_5Fswitch_5Fbutton_map" name="test_5Fswitch_5Fbutton_map">
+<area href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ..." alt="SwitchButton" shape="rect" coords="0,0,114,24"/>
+<area href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design..." alt="UIController" shape="rect" coords="124,0,238,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac4211b74c8dc479af6c5d05d8ca573f8" id="r_ac4211b74c8dc479af6c5d05d8ca573f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4211b74c8dc479af6c5d05d8ca573f8">RotaryEncoder</a> (uint encoder_clk_gpio, uint encoder_dt_gpio, gpio_irq_callback_t call_back, <a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> clk_conf={})</td></tr>
-<tr class="memdesc:ac4211b74c8dc479af6c5d05d8ca573f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Rotary Encoder object.  <br /></td></tr>
-<tr class="separator:ac4211b74c8dc479af6c5d05d8ca573f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0956a9ae8731f8e9bae8cb56162237d5" id="r_a0956a9ae8731f8e9bae8cb56162237d5"><td class="memItemLeft" align="right" valign="top"><a id="a0956a9ae8731f8e9bae8cb56162237d5" name="a0956a9ae8731f8e9bae8cb56162237d5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~RotaryEncoder</b> ()</td></tr>
-<tr class="memdesc:a0956a9ae8731f8e9bae8cb56162237d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the Rotary Encoder object. <br /></td></tr>
-<tr class="separator:a0956a9ae8731f8e9bae8cb56162237d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7ad35ae64d2b815c25ac72a51702e6f" id="r_ae7ad35ae64d2b815c25ac72a51702e6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7ad35ae64d2b815c25ac72a51702e6f">interrupt_service_routine</a> (uint32_t irq_event_mask)</td></tr>
-<tr class="memdesc:ae7ad35ae64d2b815c25ac72a51702e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the ISR that process the IRQ and send ControlEvent to the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> currentControlledObject.  <br /></td></tr>
-<tr class="separator:ae7ad35ae64d2b815c25ac72a51702e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_switch_button_with_i_r_q"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_switch_button_with_i_r_q')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_switch_button_with_i_r_q.html">SwitchButtonWithIRQ</a></td></tr>
-<tr class="memitem:a261dc80eca218e3733c6a0cf637c25e8 inherit pub_methods_class_switch_button_with_i_r_q" id="r_a261dc80eca218e3733c6a0cf637c25e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button_with_i_r_q.html#a261dc80eca218e3733c6a0cf637c25e8">irq_enabled</a> (bool enabled)</td></tr>
-<tr class="memdesc:a261dc80eca218e3733c6a0cf637c25e8 inherit pub_methods_class_switch_button_with_i_r_q"><td class="mdescLeft">&#160;</td><td class="mdescRight">and function used to enable/disable interrupt during Interrupt Service Routine (ISR)  <br /></td></tr>
-<tr class="separator:a261dc80eca218e3733c6a0cf637c25e8 inherit pub_methods_class_switch_button_with_i_r_q"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af12e2e729834d347fb0f3efdce249bff inherit pub_methods_class_switch_button_with_i_r_q" id="r_af12e2e729834d347fb0f3efdce249bff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button_with_i_r_q.html#af12e2e729834d347fb0f3efdce249bff">SwitchButtonWithIRQ</a> (uint <a class="el" href="class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0">gpio</a>, gpio_irq_callback_t call_back, <a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> conf={}, uint32_t event_mask_config=GPIO_IRQ_EDGE_FALL|GPIO_IRQ_EDGE_RISE)</td></tr>
-<tr class="memdesc:af12e2e729834d347fb0f3efdce249bff inherit pub_methods_class_switch_button_with_i_r_q"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt...">SwitchButtonWithIRQ</a> object.  <br /></td></tr>
-<tr class="separator:af12e2e729834d347fb0f3efdce249bff inherit pub_methods_class_switch_button_with_i_r_q"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d4eb41f9e064fd22e68a20c486c7f06 inherit pub_methods_class_switch_button_with_i_r_q" id="r_a2d4eb41f9e064fd22e68a20c486c7f06"><td class="memItemLeft" align="right" valign="top">
-&#160;</td><td class="memItemRight" valign="bottom"><b>~SwitchButtonWithIRQ</b> ()</td></tr>
-<tr class="memdesc:a2d4eb41f9e064fd22e68a20c486c7f06 inherit pub_methods_class_switch_button_with_i_r_q"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt...">SwitchButtonWithIRQ</a> object. <br /></td></tr>
-<tr class="separator:a2d4eb41f9e064fd22e68a20c486c7f06 inherit pub_methods_class_switch_button_with_i_r_q"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9521e42a989c84996d3b2c943e78dae inherit pub_methods_class_switch_button_with_i_r_q" id="r_ad9521e42a989c84996d3b2c943e78dae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button_with_i_r_q.html#ad9521e42a989c84996d3b2c943e78dae">process_IRQ_event</a> (uint32_t current_event_mask)</td></tr>
-<tr class="memdesc:ad9521e42a989c84996d3b2c943e78dae inherit pub_methods_class_switch_button_with_i_r_q"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process IRQ event and return the resulting event.  <br /></td></tr>
-<tr class="separator:ad9521e42a989c84996d3b2c943e78dae inherit pub_methods_class_switch_button_with_i_r_q"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac95868f8eacc212378942810d6fe5fb" id="r_aac95868f8eacc212378942810d6fe5fb"><td class="memItemLeft" align="right" valign="top"><a id="aac95868f8eacc212378942810d6fe5fb" name="aac95868f8eacc212378942810d6fe5fb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>test_switch_button</b> (uint <a class="el" href="class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0">gpio</a>, <a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> conf)</td></tr>
+<tr class="separator:aac95868f8eacc212378942810d6fe5fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_switch_button"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_switch_button')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_switch_button.html">SwitchButton</a></td></tr>
 <tr class="memitem:ab26a40e2b63115a23ff499e360768693 inherit pub_methods_class_switch_button" id="r_ab26a40e2b63115a23ff499e360768693"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_switch_button.html#ab26a40e2b63115a23ff499e360768693">SwitchButton</a> (uint <a class="el" href="class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0">gpio</a>, <a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> conf={})</td></tr>
 <tr class="memdesc:ab26a40e2b63115a23ff499e360768693 inherit pub_methods_class_switch_button"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> object.  <br /></td></tr>
@@ -218,90 +194,16 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us
 <tr class="separator:a5cf488e4819df6fd8cc5cd3811d33354 inherit pro_attribs_class_switch_button"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The rotary encoder is a device used to control a value the can be incremented/decremented by the user. It can be associated with <a class="el" href="class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value...">UIControlledIncrementalValue</a>. </p>
-<p>A rotary encoder has two signals: one can be considered as a clock (clk) , the other as the data (dt).</p>
-<p>Clock signal is produced by rotating the encoder. Each time a falling edge is generated on the clock, the value on dt gives the direction of the rotation.</p>
-<p>Due to the short time between clk and dt, we cannot usually sample the signals. IRQ is more appropriate.</p>
-<p>As a <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>, the rotary encoder is associated with a <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ac4211b74c8dc479af6c5d05d8ca573f8" name="ac4211b74c8dc479af6c5d05d8ca573f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4211b74c8dc479af6c5d05d8ca573f8">&#9670;&#160;</a></span>RotaryEncoder()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">RotaryEncoder::RotaryEncoder </td>
-          <td>(</td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>encoder_clk_gpio</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>encoder_dt_gpio</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">gpio_irq_callback_t</td>          <td class="paramname"><span class="paramname"><em>call_back</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a></td>          <td class="paramname"><span class="paramname"><em>clk_conf</em></span><span class="paramdefsep"> = </span><span class="paramdefval">{}</span>&#160;)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new Rotary Encoder object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">encoder_clk_gpio</td><td>The GPIO that produces IRQ </td></tr>
-    <tr><td class="paramname">encoder_dt_gpio</td><td>The GPIO that read the rotation direction </td></tr>
-    <tr><td class="paramname">call_back</td><td>The Interrupt Service Routine call by IRQ </td></tr>
-    <tr><td class="paramname">clk_conf</td><td>the configuration of the clock, view as a switch (with debouncing issue) </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae7ad35ae64d2b815c25ac72a51702e6f" name="ae7ad35ae64d2b815c25ac72a51702e6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7ad35ae64d2b815c25ac72a51702e6f">&#9670;&#160;</a></span>interrupt_service_routine()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void RotaryEncoder::interrupt_service_routine </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>irq_event_mask</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>the ISR that process the IRQ and send ControlEvent to the <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> currentControlledObject. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">irq_event_mask</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_KY_040/<a class="el" href="rotary__encoder_8h_source.html">rotary_encoder.h</a></li>
-<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_KY_040/<b>rotary_encoder.cpp</b></li>
+<div class="textblock"><p>this is an example of device that inherits from <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
+<li>C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/widgets/<a class="el" href="test__square__led_8cpp.html">test_square_led.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="class_rotary_encoder.html">RotaryEncoder</a></li>
+    <li class="navelem"><a class="el" href="classtest__switch__button.html">test_switch_button</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

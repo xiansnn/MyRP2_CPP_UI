@@ -8,7 +8,9 @@ var hierarchy =
         [ "test_CursorWidgetWithIncrementalValue", "classtest___cursor_widget_with_incremental_value.html", null ],
         [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", null ],
         [ "test_SetOfWidget", "classtest___set_of_widget.html", null ],
-        [ "w_SquareLed", "classw___square_led.html", null ]
+        [ "w_SquareLed", "classw___square_led.html", [
+          [ "test_square_led_widget", "classtest__square__led__widget.html", null ]
+        ] ]
       ] ]
     ] ],
     [ "HW_I2C_Master", "class_h_w___i2_c___master.html", null ],
@@ -27,10 +29,12 @@ var hierarchy =
     [ "SwitchButton", "class_switch_button.html", [
       [ "SwitchButtonWithIRQ", "class_switch_button_with_i_r_q.html", [
         [ "RotaryEncoder", "class_rotary_encoder.html", null ]
-      ] ]
+      ] ],
+      [ "test_switch_button", "classtest__switch__button.html", null ]
     ] ],
     [ "UIController", "class_u_i_controller.html", [
-      [ "RotaryEncoder", "class_rotary_encoder.html", null ]
+      [ "RotaryEncoder", "class_rotary_encoder.html", null ],
+      [ "test_switch_button", "classtest__switch__button.html", null ]
     ] ],
     [ "UIModelObject", "class_u_i_model_object.html", [
       [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", [

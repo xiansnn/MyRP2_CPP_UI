@@ -8,5 +8,6 @@ var class_u_i_model_object =
     [ "process_control_event", "class_u_i_model_object.html#a4b035d133dc91fd33028d3c264992add", null ],
     [ "set_change_flag", "class_u_i_model_object.html#a2d8608d80b226fde8b31becdc828171b", null ],
     [ "update_current_controller", "class_u_i_model_object.html#a656066649f529b7472d098637ddcf04f", null ],
-    [ "update_status", "class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688", null ]
+    [ "update_status", "class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688", null ],
+    [ "current_controller", "class_u_i_model_object.html#aa5c969bd8d600f753744fbed8ccd909f", null ]
 ];

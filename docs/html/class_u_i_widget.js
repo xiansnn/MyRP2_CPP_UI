@@ -6,8 +6,6 @@ var class_u_i_widget =
     [ "draw_border", "class_u_i_widget.html#ae8343ea2acadbfb296a53f91aa043277", null ],
     [ "draw_refresh", "class_u_i_widget.html#a3c4ca560410bfc6b07718c4dda7a7586", null ],
     [ "set_display_screen", "class_u_i_widget.html#ab0428db23b7794e60579466e62ba4290", null ],
-    [ "set_displayed_model", "class_u_i_widget.html#a00531cfc7083d9a17f3dd63e4155375c", null ],
-    [ "displayed_model", "class_u_i_widget.html#ae1ad0984c1184cb632ef24c7295219a2", null ],
     [ "widget_border_width", "class_u_i_widget.html#acd07c6d3c1543f94eca2a3e79ebf636c", null ],
     [ "widget_height", "class_u_i_widget.html#abd71d95580622d0468f29e99a30a0c00", null ],
     [ "widget_start_x", "class_u_i_widget.html#a3cc3d5b47355b80605824e9064602d8a", null ],

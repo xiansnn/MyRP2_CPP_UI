@@ -24,11 +24,13 @@ var annotated_dup =
     [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", "classtest___object_manager_widget" ],
     [ "test_SetOfWidget", "classtest___set_of_widget.html", "classtest___set_of_widget" ],
     [ "test_square_led_model", "classtest__square__led__model.html", "classtest__square__led__model" ],
+    [ "test_square_led_widget", "classtest__square__led__widget.html", "classtest__square__led__widget" ],
+    [ "test_switch_button", "classtest__switch__button.html", null ],
     [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", "class_u_i_controlled_incremental_value" ],
     [ "UIController", "class_u_i_controller.html", "class_u_i_controller" ],
     [ "UIDisplayDevice", "class_u_i_display_device.html", "class_u_i_display_device" ],
     [ "UIModelObject", "class_u_i_model_object.html", "class_u_i_model_object" ],
     [ "UIObjectManager", "class_u_i_object_manager.html", "class_u_i_object_manager" ],
     [ "UIWidget", "class_u_i_widget.html", "class_u_i_widget" ],
-    [ "w_SquareLed", "classw___square_led.html", "classw___square_led" ]
+    [ "w_SquareLed", "classw___square_led.html", null ]
 ];

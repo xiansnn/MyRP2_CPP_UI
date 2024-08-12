@@ -113,6 +113,11 @@ $(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true);
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__model.html">test_square_led_model</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__switch__button.html">test_switch_button</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is an example of device that inherits from <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>  <a href="classtest__switch__button.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -164,10 +169,24 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-<p>create I2C bus hw peripheral and display</p>
-<p>create blinking_led led1 led 2 as <a class="el" href="classw___square_led.html">w_SquareLed</a></p>
-<p>create blinking_model model1 model2 as displayed object for blinking_led led1 led2</p>
-<p>create a switchbutton</p>
+<p>main steps:</p>
+<p>1- create I2C bus hw peripheral and display</p>
+<p>2- create test_common_model as displayed object for blinking_led on_off_led</p>
+<p>3- create blinking_led on_off_led as <a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></p>
+<p>4- create a switchbutton</p>
+<p>5- clean up the scren</p>
+<p>6- start infinite loop</p>
+<ul>
+<li>get UI switch button event and process it.</li>
+</ul>
+<p>NOTICE:There is a simpler way to get event. We can also forget <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> and use directly <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> in the following way: </p><div class="fragment"><div class="line"><a class="code hl_enumeration" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> <span class="keyword">event</span> = central_switch.<a class="code hl_function" href="class_switch_button.html#ad488b9db3ed6b1709f1eda137a69f52e">process_sample_event</a>();</div>
+<div class="line">test_common_model.process_control_event(event);</div>
+<div class="ttc" id="aclass_switch_button_html_ad488b9db3ed6b1709f1eda137a69f52e"><div class="ttname"><a href="class_switch_button.html#ad488b9db3ed6b1709f1eda137a69f52e">SwitchButton::process_sample_event</a></div><div class="ttdeci">ControlEvent process_sample_event()</div><div class="ttdoc">the periodic routine that process deboucing, press and release of the switch.</div><div class="ttdef"><b>Definition</b> switch_button.cpp:37</div></div>
+<div class="ttc" id="aui__core_8h_html_afe97f6c9e5f8fc59c735ff67fa2255b4"><div class="ttname"><a href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a></div><div class="ttdeci">ControlEvent</div><div class="ttdoc">The list of predefined events that a UIController can send to the controlled UIModelObject,...</div><div class="ttdef"><b>Definition</b> ui_core.h:26</div></div>
+</div><!-- fragment --><p> This avoid the burden of casting <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> and can be used when there is not special need to have <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> aware about wich is displaying its data.</p>
+<ul>
+<li>refresh the widget</li>
+</ul>
 
 </div>
 </div>

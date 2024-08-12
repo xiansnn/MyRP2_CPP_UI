@@ -116,6 +116,7 @@ Inheritance diagram for SwitchButton:</div>
   <img src="class_switch_button.png" usemap="#SwitchButton_map" alt=""/>
   <map id="SwitchButton_map" name="SwitchButton_map">
 <area href="class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt..." alt="SwitchButtonWithIRQ" shape="rect" coords="0,56,129,80"/>
+<area href="classtest__switch__button.html" title="this is an example of device that inherits from UIController" alt="test_switch_button" shape="rect" coords="139,56,268,80"/>
 <area href="class_rotary_encoder.html" title="The rotary encoder is a device used to control a value the can be incremented/decremented by the user..." alt="RotaryEncoder" shape="rect" coords="0,112,129,136"/>
   </map>
 </div></div>
@@ -180,7 +181,7 @@ uint&#160;</td><td class="memItemRight" valign="bottom"><b>long_release_delay_us
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> status is sampled periodically by software. Switch status is the status of the physical switch device. </p>
 <p>Button status is the logical status of the button (regardless the switch is wired active Lo or HI) During each period, the status of the button is compared to the previous status and the function member <a class="el" href="#ad488b9db3ed6b1709f1eda137a69f52e" title="the periodic routine that process deboucing, press and release of the switch.">process_sample_event()</a> return an evant accordingly.</p>
-<p><a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> can be associated with <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> only if button belongs to a UI. </p>
+<p><a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> can be associated with <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> if button belongs to a UI. In such case a new class must be created that inherits from <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> and <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab26a40e2b63115a23ff499e360768693" name="ab26a40e2b63115a23ff499e360768693"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab26a40e2b63115a23ff499e360768693">&#9670;&#160;</a></span>SwitchButton()</h2>
