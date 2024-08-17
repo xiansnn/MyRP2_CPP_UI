@@ -14,26 +14,25 @@ w_SquareLed::~w_SquareLed()
 
 void w_SquareLed::light_on()
 {
-    this->lit_status = true;
+    this->is_lit = true;
 }
 
 void w_SquareLed::light_off()
 {
-    this->lit_status = false;
+    this->is_lit = false;
 }
 
-void w_SquareLed::set_blink(uint32_t _blink_period)
+void w_SquareLed::set_blink_us(uint32_t _blink_period)
 {
-    this->blinking = true;
     this->blink_period = _blink_period;
 }
 
 void w_SquareLed::blink_off()
 {
-    this->blinking = false;
+    this->is_blinking = false;
 }
 
 void w_SquareLed::blink_on()
 {
-    this->blinking = true;
+    this->is_blinking = true;
 }
