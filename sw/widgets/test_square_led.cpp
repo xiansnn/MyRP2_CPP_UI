@@ -1,7 +1,10 @@
 /**
  * @file test_square_led.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief
+ * @brief an example of usage of w_SquareLED. 
+ * The LED is blinking.
+ * A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press.
+ * A long press returns to the blinking mode.
  * @version 0.1
  * @date 2024-08-09
  *
@@ -15,6 +18,7 @@
 
 Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
+Probe pr_D1 = Probe(1);
 
 /// @brief define central switch config
 struct_SwitchButtonConfig cfg_central_switch{
@@ -45,7 +49,7 @@ class test_square_led_model : public UIModelObject
 protected:
 public:
     bool blinking_status = true;
-    bool on_status = true;
+    bool a_bool_value = true;
     test_square_led_model();
     ~test_square_led_model();
     void process_control_event(ControlEvent _event);
@@ -69,7 +73,7 @@ public:
 
 /**
  * @brief this is an example of device that inherits from UIController
- * 
+ *
  */
 class test_switch_button : public SwitchButton, public UIController
 {
@@ -90,7 +94,7 @@ test_switch_button::~test_switch_button()
 }
 
 /**
- * @brief
+ * @brief test and example program of  SquareLED widget.
  *
  * @return int
  */
@@ -101,19 +105,18 @@ int main()
     ///  1- create I2C bus hw peripheral and display
     HW_I2C_Master master = HW_I2C_Master(cfg_i2c);
     SSD1306 display = SSD1306(&master, cfg_ssd1306);
-    /// 2- create test_common_model  as displayed object for blinking_led on_off_led
+    /// 2- create test_common_model  as displayed object for blinking_led square_led
     test_square_led_model test_common_model = test_square_led_model();
-    /// 3- create blinking_led on_off_led as test_square_led_widget
-    test_square_led_widget on_off_led = test_square_led_widget(&test_common_model, &display, 16, 8, 60, 32);
+    /// 3- create square_led as test_square_led_widget
+    test_square_led_widget square_led = test_square_led_widget(&test_common_model, &display, 16, 16, 60, 32);
     /// 4- create a switchbutton
     test_switch_button central_switch = test_switch_button(CENTRAL_SWITCH_GPIO, cfg_central_switch);
     central_switch.update_current_controlled_object(&test_common_model);
 
-    on_off_led.set_blink(1000000);
-    // on_off_led.light_on();
+    /// 5- set is_blinking period of the square_led
+    square_led.set_blink_us(500000);
 
-    /// 5- clean up the scren
-
+    /// 6- clean up the screen and draw the border of the screen
     pr_D4.hi();
     display.clear_full_screen();
     display.rect(0, 0, 128, 64);
@@ -121,12 +124,11 @@ int main()
     pr_D4.lo();
 
     while (true)
-    /// 6- start infinite loop
+    /// 7- start infinite loop
 
     {
         /// - get UI switch button event and process it.
         ControlEvent event = ((test_switch_button *)test_common_model.get_current_controller())->process_sample_event();
-        // ControlEvent event = central_switch.process_sample_event();
         test_common_model.process_control_event(event);
         /**
          * NOTICE:There is a simpler way to get event. We can also forget UIController and use directly SwitchButton in
@@ -141,9 +143,9 @@ int main()
 
         pr_D5.hi();
         /// - refresh the widget
-        on_off_led.draw_refresh();
+        square_led.draw_refresh();
         pr_D5.lo();
-
+        /// - sleep for 20ms
         sleep_ms(20);
     }
 
@@ -164,8 +166,8 @@ void test_square_led_model::process_control_event(ControlEvent _event)
     switch (_event)
     {
     case ControlEvent::RELEASED_AFTER_SHORT_TIME:
-        on_status = !on_status;
-        printf("on_off=%d\n", on_status);
+        a_bool_value = !a_bool_value;
+        printf("on_off=%d\n", a_bool_value);
         set_change_flag();
         break;
     case ControlEvent::LONG_PUSH:
@@ -181,13 +183,13 @@ void test_square_led_model::process_control_event(ControlEvent _event)
 
 /**
  * @brief Construct a new test square led widget::test square led widget object
- * 
- * @param actual_displayed_model 
- * @param display_screen 
- * @param width 
- * @param height 
- * @param widget_anchor_x 
- * @param widget_anchor_y 
+ *
+ * @param actual_displayed_model
+ * @param display_screen
+ * @param width
+ * @param height
+ * @param widget_anchor_x
+ * @param widget_anchor_y
  */
 test_square_led_widget::test_square_led_widget(test_square_led_model *actual_displayed_model,
                                                UIDisplayDevice *display_screen,
@@ -205,7 +207,7 @@ test_square_led_widget::~test_square_led_widget()
 }
 
 /**
- * @brief This function implements a special draw_refresh that takes into account the on/off and blinking status of the model.
+ * @brief This function implements a special draw_refresh that takes into account the on/off and is_blinking status of the model.
  *
  * It insures that the widget consumes processing time only when its on/off status has changed.
  *
@@ -213,21 +215,34 @@ test_square_led_widget::~test_square_led_widget()
 void test_square_led_widget::draw_refresh()
 {
     {
-        // if (blinking) // to insure that blinking routine is execute every sample period //TODO improve blinking algorithm
-        // {
-        //     rect(0, 0, frame_width, frame_height, true, blinking_us(this->blink_period));
-        //     draw_border();
-        // }
+        if (this->actual_displayed_model->blinking_status)
+        {
+            bool first = on_first_semi_period(blink_period);
+            pr_D1.copy(first);
 
+            if (first and !is_lit)
+            {
+                this->light_on();
+                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+                this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+            }
+            if (!first and is_lit)
+            {
+                this->light_off();
+                rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+                draw_border();
+                this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+            }
+        }
         if ((this->actual_displayed_model != nullptr) and (this->actual_displayed_model->has_changed())) // check if something changed
         {
-            /// check if the model on_status is different from the widget lit_status
-            if ((actual_displayed_model->on_status) and (!lit_status))
+            /// check if the model a_bool_value is different from the widget lit_status
+            if ((actual_displayed_model->a_bool_value) and (!is_lit))
             {
                 this->light_on();
                 rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
             }
-            if ((!actual_displayed_model->on_status) and (lit_status))
+            if ((!actual_displayed_model->a_bool_value) and (is_lit))
             {
                 this->light_off();
                 rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);

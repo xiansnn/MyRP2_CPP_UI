@@ -164,8 +164,8 @@ private:
      *
      */
     UIController *current_controller{nullptr};
-protected:
 
+protected:
 public:
     /**
      * @brief Construct the UIModelObject object
@@ -216,11 +216,11 @@ public:
     ControlledObjectStatus get_status();
 
     /**
-     * @brief Get the current controller object. 
-     * 
+     * @brief Get the current controller object.
+     *
      * NOTICE: It is usually necessary to recast the abstract return UIController into the actual controller
-     * 
-     * @return UIController* 
+     *
+     * @return UIController*
      */
     UIController *get_current_controller();
     /**
@@ -384,8 +384,11 @@ public:
     ~UIController();
     /**
      * @brief if the current controlled object is different from _new_controlled_object, change the current controlled object this new one.
+     * By he same time, The controller of the new controlled object is updated.
+     * 
+     * NOTICE: A controller can change its controlled object. 
+     * This is why it must know what is the current controlled object and it may be usefull that the controlled object know which is its controller. 
      *
-     * The controller of the new controlled object is updated.
      * @param _new_controlled_object
      */
     void update_current_controlled_object(UIModelObject *_new_controlled_object);
@@ -403,7 +406,7 @@ public:
  * This is why the widget height and the widget_anchor_y must be multiple of 8. Doing so the widget buffer bytes do not ovewrite pixel outside the widget border.
  *
  * IMPORTANT NOTICE 2: The final widget implementation must know what actual model object it displays. This final implementation must have a member (can be private)
- * e.g. <final_type> * actual_displayed_object; of the actual <final_type> implementation of UIModelObject. This can be inialised by the constructor.
+ * e.g. <final_type> * actual_displayed_object; of the actual <final_type> implementation of UIModelObject. This can be initialised by the constructor.
  *
  *
  */
@@ -471,7 +474,6 @@ protected:
     void draw_border();
 
 public:
-
     /**
      * @brief Set the display screen object
      *
@@ -480,13 +482,13 @@ public:
     void set_display_screen(UIDisplayDevice *_new_display_device);
 
     /**
-     * @brief A special feature that can be used when we want a widget to blink. The blinking is based on the system clock time divided by half the blinking period.
-     * When the result is even, the widgete is drawn in WHITE, otherwise it is drawn in BLACK.
+     * @brief A widget utilities that gives a means to manage blinking
      *
      * @param _blink_period The period of the blinking, in microseconds
-     * @return FramebufferColor
+     * @return true    time is within the first half of the period
+     * @return false   time is within the second half of the period
      */
-    static FramebufferColor blinking_us(uint32_t _blink_period);
+    bool on_first_semi_period(uint32_t _blink_period);
     /**
      * @brief Construct a new UIWidget object
      *

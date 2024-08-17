@@ -197,9 +197,9 @@ void UIWidget::draw_border()
     rect(0, 0, frame_width, frame_height);
 }
 
-FramebufferColor UIWidget::blinking_us(uint32_t _blink_period)
+bool UIWidget::on_first_semi_period(uint32_t _blink_period)
 {
-    return ((time_us_32() / _blink_period) % 2) ? FramebufferColor::WHITE : FramebufferColor::BLACK;
+    return ((time_us_32() / (_blink_period/2))%2 ) ? true : false;
 }
 
 UIWidget::UIWidget(UIDisplayDevice *_display_screen,
