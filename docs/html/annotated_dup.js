@@ -20,6 +20,7 @@ var annotated_dup =
     [ "SwitchButtonWithIRQ", "class_switch_button_with_i_r_q.html", "class_switch_button_with_i_r_q" ],
     [ "test_CursorWidgetWithIncrementalValue", "classtest___cursor_widget_with_incremental_value.html", "classtest___cursor_widget_with_incremental_value" ],
     [ "test_IncrementalValue", "classtest___incremental_value.html", "classtest___incremental_value" ],
+    [ "test_managed_square_led_widget", "classtest__managed__square__led__widget.html", "classtest__managed__square__led__widget" ],
     [ "test_Manager", "classtest___manager.html", "classtest___manager" ],
     [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", "classtest___object_manager_widget" ],
     [ "test_SetOfWidget", "classtest___set_of_widget.html", "classtest___set_of_widget" ],
@@ -32,5 +33,5 @@ var annotated_dup =
     [ "UIModelObject", "class_u_i_model_object.html", "class_u_i_model_object" ],
     [ "UIObjectManager", "class_u_i_object_manager.html", "class_u_i_object_manager" ],
     [ "UIWidget", "class_u_i_widget.html", "class_u_i_widget" ],
-    [ "w_SquareLed", "classw___square_led.html", null ]
+    [ "w_SquareLed", "classw___square_led.html", "classw___square_led" ]
 ];

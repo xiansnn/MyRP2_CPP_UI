@@ -9,6 +9,7 @@ var hierarchy =
         [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", null ],
         [ "test_SetOfWidget", "classtest___set_of_widget.html", null ],
         [ "w_SquareLed", "classw___square_led.html", [
+          [ "test_managed_square_led_widget", "classtest__managed__square__led__widget.html", null ],
           [ "test_square_led_widget", "classtest__square__led__widget.html", null ]
         ] ]
       ] ]
@@ -30,19 +31,23 @@ var hierarchy =
       [ "SwitchButtonWithIRQ", "class_switch_button_with_i_r_q.html", [
         [ "RotaryEncoder", "class_rotary_encoder.html", null ]
       ] ],
+      [ "test_switch_button", "classtest__switch__button.html", null ],
       [ "test_switch_button", "classtest__switch__button.html", null ]
     ] ],
     [ "UIController", "class_u_i_controller.html", [
       [ "RotaryEncoder", "class_rotary_encoder.html", null ],
+      [ "test_switch_button", "classtest__switch__button.html", null ],
       [ "test_switch_button", "classtest__switch__button.html", null ]
     ] ],
     [ "UIModelObject", "class_u_i_model_object.html", [
       [ "UIControlledIncrementalValue", "class_u_i_controlled_incremental_value.html", [
         [ "UIObjectManager", "class_u_i_object_manager.html", [
+          [ "test_Manager", "classtest___manager.html", null ],
           [ "test_Manager", "classtest___manager.html", null ]
         ] ],
         [ "test_IncrementalValue", "classtest___incremental_value.html", null ]
       ] ],
+      [ "test_square_led_model", "classtest__square__led__model.html", null ],
       [ "test_square_led_model", "classtest__square__led__model.html", null ]
     ] ]
 ];

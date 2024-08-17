@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MyRP2_CPP_UI: C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/widgets/test_square_led.cpp File Reference</title>
+<title>MyRP2_CPP_UI: C:/Users/chris/OneDrive/MyRP2_CPP_UI/sw/widgets/test_managed_square_led.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -70,7 +70,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true); });
+$(function(){initNavTree('test__managed__square__led_8cpp.html',''); initResizable(true); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -101,23 +101,27 @@ $(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true);
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
-  <div class="headertitle"><div class="title">test_square_led.cpp File Reference</div></div>
+  <div class="headertitle"><div class="title">test_managed_square_led.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;widget_square_led.h&quot;</code><br />
 <code>#include &quot;ssd1306.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="probe_8h_source.html">probe.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="switch__button_8h_source.html">switch_button.h</a>&quot;</code><br />
+<code>#include &quot;rotary_encoder.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__model.html">test_square_led_model</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example of final implementation of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>.  <a href="classtest__square__led__model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__managed__square__led__widget.html">test_managed_square_led_widget</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example of final implementation of <a class="el" href="classw___square_led.html" title="A widget that show a square (it can be a rectangle) on the display.">w_SquareLed</a>.  <a href="classtest__managed__square__led__widget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__switch__button.html">test_switch_button</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is an example of device that inherits from <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>  <a href="classtest__switch__button.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest___manager.html">test_Manager</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">the example implementation of <a class="el" href="class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen.">UIObjectManager</a>  <a href="classtest___manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -125,9 +129,18 @@ Macros</h2></td></tr>
 <tr class="memitem:a70f4bc9e569b20d5dac5c54daaad9cc3" id="r_a70f4bc9e569b20d5dac5c54daaad9cc3"><td class="memItemLeft" align="right" valign="top"><a id="a70f4bc9e569b20d5dac5c54daaad9cc3" name="a70f4bc9e569b20d5dac5c54daaad9cc3"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>CENTRAL_SWITCH_GPIO</b>&#160;&#160;&#160;6</td></tr>
 <tr class="separator:a70f4bc9e569b20d5dac5c54daaad9cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8d26c41a2c733bd38db98003f395778" id="r_aa8d26c41a2c733bd38db98003f395778"><td class="memItemLeft" align="right" valign="top"><a id="aa8d26c41a2c733bd38db98003f395778" name="aa8d26c41a2c733bd38db98003f395778"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ENCODER_CLK_GPIO</b>&#160;&#160;&#160;26</td></tr>
+<tr class="separator:aa8d26c41a2c733bd38db98003f395778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3f4ce9a0e2095177c4b9cd75edb2a46" id="r_aa3f4ce9a0e2095177c4b9cd75edb2a46"><td class="memItemLeft" align="right" valign="top"><a id="aa3f4ce9a0e2095177c4b9cd75edb2a46" name="aa3f4ce9a0e2095177c4b9cd75edb2a46"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ENCODER_DT_GPIO</b>&#160;&#160;&#160;21</td></tr>
+<tr class="separator:aa3f4ce9a0e2095177c4b9cd75edb2a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a64d11a233c32f2da60996f97a98ccea4" id="r_a64d11a233c32f2da60996f97a98ccea4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a> (uint gpio, uint32_t event_mask)</td></tr>
+<tr class="memdesc:a64d11a233c32f2da60996f97a98ccea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">define the ISR associated with the clock signal of the rotary encoder  <br /></td></tr>
+<tr class="separator:a64d11a233c32f2da60996f97a98ccea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">test and example program of SquareLED widget.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,12 +159,18 @@ Variables</h2></td></tr>
 <tr class="memitem:a0748456ae127a55ef21b80cffc43ffe5" id="r_a0748456ae127a55ef21b80cffc43ffe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0748456ae127a55ef21b80cffc43ffe5">cfg_central_switch</a></td></tr>
 <tr class="memdesc:a0748456ae127a55ef21b80cffc43ffe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">define central switch config  <br /></td></tr>
 <tr class="separator:a0748456ae127a55ef21b80cffc43ffe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a006af9cd5d96e6655b3a047f5f541f91" id="r_a006af9cd5d96e6655b3a047f5f541f91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a006af9cd5d96e6655b3a047f5f541f91">cfg_encoder_clk</a></td></tr>
+<tr class="memdesc:a006af9cd5d96e6655b3a047f5f541f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">config of the rotary encoder clock signal  <br /></td></tr>
+<tr class="separator:a006af9cd5d96e6655b3a047f5f541f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6b1aca0002250115e13f2bcf8991ee8" id="r_ac6b1aca0002250115e13f2bcf8991ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___config_master_i2_c.html">struct_ConfigMasterI2C</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6b1aca0002250115e13f2bcf8991ee8">cfg_i2c</a></td></tr>
 <tr class="memdesc:ac6b1aca0002250115e13f2bcf8991ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">define i2c config  <br /></td></tr>
 <tr class="separator:ac6b1aca0002250115e13f2bcf8991ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29dfa8d486ecd3b70bd7b54a25d992da" id="r_a29dfa8d486ecd3b70bd7b54a25d992da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___config_s_s_d1306.html">struct_ConfigSSD1306</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a29dfa8d486ecd3b70bd7b54a25d992da">cfg_ssd1306</a></td></tr>
 <tr class="memdesc:a29dfa8d486ecd3b70bd7b54a25d992da"><td class="mdescLeft">&#160;</td><td class="mdescRight">define <a class="el" href="class_s_s_d1306.html" title="SSD1306 OLED display device driver.">SSD1306</a> display config  <br /></td></tr>
 <tr class="separator:a29dfa8d486ecd3b70bd7b54a25d992da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb211b6ed10dde4c778f33d7ea9350a" id="r_acbb211b6ed10dde4c778f33d7ea9350a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_rotary_encoder.html">RotaryEncoder</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acbb211b6ed10dde4c778f33d7ea9350a">encoder</a></td></tr>
+<tr class="memdesc:acbb211b6ed10dde4c778f33d7ea9350a"><td class="mdescLeft">&#160;</td><td class="mdescRight">create encoder  <br /></td></tr>
+<tr class="separator:acbb211b6ed10dde4c778f33d7ea9350a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>xiansnn (<a href="#" onclick="location.href='mai'+'lto:'+'xia'+'ns'+'nn@'+'ho'+'tma'+'il'+'.co'+'m'; return false;">xians<span class="obfuscator">.nosp@m.</span>nn@h<span class="obfuscator">.nosp@m.</span>otmai<span class="obfuscator">.nosp@m.</span>l.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
@@ -177,28 +196,54 @@ Variables</h2></td></tr>
 <p>test and example program of SquareLED widget. </p>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 <p>main steps:</p>
-<p>1- create I2C bus hw peripheral and display</p>
-<p>2- create test_common_model as displayed object for blinking_led square_led</p>
-<p>3- create square_led as <a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></p>
-<p>4- create a switchbutton</p>
+<p>1- create I2C bus hw peripheral</p>
+<p>2- create the OLED display, clean up the screen and draw the border of the screen</p>
+<p>3- create 3 <a class="el" href="classtest__square__led__model.html" title="Example of final implementation of UIModelObject.">test_square_led_model</a> as displayed object for <a class="el" href="classtest__managed__square__led__widget.html" title="Example of final implementation of w_SquareLed.">test_managed_square_led_widget</a></p>
+<p>4- create 3 <a class="el" href="classtest__managed__square__led__widget.html" title="Example of final implementation of w_SquareLed.">test_managed_square_led_widget</a></p>
 <p>5- set is_blinking period of the square_led</p>
-<p>6- clean up the screen and draw the border of the screen</p>
-<p>7- start infinite loop</p>
+<p>6- create a <a class="el" href="classtest__switch__button.html" title="this is an example of device that inherits from UIController">test_switch_button</a></p>
+<p>7- create a <a class="el" href="classtest___manager.html" title="the example implementation of UIObjectManager">test_Manager</a> connected to the rotary encoder.</p>
+<p>8- populate manager with managed object</p>
+<p>9- start infinite loop</p>
 <ul>
-<li>get UI switch button event and process it.</li>
+<li>get central_switch event and give it to the manager .</li>
 </ul>
-<p>NOTICE:There is a simpler way to get event. We can also forget <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> and use directly <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> in the following way: </p><div class="fragment"><div class="line"><a class="code hl_enumeration" href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a> <span class="keyword">event</span> = <a class="code hl_variable" href="test__ui__core_8cpp.html#a8abe4a909e426cb03eadadd8facf46c8">central_switch</a>.<a class="code hl_function" href="class_switch_button.html#ad488b9db3ed6b1709f1eda137a69f52e">process_sample_event</a>();</div>
-<div class="line">test_common_model.process_control_event(event);</div>
-<div class="ttc" id="aclass_switch_button_html_ad488b9db3ed6b1709f1eda137a69f52e"><div class="ttname"><a href="class_switch_button.html#ad488b9db3ed6b1709f1eda137a69f52e">SwitchButton::process_sample_event</a></div><div class="ttdeci">ControlEvent process_sample_event()</div><div class="ttdoc">the periodic routine that process deboucing, press and release of the switch.</div><div class="ttdef"><b>Definition</b> switch_button.cpp:37</div></div>
-<div class="ttc" id="atest__ui__core_8cpp_html_a8abe4a909e426cb03eadadd8facf46c8"><div class="ttname"><a href="test__ui__core_8cpp.html#a8abe4a909e426cb03eadadd8facf46c8">central_switch</a></div><div class="ttdeci">SwitchButton central_switch</div><div class="ttdoc">create central switch</div><div class="ttdef"><b>Definition</b> test_ui_core.cpp:53</div></div>
-<div class="ttc" id="aui__core_8h_html_afe97f6c9e5f8fc59c735ff67fa2255b4"><div class="ttname"><a href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a></div><div class="ttdeci">ControlEvent</div><div class="ttdoc">The list of predefined events that a UIController can send to the controlled UIModelObject,...</div><div class="ttdef"><b>Definition</b> ui_core.h:26</div></div>
-</div><!-- fragment --><p> This avoid the burden of casting <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> and can be used when there is not special need to have <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> aware about wich is displaying its data.</p>
 <ul>
-<li>refresh the widget</li>
+<li>refresh the widgets</li>
 </ul>
 <ul>
 <li>sleep for 20ms</li>
 </ul>
+
+</div>
+</div>
+<a id="a64d11a233c32f2da60996f97a98ccea4" name="a64d11a233c32f2da60996f97a98ccea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64d11a233c32f2da60996f97a98ccea4">&#9670;&#160;</a></span>shared_irq_call_back()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void shared_irq_call_back </td>
+          <td>(</td>
+          <td class="paramtype">uint</td>          <td class="paramname"><span class="paramname"><em>gpio</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>event_mask</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>define the ISR associated with the clock signal of the rotary encoder </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gpio</td><td>The gpio number connected to the clock signal </td></tr>
+    <tr><td class="paramname">event_mask</td><td>the IRQ mask, default to GPIO_IRQ_EDGE_FALL | GPIO_IRQ_EDGE_RISE </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -221,6 +266,24 @@ Variables</h2></td></tr>
 <div class="line">    .active_lo = <span class="keyword">true</span>}</div>
 </div><!-- fragment -->
 <p>define central switch config </p>
+
+</div>
+</div>
+<a id="a006af9cd5d96e6655b3a047f5f541f91" name="a006af9cd5d96e6655b3a047f5f541f91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a006af9cd5d96e6655b3a047f5f541f91">&#9670;&#160;</a></span>cfg_encoder_clk</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a> cfg_encoder_clk</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">{</div>
+<div class="line">    .debounce_delay_us = 5000}</div>
+</div><!-- fragment -->
+<p>config of the rotary encoder clock signal </p>
 
 </div>
 </div>
@@ -269,12 +332,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acbb211b6ed10dde4c778f33d7ea9350a" name="acbb211b6ed10dde4c778f33d7ea9350a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb211b6ed10dde4c778f33d7ea9350a">&#9670;&#160;</a></span>encoder</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_rotary_encoder.html">RotaryEncoder</a> encoder</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <a class="code hl_class" href="class_rotary_encoder.html">RotaryEncoder</a>(ENCODER_CLK_GPIO, ENCODER_DT_GPIO,</div>
+<div class="line">                                      <a class="code hl_function" href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a>, <a class="code hl_variable" href="#a006af9cd5d96e6655b3a047f5f541f91">cfg_encoder_clk</a>)</div>
+<div class="ttc" id="aclass_rotary_encoder_html"><div class="ttname"><a href="class_rotary_encoder.html">RotaryEncoder</a></div><div class="ttdoc">The rotary encoder is a device used to control a value the can be incremented/decremented by the user...</div><div class="ttdef"><b>Definition</b> rotary_encoder.h:21</div></div>
+<div class="ttc" id="atest__managed__square__led_8cpp_html_a006af9cd5d96e6655b3a047f5f541f91"><div class="ttname"><a href="#a006af9cd5d96e6655b3a047f5f541f91">cfg_encoder_clk</a></div><div class="ttdeci">struct_SwitchButtonConfig cfg_encoder_clk</div><div class="ttdoc">config of the rotary encoder clock signal</div><div class="ttdef"><b>Definition</b> test_managed_square_led.cpp:32</div></div>
+<div class="ttc" id="atest__managed__square__led_8cpp_html_a64d11a233c32f2da60996f97a98ccea4"><div class="ttname"><a href="#a64d11a233c32f2da60996f97a98ccea4">shared_irq_call_back</a></div><div class="ttdeci">void shared_irq_call_back(uint gpio, uint32_t event_mask)</div><div class="ttdoc">define the ISR associated with the clock signal of the rotary encoder</div><div class="ttdef"><b>Definition</b> test_managed_square_led.cpp:61</div></div>
+</div><!-- fragment -->
+<p>create encoder </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_83479ca8445b084a39a9716b3e7c10e1.html">chris</a></li><li class="navelem"><a class="el" href="dir_ba412ed9cbc5502d4bd0776b8722a0ca.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_e8a225bfacbb433bca1ba3570f442c47.html">MyRP2_CPP_UI</a></li><li class="navelem"><a class="el" href="dir_aa49518dd45ddfc7f12f082e45b2367d.html">sw</a></li><li class="navelem"><a class="el" href="dir_bfebe2a9be091b640c7a27ad279f8d2a.html">widgets</a></li><li class="navelem"><a class="el" href="test__square__led_8cpp.html">test_square_led.cpp</a></li>
+    <li class="navelem"><a class="el" href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a class="el" href="dir_83479ca8445b084a39a9716b3e7c10e1.html">chris</a></li><li class="navelem"><a class="el" href="dir_ba412ed9cbc5502d4bd0776b8722a0ca.html">OneDrive</a></li><li class="navelem"><a class="el" href="dir_e8a225bfacbb433bca1ba3570f442c47.html">MyRP2_CPP_UI</a></li><li class="navelem"><a class="el" href="dir_aa49518dd45ddfc7f12f082e45b2367d.html">sw</a></li><li class="navelem"><a class="el" href="dir_bfebe2a9be091b640c7a27ad279f8d2a.html">widgets</a></li><li class="navelem"><a class="el" href="test__managed__square__led_8cpp.html">test_managed_square_led.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
   </ul>
 </div>

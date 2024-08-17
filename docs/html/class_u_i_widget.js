@@ -5,6 +5,7 @@ var class_u_i_widget =
     [ "add_widget", "class_u_i_widget.html#a77b60ee8bae791e3239fdc6c27472b83", null ],
     [ "draw_border", "class_u_i_widget.html#ae8343ea2acadbfb296a53f91aa043277", null ],
     [ "draw_refresh", "class_u_i_widget.html#a3c4ca560410bfc6b07718c4dda7a7586", null ],
+    [ "on_first_semi_period", "class_u_i_widget.html#a23e83194e547dba2049b11e2b942a30f", null ],
     [ "set_display_screen", "class_u_i_widget.html#ab0428db23b7794e60579466e62ba4290", null ],
     [ "widget_border_width", "class_u_i_widget.html#acd07c6d3c1543f94eca2a3e79ebf636c", null ],
     [ "widget_height", "class_u_i_widget.html#abd71d95580622d0468f29e99a30a0c00", null ],

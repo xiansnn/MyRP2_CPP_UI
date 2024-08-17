@@ -10,7 +10,9 @@ var searchData=
   ['interrupt_5fservice_5froutine_7',['interrupt_service_routine',['../class_rotary_encoder.html#ae7ad35ae64d2b815c25ac72a51702e6f',1,'RotaryEncoder']]],
   ['irq_5fenabled_8',['irq_enabled',['../class_switch_button_with_i_r_q.html#a261dc80eca218e3733c6a0cf637c25e8',1,'SwitchButtonWithIRQ']]],
   ['is_5factive_9',['IS_ACTIVE',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a70d794d2a66b3ed4d2b0ff57d41b7089',1,'ui_core.h']]],
-  ['is_5fbutton_5factive_10',['is_button_active',['../class_switch_button.html#aa9fdb807158ad5f9c2af77541a6da8a5',1,'SwitchButton']]],
-  ['is_5fswitch_5factive_11',['is_switch_active',['../class_switch_button.html#a7e862eb1123eb54a4589f88537b68374',1,'SwitchButton']]],
-  ['is_5fwaiting_12',['IS_WAITING',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab',1,'ui_core.h']]]
+  ['is_5fblinking_10',['is_blinking',['../classw___square_led.html#a447beab97f4f37c50274d222af4a19d2',1,'w_SquareLed']]],
+  ['is_5fbutton_5factive_11',['is_button_active',['../class_switch_button.html#aa9fdb807158ad5f9c2af77541a6da8a5',1,'SwitchButton']]],
+  ['is_5flit_12',['is_lit',['../classw___square_led.html#a20e541a27f053ff1b672bc3057e905fe',1,'w_SquareLed']]],
+  ['is_5fswitch_5factive_13',['is_switch_active',['../class_switch_button.html#a7e862eb1123eb54a4589f88537b68374',1,'SwitchButton']]],
+  ['is_5fwaiting_14',['IS_WAITING',['../ui__core_8h.html#a57c20ec1ef250b4ad060705786762112a02ca6db02d1c43b09e875c6cc1f51aab',1,'ui_core.h']]]
 ];
