@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.12)
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(MYRP2_CPP_PROJECTS C CXX ASM)
+project(MYRP2_CPP_UI C CXX ASM)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_CXX_STANDARD 20)
 
@@ -20,20 +20,25 @@ add_compile_options(-Wall
         -Wno-maybe-uninitialized
         )
 
-# include_directories(${PROJECT_SOURCE_DIR}/utilities/dbg_probe
-#                     ${PROJECT_SOURCE_DIR}/utilities/cntrl_value
-#                     ${PROJECT_SOURCE_DIR}/utilities/ui_mvc
-#                     ${PROJECT_SOURCE_DIR}/sw/framebuffer
-#                     ${PROJECT_SOURCE_DIR}/sw/widgets
-#                     ${PROJECT_SOURCE_DIR}/device/device_ssd1306
-#                     ${PROJECT_SOURCE_DIR}/device/device_switch
-#                     ${PROJECT_SOURCE_DIR}/device/device_KY_040
-#                     ${PROJECT_SOURCE_DIR}/hw/hw_I2C
-#                     ${PROJECT_SOURCE_DIR}/hw/hw_PWM)
+include_directories(    ${PROJECT_SOURCE_DIR}/utilities/debug_probe
+                        ${PROJECT_SOURCE_DIR}/hw/hw_I2C
+                        ${PROJECT_SOURCE_DIR}/sw/framebuffer
+                        # ${PROJECT_SOURCE_DIR}/utilities/cntrl_value
+                        
+                        ${PROJECT_SOURCE_DIR}/ui_core/test_ui_core
 
-# add_subdirectory(utilities)
-# add_subdirectory(hw)
-# add_subdirectory(device)
-# add_subdirectory(sw)
-# add_subdirectory(app_example)
+                        ${PROJECT_SOURCE_DIR}/ui_core
+                        ${PROJECT_SOURCE_DIR}/sw/widgets
+                        ${PROJECT_SOURCE_DIR}/devices/device_ssd1306
+                        ${PROJECT_SOURCE_DIR}/devices/device_switch
+                        ${PROJECT_SOURCE_DIR}/devices/device_KY_040
+                        # ${PROJECT_SOURCE_DIR}/hw/hw_PWM
+                    )
+
+add_subdirectory(utilities)
+add_subdirectory(ui_core)
+add_subdirectory(hw)
+add_subdirectory(devices)
+add_subdirectory(sw)
+add_subdirectory(app_examples)
 

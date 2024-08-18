@@ -1,0 +1,53 @@
+#include "widget_square_led.h"
+
+w_SquareLed::w_SquareLed(UIDisplayDevice *display_screen,
+                         size_t width, size_t height,
+                         uint8_t widget_anchor_x, uint8_t widget_anchor_y,
+                         FramebufferColor color, FramebufferFormat framebuffer_format)
+    : UIWidget(display_screen, width, height, widget_anchor_x, widget_anchor_y, true, 1, framebuffer_format)
+{
+}
+
+w_SquareLed::~w_SquareLed()
+{
+}
+
+void w_SquareLed::light_on()
+{
+    this->is_lit = true;
+}
+
+void w_SquareLed::light_off()
+{
+    this->is_lit = false;
+}
+
+void w_SquareLed::blink_refresh()
+{
+    if (this->is_blinking and this->blinking_phase_has_changed())
+    {
+        if (!is_lit)
+        {
+            this->light_on();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        }
+        else
+        {
+            this->light_off();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+            draw_border();
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        }
+    }
+}
+
+void w_SquareLed::blink_off()
+{
+    this->is_blinking = false;
+}
+
+void w_SquareLed::blink_on()
+{
+    this->is_blinking = true;
+}

@@ -2,8 +2,13 @@
 This repository proposes a User Interface alternative version for RPi Pico.
 All the classes defined here rely on the RPi Pico SDK version 1.5.1
 
-## Complete documentation
-not yet
+Up to now, only one display device is available. It is the OLED SSD1306. Most of The code was derived from [Harbys github repository](https://github.com/Harbys/pico-ssd1306) works and framebuffer API aws inspired from mycropython API we can find [here](https://docs.micropython.org/en/latest/library/framebuf.html#module-framebuf).
+
+## Complete documentation (still in construction)
+Access to the the project web page with external browser [here](https://xiansnn.github.io/MyRP2_CPP_UI/).
+
+After opening this pages with your web browser, you will find doxygen documentation [here](docs/html/index.html)
+
 
 ## Motivation
 
@@ -18,6 +23,9 @@ During my professional period of activities, I've got knowledge about Model Base
 
 ## Files organisation
 The files directories have been inspired by the Pico SDK.
+Structures are named struct_xxxx.
+Classes created for testing or example purpose are named test_xxx.
+Files created for test or example purpose are named t_xxxx/
 ### "hw" directory
 I'll place here C++ classes that abstract in some way the corresponding SDK functions related the HW peripheral of the Pico.
 The first one is I2C.
