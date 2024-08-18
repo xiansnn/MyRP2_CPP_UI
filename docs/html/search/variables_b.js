@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../classtest__square__led__model.html#a35068e0a8d7559f6c795a8b74fb42388',1,'test_square_led_model']]]
+  ['name_0',['name',['../classtest__managed__square__led__model.html#a851bd971a6dcb7def35b73778a0e2e08',1,'test_managed_square_led_model']]]
 ];

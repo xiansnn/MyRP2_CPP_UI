@@ -104,6 +104,9 @@ $(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true);
   <div class="headertitle"><div class="title">test_square_led.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press. A long press returns to the blinking mode.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;widget_square_led.h&quot;</code><br />
 <code>#include &quot;ssd1306.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="probe_8h_source.html">probe.h</a>&quot;</code><br />
@@ -112,12 +115,13 @@ $(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true);
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__model.html">test_square_led_model</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example of final implementation of <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a>.  <a href="classtest__square__led__model.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">########## implementation classes section ##########  <a href="classtest__square__led__model.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed">test_square_led_widget</a> : Example of final implementation of <a class="el" href="classw___square_led.html" title="A widget that show a square (it can be a rectangle) on the display.">w_SquareLed</a>  <a href="classtest__square__led__widget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__switch__button.html">test_switch_button</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">this is an example of device that inherits from <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>  <a href="classtest__switch__button.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtest__switch__button.html" title="test_switch_button : Example of final implementation of SwitchButton and UIController">test_switch_button</a> : Example of final implementation of <a class="el" href="class_switch_button.html" title="SwitchButton status is sampled periodically by software. Switch status is the status of the physical ...">SwitchButton</a> and <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a>  <a href="classtest__switch__button.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -129,13 +133,14 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">test and example program of SquareLED widget.  <br /></td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Example of main program of a SquareLED widget.  <br /></td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a122a4d45522f672845c43eb2f63eb3b1" id="r_a122a4d45522f672845c43eb2f63eb3b1"><td class="memItemLeft" align="right" valign="top"><a id="a122a4d45522f672845c43eb2f63eb3b1" name="a122a4d45522f672845c43eb2f63eb3b1"></a>
 <a class="el" href="class_probe.html">Probe</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pr_D4</b> = <a class="el" href="class_probe.html">Probe</a>(4)</td></tr>
+<tr class="memdesc:a122a4d45522f672845c43eb2f63eb3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">########## Debug/Observer <a class="el" href="class_probe.html" title="The Probe provides a convenient class that can be used to observe behavior of programs....">Probe</a> for logic analyser section ########## <br /></td></tr>
 <tr class="separator:a122a4d45522f672845c43eb2f63eb3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1c2477935414ae45ce93e660dcd55d4" id="r_af1c2477935414ae45ce93e660dcd55d4"><td class="memItemLeft" align="right" valign="top"><a id="af1c2477935414ae45ce93e660dcd55d4" name="af1c2477935414ae45ce93e660dcd55d4"></a>
 <a class="el" href="class_probe.html">Probe</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pr_D5</b> = <a class="el" href="class_probe.html">Probe</a>(5)</td></tr>
@@ -144,7 +149,7 @@ Variables</h2></td></tr>
 <a class="el" href="class_probe.html">Probe</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pr_D1</b> = <a class="el" href="class_probe.html">Probe</a>(1)</td></tr>
 <tr class="separator:a8d0a8f18bdd06a913a04bd6fd7575ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0748456ae127a55ef21b80cffc43ffe5" id="r_a0748456ae127a55ef21b80cffc43ffe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___switch_button_config.html">struct_SwitchButtonConfig</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0748456ae127a55ef21b80cffc43ffe5">cfg_central_switch</a></td></tr>
-<tr class="memdesc:a0748456ae127a55ef21b80cffc43ffe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">define central switch config  <br /></td></tr>
+<tr class="memdesc:a0748456ae127a55ef21b80cffc43ffe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">########## configuration section ##########  <br /></td></tr>
 <tr class="separator:a0748456ae127a55ef21b80cffc43ffe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6b1aca0002250115e13f2bcf8991ee8" id="r_ac6b1aca0002250115e13f2bcf8991ee8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstruct___config_master_i2_c.html">struct_ConfigMasterI2C</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6b1aca0002250115e13f2bcf8991ee8">cfg_i2c</a></td></tr>
 <tr class="memdesc:ac6b1aca0002250115e13f2bcf8991ee8"><td class="mdescLeft">&#160;</td><td class="mdescRight">define i2c config  <br /></td></tr>
@@ -154,7 +159,8 @@ Variables</h2></td></tr>
 <tr class="separator:a29dfa8d486ecd3b70bd7b54a25d992da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section author"><dt>Author</dt><dd>xiansnn (<a href="#" onclick="location.href='mai'+'lto:'+'xia'+'ns'+'nn@'+'ho'+'tma'+'il'+'.co'+'m'; return false;">xians<span class="obfuscator">.nosp@m.</span>nn@h<span class="obfuscator">.nosp@m.</span>otmai<span class="obfuscator">.nosp@m.</span>l.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
+<div class="textblock"><p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press. A long press returns to the blinking mode. </p>
+<dl class="section author"><dt>Author</dt><dd>xiansnn (<a href="#" onclick="location.href='mai'+'lto:'+'xia'+'ns'+'nn@'+'ho'+'tma'+'il'+'.co'+'m'; return false;">xians<span class="obfuscator">.nosp@m.</span>nn@h<span class="obfuscator">.nosp@m.</span>otmai<span class="obfuscator">.nosp@m.</span>l.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-08-09</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
@@ -174,12 +180,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>test and example program of SquareLED widget. </p>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+<p>Example of main program of a SquareLED widget. </p>
 <p>main steps:</p>
 <p>1- create I2C bus hw peripheral and display</p>
 <p>2- create test_common_model as displayed object for blinking_led square_led</p>
-<p>3- create square_led as <a class="el" href="classtest__square__led__widget.html">test_square_led_widget</a></p>
+<p>3- create square_led as <a class="el" href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed">test_square_led_widget</a></p>
 <p>4- create a switchbutton</p>
 <p>5- set is_blinking period of the square_led</p>
 <p>6- clean up the screen and draw the border of the screen</p>
@@ -220,6 +225,7 @@ Variables</h2></td></tr>
 <div class="line">    .long_push_delay_us = 1000000,</div>
 <div class="line">    .active_lo = <span class="keyword">true</span>}</div>
 </div><!-- fragment -->
+<p>########## configuration section ########## </p>
 <p>define central switch config </p>
 
 </div>

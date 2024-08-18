@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vertical_5fscroll_0',['vertical_scroll',['../class_s_s_d1306.html#a25a4d90a656b9fd2f1b2d220cc9f8e2b',1,'SSD1306']]],
-  ['vline_1',['vline',['../class_framebuffer.html#ae8fb16c32869ebc991bc6fbe1465979d',1,'Framebuffer']]]
+  ['w_5fsquareled_0',['w_SquareLed',['../classw___square_led.html#a9b8ea152688ae0b082e0ce9fc318f1a3',1,'w_SquareLed']]]
 ];

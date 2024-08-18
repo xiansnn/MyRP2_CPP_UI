@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"structstruct___config_slave_i2_c.html#ae6a465237599f36f69dddb429d5f2da2":[3,0,9,0],
+"structstruct___config_slave_i2_c.html#af7f59b731d8464999028a1128f646734":[3,0,9,5],
 "structstruct___framebuffer_text.html":[3,0,11],
 "structstruct___framebuffer_text.html#a3c19c4a2abd368a40bf071452f372cc3":[3,0,11,2],
 "structstruct___framebuffer_text.html#a48f2ac96ca9b772586c16b020eddc989":[3,0,11,0],
@@ -31,6 +33,7 @@ var NAVTREEINDEX1 =
 "test__managed__square__led_8cpp.html":[4,0,0,0,0,0,2,1,0],
 "test__managed__square__led_8cpp.html#a006af9cd5d96e6655b3a047f5f541f91":[4,0,0,0,0,0,2,1,0,7],
 "test__managed__square__led_8cpp.html#a0748456ae127a55ef21b80cffc43ffe5":[4,0,0,0,0,0,2,1,0,6],
+"test__managed__square__led_8cpp.html#a122a4d45522f672845c43eb2f63eb3b1":[4,0,0,0,0,0,2,1,0,11],
 "test__managed__square__led_8cpp.html#a29dfa8d486ecd3b70bd7b54a25d992da":[4,0,0,0,0,0,2,1,0,9],
 "test__managed__square__led_8cpp.html#a64d11a233c32f2da60996f97a98ccea4":[4,0,0,0,0,0,2,1,0,5],
 "test__managed__square__led_8cpp.html#ac6b1aca0002250115e13f2bcf8991ee8":[4,0,0,0,0,0,2,1,0,8],
@@ -40,6 +43,7 @@ var NAVTREEINDEX1 =
 "test__probe_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,0,0,0,0,4,0,1,0],
 "test__square__led_8cpp.html":[4,0,0,0,0,0,2,1,1],
 "test__square__led_8cpp.html#a0748456ae127a55ef21b80cffc43ffe5":[4,0,0,0,0,0,2,1,1,4],
+"test__square__led_8cpp.html#a122a4d45522f672845c43eb2f63eb3b1":[4,0,0,0,0,0,2,1,1,7],
 "test__square__led_8cpp.html#a29dfa8d486ecd3b70bd7b54a25d992da":[4,0,0,0,0,0,2,1,1,6],
 "test__square__led_8cpp.html#ac6b1aca0002250115e13f2bcf8991ee8":[4,0,0,0,0,0,2,1,1,5],
 "test__square__led_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,0,0,0,0,2,1,1,3],

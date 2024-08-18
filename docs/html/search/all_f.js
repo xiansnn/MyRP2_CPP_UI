@@ -3,7 +3,7 @@ var searchData=
   ['scl_5fpin_0',['scl_pin',['../structstruct___config_master_i2_c.html#a38d61a77302cbc907edb11f66acccff6',1,'struct_ConfigMasterI2C::scl_pin'],['../structstruct___config_slave_i2_c.html#a12d1f8b66f10861353bc15b35fc62398',1,'struct_ConfigSlaveI2C::scl_pin']]],
   ['sda_5fpin_1',['sda_pin',['../structstruct___config_master_i2_c.html#afd48650ae9d3930c7762d05c53c21206',1,'struct_ConfigMasterI2C::sda_pin'],['../structstruct___config_slave_i2_c.html#acba8fdbc41345f5fb5012e649615f16a',1,'struct_ConfigSlaveI2C::sda_pin']]],
   ['set_5fall_5fpixel_5fon_2',['set_all_pixel_ON',['../class_s_s_d1306.html#aee29b36a9af5d427c0665dfaf942445e',1,'SSD1306']]],
-  ['set_5fblink_5fus_3',['set_blink_us',['../classw___square_led.html#a2e60f9299da1200a5cd1a80af964e931',1,'w_SquareLed']]],
+  ['set_5fblink_5fus_3',['set_blink_us',['../class_u_i_widget.html#ac59f35621206bdea462a0b7846ddf0ac',1,'UIWidget']]],
   ['set_5fchange_5fflag_4',['set_change_flag',['../class_u_i_model_object.html#a2d8608d80b226fde8b31becdc828171b',1,'UIModelObject']]],
   ['set_5fclipped_5fvalue_5',['set_clipped_value',['../class_u_i_controlled_incremental_value.html#a428e1f2a8063a48f04ec45c4050af36d',1,'UIControlledIncrementalValue']]],
   ['set_5fcontrast_6',['set_contrast',['../class_s_s_d1306.html#ae4322aca81cf05c9f9b9e5f40874cb7b',1,'SSD1306']]],

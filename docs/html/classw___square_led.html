@@ -116,8 +116,8 @@ Inheritance diagram for w_SquareLed:</div>
   <map id="w_5FSquareLed_map" name="w_5FSquareLed_map">
 <area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="105,56,306,80"/>
 <area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="105,0,306,24"/>
-<area href="classtest__managed__square__led__widget.html" title="Example of final implementation of w_SquareLed." alt="test_managed_square_led_widget" shape="rect" coords="0,168,201,192"/>
-<area href="classtest__square__led__widget.html" alt="test_square_led_widget" shape="rect" coords="211,168,412,192"/>
+<area href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed" alt="test_managed_square_led_widget" shape="rect" coords="0,168,201,192"/>
+<area href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="test_square_led_widget" shape="rect" coords="211,168,412,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -134,9 +134,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>light_on</b> ()</td><
 void&#160;</td><td class="memItemRight" valign="bottom"><b>light_off</b> ()</td></tr>
 <tr class="memdesc:aadad27f0a0f0a66adc7e74cf646b6fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the led OFF <br /></td></tr>
 <tr class="separator:aadad27f0a0f0a66adc7e74cf646b6fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e60f9299da1200a5cd1a80af964e931" id="r_a2e60f9299da1200a5cd1a80af964e931"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e60f9299da1200a5cd1a80af964e931">set_blink_us</a> (uint32_t <a class="el" href="#a3a3163ff09f9a5550c167bcad7727bd3">blink_period</a>)</td></tr>
-<tr class="memdesc:a2e60f9299da1200a5cd1a80af964e931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the blink period in microseconds.  <br /></td></tr>
-<tr class="separator:a2e60f9299da1200a5cd1a80af964e931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27d4cadecdeac2ec08caaf89401c25a5" id="r_a27d4cadecdeac2ec08caaf89401c25a5"><td class="memItemLeft" align="right" valign="top"><a id="a27d4cadecdeac2ec08caaf89401c25a5" name="a27d4cadecdeac2ec08caaf89401c25a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>blink_refresh</b> ()</td></tr>
+<tr class="memdesc:a27d4cadecdeac2ec08caaf89401c25a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">refresh the square led ON or OFF on blinking phase change <br /></td></tr>
+<tr class="separator:a27d4cadecdeac2ec08caaf89401c25a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b76f68c39a9e80c49353a6bb3cf030" id="r_ae7b76f68c39a9e80c49353a6bb3cf030"><td class="memItemLeft" align="right" valign="top"><a id="ae7b76f68c39a9e80c49353a6bb3cf030" name="ae7b76f68c39a9e80c49353a6bb3cf030"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>blink_off</b> ()</td></tr>
 <tr class="memdesc:ae7b76f68c39a9e80c49353a6bb3cf030"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the blinking of the led OFF <br /></td></tr>
@@ -146,14 +147,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>blink_on</b> ()</td><
 <tr class="memdesc:a07460a36ac8d3a752c86f6e2833cbaa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the blinking of the led ON <br /></td></tr>
 <tr class="separator:a07460a36ac8d3a752c86f6e2833cbaa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_u_i_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_u_i_widget')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_u_i_widget.html">UIWidget</a></td></tr>
+<tr class="memitem:afad935720833986592d567d77ce3bbbd inherit pub_methods_class_u_i_widget" id="r_afad935720833986592d567d77ce3bbbd"><td class="memItemLeft" align="right" valign="top">
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>blinking_phase_has_changed</b> ()</td></tr>
+<tr class="memdesc:afad935720833986592d567d77ce3bbbd inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the blinking phase has changed <br /></td></tr>
+<tr class="separator:afad935720833986592d567d77ce3bbbd inherit pub_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0428db23b7794e60579466e62ba4290 inherit pub_methods_class_u_i_widget" id="r_ab0428db23b7794e60579466e62ba4290"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_widget.html#ab0428db23b7794e60579466e62ba4290">set_display_screen</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *_new_display_device)</td></tr>
 <tr class="memdesc:ab0428db23b7794e60579466e62ba4290 inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the display screen object.  <br /></td></tr>
 <tr class="separator:ab0428db23b7794e60579466e62ba4290 inherit pub_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e83194e547dba2049b11e2b942a30f inherit pub_methods_class_u_i_widget" id="r_a23e83194e547dba2049b11e2b942a30f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_widget.html#a23e83194e547dba2049b11e2b942a30f">on_first_semi_period</a> (uint32_t _blink_period)</td></tr>
-<tr class="memdesc:a23e83194e547dba2049b11e2b942a30f inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">A widget utilities that gives a means to manage blinking.  <br /></td></tr>
-<tr class="separator:a23e83194e547dba2049b11e2b942a30f inherit pub_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59f35621206bdea462a0b7846ddf0ac inherit pub_methods_class_u_i_widget" id="r_ac59f35621206bdea462a0b7846ddf0ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_widget.html#ac59f35621206bdea462a0b7846ddf0ac">set_blink_us</a> (uint32_t blink_period=1000000)</td></tr>
+<tr class="memdesc:ac59f35621206bdea462a0b7846ddf0ac inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the blink period in microseconds.  <br /></td></tr>
+<tr class="separator:ac59f35621206bdea462a0b7846ddf0ac inherit pub_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e9ebf97c6fe90a156b0f91f581b317 inherit pub_methods_class_u_i_widget" id="r_ae9e9ebf97c6fe90a156b0f91f581b317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_widget.html#ae9e9ebf97c6fe90a156b0f91f581b317">UIWidget</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *display_screen, size_t frame_width, size_t frame_height, uint8_t widget_anchor_x, uint8_t widget_anchor_y, bool widget_with_border, uint8_t <a class="el" href="class_u_i_widget.html#acd07c6d3c1543f94eca2a3e79ebf636c">widget_border_width</a>=1, FramebufferFormat framebuffer_format=FramebufferFormat::MONO_VLSB, <a class="el" href="structstruct___framebuffer_text.html">struct_FramebufferText</a> framebuffer_txt_cnf={.font=font_8x8})</td></tr>
-<tr class="memdesc:ae9e9ebf97c6fe90a156b0f91f581b317 inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,...">UIWidget</a> object.  <br /></td></tr>
+<tr class="memdesc:ae9e9ebf97c6fe90a156b0f91f581b317 inherit pub_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">A widget utilities that gives a means to manage blinking.  <br /></td></tr>
 <tr class="separator:ae9e9ebf97c6fe90a156b0f91f581b317 inherit pub_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d4a57bc7a557151612c87058be8b9c7 inherit pub_methods_class_u_i_widget" id="r_a9d4a57bc7a557151612c87058be8b9c7"><td class="memItemLeft" align="right" valign="top">
 &#160;</td><td class="memItemRight" valign="bottom"><b>~UIWidget</b> ()</td></tr>
@@ -237,11 +242,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_lit</b> = true</td
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_blinking</b> = false</td></tr>
 <tr class="memdesc:a447beab97f4f37c50274d222af4a19d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the blinking status of the led <br /></td></tr>
 <tr class="separator:a447beab97f4f37c50274d222af4a19d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a3163ff09f9a5550c167bcad7727bd3" id="r_a3a3163ff09f9a5550c167bcad7727bd3"><td class="memItemLeft" align="right" valign="top"><a id="a3a3163ff09f9a5550c167bcad7727bd3" name="a3a3163ff09f9a5550c167bcad7727bd3"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>blink_period</b></td></tr>
-<tr class="memdesc:a3a3163ff09f9a5550c167bcad7727bd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">the blinking period, in microseconds <br /></td></tr>
-<tr class="separator:a3a3163ff09f9a5550c167bcad7727bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_u_i_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_u_i_widget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_u_i_widget.html">UIWidget</a></td></tr>
+<tr class="memitem:aa632ac0145d606c34dc2c2378d5217e7 inherit pro_attribs_class_u_i_widget" id="r_aa632ac0145d606c34dc2c2378d5217e7"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>blink_period_us</b></td></tr>
+<tr class="memdesc:aa632ac0145d606c34dc2c2378d5217e7 inherit pro_attribs_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">The period of the blinking, in microseconds. <br /></td></tr>
+<tr class="separator:aa632ac0145d606c34dc2c2378d5217e7 inherit pro_attribs_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85a82836dd04ae6a7164d5f213615a4b inherit pro_attribs_class_u_i_widget" id="r_a85a82836dd04ae6a7164d5f213615a4b"><td class="memItemLeft" align="right" valign="top">
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>widget_anchor_x</b></td></tr>
 <tr class="separator:a85a82836dd04ae6a7164d5f213615a4b inherit pro_attribs_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -361,32 +366,6 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</t
     <tr><td class="paramname">widget_anchor_y</td><td></td></tr>
     <tr><td class="paramname">color</td><td></td></tr>
     <tr><td class="paramname">framebuffer_format</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2e60f9299da1200a5cd1a80af964e931" name="a2e60f9299da1200a5cd1a80af964e931"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e60f9299da1200a5cd1a80af964e931">&#9670;&#160;</a></span>set_blink_us()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void w_SquareLed::set_blink_us </td>
-          <td>(</td>
-          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>blink_period</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the blink period in microseconds. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">blink_period</td><td></td></tr>
   </table>
   </dd>
 </dl>

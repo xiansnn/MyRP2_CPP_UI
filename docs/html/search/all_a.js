@@ -6,5 +6,6 @@ var searchData=
   ['managed_5fmodels_3',['managed_models',['../class_u_i_object_manager.html#ab1d6f0601a5a4fe8e5609661c349a01c',1,'UIObjectManager']]],
   ['motivation_4',['Motivation',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md2',1,'']]],
   ['msgeq7_5',['MSGEQ7',['../class_m_s_g_e_q7.html',1,'MSGEQ7'],['../class_m_s_g_e_q7.html#a5d30e2ac12bbf4927b3154859d6f1ee0',1,'MSGEQ7::MSGEQ7()']]],
-  ['myrp2_5fcpp_5fui_6',['MyRP2_CPP_UI',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html',1,'']]]
+  ['my_5fbool_5fvalue_6',['my_bool_value',['../classtest__managed__square__led__model.html#aacb6edf9e8cdd00298de5443bf31fe28',1,'test_managed_square_led_model']]],
+  ['myrp2_5fcpp_5fui_7',['MyRP2_CPP_UI',['../md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html',1,'']]]
 ];

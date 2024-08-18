@@ -47,7 +47,7 @@ var hierarchy =
         ] ],
         [ "test_IncrementalValue", "classtest___incremental_value.html", null ]
       ] ],
-      [ "test_square_led_model", "classtest__square__led__model.html", null ],
+      [ "test_managed_square_led_model", "classtest__managed__square__led__model.html", null ],
       [ "test_square_led_model", "classtest__square__led__model.html", null ]
     ] ]
 ];
