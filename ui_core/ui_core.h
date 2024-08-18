@@ -385,9 +385,9 @@ public:
     /**
      * @brief if the current controlled object is different from _new_controlled_object, change the current controlled object this new one.
      * By he same time, The controller of the new controlled object is updated.
-     * 
-     * NOTICE: A controller can change its controlled object. 
-     * This is why it must know what is the current controlled object and it may be usefull that the controlled object know which is its controller. 
+     *
+     * NOTICE: A controller can change its controlled object.
+     * This is why it must know what is the current controlled object and it may be usefull that the controlled object know which is its controller.
      *
      * @param _new_controlled_object
      */
@@ -413,7 +413,19 @@ public:
 class UIWidget : public Framebuffer
 {
 private:
+    int8_t previous_blinking_phase; // should be 0 or 1.
+
 protected:
+    /**
+     * @brief return true if the blinking phase has changed
+     *
+     */
+    bool blinking_phase_has_changed();
+    /**
+     * @brief The period of the blinking, in microseconds
+     *
+     */
+    uint32_t blink_period_us;
     /**
      * @brief
      *
@@ -482,13 +494,12 @@ public:
     void set_display_screen(UIDisplayDevice *_new_display_device);
 
     /**
-     * @brief A widget utilities that gives a means to manage blinking
+     * @brief Set the blink period in microseconds
      *
-     * @param _blink_period The period of the blinking, in microseconds
-     * @return true    time is within the first half of the period
-     * @return false   time is within the second half of the period
+     * @param blink_period default to 1 second
      */
-    bool on_first_semi_period(uint32_t _blink_period);
+    void set_blink_us(uint32_t blink_period = 1000000);
+
     /**
      * @brief Construct a new UIWidget object
      *
@@ -531,8 +542,10 @@ public:
      * Guidance to implement this function:
      *
      * - First: Scan all contained sub-widgets if any and call draw_refresh() member function of each of them.
-     * - Then: check if any changes require a screen redraw
-     * - if redraw() required , execute the effective widget drawing (can be a private memeber function)
+     * - then: update widget status according to the values of interest in the UIModelObject
+     * - refresh blinking if needed
+     * - Then: check if any changes in the model require a screen redraw
+     * - if redraw() required , execute the effective widget drawing (can be a private member function)
      * - and finally : clear model change flag if needed.
      *       WARNING : When several widget display one Model, only the last one must clear_change_flag()
      */

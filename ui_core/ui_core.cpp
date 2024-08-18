@@ -50,7 +50,7 @@ ControlledObjectStatus UIModelObject::get_status()
     return this->status;
 }
 
-UIController* UIModelObject::get_current_controller()
+UIController *UIModelObject::get_current_controller()
 {
     return this->current_controller;
 }
@@ -197,11 +197,6 @@ void UIWidget::draw_border()
     rect(0, 0, frame_width, frame_height);
 }
 
-bool UIWidget::on_first_semi_period(uint32_t _blink_period)
-{
-    return ((time_us_32() / (_blink_period/2))%2 ) ? true : false;
-}
-
 UIWidget::UIWidget(UIDisplayDevice *_display_screen,
                    size_t _frame_width,
                    size_t _frame_height,
@@ -213,7 +208,7 @@ UIWidget::UIWidget(UIDisplayDevice *_display_screen,
                    struct_FramebufferText _framebuffer_txt_cnf)
     : Framebuffer(_frame_width, _frame_height, _framebuffer_format)
 {
-    assert(_frame_height % 8 == 0);          // check widget height limitation
+    assert(_frame_height % 8 == 0);    // check widget height limitation
     assert(_widget_anchor_y % 8 == 0); // check widget anchor y limitation
     this->display_screen = _display_screen;
     this->widget_anchor_x = _widget_anchor_x;
@@ -234,6 +229,19 @@ UIWidget::~UIWidget()
 void UIWidget::set_display_screen(UIDisplayDevice *_new_display_device)
 {
     this->display_screen = _new_display_device;
+}
+
+void UIWidget::set_blink_us(uint32_t _blink_period_us)
+{
+    this->blink_period_us = _blink_period_us;
+}
+
+bool UIWidget::blinking_phase_has_changed()
+{
+    int8_t current_blinking_phase = (time_us_32() / (this->blink_period_us / 2)) % 2 ;
+    bool phase_has_changed = (previous_blinking_phase != current_blinking_phase);
+    previous_blinking_phase = current_blinking_phase;
+    return phase_has_changed;
 }
 
 void UIWidget::add_widget(UIWidget *_sub_widget)
