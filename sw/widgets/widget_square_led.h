@@ -17,11 +17,6 @@ protected:
      * 
      */
     bool is_blinking = false;
-    /**
-     * @brief the blinking period, in microseconds
-     * 
-     */
-    uint32_t blink_period;
     
 
 public:
@@ -55,12 +50,12 @@ public:
      * 
      */
     void light_off();
+    
     /**
-     * @brief Set the blink period in microseconds
+     * @brief refresh the square led ON or OFF on blinking phase change
      * 
-     * @param blink_period 
      */
-    void set_blink_us(uint32_t blink_period);
+    void blink_refresh();
     /**
      * @brief set the blinking of the led OFF
      * 

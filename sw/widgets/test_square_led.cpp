@@ -1,7 +1,7 @@
 /**
  * @file test_square_led.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief an example of usage of w_SquareLED. 
+ * @brief an example of usage of w_SquareLED.
  * The LED is blinking.
  * A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press.
  * A long press returns to the blinking mode.
@@ -16,9 +16,12 @@
 #include "probe.h"
 #include "switch_button.h"
 
+/// @brief ########## Debug/Observer Probe for logic analyser section ##########
 Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
 Probe pr_D1 = Probe(1);
+
+/// @brief ########## configuration section ##########
 
 /// @brief define central switch config
 struct_SwitchButtonConfig cfg_central_switch{
@@ -44,17 +47,27 @@ struct_ConfigSSD1306 cfg_ssd1306{
     .frequency_divider = 1,
     .frequency_factor = 0};
 
+/// @brief ########## implementation classes section ##########
+
+/**
+ * @brief test_square_led_model : Example of final implementation of UIModelObject
+ *
+ */
 class test_square_led_model : public UIModelObject
 {
 protected:
 public:
     bool blinking_status = true;
-    bool a_bool_value = true;
+    bool my_bool_value = true;
     test_square_led_model();
     ~test_square_led_model();
     void process_control_event(ControlEvent _event);
 };
 
+/**
+ * @brief test_square_led_widget : Example of final implementation of w_SquareLed
+ *
+ */
 class test_square_led_widget : public w_SquareLed
 {
 private:
@@ -72,7 +85,7 @@ public:
 };
 
 /**
- * @brief this is an example of device that inherits from UIController
+ * @brief test_switch_button : Example of final implementation of SwitchButton and UIController
  *
  */
 class test_switch_button : public SwitchButton, public UIController
@@ -94,13 +107,13 @@ test_switch_button::~test_switch_button()
 }
 
 /**
- * @brief test and example program of  SquareLED widget.
+ * @brief Example of main program of a SquareLED widget.
  *
- * @return int
  */
 int main()
 {
     /// main steps:
+    pr_D4.hi();
     stdio_init_all();
     ///  1- create I2C bus hw peripheral and display
     HW_I2C_Master master = HW_I2C_Master(cfg_i2c);
@@ -117,8 +130,7 @@ int main()
     square_led.set_blink_us(500000);
 
     /// 6- clean up the screen and draw the border of the screen
-    pr_D4.hi();
-    display.clear_full_screen();
+    display.clear_pixel_buffer();
     display.rect(0, 0, 128, 64);
     display.show();
     pr_D4.lo();
@@ -127,6 +139,7 @@ int main()
     /// 7- start infinite loop
 
     {
+        pr_D5.hi();
         /// - get UI switch button event and process it.
         ControlEvent event = ((test_switch_button *)test_common_model.get_current_controller())->process_sample_event();
         test_common_model.process_control_event(event);
@@ -141,7 +154,6 @@ int main()
          *
          */
 
-        pr_D5.hi();
         /// - refresh the widget
         square_led.draw_refresh();
         pr_D5.lo();
@@ -166,8 +178,8 @@ void test_square_led_model::process_control_event(ControlEvent _event)
     switch (_event)
     {
     case ControlEvent::RELEASED_AFTER_SHORT_TIME:
-        a_bool_value = !a_bool_value;
-        printf("on_off=%d\n", a_bool_value);
+        my_bool_value = !my_bool_value;
+        printf("on_off=%d\n", my_bool_value);
         set_change_flag();
         break;
     case ControlEvent::LONG_PUSH:
@@ -214,42 +226,28 @@ test_square_led_widget::~test_square_led_widget()
  */
 void test_square_led_widget::draw_refresh()
 {
-    {
-        if (this->actual_displayed_model->blinking_status)
-        {
-            bool first = on_first_semi_period(blink_period);
-            pr_D1.copy(first);
+    assert(this->actual_displayed_model != nullptr);
+    /// main step of the function
+    /// - first process the status of the displayed object
+    this->is_blinking = this->actual_displayed_model->blinking_status;
+    /// - then blink_refresh() if it is appropriate
+    blink_refresh();
 
-            if (first and !is_lit)
-            {
-                this->light_on();
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
-                this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-            }
-            if (!first and is_lit)
-            {
-                this->light_off();
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
-                draw_border();
-                this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-            }
-        }
-        if ((this->actual_displayed_model != nullptr) and (this->actual_displayed_model->has_changed())) // check if something changed
+    if (this->actual_displayed_model->has_changed()) // check if something changed
+    {
+        /// check if the model my_bool_value is different from the widget lit_status
+        if ((actual_displayed_model->my_bool_value) and (!is_lit))
         {
-            /// check if the model a_bool_value is different from the widget lit_status
-            if ((actual_displayed_model->a_bool_value) and (!is_lit))
-            {
-                this->light_on();
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
-            }
-            if ((!actual_displayed_model->a_bool_value) and (is_lit))
-            {
-                this->light_off();
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
-                draw_border();
-            }
-            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-            this->actual_displayed_model->clear_change_flag();
+            this->light_on();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
         }
+        if ((!actual_displayed_model->my_bool_value) and (is_lit))
+        {
+            this->light_off();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+            draw_border();
+        }
+        this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        this->actual_displayed_model->clear_change_flag();
     }
 }

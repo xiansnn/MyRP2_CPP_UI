@@ -22,9 +22,24 @@ void w_SquareLed::light_off()
     this->is_lit = false;
 }
 
-void w_SquareLed::set_blink_us(uint32_t _blink_period)
+void w_SquareLed::blink_refresh()
 {
-    this->blink_period = _blink_period;
+    if (this->is_blinking and this->blinking_phase_has_changed())
+    {
+        if (!is_lit)
+        {
+            this->light_on();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        }
+        else
+        {
+            this->light_off();
+            rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+            draw_border();
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+        }
+    }
 }
 
 void w_SquareLed::blink_off()
