@@ -25,16 +25,12 @@
  */
 enum class ButtonState
 {
-    /**
-     * @brief the switch is pushed
-     * 
-     */
+    /// @brief 
+    IDLE,
+    /// @brief 
     ACTIVE,
-    /**
-     * @brief the switch is not pushed
-     * 
-     */
-    INACTIVE,
+    /// @brief 
+    TIME_OUT_PENDING
 };
 
 #define DEBOUNCE_us 10000
