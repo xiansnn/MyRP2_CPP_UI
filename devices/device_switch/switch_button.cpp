@@ -26,7 +26,7 @@ SwitchButton::SwitchButton(uint gpio, struct_SwitchButtonConfig conf)
     else
         gpio_pull_down(this->gpio);
     this->previous_change_time_us = time_us_32();
-    this->button_is_active = false;
+    this->button_status = ButtonState::IDLE;
     this->previous_switch_pushed_state = false;
 }
 
@@ -41,7 +41,7 @@ ControlEvent SwitchButton::process_sample_event()
     bool new_switch_pushed_state = is_switch_pushed();
     if (new_switch_pushed_state == previous_switch_pushed_state)
     {
-        if (button_is_active == false)
+        if ((button_status == ButtonState::IDLE) or (button_status == ButtonState::TIME_OUT_PENDING ))
         {
             return ControlEvent::NOOP;
         }
@@ -49,7 +49,8 @@ ControlEvent SwitchButton::process_sample_event()
         {
             if (current_time_us - previous_change_time_us >= long_push_delay_us)
             {
-                button_is_active = false;
+                button_status = ButtonState::TIME_OUT_PENDING;
+
                 return ControlEvent::LONG_PUSH;
             }
             else
@@ -69,22 +70,23 @@ ControlEvent SwitchButton::process_sample_event()
             previous_change_time_us = current_time_us;
             if (new_switch_pushed_state)
             {
-                button_is_active = true;
+                button_status = ButtonState::ACTIVE;
                 return ControlEvent::PUSH;
             }
             else
             {
-                button_is_active = false;
+                button_status = ButtonState::TIME_OUT_PENDING;
                 return (time_since_previous_change < long_release_delay_us) ? ControlEvent::RELEASED_AFTER_SHORT_TIME : ControlEvent::RELEASED_AFTER_LONG_TIME;
             }
         }
     }
 }
 
-bool SwitchButton::is_button_active()
+ButtonState SwitchButton::get_button_status()
 {
-    return button_is_active;
+    return button_status;
 }
+
 
 bool SwitchButton::is_switch_pushed()
 {
@@ -117,12 +119,12 @@ ControlEvent SwitchButtonWithIRQ::process_IRQ_event(uint32_t current_event_mask)
     {
         if (new_switch_pushed_state == true)
         {
-            button_is_active = true;
+            button_status = ButtonState::ACTIVE;
             return ControlEvent::PUSH;
         }
         else
         {
-            button_is_active = false;
+            button_status = ButtonState::TIME_OUT_PENDING;
             if (time_since_previous_change < long_release_delay_us)
                 return ControlEvent::RELEASED_AFTER_SHORT_TIME;
             else

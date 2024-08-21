@@ -92,8 +92,10 @@ int main()
 
     while (true)
     {
-        pr_D1.copy(encoder_clk.is_button_active());
-        pr_D2.copy(encoder_central_sw.is_button_active());
+        bool encoder_status = (encoder_clk.get_button_status() != ButtonState::IDLE )?true:false;
+        pr_D1.copy(encoder_status);
+        bool central_sw_status = (encoder_central_sw.get_button_status() != ButtonState::IDLE )?true:false;
+        pr_D2.copy(central_sw_status);
     }
 
     return 0;

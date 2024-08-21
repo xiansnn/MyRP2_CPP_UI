@@ -25,11 +25,11 @@
  */
 enum class ButtonState
 {
-    /// @brief 
+    /// @brief
     IDLE,
-    /// @brief 
+    /// @brief
     ACTIVE,
-    /// @brief 
+    /// @brief
     TIME_OUT_PENDING
 };
 
@@ -60,6 +60,8 @@ struct struct_SwitchButtonConfig
      *
      */
     uint long_push_delay_us = LONG_PUSH_DELAY_us;
+
+    uint time_out_delay_us = TIME_OUT_DELAY_us;
     /**
      * @brief this indicates that when the button is pushed, a logical LO (0) signal is read.
      *
@@ -69,11 +71,11 @@ struct struct_SwitchButtonConfig
 
 /**
  * @brief SwitchButton status is sampled periodically by software.
- * 
+ *
  * - Switch status is the status of the physical (i.e. mechanical) switch device.
  *
  * - Button status is the logical status of the button (regardless the switch is wired active Lo or HI).
- * 
+ *
  * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an event accordingly.
  *
  * SwitchButton can be associated with UIController if button belongs to a GUI. In such case a new class must be created that inherits from SwitchButton and UIController.
@@ -81,57 +83,51 @@ struct struct_SwitchButtonConfig
  */
 class SwitchButton
 {
+private:
 protected:
+    /*time related members*/
+    /// @brief The time during which all changes in the switch state is ignored
+    uint debounce_delay_us;
+
+    /// @brief when a button is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
+    uint long_push_delay_us;
+
     /**
-     * @brief the GPIO that reads the logical state of the switch (pushed or released)
+     * @brief if the button is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
+     * else a ControlEvent::RELEASED_AFTER_SHORT_TIME is released.
+     */
+    uint long_release_delay_us;
+
+    /**
+     * @brief
      *
      */
+    uint time_out_delay_us;
+
+    /*mechanical switch related members*/
+    /// @brief the GPIO that reads the logical state of the switch (pushed or released)
     uint gpio;
-    /**
-     * @brief this indicates that when the switch is pushed, a logical LO (0) signal is read.
-     *
-     */
+
+    /// @brief his indicates that when the switch is pushed, a logical LO (0) signal is read.
     bool active_lo;
-    /**
-     * @brief the system time stored on the previous switch state change.
-     *
-     */
+
+    /// @brief the system time stored on the previous switch state change.
     uint32_t previous_change_time_us;
-    /*mechanical switch state machine*/
+
     /**
-     * @brief the mechanical status of the switch
+     * @brief
      *
      * @return true if switch status is read LO (resp. HI) if active_lo is true (resp. false)
      * @return false if switch status is read HI (resp. LO) if active_lo is true (resp. false)
      */
     bool is_switch_pushed();
-    /**
-     * @brief The previous state read during the previous period.
-     *
-     */
+
+    /// @brief The previous state read during the previous period.
     bool previous_switch_pushed_state;
-    /**
-     * @brief The time during which all changes in the switch state is ignored
-     *
-     */
-    uint debounce_delay_us;
-    /*logical button state machine*/
-    /**
-     * @brief the logical status of the button
-     *
-     */
-    bool button_is_active;
-    /**
-     * @brief when a button is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
-     *
-     */
-    uint long_push_delay_us;
-    /**
-     * @brief if the button is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
-     * else a ControlEvent::RELEASED_AFTER_SHORT_TIME is released.
-     *
-     */
-    uint long_release_delay_us;
+
+    /*logical button related members*/
+    /// @brief
+    ButtonState button_status{ButtonState::IDLE};
 
 public:
     /**
@@ -146,17 +142,15 @@ public:
      *
      */
     ~SwitchButton();
-    /**
-     * @brief return the value of the logical status of the button. This member is public to allows debug probe actions.
-     *
-     */
-    bool is_button_active();
+
     /**
      * @brief the periodic routine that process deboucing, push and release of the switch.
      *
      * @return ControlEvent
      */
     ControlEvent process_sample_event();
+
+    ButtonState get_button_status();
 };
 
 /**
