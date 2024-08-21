@@ -40,6 +40,7 @@ enum class ButtonState
 #define DEBOUNCE_us 10000
 #define LONG_RELEASE_DELAY_us 3000000
 #define LONG_PUSH_DELAY_us 1000000
+#define TIME_OUT_DELAY_us 5000000
 
 /**
  * @brief These are the values used to configure a switch button
@@ -72,12 +73,14 @@ struct struct_SwitchButtonConfig
 
 /**
  * @brief SwitchButton status is sampled periodically by software.
- * Switch status is the status of the physical switch device.
+ * 
+ * - Switch status is the status of the physical (i.e. mechanical) switch device.
  *
- * Button status is the logical status of the button (regardless the switch is wired active Lo or HI)
- * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an evant accordingly.
+ * - Button status is the logical status of the button (regardless the switch is wired active Lo or HI).
+ * 
+ * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an event accordingly.
  *
- * SwitchButton can be associated with UIController if button belongs to a UI. In such case a new class must be created that inherits from SwitchButton and UIController.
+ * SwitchButton can be associated with UIController if button belongs to a GUI. In such case a new class must be created that inherits from SwitchButton and UIController.
  *
  */
 class SwitchButton
@@ -100,17 +103,17 @@ protected:
     uint32_t previous_change_time_us;
     /*mechanical switch state machine*/
     /**
-     * @brief the logical status of the switch
+     * @brief the mechanical status of the switch
      *
      * @return true if switch status is read LO (resp. HI) if active_lo is true (resp. false)
      * @return false if switch status is read HI (resp. LO) if active_lo is true (resp. false)
      */
-    bool is_switch_active();
+    bool is_switch_pushed();
     /**
      * @brief The previous state read during the previous period.
      *
      */
-    bool previous_switch_active_state;
+    bool previous_switch_pushed_state;
     /**
      * @brief The time during which all changes in the switch state is ignored
      *
@@ -118,7 +121,7 @@ protected:
     uint debounce_delay_us;
     /*logical button state machine*/
     /**
-     * @brief
+     * @brief the logical status of the button
      *
      */
     bool button_is_active;
@@ -148,12 +151,12 @@ public:
      */
     ~SwitchButton();
     /**
-     * @brief return the value of the logical status of the button
+     * @brief return the value of the logical status of the button. This member is public to allows debug probe actions.
      *
      */
     bool is_button_active();
     /**
-     * @brief the periodic routine that process deboucing, press and release of the switch.
+     * @brief the periodic routine that process deboucing, push and release of the switch.
      *
      * @return ControlEvent
      */
