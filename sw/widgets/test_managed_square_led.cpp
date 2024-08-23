@@ -207,7 +207,7 @@ int main()
         /// - get central_switch event and give it to the manager .
         ControlEvent event = central_switch.process_sample_event();
         manager.process_control_event(event);
-         /// - refresh the widgets
+        /// - refresh the widgets
         square_led_1.draw_refresh();
         square_led_2.draw_refresh();
         square_led_3.draw_refresh();
@@ -367,6 +367,12 @@ void test_Manager::process_control_event(ControlEvent _event)
 
         else
             current_active_model->process_control_event(_event);
+        break;
+    case ControlEvent::TIME_OUT:
+        for (auto &&i : this->managed_models)
+        {
+            i->update_status(ControlledObjectStatus::IS_WAITING);
+        }
         break;
     default:
         break;
