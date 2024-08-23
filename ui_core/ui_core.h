@@ -40,20 +40,14 @@ enum class ControlEvent
     DOUBLE_PUSH,
     /**
      * @brief event triggered when a button is held more than a configurable duration.
-     *
-     * The duration configuration is under implemented UIController object.
      */
     LONG_PUSH,
     /**
      * @brief event triggered when a button is released after a configurable duration.
-     *
-     * The duration configuration is under implemented UIController object.
      */
     RELEASED_AFTER_LONG_TIME,
     /**
      * @brief event triggered when a button is released before a configurable duration.
-     *
-     * The duration configuration is under implemented UIController object.
      */
     RELEASED_AFTER_SHORT_TIME,
     /**
@@ -61,14 +55,11 @@ enum class ControlEvent
      */
     INCREMENT,
     /**
-     * @brief event that signals the user trig an decerement order.
+     * @brief event that signals the user trig an decrement order.
      */
     DECREMENT,
     /**
      * @brief event that signals nothing happens after a configurable period of time.
-     * The period of time configuration is under implemented UIController object.
-     *
-     * \todo Not implemented. //TODO find a way to do "TIME_OUT"
      */
     TIME_OUT
 };
