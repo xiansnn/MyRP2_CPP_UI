@@ -25,21 +25,20 @@
  */
 enum class ButtonState
 {
-    /**
-     * @brief the switch is pushed
-     * 
-     */
+    /// @brief The button is inactive
+    IDLE,
+    /// @brief the switch has been pushed, the button is active
     ACTIVE,
-    /**
-     * @brief the switch is not pushed
-     * 
-     */
-    INACTIVE,
+    /// @brief  A long push has been detected, the switch wait to be released
+    RELEASE_PENDING,
+    /// @brief the switch has beeb released, the button wait for next action. If nothing occurs, a time_out event is returned and the button is inactive
+    TIME_OUT_PENDING
 };
 
-#define DEBOUNCE_us 10000
-#define LONG_RELEASE_DELAY_us 3000000
-#define LONG_PUSH_DELAY_us 1000000
+#define DEBOUNCE_us 10000             // default to 10ms
+#define LONG_RELEASE_DELAY_us 1000000 // default to 1s
+#define LONG_PUSH_DELAY_us 1000000    // default to 1s
+#define TIME_OUT_DELAY_us 5000000     // default top 5s
 
 /**
  * @brief These are the values used to configure a switch button
@@ -53,18 +52,22 @@ struct struct_SwitchButtonConfig
      */
     uint debounce_delay_us = DEBOUNCE_us;
     /**
-     * @brief if the button is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
+     * @brief if the switch is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
      * else a ControlEvent::RELEASED_AFTER_SHORT_TIME is released.
-     *
      */
     uint long_release_delay_us = LONG_RELEASE_DELAY_us;
     /**
-     * @brief when a button is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
-     *
+     * @brief when a switch is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
      */
     uint long_push_delay_us = LONG_PUSH_DELAY_us;
+
     /**
-     * @brief this indicates that when the button is pushed, a logical LO (0) signal is read.
+     * @brief when a switch is released and not pushed again for time_out_delay_us (in microseconds) a ControlEvent::TIME_OUT is returned.
+     *
+     */
+    uint time_out_delay_us = TIME_OUT_DELAY_us;
+    /**
+     * @brief if true, this indicates that when the switch is pushed, a logical LO (0) signal is read on GPIO pin.
      *
      */
     bool active_lo = true;
@@ -72,67 +75,63 @@ struct struct_SwitchButtonConfig
 
 /**
  * @brief SwitchButton status is sampled periodically by software.
- * Switch status is the status of the physical switch device.
  *
- * Button status is the logical status of the button (regardless the switch is wired active Lo or HI)
- * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an evant accordingly.
+ * - Switch status is the status of the physical (i.e. mechanical) switch device.
  *
- * SwitchButton can be associated with UIController if button belongs to a UI. In such case a new class must be created that inherits from SwitchButton and UIController.
+ * - Button status is the logical status of the button (regardless if the switch is wired active Lo or HI).
+ *
+ * During each period, the status of the button is compared to the previous status and the function member process_sample_event() return an event accordingly.
+ *
+ * SwitchButton can be associated with UIController if button belongs to a GUI. In such case a new class must be created that inherits from SwitchButton and UIController.
  *
  */
 class SwitchButton
 {
+private:
 protected:
+    /*time related members*/
+    /// @brief The time during which all changes in the switch state is ignored
+    uint debounce_delay_us;
+
+    /// @brief when a button is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
+    uint long_push_delay_us;
+
     /**
-     * @brief the GPIO that reads the logical state of the switch (pushed or released)
+     * @brief if the button is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
+     * else a ControlEvent::RELEASED_AFTER_SHORT_TIME is released.
+     */
+    uint long_release_delay_us;
+
+    /**
+     * @brief if the button is released after time_out_delay_us (in microseconds) a ControlEvent::TIME_OUT is returned,
      *
      */
+    uint time_out_delay_us;
+
+    /*mechanical switch related members*/
+    /// @brief the GPIO that reads the logical state of the switch (pushed or released)
     uint gpio;
-    /**
-     * @brief this indicates that when the switch is pushed, a logical LO (0) signal is read.
-     *
-     */
+
+    /// @brief his indicates that when the switch is pushed, a logical LO (0) signal is read.
     bool active_lo;
+
+    /// @brief the system time stored on the previous switch state change.
+    uint previous_change_time_us;
+
     /**
-     * @brief the system time stored on the previous switch state change.
-     *
-     */
-    uint32_t previous_change_time_us;
-    /*mechanical switch state machine*/
-    /**
-     * @brief the logical status of the switch
+     * @brief return the status of the switch.
      *
      * @return true if switch status is read LO (resp. HI) if active_lo is true (resp. false)
      * @return false if switch status is read HI (resp. LO) if active_lo is true (resp. false)
      */
-    bool is_switch_active();
-    /**
-     * @brief The previous state read during the previous period.
-     *
-     */
-    bool previous_switch_active_state;
-    /**
-     * @brief The time during which all changes in the switch state is ignored
-     *
-     */
-    uint debounce_delay_us;
-    /*logical button state machine*/
-    /**
-     * @brief
-     *
-     */
-    bool button_is_active;
-    /**
-     * @brief when a button is pushed more than long_push_delay_us (in microseconds) a ControlEvent::LONG_PUSH is returned.
-     *
-     */
-    uint long_push_delay_us;
-    /**
-     * @brief if the button is released after long_release_delay_us (in microseconds) a ControlEvent::RELEASED_AFTER_LONG_TIME is returned,
-     * else a ControlEvent::RELEASED_AFTER_SHORT_TIME is released.
-     *
-     */
-    uint long_release_delay_us;
+    bool is_switch_pushed();
+
+    /// @brief The previous state read during the previous period.
+    bool previous_switch_pushed_state;
+
+    /*logical button related members*/
+    /// @brief the logical button status, required to manage the event returned when the switch is pushed or released.
+    ButtonState button_status{ButtonState::IDLE};
 
 public:
     /**
@@ -147,22 +146,27 @@ public:
      *
      */
     ~SwitchButton();
+
     /**
-     * @brief return the value of the logical status of the button
-     *
-     */
-    bool is_button_active();
-    /**
-     * @brief the periodic routine that process deboucing, press and release of the switch.
+     * @brief the periodic routine that process deboucing, push and release of the switch.
      *
      * @return ControlEvent
      */
     ControlEvent process_sample_event();
+
+    /**
+     * @brief Get the button status object
+     *
+     * @return ButtonState
+     */
+    ButtonState get_button_status();
 };
 
 /**
  * @brief SwitchButtonWithIRQ status is processed by an Interrupt Service Routine.
  * It is derived from SwithButton, but debouncing, press and release are processed differently.
+ * 
+ * NOTICE: LONG_PUSH and TIME_OUT cannot be implemented by processing IRQ.
  *
  * SwitchButtonWithIRQ can be associated with UIController only if button belongs to a UI.
  *

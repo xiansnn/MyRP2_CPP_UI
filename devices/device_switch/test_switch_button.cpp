@@ -1,12 +1,12 @@
 /**
  * @file test_switch_button.cpp
  * @author xiansnn (xiansnn@hotmail.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-05-30
- * 
+ *
  * @copyright Copyright (c) 2024
- * 
+ *
  */
 #include "switch_button.h"
 #include "probe.h"
@@ -18,11 +18,11 @@
 
 struct_SwitchButtonConfig cfg_central_switch{
     .debounce_delay_us = 1000,
-    .long_release_delay_us = 2000000,
-    .long_push_delay_us = 1000000};
+    .long_release_delay_us = 1000000,
+    .long_push_delay_us = 1000000,
+    .time_out_delay_us = 5000000};
 struct_SwitchButtonConfig cfg_encoder_clk{
-    .debounce_delay_us = 1000,
-};
+    .debounce_delay_us = 1000};
 
 std::map<ControlEvent, std::string> event_to_string{
     {ControlEvent::NOOP, "NOOP"},
@@ -35,12 +35,11 @@ std::map<ControlEvent, std::string> event_to_string{
     {ControlEvent::DECREMENT, "DECREMENT"},
     {ControlEvent::TIME_OUT, "TIME_OUT"}};
 
-
 int main()
 {
     stdio_init_all();
     SwitchButton central_switch = SwitchButton(CENTRAL_SWITCH_GPIO, cfg_central_switch);
-    SwitchButton encoder_clk = SwitchButton( ENCODER_CLK_GPIO, cfg_encoder_clk);
+    SwitchButton encoder_clk = SwitchButton(ENCODER_CLK_GPIO, cfg_encoder_clk);
 
     while (true)
     {
