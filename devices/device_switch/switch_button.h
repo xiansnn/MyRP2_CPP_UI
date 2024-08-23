@@ -84,6 +84,7 @@ struct struct_SwitchButtonConfig
  *
  * SwitchButton can be associated with UIController if button belongs to a GUI. In such case a new class must be created that inherits from SwitchButton and UIController.
  *
+ * \image html button.png "SwitchButton times references"
  */
 class SwitchButton
 {
