@@ -29,14 +29,16 @@ enum class ButtonState
     IDLE,
     /// @brief
     ACTIVE,
+    /// @brief 
+    RELEASE_PENDING,
     /// @brief
     TIME_OUT_PENDING
 };
 
 #define DEBOUNCE_us 10000
-#define LONG_RELEASE_DELAY_us 3000000
+#define LONG_RELEASE_DELAY_us 1000000
 #define LONG_PUSH_DELAY_us 1000000
-#define TIME_OUT_DELAY_us 5000000
+#define TIME_OUT_DELAY_us 10000000
 
 /**
  * @brief These are the values used to configure a switch button
@@ -112,7 +114,7 @@ protected:
     bool active_lo;
 
     /// @brief the system time stored on the previous switch state change.
-    uint32_t previous_change_time_us;
+    uint previous_change_time_us;
 
     /**
      * @brief
