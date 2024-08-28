@@ -474,7 +474,7 @@ protected:
      * @brief draw a rectangle around the widget
      *
      */
-    void draw_border();
+    void draw_border(FramebufferColor c = FramebufferColor::WHITE);
 
 public:
     /**

@@ -192,7 +192,7 @@ void UIController::update_current_controlled_object(UIModelObject *_new_controll
     }
 }
 
-void UIWidget::draw_border()
+void UIWidget::draw_border(FramebufferColor c)
 {
     rect(0, 0, frame_width, frame_height);
 }
