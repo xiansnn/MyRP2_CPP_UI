@@ -250,7 +250,7 @@ test_managed_square_led_widget::test_managed_square_led_widget(test_managed_squa
 {
     this->actual_displayed_model = actual_displayed_model;
     this->is_blinking = true;
-    this->is_lit = true;
+    this->led_is_on = true;
 }
 
 test_managed_square_led_widget::~test_managed_square_led_widget()

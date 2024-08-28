@@ -11,7 +11,7 @@ protected:
      * @brief the status of the led, on or off
      * 
      */
-    bool is_lit = true;
+    bool led_is_on = true;
     /**
      * @brief the blinking status of the led
      * 

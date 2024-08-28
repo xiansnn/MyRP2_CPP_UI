@@ -236,12 +236,12 @@ void test_square_led_widget::draw_refresh()
     if (this->actual_displayed_model->has_changed()) // check if something changed
     {
         /// check if the model my_bool_value is different from the widget lit_status
-        if ((actual_displayed_model->my_bool_value) and (!is_lit))
+        if ((actual_displayed_model->my_bool_value) and (!led_is_on))
         {
             this->light_on();
             rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
         }
-        if ((!actual_displayed_model->my_bool_value) and (is_lit))
+        if ((!actual_displayed_model->my_bool_value) and (led_is_on))
         {
             this->light_off();
             rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);

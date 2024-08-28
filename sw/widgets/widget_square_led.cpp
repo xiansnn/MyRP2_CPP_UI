@@ -14,19 +14,19 @@ w_SquareLed::~w_SquareLed()
 
 void w_SquareLed::light_on()
 {
-    this->is_lit = true;
+    this->led_is_on = true;
 }
 
 void w_SquareLed::light_off()
 {
-    this->is_lit = false;
+    this->led_is_on = false;
 }
 
 void w_SquareLed::blink_refresh()
 {
     if (this->is_blinking and this->blinking_phase_has_changed())
     {
-        if (!is_lit)
+        if (!led_is_on)
         {
             this->light_on();
             rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::WHITE);
