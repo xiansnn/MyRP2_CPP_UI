@@ -295,11 +295,11 @@ void test_managed_square_led_widget::draw_refresh()
         {
             if (this->actual_displayed_model->my_bool_value)
             {
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::WHITE);
+                rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::WHITE);
             }
             else
             {
-                rect(0, 0, frame_width, frame_height, true, FramebufferColor::BLACK);
+                rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::BLACK);
                 draw_border();
             }
 
