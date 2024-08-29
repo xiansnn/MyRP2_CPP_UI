@@ -9,14 +9,12 @@ class w_SquareLed : public UIWidget
 protected:
     /**
      * @brief the status of the led, on or off
-     * 
      */
     bool led_is_on = true;
     /**
      * @brief the blinking status of the led
-     * 
      */
-    bool is_blinking = false;
+    bool led_is_blinking = false;
     
 
 public:

@@ -24,7 +24,7 @@ void w_SquareLed::light_off()
 
 void w_SquareLed::widget_blink_refresh()
 {
-    if (this->is_blinking and this->blinking_phase_has_changed())
+    if (this->led_is_blinking and this->blinking_phase_has_changed())
     {
         if (!led_is_on)
         {
@@ -44,10 +44,10 @@ void w_SquareLed::widget_blink_refresh()
 
 void w_SquareLed::blink_off()
 {
-    this->is_blinking = false;
+    this->led_is_blinking = false;
 }
 
 void w_SquareLed::blink_on()
 {
-    this->is_blinking = true;
+    this->led_is_blinking = true;
 }

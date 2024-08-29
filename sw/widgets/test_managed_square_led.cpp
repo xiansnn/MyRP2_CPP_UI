@@ -185,7 +185,7 @@ int main()
     test_managed_square_led_widget square_led_1 = test_managed_square_led_widget(&test_model_1, &display, 16, 16, 10, 24);
     test_managed_square_led_widget square_led_2 = test_managed_square_led_widget(&test_model_2, &display, 16, 16, 50, 24);
     test_managed_square_led_widget square_led_3 = test_managed_square_led_widget(&test_model_3, &display, 16, 16, 90, 24);
-    /// 5- set is_blinking period of the square_led
+    /// 5- set led_is_blinking period of the square_led
     square_led_1.set_blink_us(200000);
     square_led_2.set_blink_us(200000);
     square_led_3.set_blink_us(200000);
@@ -249,7 +249,7 @@ test_managed_square_led_widget::test_managed_square_led_widget(test_managed_squa
     : w_SquareLed(display_screen, width, height, widget_anchor_x, widget_anchor_y)
 {
     this->actual_displayed_model = actual_displayed_model;
-    this->is_blinking = true;
+    this->led_is_blinking = true;
     this->led_is_on = true;
 }
 
@@ -258,7 +258,7 @@ test_managed_square_led_widget::~test_managed_square_led_widget()
 }
 
 /**
- * @brief This function implements a special draw_refresh that takes into account the on/off and is_blinking status of the model.
+ * @brief This function implements a special draw_refresh that takes into account the on/off and led_is_blinking status of the model.
  *
  * It insures that the widget consumes processing time only when its on/off status has changed.
  * The logic of the visualisation :

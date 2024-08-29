@@ -126,7 +126,7 @@ int main()
     test_switch_button central_switch = test_switch_button(CENTRAL_SWITCH_GPIO, cfg_central_switch);
     central_switch.update_current_controlled_object(&test_common_model);
 
-    /// 5- set is_blinking period of the square_led
+    /// 5- set led_is_blinking period of the square_led
     square_led.set_blink_us(500000);
 
     /// 6- clean up the screen and draw the border of the screen
@@ -219,7 +219,7 @@ test_square_led_widget::~test_square_led_widget()
 }
 
 /**
- * @brief This function implements a special draw_refresh that takes into account the on/off and is_blinking status of the model.
+ * @brief This function implements a special draw_refresh that takes into account the on/off and led_is_blinking status of the model.
  *
  * It insures that the widget consumes processing time only when its on/off status has changed.
  *
@@ -229,7 +229,7 @@ void test_square_led_widget::draw_refresh()
     assert(this->actual_displayed_model != nullptr);
     /// main step of the function
     /// - first process the status of the displayed object
-    this->is_blinking = this->actual_displayed_model->blinking_status;
+    this->led_is_blinking = this->actual_displayed_model->blinking_status;
     /// - then widget_blink_refresh() if it is appropriate
     widget_blink_refresh();
 
