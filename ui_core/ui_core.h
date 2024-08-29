@@ -471,7 +471,8 @@ protected:
      */
     uint8_t widget_border_width;
     /**
-     * @brief draw a rectangle around the widget
+     * @brief draw a rectangle around the widget.
+     * IMPORTANT NOTICE: as the border is a rectangle with fill=false, the border width can only be 1 pixel.
      *
      */
     void draw_border(FramebufferColor c = FramebufferColor::WHITE);
@@ -500,7 +501,7 @@ public:
      * @param widget_anchor_x  the horizontal position where the widget start on the device screen
      * @param widget_anchor_y  the vertical position where the widget start on the device screen
      * @param widget_with_border   The flag that indicates whether the widget has a border or not
-     * @param widget_border_width   the width of the border
+     * @param widget_border_width   the width of the border. WARNING: can only be 1 pixel.
      * @param framebuffer_format  the addressing format of the actual display device
      * @param framebuffer_txt_cnf   a default textual configuration, with 8x8 font size
      *
