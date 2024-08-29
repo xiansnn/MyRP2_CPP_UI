@@ -3,7 +3,7 @@
  * @author xiansnn (xiansnn@hotmail.com)
  * @brief an example of usage of w_SquareLED.
  * The LED is blinking.
- * A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press.
+ * A long press on the switch stop the blinking and let the control of the LED ON/OF with a short press.
  * A long press returns to the blinking mode.
  * @version 0.1
  * @date 2024-08-09
@@ -230,8 +230,8 @@ void test_square_led_widget::draw_refresh()
     /// main step of the function
     /// - first process the status of the displayed object
     this->is_blinking = this->actual_displayed_model->blinking_status;
-    /// - then blink_refresh() if it is appropriate
-    blink_refresh();
+    /// - then widget_blink_refresh() if it is appropriate
+    widget_blink_refresh();
 
     if (this->actual_displayed_model->has_changed()) // check if something changed
     {

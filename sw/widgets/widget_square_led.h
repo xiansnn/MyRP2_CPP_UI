@@ -55,7 +55,7 @@ public:
      * @brief refresh the square led ON or OFF on blinking phase change
      * 
      */
-    void blink_refresh();
+    void widget_blink_refresh();
     /**
      * @brief set the blinking of the led OFF
      * 

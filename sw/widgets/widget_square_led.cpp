@@ -22,7 +22,7 @@ void w_SquareLed::light_off()
     this->led_is_on = false;
 }
 
-void w_SquareLed::blink_refresh()
+void w_SquareLed::widget_blink_refresh()
 {
     if (this->is_blinking and this->blinking_phase_has_changed())
     {
@@ -35,8 +35,8 @@ void w_SquareLed::blink_refresh()
         else
         {
             this->light_off();
-            rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::BLACK);
             draw_border();
+            rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::BLACK);
             this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
         }
     }

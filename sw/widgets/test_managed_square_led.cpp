@@ -288,8 +288,8 @@ void test_managed_square_led_widget::draw_refresh()
         default:
             break;
         }
-        /// - then blink_refresh() if it is appropriate
-        blink_refresh();
+        /// - then widget_blink_refresh() if it is appropriate
+        widget_blink_refresh();
         /// - and finally visualise  the change of value in the displayed model
         if (this->actual_displayed_model->has_changed())
         {
