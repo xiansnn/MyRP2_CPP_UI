@@ -139,34 +139,24 @@ public:
 class UIModelObject
 {
 private:
-    /**
-     * @brief The semaphore used to trigger the actual drawing of the widget on the screen.
-     *
-     */
+    /// @brief the time in microseconds since the last status has changed
+    uint32_t last_change_time;
+
+    /// @brief The semaphore used to trigger the actual drawing of the widget on the screen.
     bool change_flag{true};
-    /**
-     * @brief The status of the model, indicating if it is waiting, active or just ahs focus (pointed by the object manager)
-     *
-     */
+
+    /// @brief The status of the model, indicating if it is waiting, active or just ahs focus (pointed by the object manager)
     ControlledObjectStatus status{ControlledObjectStatus::IS_WAITING};
 
-    /**
-     * @brief A point er to the controller of this model.
-     *
-     */
+    /// @brief A pointer to the controller of this model.
     UIController *current_controller{nullptr};
 
 protected:
 public:
-    /**
-     * @brief Construct the UIModelObject object
-     *
-     */
+    /// @brief Construct the UIModelObject object
     UIModelObject(/* args */);
-    /**
-     * @brief Destroy the UIModelObject object
-     *
-     */
+
+    /// @brief Destroy the UIModelObject object
     ~UIModelObject();
     /**
      * @brief get the change flag status
@@ -175,27 +165,26 @@ public:
      * @return false means the model is unchanged
      */
     bool has_changed();
-    /**
-     * @brief Set the change flag object to true
-     *
-     */
+
+    /// @brief Set the change flag object to true
     void set_change_flag();
+
+    /// @brief Set the change flag object to false
+    void clear_change_flag(); 
+
+    /// @brief 
+    /// @return 
+    uint32_t get_time_since_last_change();
     /**
-     * @brief Set the change flag object to false
-     *
-     */
-    void clear_change_flag();
-    /**
-     * @brief Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one,
+     * @brief 
+     * 
      * then the change is effective and the change_flag is set to true.
-     *
      * @param _new_status
      */
     void update_status(ControlledObjectStatus _new_status);
     /**
      * @brief if _new_controller is different from the current controller, change the current controller associated to the ModelObject.
      * the new controller has is member current_controlled_object also changed.
-     *
      * @param _new_controller
      */
     void update_current_controller(UIController *_new_controller);

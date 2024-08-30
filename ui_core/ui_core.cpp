@@ -11,6 +11,7 @@ UIDisplayDevice::~UIDisplayDevice()
 
 UIModelObject::UIModelObject()
 {
+    last_change_time = time_us_32();
 }
 
 UIModelObject::~UIModelObject()
@@ -25,6 +26,11 @@ bool UIModelObject::has_changed()
 void UIModelObject::clear_change_flag()
 {
     this->change_flag = false;
+}
+
+uint32_t UIModelObject::get_time_since_last_change()
+{
+    return time_us_32() - last_change_time;
 }
 
 void UIModelObject::update_current_controller(UIController *_new_controller)
@@ -57,6 +63,7 @@ UIController *UIModelObject::get_current_controller()
 
 void UIModelObject::set_change_flag()
 {
+    last_change_time = time_us_32();
     this->change_flag = true;
 }
 
