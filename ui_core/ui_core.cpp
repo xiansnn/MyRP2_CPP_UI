@@ -163,6 +163,25 @@ void UIObjectManager::decrement_focus()
     }
 }
 
+void UIObjectManager::check_time_out(uint32_t time_out_us)
+{
+    if (current_active_model != this) /// - chek time_out for active model
+    {
+        if (current_active_model->get_time_since_last_change() > time_out_us)
+        {
+            get_current_controller()->update_current_controlled_object(this);
+            make_manager_active();
+        }
+    }
+    else /// - check time_out for model under focus
+    {
+        if ((get_time_since_last_change() > time_out_us) and (managed_models[value]->get_status() == ControlledObjectStatus::HAS_FOCUS))
+        {
+            managed_models[value]->update_status(ControlledObjectStatus::IS_WAITING);
+        }
+    }
+}
+
 void UIObjectManager::make_managed_object_active()
 {
     this->current_active_model = this->managed_models[this->value];
@@ -172,12 +191,7 @@ void UIObjectManager::make_managed_object_active()
 
 void UIObjectManager::make_manager_active()
 {
-    if (managed_models.size() != 0)
-    {
-        current_active_model->update_status(ControlledObjectStatus::HAS_FOCUS);
-        for (auto &&model : managed_models)
-            model->set_change_flag();
-    }
+    current_active_model->update_status(ControlledObjectStatus::IS_WAITING);
     current_active_model = this;
     update_status(ControlledObjectStatus::IS_ACTIVE);
 }
@@ -245,7 +259,7 @@ void UIWidget::set_blink_us(uint32_t _blink_period_us)
 
 bool UIWidget::blinking_phase_has_changed()
 {
-    int8_t current_blinking_phase = (time_us_32() / (this->blink_period_us / 2)) % 2 ;
+    int8_t current_blinking_phase = (time_us_32() / (this->blink_period_us / 2)) % 2;
     bool phase_has_changed = (previous_blinking_phase != current_blinking_phase);
     previous_blinking_phase = current_blinking_phase;
     return phase_has_changed;

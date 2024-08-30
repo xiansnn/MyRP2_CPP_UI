@@ -17,6 +17,8 @@
 #include <map>
 #include <string>
 
+#define TIME_OUT_us 3000000
+
 /**
  * @brief The list of predefined events that a UIController can send to the controlled UIModelObject, leaving it the responsibility
  * to act as required by its specification.
@@ -170,14 +172,14 @@ public:
     void set_change_flag();
 
     /// @brief Set the change flag object to false
-    void clear_change_flag(); 
+    void clear_change_flag();
 
-    /// @brief 
-    /// @return 
+    /// @brief compute time since the last status change
+    /// @return this time in microsecond
     uint32_t get_time_since_last_change();
     /**
-     * @brief 
-     * 
+     * @brief
+     *
      * then the change is effective and the change_flag is set to true.
      * @param _new_status
      */
@@ -293,6 +295,15 @@ public:
 class UIObjectManager : public UIControlledIncrementalValue
 {
 protected:
+
+    /**
+     * @brief check if there is a time out either on the managed models than the manager itself.
+     * 
+     * This means no action on focus control and active status control.
+     * 
+     * @param time_out_us the time out value in microsecond. default to 3000000 (3seconds)
+     */
+    void check_time_out(uint32_t time_out_us=TIME_OUT_us);
     /**
      * @brief The list of amaged objects
      *
