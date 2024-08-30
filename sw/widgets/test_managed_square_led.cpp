@@ -17,6 +17,8 @@
 #define ENCODER_CLK_GPIO 26
 #define ENCODER_DT_GPIO 21
 
+#define TIME_OUT_us 3000000
+
 /// @brief ########## Debug/Observer Probe for logic analyser section ##########
 Probe pr_D4 = Probe(4);
 Probe pr_D5 = Probe(5);
@@ -364,17 +366,24 @@ void test_Manager::process_control_event(ControlEvent _event)
             decrement_focus();
             printf("[dec] %s has focus\n", ((test_managed_square_led_model *)this->managed_models[this->value])->name.c_str());
         }
-
         else
             current_active_model->process_control_event(_event);
         break;
-    case ControlEvent::TIME_OUT:
+    // case ControlEvent::TIME_OUT:
+    //     for (auto &&i : this->managed_models)
+    //     {
+    //         i->update_status(ControlledObjectStatus::IS_WAITING);
+    //     }
+    //     break;
+    default:
+        break;
+    }
+    /// check time_out
+    if (this->get_time_since_last_change() > TIME_OUT_us)
+    {
         for (auto &&i : this->managed_models)
         {
             i->update_status(ControlledObjectStatus::IS_WAITING);
         }
-        break;
-    default:
-        break;
     }
 }
