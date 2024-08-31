@@ -98,6 +98,22 @@ public:
     void process_control_event(ControlEvent _event);
 };
 
+class test_managed_focus_led_widget : public w_SquareLed
+{
+private:
+    test_managed_square_led_model *actual_displayed_model = nullptr;
+
+public:
+    test_managed_focus_led_widget(test_managed_square_led_model *actual_displayed_model,
+                                  UIDisplayDevice *display_screen,
+                                  size_t width,
+                                  size_t height,
+                                  uint8_t widget_anchor_x,
+                                  uint8_t widget_anchor_y);
+    ~test_managed_focus_led_widget();
+    void draw_refresh();
+};
+
 /**
  * @brief test_managed_square_led_widget : Example of final implementation of w_SquareLed
  *
@@ -174,7 +190,7 @@ int main()
     SSD1306 display = SSD1306(&master, cfg_ssd1306);
     pr_D5.hi();
     display.clear_pixel_buffer();
-    display.rect(0, 0, 128, 64);
+    // display.rect(0, 0, 128, 64);
     display.show();
     pr_D5.lo();
     /// 3- create 3 test_managed_square_led_model  as displayed object for test_managed_square_led_widget
@@ -182,13 +198,17 @@ int main()
     test_managed_square_led_model test_model_2 = test_managed_square_led_model("TM2");
     test_managed_square_led_model test_model_3 = test_managed_square_led_model("TM3");
     /// 4- create 3 test_managed_square_led_widget
-    test_managed_square_led_widget square_led_1 = test_managed_square_led_widget(&test_model_1, &display, 16, 16, 10, 24);
-    test_managed_square_led_widget square_led_2 = test_managed_square_led_widget(&test_model_2, &display, 16, 16, 50, 24);
-    test_managed_square_led_widget square_led_3 = test_managed_square_led_widget(&test_model_3, &display, 16, 16, 90, 24);
+    test_managed_square_led_widget square_led_1 = test_managed_square_led_widget(&test_model_1, &display, 20, 16, 6, 0);
+    test_managed_square_led_widget square_led_2 = test_managed_square_led_widget(&test_model_2, &display, 20, 16, 6, 24);
+    test_managed_square_led_widget square_led_3 = test_managed_square_led_widget(&test_model_3, &display, 20, 16, 6, 48);
+    test_managed_focus_led_widget focus_led_1 = test_managed_focus_led_widget(&test_model_1, &display, 5, 8, 0, 0);
+    test_managed_focus_led_widget focus_led_2 = test_managed_focus_led_widget(&test_model_2, &display, 5, 8, 0, 24);
+    test_managed_focus_led_widget focus_led_3 = test_managed_focus_led_widget(&test_model_3, &display, 5, 8, 0, 48);
+
     /// 5- set led_is_blinking period of the square_led
-    square_led_1.set_blink_us(200000);
-    square_led_2.set_blink_us(200000);
-    square_led_3.set_blink_us(200000);
+    focus_led_1.set_blink_us(200000);
+    focus_led_2.set_blink_us(200000);
+    focus_led_3.set_blink_us(200000);
     /// 6- create a test_switch_button
     test_switch_button central_switch = test_switch_button(CENTRAL_SWITCH_GPIO, cfg_central_switch);
     central_switch.update_current_controlled_object(&test_model_1);
@@ -211,6 +231,9 @@ int main()
         square_led_1.draw_refresh();
         square_led_2.draw_refresh();
         square_led_3.draw_refresh();
+        focus_led_1.draw_refresh();
+        focus_led_2.draw_refresh();
+        focus_led_3.draw_refresh();
         pr_D5.lo(); // end logic probe 5
         /// - sleep for 20ms
         sleep_ms(20);
@@ -276,24 +299,24 @@ void test_managed_square_led_widget::draw_refresh()
     {
         /// main step of the function
         /// - first process the status of the displayed object
-        switch (this->actual_displayed_model->get_status())
-        {
-        case ControlledObjectStatus::HAS_FOCUS:
-            this->blink_on();
-            break;
-        case ControlledObjectStatus::IS_ACTIVE:
-            this->blink_off();
-            break;
-        case ControlledObjectStatus::IS_WAITING:
-            this->blink_off();
-            // draw_border();
-            break;
+        // switch (this->actual_displayed_model->get_status())
+        // {
+        // case ControlledObjectStatus::HAS_FOCUS:
+        //     this->blink_on();
+        //     break;
+        // case ControlledObjectStatus::IS_ACTIVE:
+        //     this->blink_off();
+        //     break;
+        // case ControlledObjectStatus::IS_WAITING:
+        //     this->blink_off();
+        //     // draw_border();
+        //     break;
 
-        default:
-            break;
-        }
+        // default:
+        //     break;
+        // }
         /// - then widget_blink_refresh() if it is appropriate
-        widget_blink_refresh();
+        // widget_blink_refresh();
         /// - and finally visualise  the change of value in the displayed model
         if (this->actual_displayed_model->has_changed())
         {
@@ -308,7 +331,7 @@ void test_managed_square_led_widget::draw_refresh()
             }
 
             this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
-            this->actual_displayed_model->clear_change_flag();
+            // this->actual_displayed_model->clear_change_flag();
         }
     }
 }
@@ -376,4 +399,63 @@ void test_Manager::process_control_event(ControlEvent _event)
         break;
     }
     check_time_out();
+}
+
+test_managed_focus_led_widget::test_managed_focus_led_widget(test_managed_square_led_model *actual_displayed_model,
+                                                             UIDisplayDevice *display_screen,
+                                                             size_t width, size_t height,
+                                                             uint8_t widget_anchor_x, uint8_t widget_anchor_y)
+    : w_SquareLed(display_screen, width, height, widget_anchor_x, widget_anchor_y, false)
+{
+    this->actual_displayed_model = actual_displayed_model;
+    this->led_is_blinking = false;
+    this->led_is_on = true;
+}
+
+test_managed_focus_led_widget::~test_managed_focus_led_widget()
+{
+}
+
+void test_managed_focus_led_widget::draw_refresh()
+{
+    assert(this->actual_displayed_model != nullptr);
+    {
+        /// main step of the function
+        /// - first process the status of the displayed object
+        switch (this->actual_displayed_model->get_status())
+        {
+        case ControlledObjectStatus::HAS_FOCUS:
+            this->blink_off();
+            this->light_on();
+            break;
+        case ControlledObjectStatus::IS_ACTIVE:
+            this->blink_on();
+            break;
+        case ControlledObjectStatus::IS_WAITING:
+            this->blink_off();
+            this->light_off();
+            // draw_border();
+            break;
+
+        default:
+            break;
+        }
+        /// - then widget_blink_refresh() if it is appropriate
+        widget_blink_refresh();
+        /// - and finally visualise  the change of value in the displayed model
+        if (this->actual_displayed_model->has_changed())
+        {
+            if (this->led_is_on)
+            {
+                rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::WHITE);
+            }
+            else
+            {
+                rect(widget_start_x, widget_start_y, widget_width, widget_height, true, FramebufferColor::BLACK);
+                // draw_border();
+            }
+            this->display_screen->show(this, this->widget_anchor_x, this->widget_anchor_y);
+            this->actual_displayed_model->clear_change_flag();
+        }
+    }
 }
