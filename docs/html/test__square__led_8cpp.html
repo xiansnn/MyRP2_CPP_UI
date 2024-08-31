@@ -105,7 +105,7 @@ $(function(){initNavTree('test__square__led_8cpp.html',''); initResizable(true);
 </div><!--header-->
 <div class="contents">
 
-<p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press. A long press returns to the blinking mode.  
+<p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a short press. A long press returns to the blinking mode.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;widget_square_led.h&quot;</code><br />
 <code>#include &quot;ssd1306.h&quot;</code><br />
@@ -159,7 +159,7 @@ Variables</h2></td></tr>
 <tr class="separator:a29dfa8d486ecd3b70bd7b54a25d992da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a shot press. A long press returns to the blinking mode. </p>
+<div class="textblock"><p>an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking and let the control of the LED ON/OF with a short press. A long press returns to the blinking mode. </p>
 <dl class="section author"><dt>Author</dt><dd>xiansnn (<a href="#" onclick="location.href='mai'+'lto:'+'xia'+'ns'+'nn@'+'ho'+'tma'+'il'+'.co'+'m'; return false;">xians<span class="obfuscator">.nosp@m.</span>nn@h<span class="obfuscator">.nosp@m.</span>otmai<span class="obfuscator">.nosp@m.</span>l.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2024-08-09</dd></dl>
@@ -186,7 +186,7 @@ Variables</h2></td></tr>
 <p>2- create test_common_model as displayed object for blinking_led square_led</p>
 <p>3- create square_led as <a class="el" href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed">test_square_led_widget</a></p>
 <p>4- create a switchbutton</p>
-<p>5- set is_blinking period of the square_led</p>
+<p>5- set led_is_blinking period of the square_led</p>
 <p>6- clean up the screen and draw the border of the screen</p>
 <p>7- start infinite loop</p>
 <ul>
@@ -196,7 +196,7 @@ Variables</h2></td></tr>
 <div class="line">test_common_model.process_control_event(event);</div>
 <div class="ttc" id="aclass_switch_button_html_ad488b9db3ed6b1709f1eda137a69f52e"><div class="ttname"><a href="class_switch_button.html#ad488b9db3ed6b1709f1eda137a69f52e">SwitchButton::process_sample_event</a></div><div class="ttdeci">ControlEvent process_sample_event()</div><div class="ttdoc">the periodic routine that process deboucing, push and release of the switch.</div><div class="ttdef"><b>Definition</b> switch_button.cpp:38</div></div>
 <div class="ttc" id="atest__ui__core_8cpp_html_a8abe4a909e426cb03eadadd8facf46c8"><div class="ttname"><a href="test__ui__core_8cpp.html#a8abe4a909e426cb03eadadd8facf46c8">central_switch</a></div><div class="ttdeci">SwitchButton central_switch</div><div class="ttdoc">create central switch</div><div class="ttdef"><b>Definition</b> test_ui_core.cpp:53</div></div>
-<div class="ttc" id="aui__core_8h_html_afe97f6c9e5f8fc59c735ff67fa2255b4"><div class="ttname"><a href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a></div><div class="ttdeci">ControlEvent</div><div class="ttdoc">The list of predefined events that a UIController can send to the controlled UIModelObject,...</div><div class="ttdef"><b>Definition</b> ui_core.h:26</div></div>
+<div class="ttc" id="aui__core_8h_html_afe97f6c9e5f8fc59c735ff67fa2255b4"><div class="ttname"><a href="ui__core_8h.html#afe97f6c9e5f8fc59c735ff67fa2255b4">ControlEvent</a></div><div class="ttdeci">ControlEvent</div><div class="ttdoc">The list of predefined events that a UIController can send to the controlled UIModelObject,...</div><div class="ttdef"><b>Definition</b> ui_core.h:28</div></div>
 </div><!-- fragment --><p> This avoid the burden of casting <a class="el" href="class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model-View-Controll design...">UIController</a> and can be used when there is not special need to have <a class="el" href="class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern.">UIModelObject</a> aware about wich is displaying its data.</p>
 <ul>
 <li>refresh the widget</li>

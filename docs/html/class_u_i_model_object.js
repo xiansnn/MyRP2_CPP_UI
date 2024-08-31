@@ -5,6 +5,7 @@ var class_u_i_model_object =
     [ "clear_change_flag", "class_u_i_model_object.html#aff2fe32c66d4c1637627a253274fd383", null ],
     [ "get_current_controller", "class_u_i_model_object.html#a4915527ae45bcb6061f36b2d8d632d3a", null ],
     [ "get_status", "class_u_i_model_object.html#a63d6483ff3c6141398213e6eae1be63d", null ],
+    [ "get_time_since_last_change", "class_u_i_model_object.html#a713e9fbb5d1842d2c80764898f60ce26", null ],
     [ "has_changed", "class_u_i_model_object.html#ae79a9f2c84215e09309dcefde3711138", null ],
     [ "process_control_event", "class_u_i_model_object.html#a4b035d133dc91fd33028d3c264992add", null ],
     [ "set_change_flag", "class_u_i_model_object.html#a2d8608d80b226fde8b31becdc828171b", null ],

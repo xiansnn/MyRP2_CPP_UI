@@ -114,18 +114,19 @@ Inheritance diagram for w_SquareLed:</div>
  <div class="center">
   <img src="classw___square_led.png" usemap="#w_5FSquareLed_map" alt=""/>
   <map id="w_5FSquareLed_map" name="w_5FSquareLed_map">
-<area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="105,56,306,80"/>
-<area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="105,0,306,24"/>
-<area href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed" alt="test_managed_square_led_widget" shape="rect" coords="0,168,201,192"/>
-<area href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="test_square_led_widget" shape="rect" coords="211,168,412,192"/>
+<area href="class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="UIWidget" shape="rect" coords="211,56,412,80"/>
+<area href="class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="Framebuffer" shape="rect" coords="211,0,412,24"/>
+<area href="classtest__managed__focus__led__widget.html" title="test_managed_focus_led_widget : this is a special led widget used to show the status of the model." alt="test_managed_focus_led_widget" shape="rect" coords="0,168,201,192"/>
+<area href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed" alt="test_managed_square_led_widget" shape="rect" coords="211,168,412,192"/>
+<area href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="test_square_led_widget" shape="rect" coords="422,168,623,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9b8ea152688ae0b082e0ce9fc318f1a3" id="r_a9b8ea152688ae0b082e0ce9fc318f1a3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b8ea152688ae0b082e0ce9fc318f1a3">w_SquareLed</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *display_screen, size_t width, size_t height, uint8_t widget_anchor_x, uint8_t widget_anchor_y, FramebufferColor color=FramebufferColor::WHITE, FramebufferFormat framebuffer_format=FramebufferFormat::MONO_VLSB)</td></tr>
-<tr class="memdesc:a9b8ea152688ae0b082e0ce9fc318f1a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new w SquareLed object.  <br /></td></tr>
-<tr class="separator:a9b8ea152688ae0b082e0ce9fc318f1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1057395795e1c97a23bb8a22114d39" id="r_a9b1057395795e1c97a23bb8a22114d39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b1057395795e1c97a23bb8a22114d39">w_SquareLed</a> (<a class="el" href="class_u_i_display_device.html">UIDisplayDevice</a> *display_screen, size_t width, size_t height, uint8_t widget_anchor_x, uint8_t widget_anchor_y, bool widget_with_border=true, FramebufferColor color=FramebufferColor::WHITE, FramebufferFormat framebuffer_format=FramebufferFormat::MONO_VLSB)</td></tr>
+<tr class="memdesc:a9b1057395795e1c97a23bb8a22114d39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new w SquareLed object.  <br /></td></tr>
+<tr class="separator:a9b1057395795e1c97a23bb8a22114d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a250216e99d4658e0d1473bfa936082d0" id="r_a250216e99d4658e0d1473bfa936082d0"><td class="memItemLeft" align="right" valign="top"><a id="a250216e99d4658e0d1473bfa936082d0" name="a250216e99d4658e0d1473bfa936082d0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>light_on</b> ()</td></tr>
 <tr class="memdesc:a250216e99d4658e0d1473bfa936082d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the led ON <br /></td></tr>
@@ -134,10 +135,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>light_on</b> ()</td><
 void&#160;</td><td class="memItemRight" valign="bottom"><b>light_off</b> ()</td></tr>
 <tr class="memdesc:aadad27f0a0f0a66adc7e74cf646b6fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the led OFF <br /></td></tr>
 <tr class="separator:aadad27f0a0f0a66adc7e74cf646b6fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d4cadecdeac2ec08caaf89401c25a5" id="r_a27d4cadecdeac2ec08caaf89401c25a5"><td class="memItemLeft" align="right" valign="top"><a id="a27d4cadecdeac2ec08caaf89401c25a5" name="a27d4cadecdeac2ec08caaf89401c25a5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>blink_refresh</b> ()</td></tr>
-<tr class="memdesc:a27d4cadecdeac2ec08caaf89401c25a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">refresh the square led ON or OFF on blinking phase change <br /></td></tr>
-<tr class="separator:a27d4cadecdeac2ec08caaf89401c25a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71b45b6c256a490b9448f1e86b0c2a9" id="r_ab71b45b6c256a490b9448f1e86b0c2a9"><td class="memItemLeft" align="right" valign="top"><a id="ab71b45b6c256a490b9448f1e86b0c2a9" name="ab71b45b6c256a490b9448f1e86b0c2a9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>widget_blink_refresh</b> ()</td></tr>
+<tr class="memdesc:ab71b45b6c256a490b9448f1e86b0c2a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">refresh the square led ON or OFF on blinking phase change <br /></td></tr>
+<tr class="separator:ab71b45b6c256a490b9448f1e86b0c2a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7b76f68c39a9e80c49353a6bb3cf030" id="r_ae7b76f68c39a9e80c49353a6bb3cf030"><td class="memItemLeft" align="right" valign="top"><a id="ae7b76f68c39a9e80c49353a6bb3cf030" name="ae7b76f68c39a9e80c49353a6bb3cf030"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>blink_off</b> ()</td></tr>
 <tr class="memdesc:ae7b76f68c39a9e80c49353a6bb3cf030"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the blinking of the led OFF <br /></td></tr>
@@ -230,14 +231,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>next_char</b> ()</td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a20e541a27f053ff1b672bc3057e905fe" id="r_a20e541a27f053ff1b672bc3057e905fe"><td class="memItemLeft" align="right" valign="top"><a id="a20e541a27f053ff1b672bc3057e905fe" name="a20e541a27f053ff1b672bc3057e905fe"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_lit</b> = true</td></tr>
-<tr class="memdesc:a20e541a27f053ff1b672bc3057e905fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">the status of the led, on or off <br /></td></tr>
-<tr class="separator:a20e541a27f053ff1b672bc3057e905fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a447beab97f4f37c50274d222af4a19d2" id="r_a447beab97f4f37c50274d222af4a19d2"><td class="memItemLeft" align="right" valign="top"><a id="a447beab97f4f37c50274d222af4a19d2" name="a447beab97f4f37c50274d222af4a19d2"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_blinking</b> = false</td></tr>
-<tr class="memdesc:a447beab97f4f37c50274d222af4a19d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the blinking status of the led <br /></td></tr>
-<tr class="separator:a447beab97f4f37c50274d222af4a19d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c8e76eebdc5ec9266849b4ecfe4b4a" id="r_a53c8e76eebdc5ec9266849b4ecfe4b4a"><td class="memItemLeft" align="right" valign="top"><a id="a53c8e76eebdc5ec9266849b4ecfe4b4a" name="a53c8e76eebdc5ec9266849b4ecfe4b4a"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>led_is_on</b> = true</td></tr>
+<tr class="memdesc:a53c8e76eebdc5ec9266849b4ecfe4b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">the status of the led, on or off <br /></td></tr>
+<tr class="separator:a53c8e76eebdc5ec9266849b4ecfe4b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc66c33920dba5168857cac0ef31ced2" id="r_abc66c33920dba5168857cac0ef31ced2"><td class="memItemLeft" align="right" valign="top"><a id="abc66c33920dba5168857cac0ef31ced2" name="abc66c33920dba5168857cac0ef31ced2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>led_is_blinking</b> = false</td></tr>
+<tr class="memdesc:abc66c33920dba5168857cac0ef31ced2"><td class="mdescLeft">&#160;</td><td class="mdescRight">the blinking status of the led <br /></td></tr>
+<tr class="separator:abc66c33920dba5168857cac0ef31ced2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_u_i_widget"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_u_i_widget')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_u_i_widget.html">UIWidget</a></td></tr>
 <tr class="memitem:aa632ac0145d606c34dc2c2378d5217e7 inherit pro_attribs_class_u_i_widget" id="r_aa632ac0145d606c34dc2c2378d5217e7"><td class="memItemLeft" align="right" valign="top">
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>blink_period_us</b></td></tr>
@@ -304,16 +305,16 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>blinking_phase_has_changed</b> ()</td></tr>
 <tr class="memdesc:afad935720833986592d567d77ce3bbbd inherit pro_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the blinking phase has changed <br /></td></tr>
 <tr class="separator:afad935720833986592d567d77ce3bbbd inherit pro_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8343ea2acadbfb296a53f91aa043277 inherit pro_methods_class_u_i_widget" id="r_ae8343ea2acadbfb296a53f91aa043277"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</td></tr>
-<tr class="memdesc:ae8343ea2acadbfb296a53f91aa043277 inherit pro_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a rectangle around the widget <br /></td></tr>
-<tr class="separator:ae8343ea2acadbfb296a53f91aa043277 inherit pro_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41242ebdec9a3336ce8ad4aabc6521a inherit pro_methods_class_u_i_widget" id="r_ab41242ebdec9a3336ce8ad4aabc6521a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> (FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:ab41242ebdec9a3336ce8ad4aabc6521a inherit pro_methods_class_u_i_widget"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a rectangle around the widget. IMPORTANT NOTICE: as the border is a rectangle with fill=false, the border width can only be 1 pixel. <br /></td></tr>
+<tr class="separator:ab41242ebdec9a3336ce8ad4aabc6521a inherit pro_methods_class_u_i_widget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A widget that show a square (it can be a rectangle) on the display. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a9b8ea152688ae0b082e0ce9fc318f1a3" name="a9b8ea152688ae0b082e0ce9fc318f1a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9b8ea152688ae0b082e0ce9fc318f1a3">&#9670;&#160;</a></span>w_SquareLed()</h2>
+<a id="a9b1057395795e1c97a23bb8a22114d39" name="a9b1057395795e1c97a23bb8a22114d39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1057395795e1c97a23bb8a22114d39">&#9670;&#160;</a></span>w_SquareLed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -346,6 +347,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</t
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>widget_with_border</em></span><span class="paramdefsep"> = </span><span class="paramdefval">true</span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">FramebufferColor</td>          <td class="paramname"><span class="paramname"><em>color</em></span><span class="paramdefsep"> = </span><span class="paramdefval">FramebufferColor::WHITE</span>, </td>
         </tr>
         <tr>
@@ -364,6 +370,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</t
     <tr><td class="paramname">height</td><td></td></tr>
     <tr><td class="paramname">widget_anchor_x</td><td></td></tr>
     <tr><td class="paramname">widget_anchor_y</td><td></td></tr>
+    <tr><td class="paramname">widget_with_border</td><td></td></tr>
     <tr><td class="paramname">color</td><td></td></tr>
     <tr><td class="paramname">framebuffer_format</td><td></td></tr>
   </table>

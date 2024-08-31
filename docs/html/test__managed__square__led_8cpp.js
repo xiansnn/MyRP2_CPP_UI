@@ -1,6 +1,7 @@
 var test__managed__square__led_8cpp =
 [
     [ "test_managed_square_led_model", "classtest__managed__square__led__model.html", "classtest__managed__square__led__model" ],
+    [ "test_managed_focus_led_widget", "classtest__managed__focus__led__widget.html", "classtest__managed__focus__led__widget" ],
     [ "test_managed_square_led_widget", "classtest__managed__square__led__widget.html", "classtest__managed__square__led__widget" ],
     [ "test_switch_button", "classtest__switch__button.html", null ],
     [ "test_Manager", "classtest___manager.html", "classtest___manager" ],

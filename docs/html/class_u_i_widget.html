@@ -120,8 +120,9 @@ Inheritance diagram for UIWidget:</div>
 <area href="classtest___object_manager_widget.html" title="This is an implementation of a pseudo-widget for test_ui_core program." alt="test_ObjectManagerWidget" shape="rect" coords="247,112,484,136"/>
 <area href="classtest___set_of_widget.html" title="test the composite widget features" alt="test_SetOfWidget" shape="rect" coords="494,112,731,136"/>
 <area href="classw___square_led.html" title="A widget that show a square (it can be a rectangle) on the display." alt="w_SquareLed" shape="rect" coords="741,112,978,136"/>
-<area href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed" alt="test_managed_square_led_widget" shape="rect" coords="617,168,854,192"/>
-<area href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="test_square_led_widget" shape="rect" coords="864,168,1101,192"/>
+<area href="classtest__managed__focus__led__widget.html" title="test_managed_focus_led_widget : this is a special led widget used to show the status of the model." alt="test_managed_focus_led_widget" shape="rect" coords="494,168,731,192"/>
+<area href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed" alt="test_managed_square_led_widget" shape="rect" coords="741,168,978,192"/>
+<area href="classtest__square__led__widget.html" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="test_square_led_widget" shape="rect" coords="988,168,1225,192"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -214,10 +215,10 @@ Protected Member Functions</h2></td></tr>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>blinking_phase_has_changed</b> ()</td></tr>
 <tr class="memdesc:afad935720833986592d567d77ce3bbbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">return true if the blinking phase has changed <br /></td></tr>
 <tr class="separator:afad935720833986592d567d77ce3bbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8343ea2acadbfb296a53f91aa043277" id="r_ae8343ea2acadbfb296a53f91aa043277"><td class="memItemLeft" align="right" valign="top"><a id="ae8343ea2acadbfb296a53f91aa043277" name="ae8343ea2acadbfb296a53f91aa043277"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> ()</td></tr>
-<tr class="memdesc:ae8343ea2acadbfb296a53f91aa043277"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a rectangle around the widget <br /></td></tr>
-<tr class="separator:ae8343ea2acadbfb296a53f91aa043277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab41242ebdec9a3336ce8ad4aabc6521a" id="r_ab41242ebdec9a3336ce8ad4aabc6521a"><td class="memItemLeft" align="right" valign="top"><a id="ab41242ebdec9a3336ce8ad4aabc6521a" name="ab41242ebdec9a3336ce8ad4aabc6521a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>draw_border</b> (FramebufferColor c=FramebufferColor::WHITE)</td></tr>
+<tr class="memdesc:ab41242ebdec9a3336ce8ad4aabc6521a"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw a rectangle around the widget. IMPORTANT NOTICE: as the border is a rectangle with fill=false, the border width can only be 1 pixel. <br /></td></tr>
+<tr class="separator:ab41242ebdec9a3336ce8ad4aabc6521a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -351,7 +352,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
     <tr><td class="paramname">widget_anchor_x</td><td>the horizontal position where the widget start on the device screen </td></tr>
     <tr><td class="paramname">widget_anchor_y</td><td>the vertical position where the widget start on the device screen </td></tr>
     <tr><td class="paramname">widget_with_border</td><td>The flag that indicates whether the widget has a border or not </td></tr>
-    <tr><td class="paramname">widget_border_width</td><td>the width of the border </td></tr>
+    <tr><td class="paramname">widget_border_width</td><td>the width of the border. WARNING: can only be 1 pixel. </td></tr>
     <tr><td class="paramname">framebuffer_format</td><td>the addressing format of the actual display device </td></tr>
     <tr><td class="paramname">framebuffer_txt_cnf</td><td>a default textual configuration, with 8x8 font size</td></tr>
   </table>
@@ -424,7 +425,7 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><b>max_column</b> {0}
 <li>and finally : clear model change flag if needed. WARNING : When several widget display one Model, only the last one must clear_change_flag() </li>
 </ul>
 
-<p>Implemented in <a class="el" href="classtest___cursor_widget_with_incremental_value.html#a570b80ff7fd20b8ae74d44f4e16ce2c9">test_CursorWidgetWithIncrementalValue</a>, <a class="el" href="classtest__managed__square__led__widget.html#a6cc2a449331f90be565474aabaf67bde">test_managed_square_led_widget</a>, <a class="el" href="classtest___object_manager_widget.html#a795922be34fbe6d6a284811ace7a5055">test_ObjectManagerWidget</a>, <a class="el" href="classtest___set_of_widget.html#a1a7a0d270d8c0f4319d0abaa34cdf3a4">test_SetOfWidget</a>, and <a class="el" href="classtest__square__led__widget.html#a44c6863827fab0b409167474c33e4cdc">test_square_led_widget</a>.</p>
+<p>Implemented in <a class="el" href="classtest___cursor_widget_with_incremental_value.html#a570b80ff7fd20b8ae74d44f4e16ce2c9">test_CursorWidgetWithIncrementalValue</a>, <a class="el" href="classtest__managed__focus__led__widget.html#ac614912429a9508db7f5cdff6b548a11">test_managed_focus_led_widget</a>, <a class="el" href="classtest__managed__square__led__widget.html#a6cc2a449331f90be565474aabaf67bde">test_managed_square_led_widget</a>, <a class="el" href="classtest___object_manager_widget.html#a795922be34fbe6d6a284811ace7a5055">test_ObjectManagerWidget</a>, <a class="el" href="classtest___set_of_widget.html#a1a7a0d270d8c0f4319d0abaa34cdf3a4">test_SetOfWidget</a>, and <a class="el" href="classtest__square__led__widget.html#a44c6863827fab0b409167474c33e4cdc">test_square_led_widget</a>.</p>
 
 </div>
 </div>

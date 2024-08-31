@@ -183,8 +183,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_change_flag</b> (
 void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_change_flag</b> ()</td></tr>
 <tr class="memdesc:aff2fe32c66d4c1637627a253274fd383 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the change flag object to false. <br /></td></tr>
 <tr class="separator:aff2fe32c66d4c1637627a253274fd383 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a713e9fbb5d1842d2c80764898f60ce26 inherit pub_methods_class_u_i_model_object" id="r_a713e9fbb5d1842d2c80764898f60ce26"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a713e9fbb5d1842d2c80764898f60ce26">get_time_since_last_change</a> ()</td></tr>
+<tr class="memdesc:a713e9fbb5d1842d2c80764898f60ce26 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">compute time since the last status change  <br /></td></tr>
+<tr class="separator:a713e9fbb5d1842d2c80764898f60ce26 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object" id="r_a23cc738b1244cbc6a52ad7ed6102e688"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a23cc738b1244cbc6a52ad7ed6102e688">update_status</a> (<a class="el" href="ui__core_8h.html#a57c20ec1ef250b4ad060705786762112">ControlledObjectStatus</a> _new_status)</td></tr>
-<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Propose a _new_status for the model : IS_WAITING, HAS_FOCUS or IS_ACTIVE. If this _new_status is different from the present one, then the change is effective and the change_flag is set to true.  <br /></td></tr>
+<tr class="memdesc:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">then the change is effective and the change_flag is set to true.  <br /></td></tr>
 <tr class="separator:a23cc738b1244cbc6a52ad7ed6102e688 inherit pub_methods_class_u_i_model_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a656066649f529b7472d098637ddcf04f inherit pub_methods_class_u_i_model_object" id="r_a656066649f529b7472d098637ddcf04f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_i_model_object.html#a656066649f529b7472d098637ddcf04f">update_current_controller</a> (<a class="el" href="class_u_i_controller.html">UIController</a> *_new_controller)</td></tr>
 <tr class="memdesc:a656066649f529b7472d098637ddcf04f inherit pub_methods_class_u_i_model_object"><td class="mdescLeft">&#160;</td><td class="mdescRight">if _new_controller is different from the current controller, change the current controller associated to the ModelObject. the new controller has is member current_controlled_object also changed.  <br /></td></tr>
@@ -201,6 +204,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_change_flag</b>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad39e9757f9f09147eff9efd091334752" id="r_ad39e9757f9f09147eff9efd091334752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad39e9757f9f09147eff9efd091334752">check_time_out</a> (uint32_t time_out_us=TIME_OUT_us)</td></tr>
+<tr class="memdesc:ad39e9757f9f09147eff9efd091334752"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if there is a time out either on the managed models than the manager itself.  <br /></td></tr>
+<tr class="separator:ad39e9757f9f09147eff9efd091334752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bab4cf4e46d7dd6347ae8b8c6fb4d4a" id="r_a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"><td class="memItemLeft" align="right" valign="top"><a id="a1bab4cf4e46d7dd6347ae8b8c6fb4d4a" name="a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>make_managed_object_active</b> ()</td></tr>
 <tr class="memdesc:a1bab4cf4e46d7dd6347ae8b8c6fb4d4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">change the status of model object under focus to IS_ACTIVE <br /></td></tr>
@@ -275,6 +281,46 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_wrappable</b></td>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ad39e9757f9f09147eff9efd091334752" name="ad39e9757f9f09147eff9efd091334752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39e9757f9f09147eff9efd091334752">&#9670;&#160;</a></span>check_time_out()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIObjectManager::check_time_out </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>time_out_us</em></span><span class="paramdefsep"> = </span><span class="paramdefval">TIME_OUT_us</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check if there is a time out either on the managed models than the manager itself. </p>
+<p>This means no action on focus control and active status control.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time_out_us</td><td>the time out value in microsecond. default to 3000000 (3seconds) </td></tr>
+  </table>
+  </dd>
+</dl>
+<ul>
+<li>chek time_out for active model</li>
+</ul>
+<ul>
+<li>check time_out for model under focus</li>
+</ul>
 
 </div>
 </div>

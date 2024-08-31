@@ -3,8 +3,9 @@
 w_SquareLed::w_SquareLed(UIDisplayDevice *display_screen,
                          size_t width, size_t height,
                          uint8_t widget_anchor_x, uint8_t widget_anchor_y,
+                         bool widget_with_border,
                          FramebufferColor color, FramebufferFormat framebuffer_format)
-    : UIWidget(display_screen, width, height, widget_anchor_x, widget_anchor_y, true, 1, framebuffer_format)
+    : UIWidget(display_screen, width, height, widget_anchor_x, widget_anchor_y, widget_with_border, 1, framebuffer_format)
 {
 }
 
