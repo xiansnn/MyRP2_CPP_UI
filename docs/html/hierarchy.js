@@ -9,6 +9,7 @@ var hierarchy =
         [ "test_ObjectManagerWidget", "classtest___object_manager_widget.html", null ],
         [ "test_SetOfWidget", "classtest___set_of_widget.html", null ],
         [ "w_SquareLed", "classw___square_led.html", [
+          [ "test_managed_focus_led_widget", "classtest__managed__focus__led__widget.html", null ],
           [ "test_managed_square_led_widget", "classtest__managed__square__led__widget.html", null ],
           [ "test_square_led_widget", "classtest__square__led__widget.html", null ]
         ] ]

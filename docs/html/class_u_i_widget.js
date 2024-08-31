@@ -4,7 +4,7 @@ var class_u_i_widget =
     [ "~UIWidget", "class_u_i_widget.html#a9d4a57bc7a557151612c87058be8b9c7", null ],
     [ "add_widget", "class_u_i_widget.html#a77b60ee8bae791e3239fdc6c27472b83", null ],
     [ "blinking_phase_has_changed", "class_u_i_widget.html#afad935720833986592d567d77ce3bbbd", null ],
-    [ "draw_border", "class_u_i_widget.html#ae8343ea2acadbfb296a53f91aa043277", null ],
+    [ "draw_border", "class_u_i_widget.html#ab41242ebdec9a3336ce8ad4aabc6521a", null ],
     [ "draw_refresh", "class_u_i_widget.html#a3c4ca560410bfc6b07718c4dda7a7586", null ],
     [ "set_blink_us", "class_u_i_widget.html#ac59f35621206bdea462a0b7846ddf0ac", null ],
     [ "set_display_screen", "class_u_i_widget.html#ab0428db23b7794e60579466e62ba4290", null ],

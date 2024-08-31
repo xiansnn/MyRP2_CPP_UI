@@ -105,7 +105,7 @@ $(function(){initNavTree('test__managed__square__led_8cpp.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>Example of how to program several LEDcontrolled by a single rotary encoder.  
+<p>Example of how to program several LED controlled by a single rotary encoder with focus indication.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;widget_square_led.h&quot;</code><br />
 <code>#include &quot;ssd1306.h&quot;</code><br />
@@ -116,6 +116,9 @@ $(function(){initNavTree('test__managed__square__led_8cpp.html',''); initResizab
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__managed__square__led__model.html">test_managed_square_led_model</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">########## implementation classes section ##########  <a href="classtest__managed__square__led__model.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__managed__focus__led__widget.html">test_managed_focus_led_widget</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtest__managed__focus__led__widget.html" title="test_managed_focus_led_widget : this is a special led widget used to show the status of the model.">test_managed_focus_led_widget</a> : this is a special led widget used to show the status of the model.  <a href="classtest__managed__focus__led__widget.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtest__managed__square__led__widget.html">test_managed_square_led_widget</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed">test_managed_square_led_widget</a> : Example of final implementation of <a class="el" href="classw___square_led.html" title="A widget that show a square (it can be a rectangle) on the display.">w_SquareLed</a>  <a href="classtest__managed__square__led__widget.html#details">More...</a><br /></td></tr>
@@ -177,10 +180,10 @@ Variables</h2></td></tr>
 <tr class="separator:acbb211b6ed10dde4c778f33d7ea9350a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Example of how to program several LEDcontrolled by a single rotary encoder. </p>
+<div class="textblock"><p>Example of how to program several LED controlled by a single rotary encoder with focus indication. </p>
 <dl class="section author"><dt>Author</dt><dd>xiansnn (<a href="#" onclick="location.href='mai'+'lto:'+'xia'+'ns'+'nn@'+'ho'+'tma'+'il'+'.co'+'m'; return false;">xians<span class="obfuscator">.nosp@m.</span>nn@h<span class="obfuscator">.nosp@m.</span>otmai<span class="obfuscator">.nosp@m.</span>l.co<span class="obfuscator">.nosp@m.</span>m</a>) </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2024-08-09</dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2024-08-31</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
@@ -201,10 +204,10 @@ Variables</h2></td></tr>
 <p>Example of main program of a managed SquareLED widget. </p>
 <p>main steps:</p>
 <p>1- create I2C bus hw peripheral</p>
-<p>2- create the OLED display, clean up the screen and draw the border of the screen</p>
+<p>2- create the OLED display, clean up the screen</p>
 <p>3- create 3 <a class="el" href="classtest__managed__square__led__model.html" title="########## implementation classes section ##########">test_managed_square_led_model</a> as displayed object for <a class="el" href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed">test_managed_square_led_widget</a></p>
-<p>4- create 3 <a class="el" href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed">test_managed_square_led_widget</a></p>
-<p>5- set is_blinking period of the square_led</p>
+<p>4- create 3 <a class="el" href="classtest__managed__square__led__widget.html" title="test_managed_square_led_widget : Example of final implementation of w_SquareLed">test_managed_square_led_widget</a> and the <a class="el" href="classtest__managed__focus__led__widget.html" title="test_managed_focus_led_widget : this is a special led widget used to show the status of the model.">test_managed_focus_led_widget</a></p>
+<p>5- set led_is_blinking period of the <a class="el" href="classtest__managed__focus__led__widget.html" title="test_managed_focus_led_widget : this is a special led widget used to show the status of the model.">test_managed_focus_led_widget</a></p>
 <p>6- create a <a class="el" href="classtest__switch__button.html" title="test_switch_button : Example of final implementation of SwitchButton and UIController">test_switch_button</a></p>
 <p>7- create a <a class="el" href="classtest___manager.html" title="test_Manager : Example of final implementation of UIObjectManager">test_Manager</a> connected to the rotary encoder.</p>
 <p>8- populate manager with managed objects</p>

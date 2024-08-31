@@ -8,6 +8,7 @@ var searchData=
   ['get_5fname_5',['get_name',['../classtest___incremental_value.html#adb530439087bf7e3b7e4a92fde663841',1,'test_IncrementalValue']]],
   ['get_5fspectrum_6',['get_spectrum',['../class_m_s_g_e_q7.html#ac03d0f7a0c833169f67ea4d5a8712c38',1,'MSGEQ7']]],
   ['get_5fstatus_7',['get_status',['../class_u_i_model_object.html#a63d6483ff3c6141398213e6eae1be63d',1,'UIModelObject']]],
-  ['get_5fvalue_8',['get_value',['../class_u_i_controlled_incremental_value.html#a7989979c51969bb665d8539636eb9876',1,'UIControlledIncrementalValue']]],
-  ['gpio_9',['gpio',['../class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0',1,'SwitchButton']]]
+  ['get_5ftime_5fsince_5flast_5fchange_8',['get_time_since_last_change',['../class_u_i_model_object.html#a713e9fbb5d1842d2c80764898f60ce26',1,'UIModelObject']]],
+  ['get_5fvalue_9',['get_value',['../class_u_i_controlled_incremental_value.html#a7989979c51969bb665d8539636eb9876',1,'UIControlledIncrementalValue']]],
+  ['gpio_10',['gpio',['../class_switch_button.html#a68fccab1c920eec2fbd4fc2d1f5b29e0',1,'SwitchButton']]]
 ];
