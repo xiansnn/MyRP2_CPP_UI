@@ -26,6 +26,7 @@ public:
      * @param height 
      * @param widget_anchor_x 
      * @param widget_anchor_y 
+     * @param widget_with_border
      * @param color 
      * @param framebuffer_format 
      */
@@ -34,6 +35,7 @@ public:
                 size_t height,
                 uint8_t widget_anchor_x,
                 uint8_t widget_anchor_y,
+                bool widget_with_border = true,
                 FramebufferColor color = FramebufferColor::WHITE,
                 FramebufferFormat framebuffer_format = FramebufferFormat::MONO_VLSB);
     ~w_SquareLed();
