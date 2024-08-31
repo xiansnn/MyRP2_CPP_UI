@@ -198,12 +198,12 @@ int main()
     test_managed_square_led_model test_model_2 = test_managed_square_led_model("TM2");
     test_managed_square_led_model test_model_3 = test_managed_square_led_model("TM3");
     /// 4- create 3 test_managed_square_led_widget
-    test_managed_square_led_widget square_led_1 = test_managed_square_led_widget(&test_model_1, &display, 20, 16, 6, 0);
-    test_managed_square_led_widget square_led_2 = test_managed_square_led_widget(&test_model_2, &display, 20, 16, 6, 24);
-    test_managed_square_led_widget square_led_3 = test_managed_square_led_widget(&test_model_3, &display, 20, 16, 6, 48);
-    test_managed_focus_led_widget focus_led_1 = test_managed_focus_led_widget(&test_model_1, &display, 5, 8, 0, 0);
-    test_managed_focus_led_widget focus_led_2 = test_managed_focus_led_widget(&test_model_2, &display, 5, 8, 0, 24);
-    test_managed_focus_led_widget focus_led_3 = test_managed_focus_led_widget(&test_model_3, &display, 5, 8, 0, 48);
+    test_managed_square_led_widget square_led_1 = test_managed_square_led_widget(&test_model_1, &display, 20, 8, 6, 0);
+    test_managed_square_led_widget square_led_2 = test_managed_square_led_widget(&test_model_2, &display, 20, 8, 6, 8);
+    test_managed_square_led_widget square_led_3 = test_managed_square_led_widget(&test_model_3, &display, 20, 8, 6, 16);
+    test_managed_focus_led_widget focus_led_1 = test_managed_focus_led_widget(&test_model_1, &display, 3, 8, 0, 0);
+    test_managed_focus_led_widget focus_led_2 = test_managed_focus_led_widget(&test_model_2, &display, 3, 8, 0, 8);
+    test_managed_focus_led_widget focus_led_3 = test_managed_focus_led_widget(&test_model_3, &display, 3, 8, 0, 16);
 
     /// 5- set led_is_blinking period of the square_led
     focus_led_1.set_blink_us(200000);
