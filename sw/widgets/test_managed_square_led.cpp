@@ -230,9 +230,13 @@ void test_managed_square_led_model::process_control_event(ControlEvent _event)
     {
     case ControlEvent::INCREMENT:
     case ControlEvent::DECREMENT:
-        my_bool_value = !my_bool_value;
-        printf(" %s on_off=%d\n", this->name.c_str(), my_bool_value);
-        set_change_flag();
+        if (get_status() == ControlledObjectStatus::IS_ACTIVE)
+        {
+            my_bool_value = !my_bool_value;
+            printf(" %s on_off=%d\n", this->name.c_str(), my_bool_value);
+            set_change_flag();
+        }
+
         break;
 
     default:
