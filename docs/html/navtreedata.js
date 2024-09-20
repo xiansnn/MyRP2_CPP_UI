@@ -31,7 +31,7 @@ var NAVTREE =
       [ "Background", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md3", null ],
       [ "Files organisation", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md4", [
         [ "\"hw\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md5", null ],
-        [ "\"sw\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md6", null ],
+        [ "\"widget\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md6", null ],
         [ "\"devices\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md7", null ],
         [ "\"ui_core\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md8", null ],
         [ "\"utilities\" directory", "md__c_1_2_users_2chris_2_one_drive_2_my_r_p2___c_p_p___u_i_2_r_e_a_d_m_e.html#autotoc_md9", null ]
@@ -64,7 +64,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "12x16__font_8h_source.html",
-"structstruct___config_slave_i2_c.html"
+"structstruct___config_slave_i2_c.html#a1205b1fcda3c452180f907d95d47e7c6"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
