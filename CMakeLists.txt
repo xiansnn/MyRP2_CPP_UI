@@ -23,22 +23,18 @@ add_compile_options(-Wall
 include_directories(    ${PROJECT_SOURCE_DIR}/utilities/debug_probe
                         ${PROJECT_SOURCE_DIR}/hw/hw_I2C
                         ${PROJECT_SOURCE_DIR}/ui_core/framebuffer
-                        # ${PROJECT_SOURCE_DIR}/utilities/cntrl_value
-                        
                         ${PROJECT_SOURCE_DIR}/ui_core/test_ui_core
-
                         ${PROJECT_SOURCE_DIR}/ui_core
-                        ${PROJECT_SOURCE_DIR}/sw/widgets
+                        ${PROJECT_SOURCE_DIR}/widgets
                         ${PROJECT_SOURCE_DIR}/devices/device_ssd1306
                         ${PROJECT_SOURCE_DIR}/devices/device_switch
                         ${PROJECT_SOURCE_DIR}/devices/device_KY_040
-                        # ${PROJECT_SOURCE_DIR}/hw/hw_PWM
                     )
 
 add_subdirectory(utilities)
 add_subdirectory(ui_core)
 add_subdirectory(hw)
 add_subdirectory(devices)
-add_subdirectory(sw)
+add_subdirectory(widgets)
 add_subdirectory(app_examples)
 
