@@ -22,7 +22,7 @@ add_compile_options(-Wall
 
 include_directories(    ${PROJECT_SOURCE_DIR}/utilities/debug_probe
                         ${PROJECT_SOURCE_DIR}/hw/hw_I2C
-                        ${PROJECT_SOURCE_DIR}/sw/framebuffer
+                        ${PROJECT_SOURCE_DIR}/ui_core/framebuffer
                         # ${PROJECT_SOURCE_DIR}/utilities/cntrl_value
                         
                         ${PROJECT_SOURCE_DIR}/ui_core/test_ui_core
