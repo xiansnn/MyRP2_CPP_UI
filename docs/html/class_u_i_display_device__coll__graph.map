@@ -1,0 +1,5 @@
+<map id="UIDisplayDevice" name="UIDisplayDevice">
+<area shape="rect" id="Node000001" title="This is the abstract class to handle all generic behavior of physical display devices (e...." alt="" coords="5,80,126,107"/>
+<area shape="rect" id="Node000002" href="$class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="" coords="20,5,111,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,48,68,80,63,80,63,48"/>
+</map>

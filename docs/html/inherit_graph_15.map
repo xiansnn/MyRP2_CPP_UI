@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern." alt="" coords="5,89,114,116"/>
+<area shape="rect" id="Node000001" href="$class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value..." alt="" coords="162,31,356,57"/>
+<area shape="poly" id="edge16_Node000000_Node000001" title=" " alt="" coords="115,81,161,67,202,55,203,60,162,72,116,87"/>
+<area shape="rect" id="Node000005" href="$classtest__managed__square__led__model.html" title="########## implementation classes section ##########" alt="" coords="184,81,334,124"/>
+<area shape="poly" id="edge20_Node000000_Node000005" title=" " alt="" coords="129,100,184,100,184,105,129,105"/>
+<area shape="rect" id="Node000006" href="$classtest__square__led__model.html" title="########## implementation classes section ##########" alt="" coords="181,148,336,175"/>
+<area shape="poly" id="edge21_Node000000_Node000006" title=" " alt="" coords="116,119,162,133,203,145,202,150,161,139,115,124"/>
+<area shape="rect" id="Node000002" href="$class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen." alt="" coords="418,5,541,32"/>
+<area shape="poly" id="edge17_Node000001_Node000002" title=" " alt="" coords="371,28,417,23,418,28,372,34"/>
+<area shape="rect" id="Node000004" href="$classtest___incremental_value.html" title="Construct an implementation of UIControlledIncrementalValue for test_ui_core program." alt="" coords="404,56,554,83"/>
+<area shape="poly" id="edge19_Node000001_Node000004" title=" " alt="" coords="372,54,404,58,404,63,371,60"/>
+<area shape="rect" id="Node000003" href="$classtest___manager.html" title="implement a UIObjectManager for test_ui_core program" alt="" coords="602,5,703,32"/>
+<area shape="poly" id="edge18_Node000002_Node000003" title=" " alt="" coords="556,16,602,16,602,21,556,21"/>
+</map>

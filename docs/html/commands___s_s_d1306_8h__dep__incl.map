@@ -1,0 +1,13 @@
+<map id="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_SSD1306/commands_SSD1306.h" name="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_SSD1306/commands_SSD1306.h">
+<area shape="rect" id="Node000001" title="This file contains all the defineition of SSD1306 commands." alt="" coords="374,5,568,80"/>
+<area shape="rect" id="Node000002" href="$ssd1306_8h_source.html" title=" " alt="" coords="376,128,566,187"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="474,95,474,127,469,127,469,95"/>
+<area shape="rect" id="Node000003" href="$test__ssd1306_8cpp.html" title="This file contains a set of functions that exercice the main feautures of the OLED display SSD1306...." alt="" coords="5,235,239,293"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="362,194,219,237,217,232,360,189"/>
+<area shape="rect" id="Node000004" href="$test__streams_8cpp.html" title=" " alt="" coords="263,235,458,293"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="432,199,393,236,389,232,428,196"/>
+<area shape="rect" id="Node000005" href="$test__managed__square__led_8cpp.html" title="Example of how to program several LED controlled by a single rotary encoder with focus indication." alt="" coords="482,235,684,293"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="515,196,555,232,551,236,511,199"/>
+<area shape="rect" id="Node000006" href="$test__square__led_8cpp.html" title="an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking..." alt="" coords="708,235,882,293"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="575,189,709,232,707,237,574,194"/>
+</map>

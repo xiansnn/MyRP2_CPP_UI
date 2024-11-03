@@ -1,0 +1,17 @@
+<map id="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_switch/switch_button.h" name="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_switch/switch_button.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="577,5,782,64"/>
+<area shape="rect" id="Node000002" href="$rotary__encoder_8h_source.html" title=" " alt="" coords="107,120,324,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="562,62,336,115,309,122,308,117,335,109,561,57"/>
+<area shape="rect" id="Node000005" href="$switch__button_8cpp.html" title=" " alt="" coords="348,120,566,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="611,74,515,122,512,117,608,69"/>
+<area shape="rect" id="Node000006" href="$test__switch__button_8cpp.html" title=" " alt="" coords="590,112,769,187"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="682,79,682,112,677,112,677,79"/>
+<area shape="rect" id="Node000007" href="$test__switch__button__irq_8cpp.html" title=" " alt="" coords="794,112,973,187"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="746,69,818,109,816,114,743,74"/>
+<area shape="rect" id="Node000008" href="$test__square__led_8cpp.html" title="an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking..." alt="" coords="998,120,1172,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="797,60,986,109,1009,117,1007,122,984,115,796,65"/>
+<area shape="rect" id="Node000003" href="$test__ui__core_8cpp.html" title="This is the main test program of the UI_core." alt="" coords="5,235,202,293"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,192,134,236,130,232,175,188"/>
+<area shape="rect" id="Node000004" href="$test__managed__square__led_8cpp.html" title="Example of how to program several LED controlled by a single rotary encoder with focus indication." alt="" coords="226,235,429,293"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="256,188,301,232,297,236,253,192"/>
+</map>

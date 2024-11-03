@@ -1,0 +1,20 @@
+<map id="C:/Users/chris/OneDrive/MyRP2_CPP_UI/hw/hw_I2C/hw_i2c.cpp" name="C:/Users/chris/OneDrive/MyRP2_CPP_UI/hw/hw_I2C/hw_i2c.cpp">
+<area shape="rect" id="Node000001" title="this file provides an abstract view of the I2C hardware instances. It must be considered as a set of ..." alt="" coords="396,5,591,64"/>
+<area shape="rect" id="Node000002" href="$hw__i2c_8h_source.html" title=" " alt="" coords="327,112,400,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="453,67,396,105,393,101,450,62"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="454,187,508,213"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="492,65,488,112,485,171,479,171,483,112,487,64"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="498,112,558,139"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="507,63,520,96,515,98,502,65"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="582,112,642,139"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="533,62,584,100,581,105,530,66"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,187,112,213"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="328,138,127,185,126,180,326,133"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="136,187,251,213"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="335,142,238,183,236,178,333,137"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="276,187,367,213"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="359,141,338,175,334,172,354,138"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="391,187,430,213"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="374,138,397,172,392,175,370,141"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="386,137,449,176,447,181,383,141"/>
+</map>

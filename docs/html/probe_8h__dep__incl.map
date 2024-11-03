@@ -1,0 +1,21 @@
+<map id="C:/Users/chris/OneDrive/MyRP2_CPP_UI/utilities/debug_probe/probe.h" name="C:/Users/chris/OneDrive/MyRP2_CPP_UI/utilities/debug_probe/probe.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="904,5,1074,64"/>
+<area shape="rect" id="Node000002" href="$test__ssd1306_8cpp.html" title="This file contains a set of functions that exercice the main feautures of the OLED display SSD1306...." alt="" coords="5,120,239,179"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="888,44,601,66,426,87,252,115,219,122,217,117,251,109,425,81,600,61,888,38"/>
+<area shape="rect" id="Node000003" href="$test__switch__button_8cpp.html" title=" " alt="" coords="263,112,442,187"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="889,47,687,71,571,90,456,115,443,118,442,113,455,109,570,85,687,66,888,42"/>
+<area shape="rect" id="Node000004" href="$test__switch__button__irq_8cpp.html" title=" " alt="" coords="467,112,646,187"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="889,59,778,84,660,115,647,118,646,113,659,109,777,78,888,54"/>
+<area shape="rect" id="Node000005" href="$test__i2c__bus__scan_8cpp.html" title=" " alt="" coords="671,120,866,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="920,74,826,122,823,117,918,69"/>
+<area shape="rect" id="Node000006" href="$test__streams_8cpp.html" title=" " alt="" coords="891,120,1086,179"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="991,79,991,119,986,119,986,79"/>
+<area shape="rect" id="Node000007" href="$test__ui__core_8cpp.html" title="This is the main test program of the UI_core." alt="" coords="1110,120,1307,179"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1060,69,1154,117,1151,122,1057,74"/>
+<area shape="rect" id="Node000008" href="$test__probe_8cpp.html" title="this test program generates a signal pulse on each probe channel indefinitely." alt="" coords="1331,120,1521,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1090,54,1201,79,1320,109,1345,117,1343,122,1319,115,1200,84,1089,59"/>
+<area shape="rect" id="Node000009" href="$test__managed__square__led_8cpp.html" title="Example of how to program several LED controlled by a single rotary encoder with focus indication." alt="" coords="1545,120,1747,179"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="1090,42,1295,67,1415,86,1533,109,1562,117,1561,122,1532,115,1414,91,1295,72,1089,48"/>
+<area shape="rect" id="Node000010" href="$test__square__led_8cpp.html" title="an example of usage of w_SquareLED. The LED is blinking. A long press on the switch stop the blinking..." alt="" coords="1771,120,1945,179"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="1090,35,1224,41,1392,54,1576,76,1760,109,1787,117,1785,122,1759,115,1576,81,1391,59,1223,46,1089,41"/>
+</map>

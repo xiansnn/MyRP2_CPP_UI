@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_switch_button.html" title="SwitchButton status is sampled periodically by software." alt="" coords="5,31,105,57"/>
+<area shape="rect" id="Node000001" href="$class_switch_button_with_i_r_q.html" title="SwitchButtonWithIRQ status is processed by an Interrupt Service Routine. It is derived from SwithButt..." alt="" coords="153,5,303,32"/>
+<area shape="poly" id="edge11_Node000000_Node000001" title=" " alt="" coords="120,32,152,27,153,32,120,37"/>
+<area shape="rect" id="Node000004" href="$classtest__switch__button.html" title="test_switch_button : Example of final implementation of SwitchButton and UIController" alt="" coords="162,56,294,83"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="120,51,162,57,161,62,120,56"/>
+<area shape="rect" id="Node000002" href="$class_rotary_encoder.html" title="The rotary encoder is a device used to control a value the can be incremented/decremented by the user..." alt="" coords="351,56,459,83"/>
+<area shape="poly" id="edge12_Node000001_Node000002" title=" " alt="" coords="292,34,357,53,355,58,291,39"/>
+<area shape="rect" id="Node000003" href="$class_u_i_controller.html" title="UIController is the abstract class that hosts all controller object in the Model&#45;View&#45;Controll design..." alt="" coords="9,107,101,133"/>
+<area shape="poly" id="edge14_Node000003_Node000002" title=" " alt="" coords="116,114,204,106,303,92,354,81,355,86,303,97,205,111,116,119"/>
+<area shape="poly" id="edge15_Node000003_Node000004" title=" " alt="" coords="114,100,179,81,180,86,116,105"/>
+</map>

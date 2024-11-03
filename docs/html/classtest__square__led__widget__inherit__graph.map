@@ -1,0 +1,9 @@
+<map id="test_square_led_widget" name="test_square_led_widget">
+<area shape="rect" id="Node000001" title="test_square_led_widget : Example of final implementation of w_SquareLed" alt="" coords="5,229,164,256"/>
+<area shape="rect" id="Node000002" href="$classw___square_led.html" title="A widget that show a square (it can be a rectangle) on the display." alt="" coords="34,155,135,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,197,87,229,82,229,82,197"/>
+<area shape="rect" id="Node000003" href="$class_u_i_widget.html" title="A widget is a displayed object on a device screen. It inherits from all framebuffer features,..." alt="" coords="46,80,123,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,122,87,154,82,154,82,122"/>
+<area shape="rect" id="Node000004" href="$class_framebuffer.html" title="Framebuffer is the basic framework to handle texts and graphics on a digital display." alt="" coords="39,5,130,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="87,48,87,80,82,80,82,48"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="test_Manager" name="test_Manager">
+<area shape="rect" id="Node000001" title="implement a UIObjectManager for test_ui_core program" alt="" coords="52,229,153,256"/>
+<area shape="rect" id="Node000002" href="$class_u_i_object_manager.html" title="This is an Abstract class that is used to implement the manager of object on a screen." alt="" coords="41,155,164,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,197,98,229,93,229,91,197"/>
+<area shape="poly" id="edge4_Node000001_Node000002" title=" " alt="" coords="114,197,112,229,107,229,109,197"/>
+<area shape="rect" id="Node000003" href="$class_u_i_controlled_incremental_value.html" title="The UIControlledIncrementalValue is a kind of UIModelObject that have special feature such as a value..." alt="" coords="5,80,200,107"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,122,105,154,100,154,100,122"/>
+<area shape="rect" id="Node000004" href="$class_u_i_model_object.html" title="This is the Model abstract class of Model_View_Control design pattern." alt="" coords="48,5,157,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,48,105,80,100,80,100,48"/>
+</map>

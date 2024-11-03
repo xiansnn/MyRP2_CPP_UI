@@ -1,0 +1,29 @@
+<map id="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_switch/switch_button.h" name="C:/Users/chris/OneDrive/MyRP2_CPP_UI/devices/device_switch/switch_button.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="62,5,266,64"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,112,94,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,66,80,104,76,100,126,62"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="82,187,174,213"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,65,137,172,132,171,155,64"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="169,112,229,139"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="178,63,191,96,186,98,173,65"/>
+<area shape="rect" id="Node000005" href="$ui__core_8h.html" title=" " alt="" coords="258,112,332,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="208,62,265,101,262,105,205,67"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="267,142,172,183,170,178,265,137"/>
+<area shape="rect" id="Node000006" href="$framebuffer_8h.html" title="Most of code and algorithms here are derived from https://github.com/Harbys/pico&#45;ssd1306 works about ..." alt="" coords="249,187,346,213"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="298,139,299,171,294,171,293,139"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="126,261,179,288"/>
+<area shape="poly" id="edge14_Node000005_Node000007" title=" " alt="" coords="285,141,177,252,173,248,281,137"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="370,187,428,213"/>
+<area shape="poly" id="edge12_Node000005_Node000012" title=" " alt="" coords="314,137,370,175,367,180,311,141"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="452,187,498,213"/>
+<area shape="poly" id="edge13_Node000005_Node000013" title=" " alt="" coords="327,137,438,181,436,186,325,142"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="273,216,192,256,190,252,271,211"/>
+<area shape="rect" id="Node000008" href="$5x8__font_8h_source.html" title=" " alt="" coords="203,261,285,288"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="290,215,265,250,260,247,286,212"/>
+<area shape="rect" id="Node000009" href="$8x8__font_8h_source.html" title=" " alt="" coords="310,261,392,288"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="309,212,335,247,330,250,305,215"/>
+<area shape="rect" id="Node000010" href="$12x16__font_8h_source.html" title=" " alt="" coords="416,261,512,288"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="328,211,422,252,420,257,325,216"/>
+<area shape="rect" id="Node000011" href="$16x32__font_8h_source.html" title=" " alt="" coords="536,261,632,288"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="347,211,521,255,520,260,346,216"/>
+</map>
