@@ -16,6 +16,8 @@
  * 
  * As a UIController, the rotary encoder is associated with a UIModelObject.
  * 
+ * The test program for rotary encoder is the one developed for the Switch button with IRQ
+ * 
  */
 class RotaryEncoder : public SwitchButtonWithIRQ, public UIController
 {

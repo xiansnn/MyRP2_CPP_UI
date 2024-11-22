@@ -170,6 +170,9 @@ public:
  * NOTICE: LONG_PUSH and TIME_OUT cannot be implemented by processing IRQ.
  *
  * SwitchButtonWithIRQ can be associated with UIController only if button belongs to a UI.
+ * 
+ * NOTICE: the test program for switch button with IRQ is implmented with the rotary encoder device, wich is a good example of what can be done
+ * with and without IRQ
  *
  */
 class SwitchButtonWithIRQ : public SwitchButton
