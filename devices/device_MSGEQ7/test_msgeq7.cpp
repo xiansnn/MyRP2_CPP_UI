@@ -5,7 +5,7 @@ Probe pr_D4 = Probe(4);
 
 #define MSGEQ7_STROBE 19
 #define MSGEQ7_RESET 18
-#define MSGEQ7_OUT 26
+#define MSGEQ7_OUT 27
 
 int main()
 {
