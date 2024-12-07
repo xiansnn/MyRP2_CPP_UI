@@ -4,9 +4,9 @@ target_link_libraries(debug_probe
                 )
 
 add_executable(test_probe test_probe.cpp)
-target_link_libraries(test_probe 
+target_link_libraries(test_probe PRIVATE
                 pico_stdlib 
                 debug_probe
                 )
-pico_add_extra_outputs(test_probe)
+# pico_add_extra_outputs(test_probe)
 
