@@ -1,12 +1,18 @@
-add_library(debug_probe probe.cpp)
+add_library(debug_probe src/probe.cpp)
+target_include_directories(debug_probe PUBLIC 
+    ${CMAKE_CURRENT_LIST_DIR}/include
+    )
 target_link_libraries(debug_probe 
-                pico_stdlib
-                )
+    pico_stdlib
+    )
 
-add_executable(test_probe test_probe.cpp)
-target_link_libraries(test_probe PRIVATE
-                pico_stdlib 
-                debug_probe
-                )
-# pico_add_extra_outputs(test_probe)
+add_executable(test_debug_probe test/test_debug_probe.cpp)
+target_include_directories(test_debug_probe PRIVATE 
+    ${CMAKE_CURRENT_LIST_DIR}/include
+    )
+target_link_libraries(test_debug_probe
+    pico_stdlib 
+    debug_probe
+    )
+# pico_add_extra_outputs(test_debug_probe)
 
