@@ -1,1 +1,2 @@
 add_subdirectory(debug_probe)
+add_subdirectory(debug_probe/test)
